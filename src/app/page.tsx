@@ -1,11 +1,9 @@
 'use client';
 
-import Navigation from '@/components/Navigation';
 import InquirySection from '@/components/InquirySection';
 import PortfolioSection from '@/components/PortfolioSection';
 import AsSeenIn from '@/components/AsSeenIn';
 import { ScrollAnimation } from '@/components/ScrollAnimation';
-import { PageTransition } from '@/components/PageTransition';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -70,8 +68,6 @@ export default function HomePage() {
 
   return (
     <>
-      <Navigation />
-
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20" />
