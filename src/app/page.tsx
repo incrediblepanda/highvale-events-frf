@@ -70,19 +70,16 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20" />
-
-        {/* Background image placeholder */}
-        <div className="absolute inset-0 opacity-10">
-          <img
-            src="https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Grey-green overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-sage-darkest/20 to-sage-darker/15" />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d)',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
+          }}
+        />
+        <div className="absolute inset-0" />
 
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-20">
           <motion.img
