@@ -179,34 +179,45 @@ export default function HomePage() {
       <PortfolioSection />
 
       {/* Process Section */}
-      <section className="py-20 bg-warm-white" style={{backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
-        <div className="max-w-[1180px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4">
-              Our <span className="text-sage-dark italic">Process</span>
-            </h2>
-            <p className="text-lg text-sage-darker/70 max-w-2xl mx-auto">
-              A seamless journey from concept to celebration.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-white border-2 border-sage-dark flex items-center justify-center shadow-md">
-                  <span className="text-xl font-cormorant text-sage-dark font-bold">{step.phase}</span>
+      <div className="flex flex-col relative max-w-[1200px] mx-auto">
+        <section className="flex flex-col relative w-full self-stretch flex-1 max-w-[1200px] mx-auto">
+          <div className="flex flex-col relative w-full min-w-5 overflow-hidden min-h-[400px]">
+            <img
+              loading="lazy"
+              srcSet="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+              alt=""
+            />
+            <div className="relative flex flex-col h-auto w-full flex-1 bg-white/60 opacity-60">
+              <h2 className="text-black mb-4 text-center pt-10 text-4xl md:text-5xl font-cormorant">
+                <span className="font-bold">Our </span>
+                <span className="italic font-bold">Process</span>
+              </h2>
+              <p className="text-black text-2xl max-w-2xl mx-auto">
+                A seamless journey from concept to celebration.
+              </p>
+              <div className="max-w-[1180px] mx-auto px-6 pb-10">
+                <div className="text-center mb-16" />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  {processSteps.map((step, index) => (
+                    <div key={index} className="text-center">
+                      <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-white border-2 border-black flex items-center justify-center shadow-md">
+                        <span className="text-xl font-cormorant text-sage-dark font-bold">{step.phase}</span>
+                      </div>
+                      <h3 className="text-xl font-cormorant text-black mb-3">
+                        {step.title}
+                      </h3>
+                      <p className="text-black text-sm leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="text-xl font-cormorant text-sage-darkest mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-sage-darker/70 text-sm leading-relaxed">
-                  {step.description}
-                </p>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
