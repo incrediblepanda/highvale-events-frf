@@ -28,19 +28,19 @@ export default function HomePage() {
       title: 'Luxury Weddings',
       description: 'Create the wedding of your dreams with our meticulous attention to detail and creative vision.',
       href: '/weddings',
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fb7bbaf124c2b49d8aa2bbe3596e5ba15'
     },
     {
       title: 'Bachelorette Parties',
       description: 'Celebrate the bride-to-be with an unforgettable experience tailored to her unique style and personality.',
       href: '/party-planning',
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fdbc9d1a9c0cc4678a778bfe785ad61de'
     },
     {
       title: 'Party Planning',
       description: 'From intimate gatherings to grand celebrations, we bring your special occasions to life with elegance.',
       href: '/party-planning',
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F39ff8520416a4d7eabd3d346d3edd505'
     }
   ];
 
@@ -182,7 +182,7 @@ export default function HomePage() {
       <PortfolioSection />
 
       {/* Process Section */}
-      <section className="py-20 bg-warm-white">
+      <section className="py-20 bg-warm-white" style={{backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
         <div className="max-w-[1180px] mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4">
