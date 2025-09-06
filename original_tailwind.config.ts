@@ -67,8 +67,7 @@ const config: Config = {
         }
       },
       fontFamily: {
-        'ivy-body': ['var(--font-ivy-body)', 'Inter', 'sans-serif'],
-        'ivy-headline': ['var(--font-ivy-headline)', 'Cormorant Garamond', 'serif'],        cormorant: ['Cormorant Garamond', 'serif'],
+        cormorant: ['Cormorant Garamond', 'serif'],
         inter: ['Inter', 'sans-serif'],
       },
       borderRadius: {

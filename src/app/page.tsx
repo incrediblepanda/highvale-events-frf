@@ -1,7 +1,6 @@
 'use client';
 
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import InquirySection from '@/components/InquirySection';
 import PortfolioSection from '@/components/PortfolioSection';
 import AsSeenIn from '@/components/AsSeenIn';
@@ -257,7 +256,6 @@ export default function HomePage() {
         <InquirySection />
       </div>
 
-      <Footer />
     </>
   );
 }

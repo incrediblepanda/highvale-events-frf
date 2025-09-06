@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import AsSeenIn from '@/components/AsSeenIn';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -358,7 +357,6 @@ export default function Contact() {
 
       <AsSeenIn />
 
-      <Footer />
     </div>
   );
 }

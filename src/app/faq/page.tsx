@@ -1,7 +1,6 @@
 'use client';
 
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import InquirySection from '@/components/InquirySection';
 import AsSeenIn from '@/components/AsSeenIn';
 import { PageTransition } from '@/components/PageTransition';
@@ -181,7 +180,6 @@ export default function FAQPage() {
         <InquirySection />
       </div>
 
-      <Footer />
     </>
   );
 }

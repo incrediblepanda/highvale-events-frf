@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import InquirySection from '@/components/InquirySection';
 import { PageTransition } from '@/components/PageTransition';
 import { ScrollAnimation } from '@/components/ScrollAnimation';
@@ -233,7 +232,6 @@ export default function GalleryPage() {
         <InquirySection />
       </div>
 
-      <Footer />
     </>
   );
 }

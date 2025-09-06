@@ -1,7 +1,6 @@
 'use client';
 
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import InquirySection from '@/components/InquirySection';
 import AsSeenIn from '@/components/AsSeenIn';
 import FAQSection from '@/components/FAQSection';
@@ -266,7 +265,6 @@ export default function AboutPage() {
       {/* FAQ Section */}
       <FAQSection />
 
-      <Footer />
     </>
   );
 }

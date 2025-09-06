@@ -54,11 +54,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-cream text-foreground font-ivy-body;
+    @apply bg-cream text-foreground font-inter;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-ivy-headline;
+    @apply font-cormorant;
   }
 
   /* Smooth scrolling */
@@ -267,16 +267,5 @@
 
   .animation-delay-600 {
     animation-delay: 600ms;
-  }
-}
-
-/* Ivy font utility classes */
-@layer utilities {
-  .font-ivy-body {
-    font-family: var(--font-ivy-body), system-ui, sans-serif;
-  }
-  
-  .font-ivy-headline {
-    font-family: var(--font-ivy-headline), system-ui, serif;
   }
 }

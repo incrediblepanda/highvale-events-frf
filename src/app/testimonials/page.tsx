@@ -1,7 +1,6 @@
 'use client';
 
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import InquirySection from '@/components/InquirySection';
 import AsSeenIn from '@/components/AsSeenIn';
 import { Button } from '@/components/ui/button';
@@ -200,7 +199,6 @@ export default function Testimonials() {
 
       <InquirySection />
 
-      <Footer />
     </div>
   );
 }
