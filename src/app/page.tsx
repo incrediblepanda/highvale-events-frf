@@ -76,7 +76,8 @@ export default function HomePage() {
             backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d)',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
-            backgroundSize: 'cover'
+            backgroundSize: 'cover',
+            opacity: '0.39'
           }}
         />
         <div className="absolute inset-0" />
@@ -86,17 +87,19 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            src="/golden-wheat-highvale.png"
+            src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fe15769e1f80b49f2b9ebdbd2ce9bd162"
             alt="Highvale Events & Design"
             className="h-40 md:h-48 lg:h-56 mx-auto mb-8"
+            style={{ opacity: '0.79' }}
           />
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl lg:text-2xl text-sage-darker font-inter font-normal mb-4 leading-relaxed"
+            className="text-2xl md:text-3xl text-sage-darker font-inter font-normal mb-4 leading-relaxed"
           >
-            Luxury Wedding and Event Planning in the Heart of Colorado
+            Luxury Wedding and Event Planning <br />
+            in the Heart of Colorado
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
