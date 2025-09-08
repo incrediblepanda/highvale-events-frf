@@ -92,13 +92,35 @@ export default function InquirySection() {
   }, [pathname]); // Re-run effect when pathname changes
 
   return (
-    <section className="py-20 bg-warm-white">
+    <section
+      className="py-20"
+      style={{
+        backgroundColor: 'rgba(1, 1, 1, 1)',
+        backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F4b9ba40f793140a2982a78715899cb1f)',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        opacity: '0.8'
+      }}
+    >
       <div className="max-w-4xl mx-auto px-6">
         <ScrollAnimation className="text-center">
-          <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4">
+          <h2
+            className="text-4xl md:text-5xl font-cormorant mb-4"
+            style={{
+              color: 'rgba(255, 255, 255, 1)',
+              textShadow: '1px 1px 3px rgba(0, 0, 0, 1)'
+            }}
+          >
             Start Your Journey With Us
           </h2>
-          <p className="text-lg text-sage-darker/70 mb-12">
+          <p
+            className="text-lg mb-12"
+            style={{
+              color: 'rgba(255, 255, 255, 1)',
+              textShadow: '1px 1px 3px rgba(0, 0, 0, 1)'
+            }}
+          >
             Tell us about your vision and we'll bring it to life with elegance and precision.
           </p>
         </ScrollAnimation>
