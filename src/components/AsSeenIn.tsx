@@ -19,14 +19,22 @@ export default function AsSeenIn() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       className="py-16 bg-white border-t border-sage/10 overflow-hidden"
+      data-element="as-seen-in-section"
+      data-name="As Seen In Section"
     >
-      <div className="max-w-full px-0">
+      <div
+        className="max-w-full px-0"
+        data-element="as-seen-in-container"
+        data-name="As Seen In Container"
+      >
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center text-2xl font-cormorant font-semibold text-sage mb-10"
+          data-element="section-heading"
+          data-name="As Seen In Heading"
         >
           As Seen In
         </motion.h3>
@@ -37,8 +45,14 @@ export default function AsSeenIn() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative"
+          data-element="logo-carousel"
+          data-name="Logo Carousel"
         >
-          <div className="flex animate-scroll-right-to-left">
+          <div
+            className="flex animate-scroll-right-to-left"
+            data-element="logo-track"
+            data-name="Logo Track"
+          >
             {/* First set of logos */}
             {logos.map((logo, index) => (
               <div
