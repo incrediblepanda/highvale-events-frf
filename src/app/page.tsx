@@ -85,7 +85,10 @@ export default function HomePage() {
   ];
 
   return (
-    <>
+    <div
+      data-element="homepage-wrapper"
+      data-name="Homepage"
+    >
       {/* Hero Section */}
       <section
         className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
@@ -506,6 +509,6 @@ export default function HomePage() {
         <InquirySection />
       </div>
 
-    </>
+    </div>
   );
 }
