@@ -138,7 +138,18 @@ export default function WeddingsPage() {
         {/* Grey-green overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-sage-darkest/20 to-sage-darker/15" />
 
-        <PageTransition className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24">
+        <PageTransition
+          className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24"
+          style={{
+            '@media (max-width: 640px)': {
+              paddingBottom: '20px',
+              backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F79fc0883271f460e8a646399a2d6bb05)',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              backgroundSize: 'cover'
+            }
+          } as React.CSSProperties}
+        >
           <motion.img
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
