@@ -169,7 +169,11 @@ export default function Footer() {
             </div>
 
             {/* Social Icons */}
-            <div className="flex space-x-4 mt-6">
+            <div
+              className="flex space-x-4 mt-6"
+              data-element="footer-social-links"
+              data-name="Footer Social Links"
+            >
               <a href="#" className="text-white/70 hover:text-champagne transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
@@ -181,8 +185,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+        <div
+          className="border-t border-white/10 pt-8"
+          data-element="footer-bottom-bar"
+          data-name="Footer Bottom Bar"
+        >
+          <div
+            className="flex flex-col md:flex-row justify-between items-center"
+            data-element="footer-bottom-content"
+            data-name="Footer Bottom Content"
+          >
             <p className="text-white/50 text-sm">
               © {currentYear} Highvale Events & Design. All rights reserved.
             </p>
