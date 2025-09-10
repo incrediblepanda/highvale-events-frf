@@ -173,6 +173,8 @@ export default function WeddingsPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-6xl font-cormorant mb-4"
             style={{ color: 'rgba(255, 255, 255, 1)' }}
+            data-element="hero-title"
+            data-name="Hero Main Title"
           >
             Signature Wedding Planning
           </motion.h1>
@@ -182,6 +184,8 @@ export default function WeddingsPage() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed"
             style={{ color: 'rgba(255, 255, 255, 0.8)' }}
+            data-element="hero-description"
+            data-name="Hero Description"
           >
             From full-service planning to day-of coordination, we bring your dream wedding to life with elegance, precision, and Colorado's natural beauty as your backdrop.
           </motion.p>
