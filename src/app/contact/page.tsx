@@ -37,7 +37,6 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-cream">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">

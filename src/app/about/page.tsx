@@ -27,7 +27,6 @@ export default function AboutPage() {
 
   return (
     <>
-      <Navigation />
 
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
