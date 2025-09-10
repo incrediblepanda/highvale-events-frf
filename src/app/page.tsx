@@ -326,25 +326,55 @@ export default function HomePage() {
           backgroundSize: 'cover'
         }}
       >
-        <section className="flex flex-col relative w-full self-stretch flex-1 max-w-[1200px] mx-auto">
-          <div className="flex flex-col relative w-full min-w-5 overflow-hidden min-h-[400px]">
+        <section
+          className="flex flex-col relative w-full self-stretch flex-1 max-w-[1200px] mx-auto"
+          data-element="process-inner-section"
+          data-name="Process Inner Section"
+        >
+          <div
+            className="flex flex-col relative w-full min-w-5 overflow-hidden min-h-[400px]"
+            data-element="process-wrapper"
+            data-name="Process Content Wrapper"
+          >
             <div
               className="relative flex flex-col h-auto w-auto self-stretch flex-1"
+              data-element="process-content-overlay"
+              data-name="Process Content Overlay"
               style={{
                 backgroundColor: 'rgba(255, 255, 255, 1)',
                 opacity: '0.82'
               }}
             >
-              <h2 className="text-black mb-4 text-center pt-10 text-4xl md:text-5xl font-cormorant">
+              <h2
+                className="text-black mb-4 text-center pt-10 text-4xl md:text-5xl font-cormorant"
+                data-element="process-title"
+                data-name="Process Section Title"
+              >
                 <span className="font-bold">Our </span>
                 <span className="italic font-bold">Process</span>
               </h2>
-              <p className="text-black text-2xl max-w-2xl mx-auto">
+              <p
+                className="text-black text-2xl max-w-2xl mx-auto"
+                data-element="process-description"
+                data-name="Process Section Description"
+              >
                 A seamless journey from concept to celebration.
               </p>
-              <div className="max-w-[1180px] mx-auto px-6 pb-10 flex flex-col">
-                <div className="text-center mb-16" />
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div
+                className="max-w-[1180px] mx-auto px-6 pb-10 flex flex-col"
+                data-element="process-main-container"
+                data-name="Process Main Container"
+              >
+                <div
+                  className="text-center mb-16"
+                  data-element="process-spacer"
+                  data-name="Process Header Spacer"
+                />
+                <div
+                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                  data-element="process-steps-grid"
+                  data-name="Process Steps Grid"
+                >
                   {processSteps.map((step, index) => (
                     <div key={index} className="text-center">
                       <div className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center shadow-md" style={{ backgroundColor: 'rgba(27, 36, 36, 1)', border: '2px solid rgba(227, 198, 141, 1)' }}>
