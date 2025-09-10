@@ -13,9 +13,27 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export default function HomePage() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const heroImages = [
+    'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d',
+    'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fb7bbaf124c2b49d8aa2bbe3596e5ba15',
+    'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fdbc9d1a9c0cc4678a778bfe785ad61de',
+    'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F39ff8520416a4d7eabd3d346d3edd505'
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
   const scrollToInquiry = () => {
     const inquirySection = document.getElementById('inquiry-section');
     if (inquirySection) {
@@ -70,16 +88,22 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d)',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            opacity: '0.39'
-          }}
-        />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentImageIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.39 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, ease: 'easeInOut' }}
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${heroImages[currentImageIndex]})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              backgroundSize: 'cover'
+            }}
+          />
+        </AnimatePresence>
         <div className="absolute inset-0" />
 
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-20">
