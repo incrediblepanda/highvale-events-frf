@@ -39,10 +39,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${ivyModeBody.variable} ${ivyPrestoHeadline.variable}`}>
+    <html
+      lang="en"
+      className={`${ivyModeBody.variable} ${ivyPrestoHeadline.variable}`}
+      data-element="document-root"
+      data-name="Document Root"
+    >
       <ClientBody>
-        <Navigation />
-        <main>{children}</main>
+        <header data-element="site-header" data-name="Site Header">
+          <Navigation />
+        </header>
+        <main
+          data-element="main-content"
+          data-name="Main Content Area"
+        >
+          {children}
+        </main>
         <Footer />
       </ClientBody>
     </html>
