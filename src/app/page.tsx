@@ -190,7 +190,7 @@ export default function HomePage() {
                 animation="fadeInUp"
                 delay={index * 0.1}
               >
-                <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift h-full">
+                <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift h-full p-0">
                   {/* Service image */}
                   <div className="h-48 overflow-hidden">
                     <img
