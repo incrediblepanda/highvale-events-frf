@@ -72,7 +72,7 @@ export default function HomePage() {
   const faqs = [
     {
       question: 'Why should I choose Highvale Events & Design over another planner?',
-      answer: "At Highvale Events & Design, we specialize in more than just timelines and logistics—we bring custom creation and curated design elements to every event. Many of our clients come to us with Pinterest boards they've been building for years, filled with inspiration and dreams. Our passion is transforming those boards into reality, making sure every detail—big or small—feels intentional and beautifully executed. From designing your wedding signage and styling a custom monogram, to curating the perfect tablescape, we ensure every element reflects your unique vision."
+      answer: "At Highvale Events & Design, we specialize in more than just timelines and logistics—we bring custom creation and curated design elements to every event. Many of our clients come to us with Pinterest boards they've been building for years, filled with inspiration and dreams. Our passion is transforming those boards into reality, making sure every detail���big or small—feels intentional and beautifully executed. From designing your wedding signage and styling a custom monogram, to curating the perfect tablescape, we ensure every element reflects your unique vision."
     },
     {
       question: 'Can you work with my vendors, or do you only use preferred ones?',
@@ -329,17 +329,17 @@ export default function HomePage() {
         <section
           className="flex flex-col relative w-full self-stretch flex-1 max-w-[1200px] mx-auto"
           data-element="process-inner-section"
-          data-name="Process Inner Section"
+          data-name="Our Process Section > Inner Section"
         >
           <div
             className="flex flex-col relative w-full min-w-5 overflow-hidden min-h-[400px]"
             data-element="process-wrapper"
-            data-name="Process Content Wrapper"
+            data-name="Our Process Section > Content Wrapper"
           >
             <div
               className="relative flex flex-col h-auto w-auto self-stretch flex-1"
               data-element="process-content-overlay"
-              data-name="Process Content Overlay"
+              data-name="Our Process Section > Content Box"
               style={{
                 backgroundColor: 'rgba(255, 255, 255, 1)',
                 opacity: '0.82'
@@ -348,7 +348,7 @@ export default function HomePage() {
               <h2
                 className="text-black mb-4 text-center pt-10 text-4xl md:text-5xl font-cormorant"
                 data-element="process-title"
-                data-name="Process Section Title"
+                data-name="Our Process Section > Content Box > Heading"
               >
                 <span className="font-bold">Our </span>
                 <span className="italic font-bold">Process</span>
@@ -356,24 +356,24 @@ export default function HomePage() {
               <p
                 className="text-black text-2xl max-w-2xl mx-auto"
                 data-element="process-description"
-                data-name="Process Section Description"
+                data-name="Our Process Section > Content Box > Text"
               >
                 A seamless journey from concept to celebration.
               </p>
               <div
                 className="max-w-[1180px] mx-auto px-6 pb-10 flex flex-col"
                 data-element="process-main-container"
-                data-name="Process Main Container"
+                data-name="Our Process Section > Content Box > Container"
               >
                 <div
                   className="text-center mb-16"
                   data-element="process-spacer"
-                  data-name="Process Header Spacer"
+                  data-name="Our Process Section > Content Box > Header Spacer"
                 />
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
                   data-element="process-steps-grid"
-                  data-name="Process Steps Grid"
+                  data-name="Our Process Section > Content Box > Steps Grid"
                 >
                   {processSteps.map((step, index) => (
                     <div
