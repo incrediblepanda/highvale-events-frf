@@ -12,5 +12,14 @@ export default function ClientBody({
     document.body.className = "antialiased";
   }, []);
 
-  return <body className="antialiased" suppressHydrationWarning>{children}</body>;
+  return (
+    <body
+      className="antialiased"
+      suppressHydrationWarning
+      data-element="document-body"
+      data-name="Document Body"
+    >
+      {children}
+    </body>
+  );
 }
