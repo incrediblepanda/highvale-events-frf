@@ -43,29 +43,29 @@ export default function PortfolioSection() {
     <section
       className="py-20 bg-cream"
       data-element="portfolio-section"
-      data-name="Portfolio Section"
+      data-name="Our Portfolio Section"
     >
       <div
         className="max-w-[1180px] mx-auto px-6"
         data-element="portfolio-container"
-        data-name="Portfolio Container"
+        data-name="Our Portfolio Section > Container"
       >
         <ScrollAnimation
           className="text-center mb-16"
           data-element="portfolio-header"
-          data-name="Portfolio Section Header"
+          data-name="Our Portfolio Section > Header Box"
         >
           <h2
             className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4"
             data-element="portfolio-title"
-            data-name="Portfolio Section Title"
+            data-name="Our Portfolio Section > Header Box > Heading"
           >
             Our <span className="text-sage-dark italic">Portfolio</span>
           </h2>
           <p
             className="text-lg text-sage-darker/70 max-w-2xl mx-auto"
             data-element="portfolio-description"
-            data-name="Portfolio Section Description"
+            data-name="Our Portfolio Section > Header Box > Text"
           >
             A glimpse into the celebrations we've had the honor of creating.
           </p>
@@ -74,7 +74,7 @@ export default function PortfolioSection() {
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mb-12"
           data-element="portfolio-grid"
-          data-name="Portfolio Images Grid"
+          data-name="Our Portfolio Section > Images Grid"
         >
           {portfolioItems.map((item, index) => (
             <ScrollAnimation
@@ -82,7 +82,7 @@ export default function PortfolioSection() {
               animation="fadeInUp"
               delay={index * 0.1}
               data-element={`portfolio-item-wrapper-${index + 1}`}
-              data-name={`Portfolio Item ${index + 1} Wrapper`}
+              data-name={`Our Portfolio Section > Portfolio Item ${index + 1} > Wrapper`}
             >
               <div
                 className="block h-full w-full object-cover transition-transform duration-500"
@@ -92,14 +92,14 @@ export default function PortfolioSection() {
                 <div
                   className="relative h-64 overflow-hidden"
                   data-element={`portfolio-image-container-${index + 1}`}
-                  data-name={`Portfolio ${index + 1} Image Container`}
+                  data-name={`Our Portfolio Section > Portfolio Item ${index + 1} > Image Container`}
                 >
                   <img
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     data-element={`portfolio-image-${index + 1}`}
-                    data-name={`Portfolio ${index + 1} Image - ${item.title}`}
+                    data-name={`Our Portfolio Section > Portfolio Item ${index + 1} > Image`}
                   />
                 </div>
               </div>
