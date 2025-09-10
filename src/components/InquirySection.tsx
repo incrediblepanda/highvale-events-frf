@@ -121,6 +121,8 @@ export default function InquirySection() {
               color: 'rgba(255, 255, 255, 1)',
               textShadow: '1px 1px 3px rgba(0, 0, 0, 1)'
             }}
+            data-element="section-heading"
+            data-name="Inquiry Section Heading"
           >
             Start Your Journey With Us
           </h2>
@@ -130,15 +132,30 @@ export default function InquirySection() {
               color: 'rgba(255, 255, 255, 1)',
               textShadow: '1px 1px 3px rgba(0, 0, 0, 1)'
             }}
+            data-element="section-description"
+            data-name="Inquiry Section Description"
           >
             Tell us about your vision and we'll bring it to life with elegance and precision.
           </p>
         </ScrollAnimation>
 
-        <ScrollAnimation delay={0.2}>
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 min-h-[400px]">
+        <ScrollAnimation
+          delay={0.2}
+          data-element="inquiry-form-wrapper"
+          data-name="Inquiry Form Wrapper"
+        >
+          <div
+            className="bg-white rounded-2xl shadow-lg p-8 md:p-12 min-h-[400px]"
+            data-element="inquiry-form-container"
+            data-name="Inquiry Form Container"
+          >
             {/* HoneyBook Form Container */}
-            <div ref={formContainerRef} id="honeybook-form-container">
+            <div
+              ref={formContainerRef}
+              id="honeybook-form-container"
+              data-element="contact-form"
+              data-name="Contact Form"
+            >
               {/* Form will be injected here by the script */}
               <div className="text-center text-sage-darker/50">
                 <p className="text-lg">Loading contact form...</p>
