@@ -92,11 +92,11 @@ export default function HomePage() {
           <motion.div
             key={index}
             initial={{
-              opacity: index === 0 ? 0.39 : 0,
+              opacity: index === 0 ? 0.62 : 0,
               scale: 1.1
             }}
             animate={{
-              opacity: index === currentImageIndex ? 0.39 : 0,
+              opacity: index === currentImageIndex ? 0.62 : 0,
               scale: index === currentImageIndex ? 1 : 1.05
             }}
             transition={{
@@ -113,14 +113,20 @@ export default function HomePage() {
             }}
           />
         ))}
-        <div className="absolute inset-0" />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundColor: 'rgba(22, 22, 22, 1)',
+            opacity: '0.36'
+          }}
+        />
 
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-20">
           <motion.img
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F7afb3ce1c7e5412da2a5d8a23b226118"
+            src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fe15769e1f80b49f2b9ebdbd2ce9bd162"
             alt="Highvale Events & Design"
             className="mx-auto"
             style={{
@@ -133,7 +139,8 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl md:text-3xl text-sage-darker font-inter font-normal mb-4 leading-relaxed"
+            className="text-2xl md:text-3xl font-inter font-normal mb-4 leading-relaxed"
+            style={{ color: 'rgba(255, 255, 255, 1)', fontSize: '40px' }}
           >
             Luxury Wedding and Event Planning <br />
             in the Heart of Colorado
@@ -142,7 +149,8 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-sage-darker max-w-3xl mx-auto mb-10 leading-relaxed"
+            className="text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed"
+            style={{ color: 'rgba(255, 255, 255, 1)' }}
           >
             From intimate gatherings to grand celebrations, we transform your
             vision into extraordinary experiences.
