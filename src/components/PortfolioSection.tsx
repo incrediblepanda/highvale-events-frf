@@ -110,17 +110,17 @@ export default function PortfolioSection() {
         <ScrollAnimation
           className="text-center"
           data-element="portfolio-button-wrapper"
-          data-name="Portfolio Button Wrapper"
+          data-name="Our Portfolio Section > Button Box"
         >
           <Link
             href="/gallery"
             data-element="portfolio-gallery-link"
-            data-name="Portfolio Gallery Link"
+            data-name="Our Portfolio Section > Button Box > Button Link"
           >
             <Button
               className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-3"
               data-element="portfolio-gallery-button"
-              data-name="Portfolio Gallery Button - View Full Gallery"
+              data-name="Our Portfolio Section > Button Box > Button"
             >
               View Full Gallery
             </Button>
