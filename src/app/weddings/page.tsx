@@ -128,13 +128,25 @@ export default function WeddingsPage() {
         data-element="hero-section"
         data-name="Wedding Hero Section"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20" />
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20"
+          data-element="hero-background-gradient"
+          data-name="Hero Background Gradient"
+        />
 
         {/* Background image placeholder */}
-        <div className="absolute inset-0 opacity-10" />
+        <div
+          className="absolute inset-0 opacity-10"
+          data-element="hero-background-placeholder"
+          data-name="Hero Background Placeholder"
+        />
 
         {/* Dark overlay for better text contrast */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div
+          className="absolute inset-0 bg-black/40"
+          data-element="hero-dark-overlay"
+          data-name="Hero Dark Overlay"
+        />
 
         {/* Background image overlay */}
         <div
