@@ -139,22 +139,19 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl md:text-3xl font-inter font-normal mb-4 leading-relaxed"
-            style={{ color: 'rgba(255, 255, 255, 1)', fontSize: '40px' }}
+            className="font-inter"
+            style={{
+              color: 'rgba(255, 255, 255, 1)',
+              fontSize: '40px',
+              fontWeight: '400',
+              lineHeight: '28px',
+              maxWidth: '768px',
+              margin: '0 auto 60px'
+            }}
           >
             Luxury Wedding and Event Planning <br />
             in the Heart of Colorado
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed"
-            style={{ color: 'rgba(255, 255, 255, 1)' }}
-          >
-            From intimate gatherings to grand celebrations, we transform your
-            vision into extraordinary experiences.
-          </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
