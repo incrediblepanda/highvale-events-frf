@@ -19,17 +19,39 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-sage-darkest text-white py-16">
-      <div className="max-w-[1180px] mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+    <footer
+      className="bg-sage-darkest text-white py-16"
+      data-element="site-footer"
+      data-name="Site Footer"
+    >
+      <div
+        className="max-w-[1180px] mx-auto px-6"
+        data-element="footer-container"
+        data-name="Footer Container"
+      >
+        <div
+          className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12"
+          data-element="footer-content-grid"
+          data-name="Footer Content Grid"
+        >
           {/* Brand Column */}
-          <div className="md:col-span-1">
+          <div
+            className="md:col-span-1"
+            data-element="footer-brand-column"
+            data-name="Footer Brand Column"
+          >
             <img
               src="/light-sand-mountain.png"
               alt="Highvale Events"
               className="h-12 w-auto mb-4 brightness-0 invert"
+              data-element="footer-logo"
+              data-name="Footer Logo"
             />
-            <p className="text-white/70 text-sm leading-relaxed">
+            <p
+              className="text-white/70 text-sm leading-relaxed"
+              data-element="footer-brand-description"
+              data-name="Footer Brand Description"
+            >
               Creating unforgettable moments for Colorado's most cherished celebrations.
             </p>
           </div>
