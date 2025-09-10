@@ -109,6 +109,8 @@ export default function HomePage() {
               scale: { duration: 6 }
             }}
             className="absolute inset-0"
+            data-element={`hero-slideshow-image-${index + 1}`}
+            data-name={`Hero Slideshow Image ${index + 1}`}
             style={{
               backgroundImage: `url(${image})`,
               backgroundRepeat: 'no-repeat',
@@ -119,13 +121,19 @@ export default function HomePage() {
         ))}
         <div
           className="absolute inset-0"
+          data-element="hero-dark-overlay"
+          data-name="Hero Dark Overlay"
           style={{
             backgroundColor: 'rgba(22, 22, 22, 1)',
             opacity: '0.36'
           }}
         />
 
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-20">
+        <div
+          className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-20"
+          data-element="hero-content-container"
+          data-name="Hero Content Container"
+        >
           <motion.img
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
