@@ -87,7 +87,11 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section
+        className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
+        data-element="hero-section"
+        data-name="Homepage Hero Section"
+      >
         {heroImages.map((image, index) => (
           <motion.div
             key={index}
