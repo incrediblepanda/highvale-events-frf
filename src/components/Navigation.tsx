@@ -41,12 +41,12 @@ export default function Navigation() {
       <div
         className="max-w-[1180px] mx-auto px-6"
         data-element="nav-container"
-        data-name="Navigation Container"
+        data-name="Main Navigation > Container"
       >
         <div
           className="backdrop-blur-lg border border-white/10 rounded-2xl px-6 py-3 shadow-xl flex items-center justify-between"
           data-element="nav-content"
-          data-name="Navigation Content"
+          data-name="Main Navigation > Content Box"
           style={{ backgroundColor: 'rgba(45, 54, 42, 1)' }}
         >
           {/* Logo */}
@@ -54,7 +54,7 @@ export default function Navigation() {
             href="/"
             className="flex items-center"
             data-element="nav-logo"
-            data-name="Navigation Logo"
+            data-name="Main Navigation > Content Box > Logo"
           >
             <img
               src="/light-sand-mountain.png"
@@ -67,7 +67,7 @@ export default function Navigation() {
           <div
             className="hidden lg:flex items-center space-x-6"
             data-element="desktop-menu"
-            data-name="Desktop Menu"
+            data-name="Main Navigation > Content Box > Menu"
           >
             {navLinks.map((link) => (
               <Link
@@ -92,7 +92,7 @@ export default function Navigation() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden text-white"
             data-element="mobile-menu-button"
-            data-name="Mobile Menu Button"
+            data-name="Main Navigation > Content Box > Menu Button"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -109,7 +109,7 @@ export default function Navigation() {
             transition={{ duration: 0.2 }}
             className="lg:hidden absolute top-full left-0 right-0 mt-2 px-6"
             data-element="mobile-menu"
-            data-name="Mobile Menu"
+            data-name="Main Navigation > Mobile Menu Box"
           >
             <div className="bg-sage-darkest/95 backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-xl">
               <div className="flex flex-col space-y-4">
