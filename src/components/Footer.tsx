@@ -97,11 +97,22 @@ export default function Footer() {
           </div>
 
           {/* Resources */}
-          <div>
-            <h4 className="font-cormorant text-xl font-semibold mb-4 text-champagne">
+          <div
+            data-element="footer-resources-column"
+            data-name="Footer Resources Column"
+          >
+            <h4
+              className="font-cormorant text-xl font-semibold mb-4 text-champagne"
+              data-element="footer-section-heading"
+              data-name="Resources Heading"
+            >
               Resources
             </h4>
-            <ul className="space-y-2">
+            <ul
+              className="space-y-2"
+              data-element="footer-navigation-list"
+              data-name="Resources List"
+            >
               <li>
                 <Link href="/gallery" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   Gallery
