@@ -269,7 +269,7 @@ export default function HomePage() {
                       alt={service.title}
                       className="w-full h-full object-cover"
                       data-element={`service-image-${index + 1}`}
-                      data-name={`Our Services Section > Service Card ${index + 1} > Image`}
+                      data-name={`Our Services Section > Service Card ${index + 1} > Image Container > Image`}
                     />
                   </div>
                   <CardContent
@@ -280,14 +280,14 @@ export default function HomePage() {
                     <h3
                       className="text-2xl font-cormorant text-sage-darkest mb-4"
                       data-element={`service-title-${index + 1}`}
-                      data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Heading`}
+                      data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Title Heading`}
                     >
                       {service.title}
                     </h3>
                     <p
                       className="text-sage-darker/70 mb-6 leading-relaxed"
                       data-element={`service-description-${index + 1}`}
-                      data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Text`}
+                      data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Description Text`}
                     >
                       {service.description}
                     </p>
