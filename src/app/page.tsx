@@ -72,7 +72,7 @@ export default function HomePage() {
   const faqs = [
     {
       question: 'Why should I choose Highvale Events & Design over another planner?',
-      answer: "At Highvale Events & Design, we specialize in more than just timelines and logistics—we bring custom creation and curated design elements to every event. Many of our clients come to us with Pinterest boards they've been building for years, filled with inspiration and dreams. Our passion is transforming those boards into reality, making sure every detail���big or small—feels intentional and beautifully executed. From designing your wedding signage and styling a custom monogram, to curating the perfect tablescape, we ensure every element reflects your unique vision."
+      answer: "At Highvale Events & Design, we specialize in more than just timelines and logistics—we bring custom creation and curated design elements to every event. Many of our clients come to us with Pinterest boards they've been building for years, filled with inspiration and dreams. Our passion is transforming those boards into reality, making sure every detail—big or small—feels intentional and beautifully executed. From designing your wedding signage and styling a custom monogram, to curating the perfect tablescape, we ensure every element reflects your unique vision."
     },
     {
       question: 'Can you work with my vendors, or do you only use preferred ones?',
@@ -380,19 +380,19 @@ export default function HomePage() {
                       key={index}
                       className="text-center"
                       data-element={`process-step-${index + 1}`}
-                      data-name={`Process Step ${index + 1} - ${step.title}`}
+                      data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box`}
                     >
                       <div
                         className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center shadow-md"
                         style={{ backgroundColor: 'rgba(27, 36, 36, 1)', border: '2px solid rgba(227, 198, 141, 1)' }}
                         data-element={`process-step-icon-${index + 1}`}
-                        data-name={`Process Step ${index + 1} Icon - Phase ${step.phase}`}
+                        data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Icon`}
                       >
                         <span
                           className="text-xl font-cormorant font-bold"
                           style={{ color: 'rgba(255, 255, 255, 1)' }}
                           data-element={`process-step-number-${index + 1}`}
-                          data-name={`Process Step ${index + 1} Number`}
+                          data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
                         >
                           {step.phase}
                         </span>
@@ -400,14 +400,14 @@ export default function HomePage() {
                       <h3
                         className="text-xl font-cormorant text-black mb-3"
                         data-element={`process-step-title-${index + 1}`}
-                        data-name={`Process Step ${index + 1} Title`}
+                        data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Heading`}
                       >
                         {step.title}
                       </h3>
                       <p
                         className="text-black text-sm leading-relaxed"
                         data-element={`process-step-description-${index + 1}`}
-                        data-name={`Process Step ${index + 1} Description`}
+                        data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
                       >
                         {step.description}
                       </p>
@@ -418,7 +418,7 @@ export default function HomePage() {
                   href="/process"
                   className="inline-flex items-center justify-center bg-champagne text-sage-darkest rounded-full shadow-lg transition-all duration-300 hover:scale-105 font-medium mx-auto mt-6"
                   data-element="process-learn-more-button"
-                  data-name="Process Learn More Button - More About Our Process"
+                  data-name="Our Process Section > Content Box > Button"
                   style={{
                     gap: '8px',
                     height: '48px',
