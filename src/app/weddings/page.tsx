@@ -151,6 +151,8 @@ export default function WeddingsPage() {
         {/* Background image overlay */}
         <div
           className="absolute inset-0"
+          data-element="hero-background-image"
+          data-name="Hero Background Image"
           style={{
             backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F1d75e495f4d149ec926832ab0eea47a5)',
             backgroundRepeat: 'no-repeat',
@@ -160,7 +162,11 @@ export default function WeddingsPage() {
           }}
         />
 
-        <PageTransition className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24 pb-5 sm:pb-0 wedding-hero-mobile">
+        <PageTransition
+          className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24 pb-5 sm:pb-0 wedding-hero-mobile"
+          data-element="hero-content"
+          data-name="Hero Content Container"
+        >
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
