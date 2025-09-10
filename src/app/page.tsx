@@ -211,12 +211,28 @@ export default function HomePage() {
         data-element="services-section"
         data-name="Services Section"
       >
-        <div className="max-w-[1180px] mx-auto px-6">
-          <ScrollAnimation className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4">
+        <div
+          className="max-w-[1180px] mx-auto px-6"
+          data-element="services-container"
+          data-name="Services Container"
+        >
+          <ScrollAnimation
+            className="text-center mb-16"
+            data-element="services-header"
+            data-name="Services Section Header"
+          >
+            <h2
+              className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4"
+              data-element="services-title"
+              data-name="Services Section Title"
+            >
               Our <span className="text-sage-dark italic">Services</span>
             </h2>
-            <p className="text-lg text-sage-darker/70 max-w-2xl mx-auto">
+            <p
+              className="text-lg text-sage-darker/70 max-w-2xl mx-auto"
+              data-element="services-description"
+              data-name="Services Section Description"
+            >
               We specialize in creating memorable celebrations tailored to your unique vision.
             </p>
           </ScrollAnimation>
