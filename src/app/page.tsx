@@ -132,7 +132,7 @@ export default function HomePage() {
         <div
           className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-20"
           data-element="hero-content-container"
-          data-name="Hero Content Container"
+          data-name="Hero Section > Content Box"
         >
           <motion.img
             initial={{ opacity: 0, scale: 0.8 }}
@@ -142,7 +142,7 @@ export default function HomePage() {
             alt="Highvale Events & Design"
             className="mx-auto"
             data-element="hero-company-logo"
-            data-name="Hero Company Logo"
+            data-name="Hero Section > Content Box > Logo"
             style={{
               opacity: '0.79',
               height: '200px',
@@ -154,7 +154,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             data-element="hero-main-heading"
-            data-name="Hero Main Heading"
+            data-name="Hero Section > Content Box > Heading"
             style={{
               color: 'rgba(255, 255, 255, 1)',
               fontSize: '40px',
@@ -173,17 +173,17 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
             data-element="hero-action-buttons"
-            data-name="Hero Action Buttons Container"
+            data-name="Hero Section > Content Box > Button Container"
           >
             <Link
               href="/weddings"
               data-element="hero-primary-button-link"
-              data-name="Hero Primary Button Link"
+              data-name="Hero Section > Content Box > Button Link"
             >
               <Button
                 className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-6 text-lg shadow-lg transform transition-all hover:scale-105"
                 data-element="hero-primary-button"
-                data-name="Hero Primary Button - Start Planning"
+                data-name="Hero Section > Content Box > Primary Button"
               >
                 Start Planning Your Event
               </Button>
@@ -191,12 +191,12 @@ export default function HomePage() {
             <Link
               href="/gallery"
               data-element="hero-secondary-button-link"
-              data-name="Hero Secondary Button Link"
+              data-name="Hero Section > Content Box > Button Link"
             >
               <Button
                 className="bg-white text-sage-darkest border-2 border-sage-dark hover:bg-sage-dark/10 rounded-full px-8 py-6 text-lg transform transition-all hover:scale-105"
                 data-element="hero-secondary-button"
-                data-name="Hero Secondary Button - View Portfolio"
+                data-name="Hero Section > Content Box > Secondary Button"
               >
                 View Our Portfolio
               </Button>
