@@ -113,7 +113,7 @@ export default function HomePage() {
             }}
             className="absolute inset-0"
             data-element={`hero-slideshow-image-${index + 1}`}
-            data-name={`Hero Slideshow Image ${index + 1}`}
+            data-name={`Hero Section > Slideshow Image ${index + 1}`}
             style={{
               backgroundImage: `url(${image})`,
               backgroundRepeat: 'no-repeat',
@@ -125,7 +125,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0"
           data-element="hero-dark-overlay"
-          data-name="Hero Dark Overlay"
+          data-name="Hero Section > Dark Overlay"
           style={{
             backgroundColor: 'rgba(22, 22, 22, 1)',
             opacity: '0.36'
