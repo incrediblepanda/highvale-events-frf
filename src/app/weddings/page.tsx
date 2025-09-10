@@ -214,7 +214,12 @@ export default function WeddingsPage() {
       </section>
 
       {/* Welcome Section */}
-      <section id="welcome-section" className="py-20 bg-white">
+      <section
+        id="welcome-section"
+        className="py-20 bg-white"
+        data-element="welcome-section"
+        data-name="Welcome Section"
+      >
         <div className="max-w-[1180px] mx-auto px-6">
           <ScrollAnimation className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-8">
