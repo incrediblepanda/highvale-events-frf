@@ -175,13 +175,29 @@ export default function HomePage() {
             data-element="hero-action-buttons"
             data-name="Hero Action Buttons Container"
           >
-            <Link href="/weddings">
-              <Button className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-6 text-lg shadow-lg transform transition-all hover:scale-105">
+            <Link
+              href="/weddings"
+              data-element="hero-primary-button-link"
+              data-name="Hero Primary Button Link"
+            >
+              <Button
+                className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-6 text-lg shadow-lg transform transition-all hover:scale-105"
+                data-element="hero-primary-button"
+                data-name="Hero Primary Button - Start Planning"
+              >
                 Start Planning Your Event
               </Button>
             </Link>
-            <Link href="/gallery">
-              <Button className="bg-white text-sage-darkest border-2 border-sage-dark hover:bg-sage-dark/10 rounded-full px-8 py-6 text-lg transform transition-all hover:scale-105">
+            <Link
+              href="/gallery"
+              data-element="hero-secondary-button-link"
+              data-name="Hero Secondary Button Link"
+            >
+              <Button
+                className="bg-white text-sage-darkest border-2 border-sage-dark hover:bg-sage-dark/10 rounded-full px-8 py-6 text-lg transform transition-all hover:scale-105"
+                data-element="hero-secondary-button"
+                data-name="Hero Secondary Button - View Portfolio"
+              >
                 View Our Portfolio
               </Button>
             </Link>
