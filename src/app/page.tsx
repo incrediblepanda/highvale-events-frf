@@ -90,7 +90,7 @@ export default function HomePage() {
       <section
         className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
         data-element="hero-section"
-        data-name="Homepage Hero Section"
+        data-name="Hero Section"
       >
         {heroImages.map((image, index) => (
           <motion.div
@@ -209,7 +209,7 @@ export default function HomePage() {
       <section
         className="py-20 bg-white"
         data-element="services-section"
-        data-name="Services Section"
+        data-name="Our Services Section"
       >
         <div
           className="max-w-[1180px] mx-auto px-6"
@@ -317,7 +317,7 @@ export default function HomePage() {
       <div
         className="w-full py-20"
         data-element="process-section"
-        data-name="Process Section"
+        data-name="Our Process Section"
         style={{
           backgroundColor: 'rgba(7, 7, 7, 1)',
           backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fe137fdb8669345f6a848efc534ada837)',
