@@ -37,7 +37,10 @@ export default function Navigation() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}
     >
       <div className="max-w-[1180px] mx-auto px-6">
-        <div className="bg-sage-darkest/85 backdrop-blur-lg border border-white/10 rounded-2xl px-6 py-3 shadow-xl flex items-center justify-between">
+        <div
+          className="backdrop-blur-lg border border-white/10 rounded-2xl px-6 py-3 shadow-xl flex items-center justify-between"
+          style={{ backgroundColor: 'rgba(45, 54, 42, 1)' }}
+        >
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <img
