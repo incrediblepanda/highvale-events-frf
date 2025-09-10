@@ -103,17 +103,17 @@ export default function InquirySection() {
         opacity: '0.8'
       }}
       data-element="inquiry-section"
-      data-name="Inquiry Section"
+      data-name="Contact Us Section"
     >
       <div
         className="max-w-4xl mx-auto px-6"
         data-element="inquiry-container"
-        data-name="Inquiry Container"
+        data-name="Contact Us Section > Container"
       >
         <ScrollAnimation
           className="text-center"
           data-element="inquiry-header"
-          data-name="Inquiry Header"
+          data-name="Contact Us Section > Header Box"
         >
           <h2
             className="text-4xl md:text-5xl font-cormorant mb-4"
@@ -122,7 +122,7 @@ export default function InquirySection() {
               textShadow: '1px 1px 3px rgba(0, 0, 0, 1)'
             }}
             data-element="section-heading"
-            data-name="Inquiry Section Heading"
+            data-name="Contact Us Section > Header Box > Heading"
           >
             Start Your Journey With Us
           </h2>
@@ -133,7 +133,7 @@ export default function InquirySection() {
               textShadow: '1px 1px 3px rgba(0, 0, 0, 1)'
             }}
             data-element="section-description"
-            data-name="Inquiry Section Description"
+            data-name="Contact Us Section > Header Box > Text"
           >
             Tell us about your vision and we'll bring it to life with elegance and precision.
           </p>
@@ -142,19 +142,19 @@ export default function InquirySection() {
         <ScrollAnimation
           delay={0.2}
           data-element="inquiry-form-wrapper"
-          data-name="Inquiry Form Wrapper"
+          data-name="Contact Us Section > Form Box"
         >
           <div
             className="bg-white rounded-2xl shadow-lg p-8 md:p-12 min-h-[400px]"
             data-element="inquiry-form-container"
-            data-name="Inquiry Form Container"
+            data-name="Contact Us Section > Form Box > Form Container"
           >
             {/* HoneyBook Form Container */}
             <div
               ref={formContainerRef}
               id="honeybook-form-container"
               data-element="contact-form"
-              data-name="Contact Form"
+              data-name="Contact Us Section > Form Box > Form"
             >
               {/* Form will be injected here by the script */}
               <div className="text-center text-sage-darker/50">

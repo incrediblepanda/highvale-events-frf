@@ -25,7 +25,7 @@ export default function AsSeenIn() {
       <div
         className="max-w-full px-0"
         data-element="as-seen-in-container"
-        data-name="As Seen In Container"
+        data-name="As Seen In Section > Container"
       >
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function AsSeenIn() {
           transition={{ duration: 0.6 }}
           className="text-center text-2xl font-cormorant font-semibold text-sage mb-10"
           data-element="section-heading"
-          data-name="As Seen In Heading"
+          data-name="As Seen In Section > Heading"
         >
           As Seen In
         </motion.h3>
@@ -46,12 +46,12 @@ export default function AsSeenIn() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative"
           data-element="logo-carousel"
-          data-name="Logo Carousel"
+          data-name="As Seen In Section > Carousel Box"
         >
           <div
             className="flex animate-scroll-right-to-left"
             data-element="logo-track"
-            data-name="Logo Track"
+            data-name="As Seen In Section > Carousel Box > Logo Track"
           >
             {/* First set of logos */}
             {logos.map((logo, index) => (
