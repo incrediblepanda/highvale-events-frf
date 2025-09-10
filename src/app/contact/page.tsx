@@ -43,6 +43,10 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-sage"></div>
+
+        {/* Dark overlay for better text contrast */}
+        <div className="absolute inset-0 bg-black/30" />
+
         <div
           className="absolute inset-0 opacity-10"
           style={{
