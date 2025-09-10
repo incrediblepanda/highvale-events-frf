@@ -444,24 +444,24 @@ export default function HomePage() {
         <div
           className="max-w-3xl mx-auto px-6"
           data-element="faq-container"
-          data-name="FAQ Container"
+          data-name="FAQ Section > Container"
         >
           <ScrollAnimation
             className="text-center mb-12"
             data-element="faq-header"
-            data-name="FAQ Section Header"
+            data-name="FAQ Section > Header Box"
           >
             <h2
               className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4"
               data-element="faq-title"
-              data-name="FAQ Section Title"
+              data-name="FAQ Section > Header Box > Heading"
             >
               Frequently Asked <span className="text-sage-dark italic">Questions</span>
             </h2>
             <p
               className="text-lg text-sage-darker/70"
               data-element="faq-description"
-              data-name="FAQ Section Description"
+              data-name="FAQ Section > Header Box > Text"
             >
               Common questions about planning your perfect celebration.
             </p>
@@ -470,14 +470,14 @@ export default function HomePage() {
           <ScrollAnimation
             delay={0.2}
             data-element="faq-accordion-wrapper"
-            data-name="FAQ Accordion Wrapper"
+            data-name="FAQ Section > Content Box"
           >
             <Accordion
               type="single"
               collapsible
               className="space-y-4"
               data-element="faq-accordion"
-              data-name="FAQ Accordion"
+              data-name="FAQ Section > Content Box > Accordion"
             >
               {faqs.map((faq, index) => (
                 <AccordionItem
