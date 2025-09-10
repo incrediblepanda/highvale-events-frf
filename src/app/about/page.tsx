@@ -29,12 +29,24 @@ export default function AboutPage() {
     <>
 
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+      <section
+        className="relative min-h-[50vh] flex items-center justify-center overflow-hidden"
+        data-element="hero-section"
+        data-name="About Hero Section"
+      >
         {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20" />
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20"
+          data-element="hero-background-gradient"
+          data-name="Hero Background Gradient"
+        />
 
         {/* Background image placeholder */}
-        <div className="absolute inset-0 opacity-10">
+        <div
+          className="absolute inset-0 opacity-10"
+          data-element="hero-background-image"
+          data-name="Hero Background Image"
+        >
           <img
             src="https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg"
             alt=""
@@ -43,10 +55,18 @@ export default function AboutPage() {
         </div>
 
         {/* Dark overlay for better text contrast */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div
+          className="absolute inset-0 bg-black/40"
+          data-element="hero-dark-overlay"
+          data-name="Hero Dark Overlay"
+        />
 
         {/* Grey-green overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-sage-darkest/20 to-sage-darker/15" />
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-sage-darkest/20 to-sage-darker/15"
+          data-element="hero-color-overlay"
+          data-name="Hero Color Overlay"
+        />
 
         {/* Content */}
         <PageTransition className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24">
