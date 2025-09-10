@@ -10,6 +10,8 @@ interface ScrollAnimationProps {
   delay?: number
   duration?: number
   once?: boolean
+  'data-element'?: string
+  'data-name'?: string
 }
 
 const animations: Record<string, Variants> = {
@@ -42,6 +44,8 @@ export function ScrollAnimation({
   delay = 0,
   duration = 0.6,
   once = true,
+  'data-element': dataElement,
+  'data-name': dataName,
 }: ScrollAnimationProps) {
   return (
     <motion.div
@@ -51,6 +55,8 @@ export function ScrollAnimation({
       transition={{ duration, delay }}
       variants={animations[animation]}
       className={className}
+      data-element={dataElement}
+      data-name={dataName}
     >
       {children}
     </motion.div>
