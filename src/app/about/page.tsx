@@ -32,20 +32,20 @@ export default function AboutPage() {
       <section
         className="relative min-h-[50vh] flex items-center justify-center overflow-hidden"
         data-element="hero-section"
-        data-name="About Hero Section"
+        data-name="Hero Section"
       >
         {/* Background gradient */}
         <div
           className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20"
           data-element="hero-background-gradient"
-          data-name="Hero Background Gradient"
+          data-name="Hero Section > Background Gradient"
         />
 
         {/* Background image placeholder */}
         <div
           className="absolute inset-0 opacity-10"
           data-element="hero-background-image"
-          data-name="Hero Background Image"
+          data-name="Hero Section > Background Image"
         >
           <img
             src="https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg"
@@ -58,21 +58,21 @@ export default function AboutPage() {
         <div
           className="absolute inset-0 bg-black/40"
           data-element="hero-dark-overlay"
-          data-name="Hero Dark Overlay"
+          data-name="Hero Section > Dark Overlay"
         />
 
         {/* Grey-green overlay */}
         <div
           className="absolute inset-0 bg-gradient-to-b from-sage-darkest/20 to-sage-darker/15"
           data-element="hero-color-overlay"
-          data-name="Hero Color Overlay"
+          data-name="Hero Section > Color Overlay"
         />
 
         {/* Content */}
         <PageTransition
           className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24"
           data-element="hero-content-container"
-          data-name="Hero Content Container"
+          data-name="Hero Section > Content Box"
         >
           <motion.img
             initial={{ opacity: 0, scale: 0.8 }}
@@ -82,7 +82,7 @@ export default function AboutPage() {
             alt="Highvale Events"
             className="h-20 md:h-24 mx-auto mb-6"
             data-element="hero-logo"
-            data-name="About Hero Logo"
+            data-name="Hero Section > Content Box > Logo"
           />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -90,7 +90,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-6xl font-cormorant text-sage-darkest mb-4"
             data-element="hero-main-heading"
-            data-name="About Hero Main Heading"
+            data-name="Hero Section > Content Box > Heading"
           >
             About Highvale
           </motion.h1>
@@ -100,7 +100,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg md:text-xl text-sage-darker/80 max-w-2xl mx-auto mb-8 leading-relaxed"
             data-element="hero-description"
-            data-name="About Hero Description"
+            data-name="Hero Section > Content Box > Text"
           >
             A passionate team of wedding and event professionals bringing over 40 years of combined experience, creativity, and genuine care to every celebration we touch.
           </motion.p>

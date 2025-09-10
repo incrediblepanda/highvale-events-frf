@@ -243,7 +243,7 @@ export default function WeddingsPage() {
       <section
         className="py-20 bg-warm-white"
         data-element="packages-section"
-        data-name="Wedding Packages Section"
+        data-name="Our Wedding Packages Section"
       >
         <div className="max-w-[1180px] mx-auto px-6">
           <ScrollAnimation className="text-center mb-16">
