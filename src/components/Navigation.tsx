@@ -108,6 +108,8 @@ export default function Navigation() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
             className="lg:hidden absolute top-full left-0 right-0 mt-2 px-6"
+            data-element="mobile-menu"
+            data-name="Mobile Menu"
           >
             <div className="bg-sage-darkest/95 backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-xl">
               <div className="flex flex-col space-y-4">
