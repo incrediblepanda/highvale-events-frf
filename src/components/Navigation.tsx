@@ -50,7 +50,12 @@ export default function Navigation() {
           style={{ backgroundColor: 'rgba(45, 54, 42, 1)' }}
         >
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link
+            href="/"
+            className="flex items-center"
+            data-element="nav-logo"
+            data-name="Navigation Logo"
+          >
             <img
               src="/light-sand-mountain.png"
               alt="Highvale Events"
@@ -59,7 +64,11 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div
+            className="hidden lg:flex items-center space-x-6"
+            data-element="desktop-menu"
+            data-name="Desktop Menu"
+          >
             {navLinks.map((link) => (
               <Link
                 key={link.href}
