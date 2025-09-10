@@ -36,14 +36,30 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div
+      className="min-h-screen bg-cream"
+      data-element="contact-page-wrapper"
+      data-name="Contact Page Wrapper"
+    >
 
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-sage"></div>
+      <section
+        className="relative min-h-[50vh] flex items-center justify-center overflow-hidden"
+        data-element="hero-section"
+        data-name="Contact Hero Section"
+      >
+        <div
+          className="absolute inset-0 bg-gradient-sage"
+          data-element="hero-background-gradient"
+          data-name="Hero Background Gradient"
+        ></div>
 
         {/* Dark overlay for better text contrast */}
-        <div className="absolute inset-0 bg-black/30" />
+        <div
+          className="absolute inset-0 bg-black/30"
+          data-element="hero-dark-overlay"
+          data-name="Hero Dark Overlay"
+        />
 
         <div
           className="absolute inset-0 opacity-10"
