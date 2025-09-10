@@ -195,7 +195,7 @@ export default function HomePage() {
               className="absolute inset-0 h-full w-full object-cover object-center"
               alt=""
             />
-            <div className="relative flex flex-col h-auto w-full flex-1 bg-white/60 opacity-60">
+            <div className="relative flex flex-col h-auto w-full flex-1" style={{ backgroundColor: 'rgba(170, 170, 170, 0.6)' }}>
               <h2 className="text-black mb-4 text-center pt-10 text-4xl md:text-5xl font-cormorant">
                 <span className="font-bold">Our </span>
                 <span className="italic font-bold">Process</span>
@@ -203,13 +203,13 @@ export default function HomePage() {
               <p className="text-black text-2xl max-w-2xl mx-auto">
                 A seamless journey from concept to celebration.
               </p>
-              <div className="max-w-[1180px] mx-auto px-6 pb-10">
+              <div className="max-w-[1180px] mx-auto px-6 pb-10 flex flex-col">
                 <div className="text-center mb-16" />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {processSteps.map((step, index) => (
                     <div key={index} className="text-center">
-                      <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-white border-2 border-black flex items-center justify-center shadow-md">
-                        <span className="text-xl font-cormorant text-sage-dark font-bold">{step.phase}</span>
+                      <div className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center shadow-md" style={{ backgroundColor: 'rgba(27, 36, 36, 1)', border: '2px solid rgba(227, 198, 141, 1)' }}>
+                        <span className="text-xl font-cormorant font-bold" style={{ color: 'rgba(255, 255, 255, 1)' }}>{step.phase}</span>
                       </div>
                       <h3 className="text-xl font-cormorant text-black mb-3">
                         {step.title}
@@ -220,6 +220,19 @@ export default function HomePage() {
                     </div>
                   ))}
                 </div>
+                <a
+                  href="/process"
+                  className="inline-flex items-center justify-center bg-champagne text-sage-darkest rounded-full shadow-lg transition-all duration-300 hover:scale-105 font-medium mx-auto mt-6"
+                  style={{
+                    gap: '8px',
+                    height: '48px',
+                    padding: '24px 32px',
+                    fontSize: '18px',
+                    lineHeight: '28px'
+                  }}
+                >
+                  More About Our Process
+                </a>
               </div>
             </div>
           </div>
