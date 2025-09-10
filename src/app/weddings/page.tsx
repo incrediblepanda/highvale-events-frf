@@ -128,11 +128,6 @@ export default function WeddingsPage() {
 
         {/* Background image placeholder */}
         <div className="absolute inset-0 opacity-10">
-          <img
-            src="https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg"
-            alt=""
-            className="w-full h-full object-cover"
-          />
         </div>
 
         {/* Dark overlay for better text contrast */}
