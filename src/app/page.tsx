@@ -272,19 +272,19 @@ export default function HomePage() {
                   <CardContent
                     className="p-8"
                     data-element={`service-content-${index + 1}`}
-                    data-name={`Service ${index + 1} Content`}
+                    data-name={`Our Services Section > Service Card ${index + 1} > Content Box`}
                   >
                     <h3
                       className="text-2xl font-cormorant text-sage-darkest mb-4"
                       data-element={`service-title-${index + 1}`}
-                      data-name={`Service ${index + 1} Title`}
+                      data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Heading`}
                     >
                       {service.title}
                     </h3>
                     <p
                       className="text-sage-darker/70 mb-6 leading-relaxed"
                       data-element={`service-description-${index + 1}`}
-                      data-name={`Service ${index + 1} Description`}
+                      data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Text`}
                     >
                       {service.description}
                     </p>
@@ -292,12 +292,12 @@ export default function HomePage() {
                       href={service.href}
                       className="flex flex-col"
                       data-element={`service-button-link-${index + 1}`}
-                      data-name={`Service ${index + 1} Button Link`}
+                      data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Button Link`}
                     >
                       <Button
                         className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full transform transition-all hover:scale-105 mx-auto"
                         data-element={`service-button-${index + 1}`}
-                        data-name={`Service ${index + 1} Button - ${service.title === 'Luxury Weddings' ? 'Plan Your Wedding' : 'Explore Options'}`}
+                        data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Button`}
                       >
                         {service.title === 'Luxury Weddings' ? 'Plan Your Wedding' : 'Explore Options'}
                       </Button>
