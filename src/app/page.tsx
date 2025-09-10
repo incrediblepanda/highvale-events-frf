@@ -319,7 +319,12 @@ export default function HomePage() {
       </section>
 
       {/* Portfolio Section */}
-      <PortfolioSection />
+      <div
+        data-element="portfolio-section-wrapper"
+        data-name="Our Portfolio Section > Wrapper"
+      >
+        <PortfolioSection />
+      </div>
 
       {/* Process Section */}
       <div
@@ -507,10 +512,19 @@ export default function HomePage() {
       </section>
 
       {/* As Seen In */}
-      <AsSeenIn />
+      <div
+        data-element="as-seen-in-wrapper"
+        data-name="As Seen In Section > Wrapper"
+      >
+        <AsSeenIn />
+      </div>
 
       {/* Inquiry Section */}
-      <div id="inquiry-section">
+      <div
+        id="inquiry-section"
+        data-element="inquiry-section-wrapper"
+        data-name="Contact Us Section > Wrapper"
+      >
         <InquirySection />
       </div>
 
