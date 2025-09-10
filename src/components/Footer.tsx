@@ -27,30 +27,30 @@ export default function Footer() {
       <div
         className="max-w-[1180px] mx-auto px-6"
         data-element="footer-container"
-        data-name="Footer Container"
+        data-name="Site Footer > Container"
       >
         <div
           className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12"
           data-element="footer-content-grid"
-          data-name="Footer Content Grid"
+          data-name="Site Footer > Content Grid"
         >
           {/* Brand Column */}
           <div
             className="md:col-span-1"
             data-element="footer-brand-column"
-            data-name="Footer Brand Column"
+            data-name="Site Footer > Brand Column"
           >
             <img
               src="/light-sand-mountain.png"
               alt="Highvale Events"
               className="h-12 w-auto mb-4 brightness-0 invert"
               data-element="footer-logo"
-              data-name="Footer Logo"
+              data-name="Site Footer > Brand Column > Logo"
             />
             <p
               className="text-white/70 text-sm leading-relaxed"
               data-element="footer-brand-description"
-              data-name="Footer Brand Description"
+              data-name="Site Footer > Brand Column > Text"
             >
               Creating unforgettable moments for Colorado's most cherished celebrations.
             </p>
@@ -59,19 +59,19 @@ export default function Footer() {
           {/* Quick Links */}
           <div
             data-element="footer-quick-links-column"
-            data-name="Footer Quick Links Column"
+            data-name="Site Footer > Links Column"
           >
             <h4
               className="font-cormorant text-xl font-semibold mb-4 text-champagne"
               data-element="footer-section-heading"
-              data-name="Quick Links Heading"
+              data-name="Site Footer > Links Column > Heading"
             >
               Quick Links
             </h4>
             <ul
               className="space-y-2"
               data-element="footer-navigation-list"
-              data-name="Quick Links List"
+              data-name="Site Footer > Links Column > List"
             >
               <li>
                 <Link href="/weddings" className="text-white/70 hover:text-champagne transition-colors text-sm">
