@@ -214,24 +214,24 @@ export default function HomePage() {
         <div
           className="max-w-[1180px] mx-auto px-6"
           data-element="services-container"
-          data-name="Services Container"
+          data-name="Our Services Section > Container"
         >
           <ScrollAnimation
             className="text-center mb-16"
             data-element="services-header"
-            data-name="Services Section Header"
+            data-name="Our Services Section > Header Box"
           >
             <h2
               className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4"
               data-element="services-title"
-              data-name="Services Section Title"
+              data-name="Our Services Section > Header Box > Heading"
             >
               Our <span className="text-sage-dark italic">Services</span>
             </h2>
             <p
               className="text-lg text-sage-darker/70 max-w-2xl mx-auto"
               data-element="services-description"
-              data-name="Services Section Description"
+              data-name="Our Services Section > Header Box > Text"
             >
               We specialize in creating memorable celebrations tailored to your unique vision.
             </p>
@@ -240,7 +240,7 @@ export default function HomePage() {
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             data-element="services-grid"
-            data-name="Services Cards Grid"
+            data-name="Our Services Section > Cards Grid"
           >
             {services.map((service, index) => (
               <ScrollAnimation
@@ -248,25 +248,25 @@ export default function HomePage() {
                 animation="fadeInUp"
                 delay={index * 0.1}
                 data-element={`service-card-wrapper-${index + 1}`}
-                data-name={`Service Card ${index + 1} Wrapper`}
+                data-name={`Our Services Section > Service Card ${index + 1} > Wrapper`}
               >
                 <Card
                   className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift h-full p-0"
                   data-element={`service-card-${index + 1}`}
-                  data-name={`Service Card ${index + 1} - ${service.title}`}
+                  data-name={`Our Services Section > Service Card ${index + 1} > Card`}
                 >
                   {/* Service image */}
                   <div
                     className="h-48 overflow-hidden"
                     data-element={`service-image-container-${index + 1}`}
-                    data-name={`Service ${index + 1} Image Container`}
+                    data-name={`Our Services Section > Service Card ${index + 1} > Image Container`}
                   >
                     <img
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover"
                       data-element={`service-image-${index + 1}`}
-                      data-name={`Service ${index + 1} Image - ${service.title}`}
+                      data-name={`Our Services Section > Service Card ${index + 1} > Image`}
                     />
                   </div>
                   <CardContent
