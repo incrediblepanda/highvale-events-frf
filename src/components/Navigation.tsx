@@ -38,9 +38,15 @@ export default function Navigation() {
       data-element="main-navigation"
       data-name="Main Navigation"
     >
-      <div className="max-w-[1180px] mx-auto px-6">
+      <div
+        className="max-w-[1180px] mx-auto px-6"
+        data-element="nav-container"
+        data-name="Navigation Container"
+      >
         <div
           className="backdrop-blur-lg border border-white/10 rounded-2xl px-6 py-3 shadow-xl flex items-center justify-between"
+          data-element="nav-content"
+          data-name="Navigation Content"
           style={{ backgroundColor: 'rgba(45, 54, 42, 1)' }}
         >
           {/* Logo */}
