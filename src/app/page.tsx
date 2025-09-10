@@ -176,7 +176,11 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white">
+      <section
+        className="py-20 bg-white"
+        data-element="services-section"
+        data-name="Services Section"
+      >
         <div className="max-w-[1180px] mx-auto px-6">
           <ScrollAnimation className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4">
