@@ -48,7 +48,7 @@ export default function Footer() {
               data-name="Site Footer > Brand Column > Logo"
             />
             <p
-              className="text-white/70 text-sm leading-relaxed"
+              className="text-white/70 text-sm leading-relaxed font-inter"
               data-element="footer-brand-description"
               data-name="Site Footer > Brand Column > Text"
             >
@@ -88,7 +88,7 @@ export default function Footer() {
                   About Us
                 </Link>
               </li>
-              <li>
+              <li className="font-inter">
                 <Link href="/process" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   Our Process
                 </Link>
@@ -113,17 +113,17 @@ export default function Footer() {
               data-element="footer-navigation-list"
               data-name="Site Footer > Resources Column > List"
             >
-              <li>
+              <li className="font-inter">
                 <Link href="/gallery" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   Gallery
                 </Link>
               </li>
-              <li>
+              <li className="font-inter">
                 <Link href="/faq" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   FAQ
                 </Link>
               </li>
-              <li>
+              <li className="font-inter">
                 <Link href="/say-hi" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   Contact
                 </Link>
@@ -150,19 +150,19 @@ export default function Footer() {
             >
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-champagne mt-0.5 flex-shrink-0" />
-                <p className="text-white/70 text-sm">
+                <p className="text-white/70 text-sm font-inter">
                   Colorado Springs, CO
                 </p>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-champagne flex-shrink-0" />
-                <a href="tel:+19703712799" className="text-white/70 hover:text-champagne transition-colors text-sm">
+                <a href="tel:+19703712799" className="text-white/70 hover:text-champagne transition-colors text-sm font-inter">
                   (970) 371-2799
                 </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-champagne flex-shrink-0" />
-                <a href="mailto:hello@highvaleevents.com" className="text-white/70 hover:text-champagne transition-colors text-sm">
+                <a href="mailto:hello@highvaleevents.com" className="text-white/70 hover:text-champagne transition-colors text-sm font-inter">
                   hello@highvaleevents.com
                 </a>
               </div>
@@ -195,11 +195,11 @@ export default function Footer() {
             data-element="footer-bottom-content"
             data-name="Site Footer > Bottom Bar > Content"
           >
-            <p className="text-white/50 text-sm">
+            <p className="text-white/50 text-sm font-inter">
               © {currentYear} Highvale Events & Design. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-white/50 hover:text-champagne text-sm transition-colors">
+              <Link href="#" className="text-white/50 hover:text-champagne text-sm transition-colors font-inter">
                 Privacy Policy
               </Link>
             </div>
