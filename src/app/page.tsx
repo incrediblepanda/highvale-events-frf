@@ -89,8 +89,12 @@ export default function HomePage() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fe15769e1f80b49f2b9ebdbd2ce9bd162"
             alt="Highvale Events & Design"
-            className="h-40 md:h-48 lg:h-56 mx-auto mb-8"
-            style={{ opacity: '0.79' }}
+            className="mx-auto"
+            style={{
+              opacity: '0.79',
+              height: '200px',
+              marginBottom: '75px'
+            }}
           />
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
