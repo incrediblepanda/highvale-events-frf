@@ -256,6 +256,16 @@
     background: linear-gradient(90deg, #2A3532 0%, #2A3532 50%, #1A2223 50%, #1A2223 100%);
   }
 
+  /* Wedding hero mobile background */
+  @media (max-width: 640px) {
+    .wedding-hero-mobile {
+      background-image: url('https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F79fc0883271f460e8a646399a2d6bb05');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
   /* Animation delays */
   .animation-delay-200 {
     animation-delay: 200ms;
