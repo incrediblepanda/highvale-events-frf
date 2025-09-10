@@ -102,9 +102,19 @@ export default function InquirySection() {
         backgroundSize: 'cover',
         opacity: '0.8'
       }}
+      data-element="inquiry-section"
+      data-name="Inquiry Section"
     >
-      <div className="max-w-4xl mx-auto px-6">
-        <ScrollAnimation className="text-center">
+      <div
+        className="max-w-4xl mx-auto px-6"
+        data-element="inquiry-container"
+        data-name="Inquiry Container"
+      >
+        <ScrollAnimation
+          className="text-center"
+          data-element="inquiry-header"
+          data-name="Inquiry Header"
+        >
           <h2
             className="text-4xl md:text-5xl font-cormorant mb-4"
             style={{
