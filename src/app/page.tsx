@@ -186,16 +186,25 @@ export default function HomePage() {
       <PortfolioSection />
 
       {/* Process Section */}
-      <div className="flex flex-col relative max-w-[1200px] mx-auto">
+      <div
+        className="w-full py-20"
+        style={{
+          backgroundColor: 'rgba(7, 7, 7, 1)',
+          backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fe137fdb8669345f6a848efc534ada837)',
+          backgroundPosition: '50% 50%',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
+        }}
+      >
         <section className="flex flex-col relative w-full self-stretch flex-1 max-w-[1200px] mx-auto">
           <div className="flex flex-col relative w-full min-w-5 overflow-hidden min-h-[400px]">
-            <img
-              loading="lazy"
-              srcSet="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd41230b2d02b49a59a0241a5c9aefd7c"
-              className="absolute inset-0 h-full w-full object-cover object-center"
-              alt=""
-            />
-            <div className="relative flex flex-col h-auto w-full flex-1" style={{ backgroundColor: 'rgba(170, 170, 170, 0.6)' }}>
+            <div
+              className="relative flex flex-col h-auto w-auto self-stretch flex-1"
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 1)',
+                opacity: '0.82'
+              }}
+            >
               <h2 className="text-black mb-4 text-center pt-10 text-4xl md:text-5xl font-cormorant">
                 <span className="font-bold">Our </span>
                 <span className="italic font-bold">Process</span>
