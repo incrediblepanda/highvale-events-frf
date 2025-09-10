@@ -91,10 +91,24 @@ export default function HomePage() {
         <AnimatePresence mode="wait">
           <motion.div
             key={currentImageIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.39 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.5, ease: 'easeInOut' }}
+            initial={{
+              opacity: 0,
+              scale: 1.1
+            }}
+            animate={{
+              opacity: 0.39,
+              scale: 1
+            }}
+            exit={{
+              opacity: 0,
+              scale: 0.95
+            }}
+            transition={{
+              duration: 2,
+              ease: 'easeInOut',
+              opacity: { duration: 1.5 },
+              scale: { duration: 8 }
+            }}
             className="absolute inset-0"
             style={{
               backgroundImage: `url(${heroImages[currentImageIndex]})`,
