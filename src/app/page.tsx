@@ -291,20 +291,25 @@ export default function HomePage() {
                     >
                       {service.description}
                     </p>
-                    <Link
-                      href={service.href}
-                      className="flex flex-col"
-                      data-element={`service-button-link-${index + 1}`}
-                      data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Button Link`}
+                    <div
+                      data-element={`service-button-wrapper-${index + 1}`}
+                      data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Button Wrapper`}
                     >
-                      <Button
-                        className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full transform transition-all hover:scale-105 mx-auto"
-                        data-element={`service-button-${index + 1}`}
-                        data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Button`}
+                      <Link
+                        href={service.href}
+                        className="flex flex-col"
+                        data-element={`service-button-link-${index + 1}`}
+                        data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Button Link`}
                       >
-                        {service.title === 'Luxury Weddings' ? 'Plan Your Wedding' : 'Explore Options'}
-                      </Button>
-                    </Link>
+                        <Button
+                          className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full transform transition-all hover:scale-105 mx-auto"
+                          data-element={`service-button-${index + 1}`}
+                          data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Button`}
+                        >
+                          {service.title === 'Luxury Weddings' ? 'Plan Your Wedding' : 'Explore Options'}
+                        </Button>
+                      </Link>
+                    </div>
                   </CardContent>
                 </Card>
               </ScrollAnimation>
