@@ -436,19 +436,49 @@ export default function HomePage() {
       </div>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-6">
-          <ScrollAnimation className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4">
+      <section
+        className="py-20 bg-white"
+        data-element="faq-section"
+        data-name="FAQ Section"
+      >
+        <div
+          className="max-w-3xl mx-auto px-6"
+          data-element="faq-container"
+          data-name="FAQ Container"
+        >
+          <ScrollAnimation
+            className="text-center mb-12"
+            data-element="faq-header"
+            data-name="FAQ Section Header"
+          >
+            <h2
+              className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4"
+              data-element="faq-title"
+              data-name="FAQ Section Title"
+            >
               Frequently Asked <span className="text-sage-dark italic">Questions</span>
             </h2>
-            <p className="text-lg text-sage-darker/70">
+            <p
+              className="text-lg text-sage-darker/70"
+              data-element="faq-description"
+              data-name="FAQ Section Description"
+            >
               Common questions about planning your perfect celebration.
             </p>
           </ScrollAnimation>
 
-          <ScrollAnimation delay={0.2}>
-            <Accordion type="single" collapsible className="space-y-4">
+          <ScrollAnimation
+            delay={0.2}
+            data-element="faq-accordion-wrapper"
+            data-name="FAQ Accordion Wrapper"
+          >
+            <Accordion
+              type="single"
+              collapsible
+              className="space-y-4"
+              data-element="faq-accordion"
+              data-name="FAQ Accordion"
+            >
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
