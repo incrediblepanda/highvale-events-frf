@@ -99,19 +99,19 @@ export default function Footer() {
           {/* Resources */}
           <div
             data-element="footer-resources-column"
-            data-name="Footer Resources Column"
+            data-name="Site Footer > Resources Column"
           >
             <h4
               className="font-cormorant text-xl font-semibold mb-4 text-champagne"
               data-element="footer-section-heading"
-              data-name="Resources Heading"
+              data-name="Site Footer > Resources Column > Heading"
             >
               Resources
             </h4>
             <ul
               className="space-y-2"
               data-element="footer-navigation-list"
-              data-name="Resources List"
+              data-name="Site Footer > Resources Column > List"
             >
               <li>
                 <Link href="/gallery" className="text-white/70 hover:text-champagne transition-colors text-sm">
@@ -134,19 +134,19 @@ export default function Footer() {
           {/* Contact Info */}
           <div
             data-element="footer-contact-column"
-            data-name="Footer Contact Column"
+            data-name="Site Footer > Contact Column"
           >
             <h4
               className="font-cormorant text-xl font-semibold mb-4 text-champagne"
               data-element="footer-section-heading"
-              data-name="Contact Heading"
+              data-name="Site Footer > Contact Column > Heading"
             >
               Get in Touch
             </h4>
             <div
               className="space-y-3"
               data-element="footer-contact-list"
-              data-name="Contact Information List"
+              data-name="Site Footer > Contact Column > Info List"
             >
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-champagne mt-0.5 flex-shrink-0" />
@@ -172,7 +172,7 @@ export default function Footer() {
             <div
               className="flex space-x-4 mt-6"
               data-element="footer-social-links"
-              data-name="Footer Social Links"
+              data-name="Site Footer > Contact Column > Social Links"
             >
               <a href="#" className="text-white/70 hover:text-champagne transition-colors">
                 <Instagram className="w-5 h-5" />
@@ -188,12 +188,12 @@ export default function Footer() {
         <div
           className="border-t border-white/10 pt-8"
           data-element="footer-bottom-bar"
-          data-name="Footer Bottom Bar"
+          data-name="Site Footer > Bottom Bar"
         >
           <div
             className="flex flex-col md:flex-row justify-between items-center"
             data-element="footer-bottom-content"
-            data-name="Footer Bottom Content"
+            data-name="Site Footer > Bottom Bar > Content"
           >
             <p className="text-white/50 text-sm">
               © {currentYear} Highvale Events & Design. All rights reserved.
