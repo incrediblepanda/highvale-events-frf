@@ -88,36 +88,31 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <AnimatePresence mode="wait">
+        {heroImages.map((image, index) => (
           <motion.div
-            key={currentImageIndex}
+            key={index}
             initial={{
-              opacity: 0,
+              opacity: index === 0 ? 0.39 : 0,
               scale: 1.1
             }}
             animate={{
-              opacity: 0.39,
-              scale: 1
-            }}
-            exit={{
-              opacity: 0,
-              scale: 0.95
+              opacity: index === currentImageIndex ? 0.39 : 0,
+              scale: index === currentImageIndex ? 1 : 1.05
             }}
             transition={{
-              duration: 2,
+              duration: 1.5,
               ease: 'easeInOut',
-              opacity: { duration: 1.5 },
-              scale: { duration: 8 }
+              scale: { duration: 6 }
             }}
             className="absolute inset-0"
             style={{
-              backgroundImage: `url(${heroImages[currentImageIndex]})`,
+              backgroundImage: `url(${image})`,
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
               backgroundSize: 'cover'
             }}
           />
-        </AnimatePresence>
+        ))}
         <div className="absolute inset-0" />
 
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-20">
