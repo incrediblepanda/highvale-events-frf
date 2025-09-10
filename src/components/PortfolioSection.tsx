@@ -40,18 +40,42 @@ export default function PortfolioSection() {
   ];
 
   return (
-    <section className="py-20 bg-cream">
-      <div className="max-w-[1180px] mx-auto px-6">
-        <ScrollAnimation className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4">
+    <section
+      className="py-20 bg-cream"
+      data-element="portfolio-section"
+      data-name="Portfolio Section"
+    >
+      <div
+        className="max-w-[1180px] mx-auto px-6"
+        data-element="portfolio-container"
+        data-name="Portfolio Container"
+      >
+        <ScrollAnimation
+          className="text-center mb-16"
+          data-element="portfolio-header"
+          data-name="Portfolio Section Header"
+        >
+          <h2
+            className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4"
+            data-element="portfolio-title"
+            data-name="Portfolio Section Title"
+          >
             Our <span className="text-sage-dark italic">Portfolio</span>
           </h2>
-          <p className="text-lg text-sage-darker/70 max-w-2xl mx-auto">
+          <p
+            className="text-lg text-sage-darker/70 max-w-2xl mx-auto"
+            data-element="portfolio-description"
+            data-name="Portfolio Section Description"
+          >
             A glimpse into the celebrations we've had the honor of creating.
           </p>
         </ScrollAnimation>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mb-12">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mb-12"
+          data-element="portfolio-grid"
+          data-name="Portfolio Images Grid"
+        >
           {portfolioItems.map((item, index) => (
             <ScrollAnimation
               key={index}
