@@ -169,8 +169,8 @@ export default function HomePage() {
                     <p className="text-sage-darker/70 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                    <Link href={service.href}>
-                      <Button className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full transform transition-all hover:scale-105">
+                    <Link href={service.href} className="flex flex-col">
+                      <Button className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full transform transition-all hover:scale-105 mx-auto">
                         {service.title === 'Luxury Weddings' ? 'Plan Your Wedding' : 'Explore Options'}
                       </Button>
                     </Link>
