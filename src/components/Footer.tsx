@@ -132,11 +132,22 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="font-cormorant text-xl font-semibold mb-4 text-champagne">
+          <div
+            data-element="footer-contact-column"
+            data-name="Footer Contact Column"
+          >
+            <h4
+              className="font-cormorant text-xl font-semibold mb-4 text-champagne"
+              data-element="footer-section-heading"
+              data-name="Contact Heading"
+            >
               Get in Touch
             </h4>
-            <div className="space-y-3">
+            <div
+              className="space-y-3"
+              data-element="footer-contact-list"
+              data-name="Contact Information List"
+            >
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-champagne mt-0.5 flex-shrink-0" />
                 <p className="text-white/70 text-sm">
