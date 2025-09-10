@@ -199,7 +199,7 @@ export default function HomePage() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <CardContent className="p-8">
+                  <CardContent className="">
                     <h3 className="text-2xl font-cormorant text-sage-darkest mb-4">
                       {service.title}
                     </h3>
