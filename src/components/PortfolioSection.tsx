@@ -107,9 +107,21 @@ export default function PortfolioSection() {
           ))}
         </div>
 
-        <ScrollAnimation className="text-center">
-          <Link href="/gallery">
-            <Button className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-3">
+        <ScrollAnimation
+          className="text-center"
+          data-element="portfolio-button-wrapper"
+          data-name="Portfolio Button Wrapper"
+        >
+          <Link
+            href="/gallery"
+            data-element="portfolio-gallery-link"
+            data-name="Portfolio Gallery Link"
+          >
+            <Button
+              className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-3"
+              data-element="portfolio-gallery-button"
+              data-name="Portfolio Gallery Button - View Full Gallery"
+            >
               View Full Gallery
             </Button>
           </Link>
