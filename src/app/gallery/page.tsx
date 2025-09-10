@@ -45,6 +45,9 @@ export default function GalleryPage() {
           />
         </div>
 
+        {/* Dark overlay for better text contrast */}
+        <div className="absolute inset-0 bg-black/40" />
+
         {/* Grey-green overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-sage-darkest/20 to-sage-darker/15" />
 
