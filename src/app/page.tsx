@@ -376,14 +376,39 @@ export default function HomePage() {
                   data-name="Process Steps Grid"
                 >
                   {processSteps.map((step, index) => (
-                    <div key={index} className="text-center">
-                      <div className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center shadow-md" style={{ backgroundColor: 'rgba(27, 36, 36, 1)', border: '2px solid rgba(227, 198, 141, 1)' }}>
-                        <span className="text-xl font-cormorant font-bold" style={{ color: 'rgba(255, 255, 255, 1)' }}>{step.phase}</span>
+                    <div
+                      key={index}
+                      className="text-center"
+                      data-element={`process-step-${index + 1}`}
+                      data-name={`Process Step ${index + 1} - ${step.title}`}
+                    >
+                      <div
+                        className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center shadow-md"
+                        style={{ backgroundColor: 'rgba(27, 36, 36, 1)', border: '2px solid rgba(227, 198, 141, 1)' }}
+                        data-element={`process-step-icon-${index + 1}`}
+                        data-name={`Process Step ${index + 1} Icon - Phase ${step.phase}`}
+                      >
+                        <span
+                          className="text-xl font-cormorant font-bold"
+                          style={{ color: 'rgba(255, 255, 255, 1)' }}
+                          data-element={`process-step-number-${index + 1}`}
+                          data-name={`Process Step ${index + 1} Number`}
+                        >
+                          {step.phase}
+                        </span>
                       </div>
-                      <h3 className="text-xl font-cormorant text-black mb-3">
+                      <h3
+                        className="text-xl font-cormorant text-black mb-3"
+                        data-element={`process-step-title-${index + 1}`}
+                        data-name={`Process Step ${index + 1} Title`}
+                      >
                         {step.title}
                       </h3>
-                      <p className="text-black text-sm leading-relaxed">
+                      <p
+                        className="text-black text-sm leading-relaxed"
+                        data-element={`process-step-description-${index + 1}`}
+                        data-name={`Process Step ${index + 1} Description`}
+                      >
                         {step.description}
                       </p>
                     </div>
