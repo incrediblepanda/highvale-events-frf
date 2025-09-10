@@ -139,12 +139,11 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-inter"
             style={{
               color: 'rgba(255, 255, 255, 1)',
               fontSize: '40px',
               fontWeight: '400',
-              lineHeight: '28px',
+              lineHeight: '50px',
               maxWidth: '768px',
               margin: '0 auto 60px'
             }}
