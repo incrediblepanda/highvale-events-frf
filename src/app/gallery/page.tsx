@@ -36,18 +36,18 @@ export default function GalleryPage() {
 
   // Enhanced gallery with coming soon images and better layout
   const galleryImages = [
-    { id: 1, category: 'weddings', alt: 'Mountain wedding ceremony with stunning backdrop', size: 'tall', image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg' },
+    { id: 1, category: 'weddings', alt: 'Mountain wedding ceremony with stunning backdrop', size: 'tall', image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F5bb27648143e488ab6f639b3640931c2' },
     { id: 2, category: 'details', alt: 'Elegant floral centerpiece', size: 'normal', image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg' },
-    { id: 3, category: 'weddings', alt: 'Romantic first dance', size: 'wide', image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg' },
+    { id: 3, category: 'weddings', alt: 'Romantic first dance', size: 'wide', image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F28c9d97713d44c8baea1a1aaa5b1bcb7' },
     { id: 4, category: 'parties', alt: 'Bachelorette party celebration', size: 'normal', image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg' },
     { id: 5, category: 'details', alt: 'Table setting perfection', size: 'normal', image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg' },
     { id: 6, category: 'corporate', alt: 'Corporate gala dinner setup', size: 'tall', image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg' },
-    { id: 7, category: 'weddings', alt: 'Garden wedding reception', size: 'normal', image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg' },
+    { id: 7, category: 'weddings', alt: 'Garden wedding reception', size: 'normal', image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F83bc7803e09d4a28bf82c368522bf9ff' },
     { id: 8, category: 'parties', alt: 'Milestone birthday party', size: 'wide', image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg' },
-    { id: 9, category: 'weddings', alt: 'Ceremony under the stars', size: 'normal', image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg' },
+    { id: 9, category: 'weddings', alt: 'Ceremony under the stars', size: 'normal', image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fb60f674fe85c445bb0654dbd9a2591c4' },
     { id: 10, category: 'details', alt: 'Bridal bouquet artistry', size: 'tall', image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg' },
     { id: 11, category: 'corporate', alt: 'Product launch event', size: 'normal', image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg' },
-    { id: 12, category: 'weddings', alt: 'Sunset wedding portraits', size: 'wide', image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg' },
+    { id: 12, category: 'weddings', alt: 'Sunset wedding portraits', size: 'wide', image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F1d75e495f4d149ec926832ab0eea47a5' },
   ];
 
   const filteredImages = activeCategory === 'all'
