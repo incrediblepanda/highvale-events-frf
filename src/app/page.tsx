@@ -417,6 +417,8 @@ export default function HomePage() {
                 <a
                   href="/process"
                   className="inline-flex items-center justify-center bg-champagne text-sage-darkest rounded-full shadow-lg transition-all duration-300 hover:scale-105 font-medium mx-auto mt-6"
+                  data-element="process-learn-more-button"
+                  data-name="Process Learn More Button - More About Our Process"
                   style={{
                     gap: '8px',
                     height: '48px',
