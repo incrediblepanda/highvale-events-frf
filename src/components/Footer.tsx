@@ -73,17 +73,17 @@ export default function Footer() {
               data-element="footer-navigation-list"
               data-name="Site Footer > Links Column > List"
             >
-              <li>
+              <li className="font-inter">
                 <Link href="/weddings" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   Weddings
                 </Link>
               </li>
-              <li>
+              <li className="font-inter">
                 <Link href="/party-planning" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   Party Planning
                 </Link>
               </li>
-              <li>
+              <li className="font-inter">
                 <Link href="/about" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   About Us
                 </Link>
