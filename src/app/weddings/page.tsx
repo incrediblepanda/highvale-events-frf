@@ -138,23 +138,25 @@ export default function WeddingsPage() {
         {/* Dark overlay for better text contrast */}
         <div className="absolute inset-0 bg-black/40" />
 
-        {/* Grey-green overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-sage-darkest/20 to-sage-darker/15" />
+        {/* Background image overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F1d75e495f4d149ec926832ab0eea47a5)',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            opacity: '0.38'
+          }}
+        />
 
         <PageTransition className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24 pb-5 sm:pb-0 wedding-hero-mobile">
-          <motion.img
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            src="/golden-wheat-highvale.png"
-            alt="Highvale Events"
-            className="h-20 md:h-24 mx-auto mb-6"
-          />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-cormorant text-sage-darkest mb-4"
+            className="text-4xl md:text-6xl font-cormorant mb-4"
+            style={{ color: 'rgba(255, 255, 255, 1)' }}
           >
             Signature Wedding Planning
           </motion.h1>
@@ -162,7 +164,8 @@ export default function WeddingsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-sage-darker/80 max-w-2xl mx-auto mb-8 leading-relaxed"
+            className="text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed"
+            style={{ color: 'rgba(255, 255, 255, 0.8)' }}
           >
             From full-service planning to day-of coordination, we bring your dream wedding to life with elegance, precision, and Colorado's natural beauty as your backdrop.
           </motion.p>
