@@ -126,6 +126,8 @@ export default function WeddingsPage() {
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20" />
 
+        {/* Background image placeholder */}
+        <div className="absolute inset-0 opacity-10" />
 
         {/* Dark overlay for better text contrast */}
         <div className="absolute inset-0 bg-black/40" />
