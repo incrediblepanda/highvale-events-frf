@@ -1,6 +1,5 @@
 'use client';
 
-import Navigation from '@/components/Navigation';
 import InquirySection from '@/components/InquirySection';
 import AsSeenIn from '@/components/AsSeenIn';
 import FAQSection from '@/components/FAQSection';
@@ -86,7 +85,6 @@ export default function ProcessPage() {
 
   return (
     <div className="min-h-screen bg-cream">
-      <Navigation />
 
       {/* Hero Section - Slimmer version */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">

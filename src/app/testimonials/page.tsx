@@ -1,6 +1,5 @@
 'use client';
 
-import Navigation from '@/components/Navigation';
 import InquirySection from '@/components/InquirySection';
 import AsSeenIn from '@/components/AsSeenIn';
 import { Button } from '@/components/ui/button';
@@ -109,7 +108,6 @@ export default function Testimonials() {
 
   return (
     <div className="min-h-screen bg-cream">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">

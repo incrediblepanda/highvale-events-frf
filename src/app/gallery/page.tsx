@@ -29,7 +29,6 @@ export default function GalleryPage() {
 
   return (
     <>
-      <Navigation />
 
       {/* Hero Section - Matching other pages */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">

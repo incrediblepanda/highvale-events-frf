@@ -1,6 +1,5 @@
 'use client';
 
-import Navigation from '@/components/Navigation';
 import InquirySection from '@/components/InquirySection';
 import PortfolioSection from '@/components/PortfolioSection';
 import AsSeenIn from '@/components/AsSeenIn';
@@ -29,7 +28,6 @@ export default function PartyPlanningPage() {
 
   return (
     <>
-      <Navigation />
 
       {/* Hero Section - Slimmer version */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
