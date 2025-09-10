@@ -51,27 +51,22 @@ export default function PortfolioSection() {
           </p>
         </ScrollAnimation>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mb-12">
           {portfolioItems.map((item, index) => (
             <ScrollAnimation
               key={index}
               animation="fadeInUp"
               delay={index * 0.1}
             >
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift group cursor-pointer">
+              <div className="block h-full w-full object-cover transition-transform duration-500">
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-sage-darkest/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-champagne text-sm mb-1">{item.category}</p>
-                    <h3 className="text-xl font-cormorant">{item.title}</h3>
-                  </div>
                 </div>
-              </Card>
+              </div>
             </ScrollAnimation>
           ))}
         </div>
