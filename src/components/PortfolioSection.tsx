@@ -81,13 +81,25 @@ export default function PortfolioSection() {
               key={index}
               animation="fadeInUp"
               delay={index * 0.1}
+              data-element={`portfolio-item-wrapper-${index + 1}`}
+              data-name={`Portfolio Item ${index + 1} Wrapper`}
             >
-              <div className="block h-full w-full object-cover transition-transform duration-500">
-                <div className="relative h-64 overflow-hidden">
+              <div
+                className="block h-full w-full object-cover transition-transform duration-500"
+                data-element={`portfolio-item-${index + 1}`}
+                data-name={`Portfolio Item ${index + 1} - ${item.title}`}
+              >
+                <div
+                  className="relative h-64 overflow-hidden"
+                  data-element={`portfolio-image-container-${index + 1}`}
+                  data-name={`Portfolio ${index + 1} Image Container`}
+                >
                   <img
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    data-element={`portfolio-image-${index + 1}`}
+                    data-name={`Portfolio ${index + 1} Image - ${item.title}`}
                   />
                 </div>
               </div>
