@@ -68,7 +68,11 @@ export default function Footer() {
             >
               Quick Links
             </h4>
-            <ul className="space-y-2">
+            <ul
+              className="space-y-2"
+              data-element="footer-navigation-list"
+              data-name="Quick Links List"
+            >
               <li>
                 <Link href="/weddings" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   Weddings
