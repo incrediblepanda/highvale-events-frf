@@ -124,33 +124,33 @@ export default function WeddingsPage() {
       <section
         className="relative min-h-[50vh] flex items-center justify-center overflow-hidden"
         data-element="hero-section"
-        data-name="Wedding Hero Section"
+        data-name="Hero Section"
       >
         <div
           className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20"
           data-element="hero-background-gradient"
-          data-name="Hero Background Gradient"
+          data-name="Hero Section > Background Gradient"
         />
 
         {/* Background image placeholder */}
         <div
           className="absolute inset-0 opacity-10"
           data-element="hero-background-placeholder"
-          data-name="Hero Background Placeholder"
+          data-name="Hero Section > Background Placeholder"
         />
 
         {/* Dark overlay for better text contrast */}
         <div
           className="absolute inset-0 bg-black/40"
           data-element="hero-dark-overlay"
-          data-name="Hero Dark Overlay"
+          data-name="Hero Section > Dark Overlay"
         />
 
         {/* Background image overlay */}
         <div
           className="absolute inset-0"
           data-element="hero-background-image"
-          data-name="Hero Background Image"
+          data-name="Hero Section > Background Image"
           style={{
             backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F1d75e495f4d149ec926832ab0eea47a5)',
             backgroundRepeat: 'no-repeat',
@@ -163,7 +163,7 @@ export default function WeddingsPage() {
         <PageTransition
           className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24 pb-5 sm:pb-0 wedding-hero-mobile"
           data-element="hero-content"
-          data-name="Hero Content Container"
+          data-name="Hero Section > Content Box"
         >
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -172,7 +172,7 @@ export default function WeddingsPage() {
             className="text-4xl md:text-6xl font-cormorant mb-4"
             style={{ color: 'rgba(255, 255, 255, 1)' }}
             data-element="hero-title"
-            data-name="Hero Main Title"
+            data-name="Hero Section > Content Box > Heading"
           >
             Signature Wedding Planning
           </motion.h1>
@@ -183,7 +183,7 @@ export default function WeddingsPage() {
             className="text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed"
             style={{ color: 'rgba(255, 255, 255, 0.8)' }}
             data-element="hero-description"
-            data-name="Hero Description"
+            data-name="Hero Section > Content Box > Text"
           >
             From full-service planning to day-of coordination, we bring your dream wedding to life with elegance, precision, and Colorado's natural beauty as your backdrop.
           </motion.p>
@@ -193,7 +193,7 @@ export default function WeddingsPage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
             data-element="hero-buttons"
-            data-name="Hero Action Buttons"
+            data-name="Hero Section > Content Box > Button Container"
           >
             <Button
               onClick={scrollToInquiry}
