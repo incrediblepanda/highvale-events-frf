@@ -141,6 +141,8 @@ export default function HomePage() {
             src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fe15769e1f80b49f2b9ebdbd2ce9bd162"
             alt="Highvale Events & Design"
             className="mx-auto"
+            data-element="hero-company-logo"
+            data-name="Hero Company Logo"
             style={{
               opacity: '0.79',
               height: '200px',
@@ -151,6 +153,8 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            data-element="hero-main-heading"
+            data-name="Hero Main Heading"
             style={{
               color: 'rgba(255, 255, 255, 1)',
               fontSize: '40px',
@@ -168,6 +172,8 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
+            data-element="hero-action-buttons"
+            data-name="Hero Action Buttons Container"
           >
             <Link href="/weddings">
               <Button className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-6 text-lg shadow-lg transform transition-all hover:scale-105">
