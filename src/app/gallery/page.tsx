@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Navigation from '@/components/Navigation';
 import InquirySection from '@/components/InquirySection';
 import { PageTransition } from '@/components/PageTransition';
 import { ScrollAnimation } from '@/components/ScrollAnimation';

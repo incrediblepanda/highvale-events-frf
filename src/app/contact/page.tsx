@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Navigation from '@/components/Navigation';
 import AsSeenIn from '@/components/AsSeenIn';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';

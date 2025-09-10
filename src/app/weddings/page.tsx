@@ -1,6 +1,5 @@
 'use client';
 
-import Navigation from '@/components/Navigation';
 import InquirySection from '@/components/InquirySection';
 import PortfolioSection from '@/components/PortfolioSection';
 import AsSeenIn from '@/components/AsSeenIn';
@@ -120,7 +119,6 @@ export default function WeddingsPage() {
 
   return (
     <>
-      <Navigation />
 
       {/* Hero Section - Slimmer version */}
       <section
