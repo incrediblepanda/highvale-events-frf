@@ -237,31 +237,68 @@ export default function HomePage() {
             </p>
           </ScrollAnimation>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            data-element="services-grid"
+            data-name="Services Cards Grid"
+          >
             {services.map((service, index) => (
               <ScrollAnimation
                 key={index}
                 animation="fadeInUp"
                 delay={index * 0.1}
+                data-element={`service-card-wrapper-${index + 1}`}
+                data-name={`Service Card ${index + 1} Wrapper`}
               >
-                <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift h-full p-0">
+                <Card
+                  className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift h-full p-0"
+                  data-element={`service-card-${index + 1}`}
+                  data-name={`Service Card ${index + 1} - ${service.title}`}
+                >
                   {/* Service image */}
-                  <div className="h-48 overflow-hidden">
+                  <div
+                    className="h-48 overflow-hidden"
+                    data-element={`service-image-container-${index + 1}`}
+                    data-name={`Service ${index + 1} Image Container`}
+                  >
                     <img
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover"
+                      data-element={`service-image-${index + 1}`}
+                      data-name={`Service ${index + 1} Image - ${service.title}`}
                     />
                   </div>
-                  <CardContent className="p-8">
-                    <h3 className="text-2xl font-cormorant text-sage-darkest mb-4">
+                  <CardContent
+                    className="p-8"
+                    data-element={`service-content-${index + 1}`}
+                    data-name={`Service ${index + 1} Content`}
+                  >
+                    <h3
+                      className="text-2xl font-cormorant text-sage-darkest mb-4"
+                      data-element={`service-title-${index + 1}`}
+                      data-name={`Service ${index + 1} Title`}
+                    >
                       {service.title}
                     </h3>
-                    <p className="text-sage-darker/70 mb-6 leading-relaxed">
+                    <p
+                      className="text-sage-darker/70 mb-6 leading-relaxed"
+                      data-element={`service-description-${index + 1}`}
+                      data-name={`Service ${index + 1} Description`}
+                    >
                       {service.description}
                     </p>
-                    <Link href={service.href} className="flex flex-col">
-                      <Button className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full transform transition-all hover:scale-105 mx-auto">
+                    <Link
+                      href={service.href}
+                      className="flex flex-col"
+                      data-element={`service-button-link-${index + 1}`}
+                      data-name={`Service ${index + 1} Button Link`}
+                    >
+                      <Button
+                        className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full transform transition-all hover:scale-105 mx-auto"
+                        data-element={`service-button-${index + 1}`}
+                        data-name={`Service ${index + 1} Button - ${service.title === 'Luxury Weddings' ? 'Plan Your Wedding' : 'Explore Options'}`}
+                      >
                         {service.title === 'Luxury Weddings' ? 'Plan Your Wedding' : 'Explore Options'}
                       </Button>
                     </Link>
