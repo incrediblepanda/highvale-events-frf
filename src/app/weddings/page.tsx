@@ -123,7 +123,11 @@ export default function WeddingsPage() {
       <Navigation />
 
       {/* Hero Section - Slimmer version */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+      <section
+        className="relative min-h-[50vh] flex items-center justify-center overflow-hidden"
+        data-element="hero-section"
+        data-name="Wedding Hero Section"
+      >
         <div className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20" />
 
         {/* Background image placeholder */}
