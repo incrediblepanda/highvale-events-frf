@@ -69,7 +69,11 @@ export default function AboutPage() {
         />
 
         {/* Content */}
-        <PageTransition className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24">
+        <PageTransition
+          className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24"
+          data-element="hero-content-container"
+          data-name="Hero Content Container"
+        >
           <motion.img
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -77,12 +81,16 @@ export default function AboutPage() {
             src="/golden-wheat-highvale.png"
             alt="Highvale Events"
             className="h-20 md:h-24 mx-auto mb-6"
+            data-element="hero-logo"
+            data-name="About Hero Logo"
           />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-6xl font-cormorant text-sage-darkest mb-4"
+            data-element="hero-main-heading"
+            data-name="About Hero Main Heading"
           >
             About Highvale
           </motion.h1>
@@ -91,6 +99,8 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg md:text-xl text-sage-darker/80 max-w-2xl mx-auto mb-8 leading-relaxed"
+            data-element="hero-description"
+            data-name="About Hero Description"
           >
             A passionate team of wedding and event professionals bringing over 40 years of combined experience, creativity, and genuine care to every celebration we touch.
           </motion.p>
