@@ -57,8 +57,15 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="font-cormorant text-xl font-semibold mb-4 text-champagne">
+          <div
+            data-element="footer-quick-links-column"
+            data-name="Footer Quick Links Column"
+          >
+            <h4
+              className="font-cormorant text-xl font-semibold mb-4 text-champagne"
+              data-element="footer-section-heading"
+              data-name="Quick Links Heading"
+            >
               Quick Links
             </h4>
             <ul className="space-y-2">
