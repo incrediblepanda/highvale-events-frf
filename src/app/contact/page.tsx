@@ -39,26 +39,26 @@ export default function Contact() {
     <div
       className="min-h-screen bg-cream"
       data-element="contact-page-wrapper"
-      data-name="Contact Page Wrapper"
+      data-name="Contact Page"
     >
 
       {/* Hero Section */}
       <section
         className="relative min-h-[50vh] flex items-center justify-center overflow-hidden"
         data-element="hero-section"
-        data-name="Contact Hero Section"
+        data-name="Hero Section"
       >
         <div
           className="absolute inset-0 bg-gradient-sage"
           data-element="hero-background-gradient"
-          data-name="Hero Background Gradient"
+          data-name="Hero Section > Background Gradient"
         ></div>
 
         {/* Dark overlay for better text contrast */}
         <div
           className="absolute inset-0 bg-black/30"
           data-element="hero-dark-overlay"
-          data-name="Hero Dark Overlay"
+          data-name="Hero Section > Dark Overlay"
         />
 
         <div
