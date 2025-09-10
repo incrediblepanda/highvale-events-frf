@@ -233,6 +233,8 @@ export default function HomePage() {
       {/* Process Section */}
       <div
         className="w-full py-20"
+        data-element="process-section"
+        data-name="Process Section"
         style={{
           backgroundColor: 'rgba(7, 7, 7, 1)',
           backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fe137fdb8669345f6a848efc534ada837)',
