@@ -141,7 +141,7 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51"
+            src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F79e25098e0fe4082903d579f2e81ecb3"
             alt="Highvale Events & Design"
             className="mx-auto"
             data-element="hero-company-logo"
@@ -149,7 +149,7 @@ export default function HomePage() {
             style={{
               opacity: '0.79',
               height: '200px',
-              marginBottom: '75px'
+              marginBottom: '20px'
             }}
           />
           <motion.h1
