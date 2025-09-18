@@ -370,7 +370,7 @@ export default function WeddingsPage() {
               const isExpanded = expandedCards.includes(index);
               return (
                 <ScrollAnimation key={index} animation="fadeInUp" delay={index * 0.1}>
-                  <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Card className={`bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 ${!isExpanded ? 'h-64' : ''}`}>
                     <CardHeader className="border-b border-sage-dark/10">
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
