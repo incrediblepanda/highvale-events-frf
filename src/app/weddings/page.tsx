@@ -365,18 +365,30 @@ export default function WeddingsPage() {
                     <CardDescription className="text-sage-dark text-xl font-semibold mt-2">
                       {pkg.price}
                     </CardDescription>
-                    <p className="text-sage-darker/60 text-sm mt-1">
-                      {pkg.timeline}
-                    </p>
+                    {pkg.timeline && (
+                      <p className="text-sage-darker/60 text-sm mt-1">
+                        {pkg.timeline}
+                      </p>
+                    )}
                   </CardHeader>
                   <CardContent className="pt-6">
                     <div className="space-y-6">
+                      {pkg.description && (
+                        <div>
+                          <h4 className="font-cormorant text-lg font-semibold text-sage-darkest mb-3">
+                            Description
+                          </h4>
+                          <p className="text-sage-darker/70 text-sm leading-relaxed">
+                            {pkg.description}
+                          </p>
+                        </div>
+                      )}
                       <div>
                         <h4 className="font-cormorant text-lg font-semibold text-sage-darkest mb-3">
-                          During Planning:
+                          Services included in starting price
                         </h4>
                         <ul className="space-y-2">
-                          {pkg.planning.map((item, i) => (
+                          {pkg.includedServices.map((item, i) => (
                             <li key={i} className="flex items-start">
                               <Check className="w-4 h-4 text-sage-dark mt-0.5 mr-2 flex-shrink-0" />
                               <span className="text-sage-darker/70 text-sm">{item}</span>
@@ -384,19 +396,21 @@ export default function WeddingsPage() {
                           ))}
                         </ul>
                       </div>
-                      <div>
-                        <h4 className="font-cormorant text-lg font-semibold text-sage-darkest mb-3">
-                          On Your Wedding Day:
-                        </h4>
-                        <ul className="space-y-2">
-                          {pkg.weddingDay.map((item, i) => (
-                            <li key={i} className="flex items-start">
-                              <Check className="w-4 h-4 text-sage-dark mt-0.5 mr-2 flex-shrink-0" />
-                              <span className="text-sage-darker/70 text-sm">{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                      {pkg.extraServices.length > 0 && (
+                        <div>
+                          <h4 className="font-cormorant text-lg font-semibold text-sage-darkest mb-3">
+                            Services available for extra costs
+                          </h4>
+                          <ul className="space-y-2">
+                            {pkg.extraServices.map((item, i) => (
+                              <li key={i} className="flex items-start">
+                                <Plus className="w-4 h-4 text-sage-dark mt-0.5 mr-2 flex-shrink-0" />
+                                <span className="text-sage-darker/70 text-sm">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                       <div className="pt-4">
                         <Button
                           onClick={scrollToInquiry}
