@@ -352,7 +352,7 @@ export default function WeddingsPage() {
                   className="bg-warm-white rounded-lg p-4 flex items-center space-x-3 hover:bg-champagne/10 transition-colors"
                 >
                   <Plus className="w-5 h-5 text-sage-dark flex-shrink-0" />
-                  <span className="text-sage-darkest text-sm">{addon}</span>
+                  <span className="text-sage-darkest" style={{ font: '400 14px/20px Arial, sans-serif' }}>{addon}</span>
                 </div>
               ))}
             </div>
