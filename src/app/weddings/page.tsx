@@ -362,7 +362,7 @@ export default function WeddingsPage() {
             </div>
 
             <div className="text-center mt-12">
-              <p className="text-sage-darker/70 mb-6 italic">
+              <p className="text-sage-darker/70 mb-6 italic" style={{ fontFamily: 'Arial, sans-serif' }}>
                 All packages can be customized to meet your unique needs
               </p>
               <Button
