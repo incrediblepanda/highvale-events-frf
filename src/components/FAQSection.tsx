@@ -76,11 +76,13 @@ export default function FAQSection() {
               >
                 <AccordionTrigger className="text-left font-cormorant text-xl text-sage-darkest hover:text-sage-dark py-6">
                   {index === 0 || index === 2 ? (
-                    <div style={{ fontFamily: 'Arial, sans-serif' }}>
+                    <div style={{ fontFamily: 'Arial, sans-serif', fontWeight: '500' }}>
                       {faq.question}
                     </div>
                   ) : (
-                    faq.question
+                    <div style={{ fontFamily: 'Arial, sans-serif', fontWeight: '500' }}>
+                      {faq.question}
+                    </div>
                   )}
                 </AccordionTrigger>
                 <AccordionContent className="text-sage-darker/70 leading-relaxed pb-6">
