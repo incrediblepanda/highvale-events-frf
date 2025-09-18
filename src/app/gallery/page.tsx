@@ -90,13 +90,13 @@ export default function GalleryPage() {
           >
             <Button
               onClick={scrollToInquiry}
-              className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-3"
+              className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-3 w-full sm:w-auto"
             >
               Contact Form
             </Button>
             <Button
               onClick={scrollToGallery}
-              className="bg-white/80 hover:bg-white text-sage-darkest border-2 border-sage-dark/20 font-medium rounded-full px-8 py-3"
+              className="bg-white/80 hover:bg-white text-sage-darkest border-2 border-sage-dark/20 font-medium rounded-full px-8 py-3 w-full sm:w-auto"
             >
               View Gallery
             </Button>
