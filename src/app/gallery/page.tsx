@@ -31,23 +31,18 @@ export default function GalleryPage() {
     <>
 
       {/* Hero Section - Matching other pages */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20" />
-
+      <section className="relative overflow-hidden min-h-[590px] justify-center items-center flex pb-5">
         {/* Background image placeholder */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-[0.34]">
           <img
-            src="https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg"
+            src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fe2473936fcf446fdb2c1ec8636394f3e"
             alt=""
             className="w-full h-full object-cover"
           />
         </div>
 
         {/* Dark overlay for better text contrast */}
-        <div className="absolute inset-0 bg-black/40" />
-
-        {/* Grey-green overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-sage-darkest/20 to-sage-darker/15" />
+        <div className="absolute inset-0 opacity-[0.39] bg-[#272727]" />
 
         <PageTransition className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24">
           <motion.img
