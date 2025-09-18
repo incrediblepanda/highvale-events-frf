@@ -449,14 +449,12 @@ export default function HomePage() {
                 }}
               />
               <div
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
                 data-element="process-steps-grid"
                 data-name="Our Process Section > Content Box > Steps Grid"
                 style={{
                   display: "grid",
-                  fontWeight: "400",
-                  gap: "32px",
-                  gridTemplate: "none / repeat(4, minmax(0px, 1fr))"
+                  fontWeight: "400"
                 }}
               >
                 {processSteps.map((step, index) => (
