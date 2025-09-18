@@ -337,11 +337,13 @@ export default function HomePage() {
           backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ffcc2ffa805a84a458af0b921531cc971)",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          backgroundSize: "cover"
+          backgroundSize: "cover",
+          width: "100vw",
+          marginLeft: "calc(50% - 50vw)"
         }}
       >
         <section
-          className="flex flex-col relative w-full self-stretch flex-1 max-w-[1200px] mx-auto"
+          className="flex flex-col relative w-full self-stretch flex-1 mx-auto"
           style={{
             display: "flex",
             flexDirection: "column",
@@ -354,7 +356,6 @@ export default function HomePage() {
             width: "100%",
             alignSelf: "stretch",
             flexGrow: "1",
-            maxWidth: "1200px",
             marginLeft: "auto",
             marginRight: "auto"
           }}
@@ -390,7 +391,7 @@ export default function HomePage() {
                   display: "inline",
                   fontWeight: "700",
                   color: "rgba(255, 255, 255, 1)",
-                  textShadow: "1px 1px 3px rgba(0, 0, 0, 1)"
+                  textShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)"
                 }}
               >
                 Our{" "}
@@ -403,7 +404,7 @@ export default function HomePage() {
                   fontStyle: "italic",
                   fontWeight: "700",
                   color: "rgba(255, 255, 255, 1)",
-                  textShadow: "1px 1px 3px rgba(0, 0, 0, 1)"
+                  textShadow: "1px 1px 1px rgba(0, 0, 0, 0.59)"
                 }}
               >
                 Process
@@ -420,7 +421,7 @@ export default function HomePage() {
                 lineHeight: "32px",
                 maxWidth: "672px",
                 textDecoration: "rgb(0, 0, 0)",
-                textShadow: "1px 1px 3px rgba(0, 0, 0, 1)",
+                textShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)",
                 margin: "0 auto"
               }}
             >
@@ -524,11 +525,9 @@ export default function HomePage() {
                       data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
                       style={{
                         color: "rgba(255, 255, 255, 1)",
-                        fontSize: "20px",
-                        fontWeight: "400",
-                        lineHeight: "23px",
                         textDecoration: "rgb(0, 0, 0)",
-                        textShadow: "1px 1px 3px rgba(0, 0, 0, 1)"
+                        textShadow: "1px 1px 3px rgba(0, 0, 0, 1)",
+                        font: "400 15px/23px Arial, sans-serif "
                       }}
                     >
                       {step.description}
@@ -557,7 +556,7 @@ export default function HomePage() {
                   lineHeight: "28px",
                   textDecoration: "rgb(27, 35, 36)",
                   transitionDuration: "0.3s",
-                  margin: "24px auto 0",
+                  margin: "55px auto 0",
                   padding: "24px 32px"
                 }}
               >
