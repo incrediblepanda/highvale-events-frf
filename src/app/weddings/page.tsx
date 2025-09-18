@@ -354,7 +354,7 @@ export default function WeddingsPage() {
             </p>
           </ScrollAnimation>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {packages.map((pkg, index) => (
               <ScrollAnimation key={index} animation="fadeInUp" delay={index * 0.1}>
                 <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
