@@ -221,13 +221,13 @@ export default function WeddingsPage() {
           >
             <Button
               onClick={scrollToInquiry}
-              className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-3"
+              className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-6 sm:px-8 py-3 text-sm sm:text-base w-full sm:w-auto"
             >
               Contact Form
             </Button>
             <Button
               onClick={scrollToWelcome}
-              className="bg-white/80 hover:bg-white text-sage-darkest border-2 border-sage-dark/20 font-medium rounded-full px-8 py-3"
+              className="bg-white/80 hover:bg-white text-sage-darkest border-2 border-sage-dark/20 font-medium rounded-full px-6 sm:px-8 py-3 text-sm sm:text-base w-full sm:w-auto"
             >
               Learn More
             </Button>
