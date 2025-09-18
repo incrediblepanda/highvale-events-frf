@@ -164,6 +164,10 @@ export default function WeddingsPage() {
           className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24 pb-5 sm:pb-0 wedding-hero-mobile"
           data-element="hero-content"
           data-name="Hero Section > Content Box"
+          style={{
+            display: "flex",
+            flexDirection: "column"
+          }}
         >
           <img
             loading="lazy"
@@ -172,8 +176,8 @@ export default function WeddingsPage() {
               aspectRatio: "3.48",
               objectFit: "cover",
               objectPosition: "center",
-              width: "100%",
-              marginTop: "20px",
+              width: "50%",
+              margin: "20px auto",
               minHeight: "20px",
               minWidth: "20px",
               overflow: "hidden",
