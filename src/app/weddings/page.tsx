@@ -371,26 +371,38 @@ export default function WeddingsPage() {
               return (
                 <ScrollAnimation key={index} animation="fadeInUp" delay={index * 0.1}>
                   <Card className={`bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 ${!isExpanded ? 'h-64' : ''}`}>
-                    <CardHeader className="border-b border-sage-dark/10">
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <CardTitle className="text-3xl font-cormorant text-sage-darkest">
-                            {pkg.title}
-                          </CardTitle>
-                          <CardDescription className="text-sage-dark text-xl font-semibold mt-2">
-                            {pkg.price}
-                          </CardDescription>
-                          {pkg.timeline && (
-                            <p className="text-sage-darker/60 text-sm mt-1">
-                              {pkg.timeline}
-                            </p>
+                    <CardHeader className={`border-b border-sage-dark/10 ${!isExpanded ? 'h-full flex flex-col justify-between' : ''}`}>
+                      <div className="flex items-start justify-between h-full">
+                        <div className="flex-1 flex flex-col justify-between h-full">
+                          <div>
+                            <CardTitle className="text-2xl md:text-3xl font-cormorant text-sage-darkest leading-tight">
+                              {pkg.title}
+                            </CardTitle>
+                            <CardDescription className="text-sage-dark text-xl font-semibold mt-2">
+                              {pkg.price}
+                            </CardDescription>
+                            {pkg.timeline && (
+                              <p className="text-sage-darker/60 text-sm mt-1">
+                                {pkg.timeline}
+                              </p>
+                            )}
+                          </div>
+                          {!isExpanded && (
+                            <div className="mt-4">
+                              <Button
+                                onClick={() => toggleCard(index)}
+                                className="w-full bg-champagne/10 hover:bg-champagne/20 text-sage-darkest font-medium rounded-full border border-champagne/30"
+                              >
+                                View Details
+                              </Button>
+                            </div>
                           )}
                         </div>
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={() => toggleCard(index)}
-                          className="ml-2 p-2 h-auto hover:bg-sage-dark/10"
+                          className="ml-2 p-2 h-auto hover:bg-sage-dark/10 self-start"
                         >
                           {isExpanded ? (
                             <ChevronUp className="h-5 w-5 text-sage-dark" />
