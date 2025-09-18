@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import InquirySection from '@/components/InquirySection';
 import PortfolioSection from '@/components/PortfolioSection';
 import AsSeenIn from '@/components/AsSeenIn';
@@ -8,9 +9,9 @@ import { ScrollAnimation } from '@/components/ScrollAnimation';
 import { PageTransition } from '@/components/PageTransition';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Check, Plus } from 'lucide-react';
+import { Check, Plus, ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function WeddingsPage() {
   const scrollToInquiry = () => {
