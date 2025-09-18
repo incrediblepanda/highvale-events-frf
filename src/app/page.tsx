@@ -372,16 +372,13 @@ export default function HomePage() {
             }}
           >
             <h2
-              className="text-center pt-10 text-4xl md:text-5xl font-cormorant mb-4"
+              className="text-center pt-6 sm:pt-10 text-3xl sm:text-4xl lg:text-5xl font-cormorant mb-3 sm:mb-4 px-4 sm:px-0"
               data-element="process-title"
               data-name="Our Process Section > Content Box > Heading"
               style={{
                 color: "rgb(0, 0, 0)",
-                marginBottom: "16px",
-                paddingTop: "40px",
                 textAlign: "center",
-                textDecoration: "rgb(0, 0, 0)",
-                font: '400 48px/48px "Cormorant Garamond", serif '
+                textDecoration: "rgb(0, 0, 0)"
               }}
             >
               <div
@@ -411,7 +408,7 @@ export default function HomePage() {
               </div>
             </h2>
             <div
-              className="text-2xl max-w-2xl mx-auto"
+              className="text-lg sm:text-xl lg:text-2xl max-w-2xl mx-auto px-4 sm:px-6 lg:px-0 mb-6 sm:mb-8"
               data-element="process-description"
               data-name="Our Process Section > Content Box > Text"
               style={{
@@ -420,7 +417,8 @@ export default function HomePage() {
                 textDecoration: "rgb(0, 0, 0)",
                 textShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)",
                 margin: "0 auto",
-                font: "400 24px/32px Arial, sans-serif "
+                textAlign: "center",
+                lineHeight: "1.5"
               }}
             >
               A seamless journey from concept to celebration.
