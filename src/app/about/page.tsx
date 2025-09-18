@@ -146,7 +146,7 @@ export default function AboutPage() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F5894a5c00c9f4584b87bc389691cf849"
                 alt="Highvale Events Team"
-                className="className="w-full h-full object-cover object-top"
+                className="className=w-full h-full object-cover object-top"
               />
             </div>
 
