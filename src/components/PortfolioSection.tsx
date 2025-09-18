@@ -63,7 +63,8 @@ export default function PortfolioSection() {
             Our <span className="text-sage-dark italic">Portfolio</span>
           </h2>
           <p
-            className="text-lg text-sage-darker/70 max-w-2xl mx-auto"
+            className="max-w-2xl mx-auto"
+            style={{ font: '400 18px/28px Arial, sans-serif', color: 'rgba(33, 43, 42, 0.7)' }}
             data-element="portfolio-description"
             data-name="Our Portfolio Section > Header Box > Text"
           >
