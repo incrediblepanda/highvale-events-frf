@@ -44,10 +44,13 @@ export default function Navigation() {
         data-name="Main Navigation > Container"
       >
         <div
-          className="backdrop-blur-lg border border-white/10 rounded-2xl px-6 py-3 shadow-xl flex items-center justify-between"
+          className="backdrop-blur-lg rounded-2xl px-6 py-3 shadow-xl flex items-center justify-between"
           data-element="nav-content"
           data-name="Main Navigation > Content Box"
-          style={{ backgroundColor: 'rgba(45, 54, 42, 1)' }}
+          style={{
+            backgroundColor: 'rgba(34, 39, 32, 0.95)',
+            border: '1px solid rgba(38, 43, 36, 1)'
+          }}
         >
           {/* Logo */}
           <Link
