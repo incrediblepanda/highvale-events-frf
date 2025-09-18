@@ -122,7 +122,7 @@ export default function WeddingsPage() {
 
       {/* Hero Section - Slimmer version */}
       <section
-        className="relative min-h-[50vh] flex items-center justify-center overflow-hidden"
+        className="relative min-h-[60vh] lg:min-h-[50vh] flex items-center justify-center overflow-hidden"
         data-element="hero-section"
         data-name="Hero Section"
       >
@@ -161,12 +161,14 @@ export default function WeddingsPage() {
         />
 
         <PageTransition
-          className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24 pb-5 sm:pb-0 wedding-hero-mobile"
+          className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 lg:pt-24 lg:pb-5"
           data-element="hero-content"
           data-name="Hero Section > Content Box"
           style={{
             display: "flex",
-            flexDirection: "column"
+            flexDirection: "column",
+            minHeight: "100%",
+            justifyContent: "center"
           }}
         >
           <img
@@ -174,20 +176,21 @@ export default function WeddingsPage() {
             srcSet="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51"
             style={{
               aspectRatio: "3.48",
-              objectFit: "cover",
+              objectFit: "contain",
               objectPosition: "center",
-              width: "50%",
-              margin: "20px auto",
-              minHeight: "20px",
-              minWidth: "20px",
-              overflow: "hidden",
+              width: "80%",
+              maxWidth: "300px",
+              margin: "0 auto 24px",
+              minHeight: "60px",
+              height: "auto",
             }}
+            className="sm:w-1/2 sm:max-w-none"
           />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-cormorant mb-4"
+            className="text-3xl sm:text-4xl lg:text-6xl font-cormorant mb-4 sm:mb-6 leading-tight"
             style={{ color: 'rgba(255, 255, 255, 1)' }}
             data-element="hero-title"
             data-name="Hero Section > Content Box > Heading"
@@ -198,10 +201,10 @@ export default function WeddingsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="max-w-2xl mx-auto mb-8"
+            className="max-w-2xl mx-auto mb-8 sm:mb-10 px-2 sm:px-0"
             style={{
               color: 'rgba(255, 255, 255, 0.8)',
-              font: '400 20px/28px Arial, sans-serif'
+              font: '400 16px/24px Arial, sans-serif'
             }}
             data-element="hero-description"
             data-name="Hero Section > Content Box > Text"
@@ -212,7 +215,7 @@ export default function WeddingsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-10 px-4 sm:px-0"
             data-element="hero-buttons"
             data-name="Hero Section > Content Box > Button Container"
           >
