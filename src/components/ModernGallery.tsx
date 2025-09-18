@@ -122,7 +122,6 @@ const ModernGallery = ({ images, categories, className = '' }: ModernGalleryProp
                     : 'bg-white text-sage-darkest border border-sage-dark/20 hover:bg-sage-dark/5'
                 } rounded-full px-6 py-2.5 transition-all duration-300 font-medium`}
               >
-                {category.icon && <span className="mr-2">{category.icon}</span>}
                 {category.label}
                 <span className="ml-2 text-xs opacity-70">({count})</span>
               </Button>
