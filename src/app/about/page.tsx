@@ -144,7 +144,7 @@ export default function AboutPage() {
             {/* First Image Placeholder */}
             <div className="mb-12 rounded-lg overflow-hidden shadow-lg">
               <img
-                src="https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg"
+                src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F5894a5c00c9f4584b87bc389691cf849"
                 alt="Highvale Events Team"
                 className="w-full h-[400px] object-cover"
               />
