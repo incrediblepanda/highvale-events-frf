@@ -31,7 +31,7 @@ export default function GalleryPage() {
     <>
 
       {/* Hero Section - Matching other pages */}
-      <section className="relative overflow-hidden min-h-[590px] justify-center items-center flex pb-5">
+      <section className="relative overflow-hidden min-h-[60vh] lg:min-h-[590px] justify-center items-center flex pb-5">
         {/* Background image placeholder */}
         <div className="absolute inset-0 opacity-[0.34]">
           <img
@@ -44,27 +44,33 @@ export default function GalleryPage() {
         {/* Dark overlay for better text contrast */}
         <div className="absolute inset-0 opacity-[0.39] bg-[#272727]" />
 
-        <PageTransition className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24">
+        <PageTransition className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 lg:pt-24" style={{
+            display: "flex",
+            flexDirection: "column",
+            minHeight: "100%",
+            justifyContent: "center"
+          }}>
           <img
             loading="lazy"
             srcSet="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51"
             alt="Highvale Events"
             style={{
               aspectRatio: "3.48",
-              objectFit: "cover",
+              objectFit: "contain",
               objectPosition: "center",
-              width: "50%",
-              margin: "20px auto",
-              minHeight: "20px",
-              minWidth: "20px",
-              overflow: "hidden",
+              width: "80%",
+              maxWidth: "300px",
+              margin: "0 auto 24px",
+              minHeight: "60px",
+              height: "auto",
             }}
+            className="sm:w-1/2 sm:max-w-none"
           />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-cormorant text-sage-darkest mb-4"
+            className="text-3xl sm:text-4xl lg:text-6xl font-cormorant text-sage-darkest mb-4 sm:mb-6 leading-tight"
           >
             Our Gallery
           </motion.h1>
@@ -72,7 +78,7 @@ export default function GalleryPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-sage-darker/80 max-w-2xl mx-auto mb-8 leading-relaxed"
+            className="text-base sm:text-lg lg:text-xl text-sage-darker/80 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-2 sm:px-0"
           >
             A curated collection of our favorite moments from weddings, parties, and celebrations across Colorado's most beautiful venues.
           </motion.p>
@@ -80,7 +86,7 @@ export default function GalleryPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-10 px-4 sm:px-0"
           >
             <Button
               onClick={scrollToInquiry}
