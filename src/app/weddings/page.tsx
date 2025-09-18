@@ -366,75 +366,106 @@ export default function WeddingsPage() {
           </ScrollAnimation>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {packages.map((pkg, index) => (
-              <ScrollAnimation key={index} animation="fadeInUp" delay={index * 0.1}>
-                <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                  <CardHeader className="border-b border-sage-dark/10">
-                    <CardTitle className="text-3xl font-cormorant text-sage-darkest">
-                      {pkg.title}
-                    </CardTitle>
-                    <CardDescription className="text-sage-dark text-xl font-semibold mt-2">
-                      {pkg.price}
-                    </CardDescription>
-                    {pkg.timeline && (
-                      <p className="text-sage-darker/60 text-sm mt-1">
-                        {pkg.timeline}
-                      </p>
-                    )}
-                  </CardHeader>
-                  <CardContent className="pt-6">
-                    <div className="space-y-6">
-                      {pkg.description && (
-                        <div>
-                          <h4 className="font-cormorant text-lg font-semibold text-sage-darkest mb-3">
-                            Description
-                          </h4>
-                          <p className="text-sage-darker/70 text-sm leading-relaxed">
-                            {pkg.description}
-                          </p>
+            {packages.map((pkg, index) => {
+              const isExpanded = expandedCards.includes(index);
+              return (
+                <ScrollAnimation key={index} animation="fadeInUp" delay={index * 0.1}>
+                  <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <CardHeader className="border-b border-sage-dark/10">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <CardTitle className="text-3xl font-cormorant text-sage-darkest">
+                            {pkg.title}
+                          </CardTitle>
+                          <CardDescription className="text-sage-dark text-xl font-semibold mt-2">
+                            {pkg.price}
+                          </CardDescription>
+                          {pkg.timeline && (
+                            <p className="text-sage-darker/60 text-sm mt-1">
+                              {pkg.timeline}
+                            </p>
+                          )}
                         </div>
-                      )}
-                      <div>
-                        <h4 className="font-cormorant text-lg font-semibold text-sage-darkest mb-3">
-                          Services included in starting price
-                        </h4>
-                        <ul className="space-y-2">
-                          {pkg.includedServices.map((item, i) => (
-                            <li key={i} className="flex items-start">
-                              <Check className="w-4 h-4 text-sage-dark mt-0.5 mr-2 flex-shrink-0" />
-                              <span className="text-sage-darker/70 text-sm">{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      {pkg.extraServices.length > 0 && (
-                        <div>
-                          <h4 className="font-cormorant text-lg font-semibold text-sage-darkest mb-3">
-                            Services available for extra costs
-                          </h4>
-                          <ul className="space-y-2">
-                            {pkg.extraServices.map((item, i) => (
-                              <li key={i} className="flex items-start">
-                                <Plus className="w-4 h-4 text-sage-dark mt-0.5 mr-2 flex-shrink-0" />
-                                <span className="text-sage-darker/70 text-sm">{item}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                      <div className="pt-4">
                         <Button
-                          onClick={scrollToInquiry}
-                          className="w-full bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full"
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => toggleCard(index)}
+                          className="ml-2 p-2 h-auto hover:bg-sage-dark/10"
                         >
-                          Learn More
+                          {isExpanded ? (
+                            <ChevronUp className="h-5 w-5 text-sage-dark" />
+                          ) : (
+                            <ChevronDown className="h-5 w-5 text-sage-dark" />
+                          )}
                         </Button>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-            ))}
+                    </CardHeader>
+                    <AnimatePresence>
+                      {isExpanded && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
+                          style={{ overflow: "hidden" }}
+                        >
+                          <CardContent className="pt-6">
+                            <div className="space-y-6">
+                              {pkg.description && (
+                                <div>
+                                  <h4 className="font-cormorant text-lg font-semibold text-sage-darkest mb-3">
+                                    Description
+                                  </h4>
+                                  <p className="text-sage-darker/70 text-sm leading-relaxed">
+                                    {pkg.description}
+                                  </p>
+                                </div>
+                              )}
+                              <div>
+                                <h4 className="font-cormorant text-lg font-semibold text-sage-darkest mb-3">
+                                  Services included in starting price
+                                </h4>
+                                <ul className="space-y-2">
+                                  {pkg.includedServices.map((item, i) => (
+                                    <li key={i} className="flex items-start">
+                                      <Check className="w-4 h-4 text-sage-dark mt-0.5 mr-2 flex-shrink-0" />
+                                      <span className="text-sage-darker/70 text-sm">{item}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                              {pkg.extraServices.length > 0 && (
+                                <div>
+                                  <h4 className="font-cormorant text-lg font-semibold text-sage-darkest mb-3">
+                                    Services available for extra costs
+                                  </h4>
+                                  <ul className="space-y-2">
+                                    {pkg.extraServices.map((item, i) => (
+                                      <li key={i} className="flex items-start">
+                                        <Plus className="w-4 h-4 text-sage-dark mt-0.5 mr-2 flex-shrink-0" />
+                                        <span className="text-sage-darker/70 text-sm">{item}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+                              <div className="pt-4">
+                                <Button
+                                  onClick={scrollToInquiry}
+                                  className="w-full bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full"
+                                >
+                                  Get Started
+                                </Button>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </Card>
+                </ScrollAnimation>
+              );
+            })}
           </div>
         </div>
       </section>
