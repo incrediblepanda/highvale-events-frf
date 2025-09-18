@@ -247,7 +247,7 @@ export default function WeddingsPage() {
         />
 
         <PageTransition
-          className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 lg:pt-24 lg:pb-5"
+          className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 lg:pt-24 lg:pb-5 mt-[100px] sm:mt-0"
           data-element="hero-content"
           data-name="Hero Section > Content Box"
           style={{
