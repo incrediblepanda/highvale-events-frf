@@ -11,7 +11,7 @@ import {
 export default function FAQSection() {
   const faqs = [
     {
-      question: 'Why should I choose Highvale Events & Design over another planner?',
+      question: 'Why should I choose Highvale Events over another planner?',
       answer: "At Highvale Events & Design, we specialize in more than just timelines and logistics—we bring custom creation and curated design elements to every event. Many of our clients come to us with Pinterest boards they've been building for years, filled with inspiration and dreams. Our passion is transforming those boards into reality, making sure every detail—big or small—feels intentional and beautifully executed. From designing your wedding signage and styling a custom monogram, to curating the perfect tablescape, we ensure every element reflects your unique vision."
     },
     {
@@ -75,7 +75,13 @@ export default function FAQSection() {
                 className="border border-sage-dark/20 rounded-lg px-6"
               >
                 <AccordionTrigger className="text-left font-cormorant text-xl text-sage-darkest hover:text-sage-dark py-6">
-                  {faq.question}
+                  {index === 0 || index === 2 ? (
+                    <div style={{ fontFamily: 'Arial, sans-serif' }}>
+                      {faq.question}
+                    </div>
+                  ) : (
+                    faq.question
+                  )}
                 </AccordionTrigger>
                 <AccordionContent className="text-sage-darker/70 leading-relaxed pb-6">
                   {faq.answer}
