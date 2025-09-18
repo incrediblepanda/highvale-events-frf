@@ -48,7 +48,7 @@ export default function Navigation() {
           data-element="nav-content"
           data-name="Main Navigation > Content Box"
           style={{
-            backgroundColor: 'rgba(34, 39, 32, 0.95)',
+            backgroundColor: 'rgba(38, 43, 36, 0.95)',
             border: '1px solid rgba(38, 43, 36, 1)'
           }}
         >
@@ -114,7 +114,7 @@ export default function Navigation() {
             data-element="mobile-menu"
             data-name="Main Navigation > Mobile Menu Box"
           >
-            <div className="bg-sage-darkest/95 backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-xl">
+            <div className="backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-xl" style={{ backgroundColor: 'rgba(38, 43, 36, 0.95)' }}>
               <div className="flex flex-col space-y-4">
                 {navLinks.map((link, index) => (
                   <motion.div
