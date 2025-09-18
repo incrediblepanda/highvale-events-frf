@@ -20,7 +20,8 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-sage-darkest text-white py-16"
+      className="text-white py-16"
+      style={{ backgroundColor: '#262b24' }}
       data-element="site-footer"
       data-name="Site Footer"
     >
