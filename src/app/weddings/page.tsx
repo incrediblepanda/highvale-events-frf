@@ -150,7 +150,7 @@ export default function WeddingsPage() {
     {
       title: 'Event design',
       price: 'Starting at $500',
-      timeline: '',
+      timeline: 'Planning timelines vary',
       description: '',
       includedServices: [
         'Event Styling & Design',
