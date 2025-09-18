@@ -29,80 +29,155 @@ export default function WeddingsPage() {
 
   const packages = [
     {
-      title: 'Full Planning',
+      title: 'Full-service planning',
       price: 'Starting at $4,500',
-      timeline: '9-12+ months before wedding',
-      planning: [
-        'Complete design creation',
-        'Full vendor selection and management',
-        'Budget creation and oversight',
-        'Guest list management',
-        'RSVP tracking',
-        'Timeline and logistics planning',
-        'Monthly meetings and unlimited communication'
+      timeline: 'Planning begins 12 Months out',
+      description: 'This service includes assistance with everything in the planning process from start to finish. From vendor and budget advice to designing a beautiful tablescape, full planning ensures that you have a coordinator by your side through all of it. Your coordinator will provide answers to your questions and solutions to any issues that may arise throughout your time together so that things progress smoothly throughout the entire process.',
+      includedServices: [
+        'Event Styling & Design',
+        'Budget Planning',
+        'Venue Recommendations',
+        'Vendor Selection',
+        'Vendor Management',
+        'Contract Review',
+        'Transportation Coordination',
+        'Venue Visits',
+        'Final Venue Walkthrough',
+        'Timeline Creation & Management',
+        'Onsite Event Management'
       ],
-      weddingDay: [
-        'Two assistants on-site',
-        'Full vendor coordination',
-        'Timeline execution',
-        'Guest management',
-        'Emergency kit and troubleshooting'
+      extraServices: [
+        'Rentals & Linens',
+        'Invites & Stationery',
+        'RSVP Tracking',
+        'Wedding Website',
+        'Wedding Favors & Accessories',
+        'Accommodation Coordination'
       ]
     },
     {
-      title: 'Partial Planning',
+      title: 'Partial planning',
       price: 'Starting at $2,500',
-      timeline: '4-6 months before wedding',
-      planning: [
-        'Design refinement and guidance',
-        'Vendor recommendations and review',
-        'Budget review and adjustments',
-        'Timeline creation',
-        'Logistics planning',
-        'Bi-weekly meetings'
+      timeline: 'Planning begins 6 Months out',
+      description: 'This service is for the client who has the main pieces of their planning process in place but is overwhelmed with managing everything in the months leading up to their wedding day. Partial planning services do not provide the same level of support as full planning services, as they typically do not start more than 6 months before the wedding date, unlike full planning which begins at least 12 months prior.',
+      includedServices: [
+        'Event Styling & Design',
+        'Venue Recommendations',
+        'Vendor Management',
+        'Contract Review',
+        'Final Venue Walkthrough',
+        'Timeline Creation & Management',
+        'Onsite Event Management'
       ],
-      weddingDay: [
-        'One assistant on-site',
-        'Vendor coordination',
-        'Timeline management',
-        'Ceremony and reception oversight'
+      extraServices: [
+        'Budget Planning',
+        'Vendor Selection',
+        'Rentals & Linens',
+        'Invites & Stationery',
+        'RSVP Tracking',
+        'Wedding Website',
+        'Wedding Favors & Accessories',
+        'Accommodation Coordination',
+        'Transportation Coordination',
+        'Venue Visits'
       ]
     },
     {
-      title: 'Month-of Coordination',
-      price: 'Starting at $1,000',
-      timeline: '4-6 weeks before wedding',
-      planning: [
-        'Final vendor confirmations',
-        'Timeline finalization',
-        'Rehearsal coordination',
-        'Final detail review',
-        'Two planning meetings'
-      ],
-      weddingDay: [
-        'Day-of coordinator',
-        'Vendor point of contact',
-        'Timeline execution',
-        'Setup oversight'
-      ]
-    },
-    {
-      title: 'Micro Weddings',
+      title: 'Elopement / microwedding',
       price: 'Starting at $700',
-      timeline: 'Under 50 guests',
-      planning: [
-        'Simplified planning support',
-        'Vendor recommendations',
-        'Timeline creation',
-        'Design consultation',
-        'One planning meeting'
+      timeline: 'Planning begins 9 Months out',
+      description: 'A wedding under 50 guests is considered a "micro wedding." This service is for you if you\'re planning a smaller celebration with close friends and family to celebrate your union. A micro wedding is perfect if you want a wedding and all of its traditions on a smaller scale so you don\'t feel overwhelmed by the process and its complexities.',
+      includedServices: [
+        'Venue Recommendations',
+        'Vendor Management',
+        'Contract Review',
+        'Final Venue Walkthrough',
+        'Timeline Creation & Management'
       ],
-      weddingDay: [
-        'One assistant',
-        'Complete coordination',
-        'Vendor management',
-        'Intimate celebration focus'
+      extraServices: [
+        'Event Styling & Design',
+        'Budget Planning',
+        'Vendor Selection',
+        'Rentals & Linens',
+        'Invites & Stationery',
+        'RSVP Tracking',
+        'Wedding Website',
+        'Wedding Favors & Accessories',
+        'Accommodation Coordination',
+        'Transportation Coordination',
+        'Venue Visits',
+        'Onsite Event Management'
       ]
+    },
+    {
+      title: 'Day-of coordination / wedding management',
+      price: 'Starting at $800',
+      timeline: 'Planning begins 3 Months out',
+      description: 'Month-Of Coordination is the perfect service for couples who desire to handle the entire planning process themselves but want to hand over the reins prior to the big day. Our job is to step in and coordinate any of the final details and manage all of the logistics for your event, leaving you to enjoy the last moments before you walk down the aisle.',
+      includedServices: [
+        'Venue Recommendations',
+        'Contract Review',
+        'Final Venue Walkthrough',
+        'Timeline Creation & Management',
+        'Onsite Event Management'
+      ],
+      extraServices: [
+        'Event Styling & Design',
+        'Budget Planning',
+        'Vendor Selection',
+        'Vendor Management',
+        'Rentals & Linens',
+        'Invites & Stationery',
+        'RSVP Tracking',
+        'Wedding Website',
+        'Wedding Favors & Accessories',
+        'Accommodation Coordination',
+        'Transportation Coordination',
+        'Venue Visits'
+      ]
+    },
+    {
+      title: 'Event design',
+      price: 'Starting at $500',
+      timeline: '',
+      description: '',
+      includedServices: [
+        'Event Styling & Design',
+        'Budget Planning',
+        'Venue Recommendations',
+        'Contract Review',
+        'Final Venue Walkthrough',
+        'Timeline Creation & Management',
+        'Onsite Event Management'
+      ],
+      extraServices: [
+        'Vendor Selection',
+        'Vendor Management',
+        'Rentals & Linens',
+        'Invites & Stationery',
+        'RSVP Tracking',
+        'Wedding Website',
+        'Wedding Favors & Accessories',
+        'Accommodation Coordination',
+        'Transportation Coordination',
+        'Venue Visits'
+      ]
+    },
+    {
+      title: 'A la carte',
+      price: 'Starting at $100',
+      timeline: 'Planning begins 9 Months out',
+      description: 'We offer à la carte services that meet your needs! Our parties are customized to each and every client. From intimate weddings, milestone birthdays, bridal showers, baby showers. Our goal is to design and style an event that your guests will be talking about for years. We\'d love to hear from you so please get in touch and we\'ll work with you to provide a quote.',
+      includedServices: [
+        'Event Styling & Design',
+        'Rentals & Linens',
+        'Invites & Stationery',
+        'RSVP Tracking',
+        'Wedding Website',
+        'Wedding Favors & Accessories',
+        'Accommodation Coordination'
+      ],
+      extraServices: []
     }
   ];
 
