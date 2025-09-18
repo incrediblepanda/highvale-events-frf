@@ -416,13 +416,11 @@ export default function HomePage() {
               data-name="Our Process Section > Content Box > Text"
               style={{
                 color: "rgba(255, 255, 255, 1)",
-                fontSize: "24px",
-                fontWeight: "400",
-                lineHeight: "32px",
                 maxWidth: "672px",
                 textDecoration: "rgb(0, 0, 0)",
                 textShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)",
-                margin: "0 auto"
+                margin: "0 auto",
+                font: "400 24px/32px Arial, sans-serif "
               }}
             >
               A seamless journey from concept to celebration.
@@ -548,16 +546,14 @@ export default function HomePage() {
                   borderRadius: "9999px",
                   boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
                   color: "rgb(27, 35, 36)",
-                  fontSize: "18px",
-                  fontWeight: "500",
                   gap: "8px",
                   height: "48px",
                   justifyContent: "center",
-                  lineHeight: "28px",
                   textDecoration: "rgb(27, 35, 36)",
                   transitionDuration: "0.3s",
                   margin: "55px auto 0",
-                  padding: "24px 32px"
+                  padding: "24px 32px",
+                  font: "500 18px/28px Arial, sans-serif "
                 }}
               >
                 More About Our Process
