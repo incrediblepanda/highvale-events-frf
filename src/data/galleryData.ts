@@ -18,10 +18,10 @@ export interface GalleryCategory {
 
 // Gallery Categories - Add new categories here
 export const galleryCategories: GalleryCategory[] = [
-  { id: 'weddings', label: 'Weddings', icon: '💒' },
-  { id: 'parties', label: 'Parties', icon: '🎉' },
-  { id: 'corporate', label: 'Corporate', icon: '🏢' },
-  { id: 'details', label: 'Design Details', icon: '✨' },
+  { id: 'weddings', label: 'Weddings' },
+  { id: 'parties', label: 'Parties' },
+  { id: 'corporate', label: 'Corporate' },
+  { id: 'details', label: 'Design Details' },
 ];
 
 // Gallery Images - Add new images here
