@@ -14,6 +14,16 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function WeddingsPage() {
+  const [expandedCards, setExpandedCards] = useState<number[]>([]);
+
+  const toggleCard = (index: number) => {
+    setExpandedCards(prev =>
+      prev.includes(index)
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
   const scrollToInquiry = () => {
     const inquirySection = document.getElementById('inquiry-section');
     if (inquirySection) {
