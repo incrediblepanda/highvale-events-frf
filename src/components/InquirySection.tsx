@@ -127,10 +127,11 @@ export default function InquirySection() {
             Start Your Journey With Us
           </h2>
           <p
-            className="text-lg mb-12"
+            className="mb-12"
             style={{
               color: 'rgba(255, 255, 255, 1)',
-              textShadow: '1px 1px 3px rgba(0, 0, 0, 1)'
+              textShadow: '1px 1px 3px rgba(0, 0, 0, 1)',
+              font: '400 18px/28px Arial, sans-serif'
             }}
             data-element="section-description"
             data-name="Contact Us Section > Header Box > Text"
