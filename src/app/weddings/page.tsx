@@ -194,8 +194,11 @@ export default function WeddingsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed"
-            style={{ color: 'rgba(255, 255, 255, 0.8)' }}
+            className="max-w-2xl mx-auto mb-8"
+            style={{
+              color: 'rgba(255, 255, 255, 0.8)',
+              font: '400 20px/28px Arial, sans-serif'
+            }}
             data-element="hero-description"
             data-name="Hero Section > Content Box > Text"
           >
@@ -237,7 +240,7 @@ export default function WeddingsPage() {
             <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-8">
               Welcome to Highvale Weddings
             </h2>
-            <p className="text-lg text-sage-darker/70 leading-relaxed mb-6">
+            <p className="mb-6" style={{ font: '400 18px/29px Arial, sans-serif', color: 'rgba(33, 43, 42, 0.7)' }}>
               We offer a variety of wedding planning packages to suit every couple's needs,
               along with customizable add-ons to enhance your experience. Every journey begins
               with a complimentary consultation where we'll discuss your vision, understand your
@@ -264,7 +267,7 @@ export default function WeddingsPage() {
             <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4">
               Wedding Planning Packages
             </h2>
-            <p className="text-lg text-sage-darker/70 max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto" style={{ font: '400 18px/28px Arial, sans-serif', color: 'rgba(33, 43, 42, 0.7)' }}>
               Choose the level of support that's right for your wedding journey
             </p>
           </ScrollAnimation>
@@ -336,7 +339,7 @@ export default function WeddingsPage() {
             <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4">
               Optional Add-Ons
             </h2>
-            <p className="text-lg text-sage-darker/70 max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto" style={{ font: '400 18px/28px Arial, sans-serif', color: 'rgba(33, 43, 42, 0.7)' }}>
               Enhance your package with these additional services
             </p>
           </ScrollAnimation>
