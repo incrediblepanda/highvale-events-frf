@@ -327,6 +327,10 @@
     font-size: 18px !important;
     padding: 0 5px !important;
   }
+  /* FAQ container tweak for mobile */
+  [data-element="faq-container"] {
+    padding-right: 10px !important;
+  }
 }
 
 @media (min-width: 640px) {
