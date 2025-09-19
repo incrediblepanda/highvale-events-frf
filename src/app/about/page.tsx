@@ -54,12 +54,12 @@ export default function AboutPage() {
           </ScrollAnimation>
 
           <ScrollAnimation delay={0.2} className="prose prose-lg max-w-none text-sage">
-            <div style={{ font: '400 20px/32.5px Arial, sans-serif ', marginBottom: '32px', textAlign: 'center' }}>
+            <div style={{ fontFeatureSettings: 'normal', font: '400 20px/32.5px Arial, sans-serif ', marginBottom: '32px', textAlign: 'center' }}>
               We're a highly caffeinated, wedding-obsessed, client-focused team that brings boundless energy and genuine passion to every event we touch.
             </div>
 
             {/* First Image Placeholder (background image) */}
-            <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', marginTop: '20px', height: '500px', backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F800489f1000249769fbb0285c522154a)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', borderRadius: '10px', overflow: 'hidden', border: '1px solid rgba(42, 53, 50, 0)' }} />
+            <div style={{ display: 'flex', backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F800489f1000249769fbb0285c522154a)', backgroundPosition: '50% 50%', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', borderColor: 'rgba(42, 53, 50, 0)', borderRadius: '10px', borderWidth: '1px', flexDirection: 'column', fontWeight: '400', height: '500px', margin: '20px 0', overflowX: 'hidden', overflowY: 'hidden', position: 'relative' }} />
 
             <p className="mb-6" style={{ fontFamily: 'Arial, sans-serif' }}>
               Our approach is simple: we believe your celebration should be as unique as your love story. We're not here to impose a cookie-cutter template or push trendy ideas that don't reflect who you are. Instead, we listen, we learn, and we bring your authentic vision to life with meticulous attention to detail and creative flair.
@@ -75,11 +75,11 @@ export default function AboutPage() {
             {/* Additional visual block */}
             <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', height: '400px', backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F082b40be8f3e44bc80b2566b73f89fa2)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', borderRadius: '10px', overflow: 'hidden', margin: '20px 0 50px' }} />
 
-            <p className="mb-6">
+            <p className="mb-6" style={{ fontFamily: 'Arial, sans-serif' }}>
               We understand that planning a wedding or event can feel overwhelming. That's why we offer flexible support options tailored to your specific journey. Whether you need comprehensive planning from day one or just someone to tie everything together in the final weeks, we're here to make the process seamless and enjoyable.
             </p>
 
-            <p className="mb-8">
+            <p className="mb-8" style={{ fontFamily: 'Arial, sans-serif' }}>
               Our team brings over 40 years of combined industry experience, but more importantly, we bring heart. We're problem-solvers and dream-makers, logistics experts and creative visionaries. We're the calm in the storm and the spark that brings magic to your celebration.
             </p>
 
@@ -87,7 +87,7 @@ export default function AboutPage() {
               <p className="text-2xl font-cormorant text-gold italic text-center mb-6">
                 "Your wedding should be uniquely yours"
               </p>
-              <p className="text-center text-sage">
+              <p className="text-center text-sage" style={{ fontFamily: 'Arial, sans-serif' }}>
                 We believe every couple deserves a celebration that reflects their personality,
                 values, and love story. No two weddings should be the same, and we're committed
                 to ensuring yours is one-of-a-kind.
