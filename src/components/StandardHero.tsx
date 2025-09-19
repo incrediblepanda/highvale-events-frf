@@ -89,6 +89,7 @@ export default function StandardHero({
                   color: 'rgb(255, 255, 255)',
                   textDecoration: 'rgb(255, 255, 255)',
                   margin: '0 auto 24px',
+                  fontFeatureSettings: 'normal',
                   font: '400 60px/60px "Cormorant Garamond", serif ',
                 }}
                 data-element="hero-title"
