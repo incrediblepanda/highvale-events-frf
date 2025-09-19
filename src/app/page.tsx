@@ -421,8 +421,7 @@ export default function HomePage() {
                 flexDirection: "column",
                 fontWeight: "400",
                 maxWidth: "1180px",
-                margin: "0 auto",
-                padding: "0 50px 40px"
+                margin: "0 auto"
               }}
             >
               <div
