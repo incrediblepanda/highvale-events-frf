@@ -385,7 +385,7 @@ export default function HomePage() {
               paddingBottom: "30px",
               width: "100vw",
               marginLeft: "calc(50% - 50vw)",
-              backgroundColor: "rgba(168, 168, 168, 0.43)"
+              backgroundColor: "rgba(114, 114, 114, 0.56)"
             }}
           >
             <h2
@@ -450,7 +450,7 @@ export default function HomePage() {
                 fontWeight: "400",
                 maxWidth: "1180px",
                 margin: "0 auto",
-                padding: "0 24px 40px"
+                padding: "0 50px 40px"
               }}
             >
               <div
@@ -494,9 +494,9 @@ export default function HomePage() {
                         borderWidth: "2px",
                         boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
                         fontWeight: "400",
-                        height: "80px",
+                        height: "45px",
                         justifyContent: "center",
-                        width: "80px",
+                        width: "130px",
                         margin: "0 auto 16px"
                       }}
                       data-element={`process-step-icon-${index + 1}`}
