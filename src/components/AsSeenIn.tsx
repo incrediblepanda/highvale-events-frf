@@ -57,7 +57,7 @@ export default function AsSeenIn() {
             {logos.map((logo, index) => (
               <div
                 key={`first-${index}`}
-                className="flex items-center justify-center px-6 sm:px-12 min-w-[140px] sm:min-w-[280px]"
+                className="flex items-center justify-center px-4 sm:px-8 min-w-[120px] sm:min-w-[240px]"
               >
                 <div className="text-sage/60 font-inter font-medium text-lg tracking-wider whitespace-nowrap">
                   {logo.text}
@@ -68,7 +68,7 @@ export default function AsSeenIn() {
             {logos.map((logo, index) => (
               <div
                 key={`second-${index}`}
-                className="flex items-center justify-center px-6 sm:px-12 min-w-[140px] sm:min-w-[280px]"
+                className="flex items-center justify-center px-4 sm:px-8 min-w-[120px] sm:min-w-[240px]"
               >
                 <div className="text-sage/60 font-inter font-medium text-lg tracking-wider whitespace-nowrap">
                   {logo.text}
