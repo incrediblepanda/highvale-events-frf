@@ -172,8 +172,11 @@ export default function HomePage() {
                   data-element="hero-title"
                   data-name="Hero Section > Content Box > Heading"
                 >
-                  Luxury Wedding <br />
-                  &amp; Event Planning
+                  <span className="sm:hidden">
+                    Luxury Wedding<br />
+                    &amp; Event Planning
+                  </span>
+                  <span className="hidden sm:inline">Luxury Wedding &amp; Event Planning</span>
                   <br />
                   in the Heart of Colorado
                 </motion.h1>
