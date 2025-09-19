@@ -138,7 +138,7 @@ export default function HomePage() {
               }}
             >
               <PageTransition
-                className="relative z-10 text-center mx-auto px-4 sm:px-6 lg:px-8"
+                className="relative z-10 text-center mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-0"
                 data-element="hero-content"
                 data-name="Hero Section > Content Box"
               >
@@ -274,7 +274,7 @@ export default function HomePage() {
               Our <span className="text-sage-dark italic">Services</span>
             </h2>
             <p
-              className="text-lg text-sage-darker/70 max-w-2xl mx-auto"
+              className="text-lg text-sage-darker/70 max-w-2xl mx-auto font-sans sm:font-inherit"
               data-element="services-description"
               data-name="Our Services Section > Header Box > Text"
             >
