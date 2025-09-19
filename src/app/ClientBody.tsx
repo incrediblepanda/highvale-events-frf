@@ -67,7 +67,7 @@ export default function ClientBody({
       data-name="Document Body"
     >
       {children}
-      <ViewportDebugger />
+      <ScrollToTop />
     </body>
   );
 }
