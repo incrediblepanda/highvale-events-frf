@@ -84,7 +84,7 @@ export default function ProcessPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="bg-cream" style={{ minHeight: "calc(var(--vh, 1vh) * 100)" }}>
 
       {/* Hero Section - Slimmer version */}
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "calc(var(--vh, 1vh) * 50)" }}>
