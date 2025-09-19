@@ -491,7 +491,7 @@ export default function HomePage() {
                     textDecoration: "rgb(0, 0, 0)",
                     textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
                     margin: "0 auto",
-                    fontFamily: "Arial, sans-serif"
+                    font: "400 18px/36px Arial, sans-serif"
                   }}
                 >
                   A seamless journey from concept to celebration.
