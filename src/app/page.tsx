@@ -91,208 +91,162 @@ export default function HomePage() {
       data-name="Homepage"
     >
       {/* Hero Section */}
-      <div
+      <section
+        className="relative flex items-center justify-center overflow-hidden"
         style={{
-          display: 'flex',
-          flexDirection: 'column',
-          position: 'relative',
-          minHeight: '100px',
-          backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d)',
+          minHeight: '345px',
+          backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F1d75e495f4d149ec926832ab0eea47a5)',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
-          padding: '0 20px'
+          flexGrow: 0
         }}
+        data-element="hero-section"
+        data-name="Hero Section"
       >
-        <section
+        <div
           style={{
             display: 'flex',
             flexDirection: 'column',
             position: 'relative',
-            minHeight: '100px',
-            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d)',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            padding: '0 20px',
-            width: '100%',
-            alignSelf: 'stretch',
-            flexGrow: 1,
-            maxWidth: '1200px',
-            marginLeft: 'auto',
-            marginRight: 'auto'
+            width: '100vw',
+            marginLeft: 'calc(50% - 50vw)',
+            backgroundColor: 'rgba(66, 68, 66, 0.61)'
           }}
         >
-          <PageTransition
+          <section
             style={{
-              fontWeight: '400',
-              position: 'relative',
-              zIndex: '10',
-              backgroundColor: 'rgba(0, 0, 0, 0.61)',
-              width: '100vw',
-              marginLeft: 'calc(50% - 50vw)',
-              padding: '200px 0 125px'
-            }}
-          >
-            <motion.img
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F79e25098e0fe4082903d579f2e81ecb3"
-              alt="Highvale Events & Design"
-              className="mx-auto block"
-              data-element="hero-company-logo"
-              data-name="Hero Section > Content Box > Logo"
-              style={{
-                display: 'block',
-                fontWeight: '400',
-                height: '200px',
-                margin: '0 auto 40px'
-              }}
-            />
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              data-element="hero-main-heading"
-              data-name="Hero Section > Content Box > Heading"
-              style={{
-                color: 'rgb(255, 255, 255)',
-                fontFeatureSettings: 'normal',
-                textDecoration: 'rgb(255, 255, 255)',
-                display: 'flex',
-                flexDirection: 'column',
-                width: '100vw',
-                margin: '0 auto 20px calc(50% - 50vw)',
-                font: '400 60px/30px "Cormorant Garamond", serif'
-              }}
-            >
-              <div style={{
-                fontFeatureSettings: 'normal',
-                fontSize: '50px',
-                fontWeight: '400',
-                margin: '0 auto'
-              }}>
-                Luxury Wedding & Event Planning
-              </div>
-              <br />
-              <div style={{
-                fontFeatureSettings: 'normal',
-                fontSize: '50px',
-                fontWeight: '400',
-                margin: '0 auto'
-              }}>
-                in the Heart of Colorado
-              </div>
-              <br />
-            </motion.h1>
-            <div style={{
               display: 'flex',
               flexDirection: 'column',
-              fontWeight: '400'
-            }}>
-              <div style={{
+              position: 'relative',
+              width: '100vw',
+              backgroundColor: 'rgba(0, 0, 0, 0.13)',
+              alignSelf: 'stretch',
+              flexGrow: 1,
+              margin: '0 auto 0 calc(50% - 50vw)'
+            }}
+          >
+            <div
+              style={{
                 display: 'flex',
-                fontWeight: '400',
-                gap: '20px',
-                margin: '0 auto'
-              }}>
-                <div style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  fontWeight: '400',
-                  width: '50%'
-                }}>
-                  <Link
-                    href="/weddings"
-                    data-element="hero-primary-button-link"
-                    data-name="Hero Section > Content Box > Button Link"
-                    style={{
-                      display: 'block',
-                      fontWeight: '400'
-                    }}
-                  >
+                flexDirection: 'column',
+                position: 'relative',
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                width: '100vw',
+                alignSelf: 'center',
+                margin: '150px 0 50px'
+              }}
+            >
+              <PageTransition
+                className="relative z-10 text-center mx-auto"
+                data-element="hero-content"
+                data-name="Hero Section > Content Box"
+              >
+                <motion.img
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F79e25098e0fe4082903d579f2e81ecb3"
+                  alt="Highvale Events & Design"
+                  style={{
+                    display: "block",
+                    height: "200px",
+                    margin: "0 auto 24px"
+                  }}
+                  data-element="hero-company-logo"
+                  data-name="Hero Section > Content Box > Logo"
+                />
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  style={{
+                    color: 'rgb(255, 255, 255)',
+                    textDecoration: 'rgb(255, 255, 255)',
+                    margin: '0 auto 24px',
+                    font: '400 60px/60px "Cormorant Garamond", serif '
+                  }}
+                  data-element="hero-title"
+                  data-name="Hero Section > Content Box > Heading"
+                >
+                  Luxury Wedding & Event Planning<br />
+                  in the Heart of Colorado
+                </motion.h1>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  style={{
+                    color: 'rgba(255, 255, 255, 0.8)',
+                    fontFamily: 'Arial, sans-serif',
+                    fontWeight: '400',
+                    maxWidth: '672px',
+                    textDecoration: 'rgba(255, 255, 255, 0.8)',
+                    textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
+                    margin: '0 auto 40px'
+                  }}
+                  data-element="hero-description"
+                  data-name="Hero Section > Content Box > Text"
+                >
+                  From intimate celebrations to grand galas, we bring your vision to life with elegance, precision, and Colorado's natural beauty as your backdrop.
+                </motion.p>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  style={{
+                    display: 'flex',
+                    gap: '16px',
+                    justifyContent: 'center',
+                    marginBottom: '40px'
+                  }}
+                  data-element="hero-buttons"
+                  data-name="Hero Section > Content Box > Button Container"
+                >
+                  <Link href="/weddings">
                     <Button
-                      className="inline-flex items-center bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full shadow-lg transform transition-all hover:scale-105"
-                      data-element="hero-primary-button"
-                      data-name="Hero Section > Content Box > Primary Button"
                       style={{
-                        display: 'inline-flex',
+                        display: 'flex',
                         alignItems: 'center',
-                        animationDuration: '0.3s',
                         backgroundColor: 'rgb(227, 198, 141)',
                         borderRadius: '9999px',
-                        boxShadow: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px',
                         color: 'rgb(27, 35, 36)',
-                        fontFeatureSettings: 'normal',
+                        fontWeight: '500',
                         gap: '8px',
                         height: '48px',
                         justifyContent: 'center',
-                        textDecoration: 'rgb(27, 35, 36)',
-                        textWrap: 'nowrap',
-                        transitionDuration: '0.3s',
-                        whiteSpace: 'nowrap',
-                        transform: 'matrix(1, 0, 0, 1, 0, 0)',
-                        borderColor: 'rgba(0, 0, 0, 0)',
-                        padding: '24px 32px',
-                        font: '500 18px/28px Inter, sans-serif'
+                        padding: '12px 32px'
                       }}
                     >
                       Start Planning Your Event
                     </Button>
                   </Link>
-                </div>
-                <div style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  fontWeight: '400',
-                  width: '50%'
-                }}>
-                  <Link
-                    href="/gallery"
-                    data-element="hero-secondary-button-link"
-                    data-name="Hero Section > Content Box > Button Link"
-                    style={{
-                      display: 'block',
-                      fontWeight: '400'
-                    }}
-                  >
+                  <Link href="/gallery">
                     <Button
-                      className="inline-flex items-center bg-white text-sage-darkest hover:bg-sage-dark/10 rounded-full shadow-lg transform transition-all hover:scale-105"
-                      data-element="hero-secondary-button"
-                      data-name="Hero Section > Content Box > Secondary Button"
                       style={{
-                        display: 'inline-flex',
+                        display: 'flex',
                         alignItems: 'center',
-                        animationDuration: '0.3s',
-                        backgroundColor: 'rgb(255, 255, 255)',
-                        borderColor: 'rgba(59, 79, 54, 0.94)',
+                        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                        borderColor: 'rgba(35, 43, 42, 0.2)',
                         borderRadius: '9999px',
                         borderWidth: '2px',
-                        boxShadow: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px',
                         color: 'rgb(27, 35, 36)',
-                        fontFeatureSettings: 'normal',
+                        fontWeight: '500',
                         gap: '8px',
                         height: '48px',
                         justifyContent: 'center',
-                        textDecoration: 'rgb(27, 35, 36)',
-                        textWrap: 'nowrap',
-                        transitionDuration: '0.3s',
-                        whiteSpace: 'nowrap',
-                        transform: 'matrix(1, 0, 0, 1, 0, 0)',
-                        padding: '24px 32px',
-                        font: '500 18px/28px Inter, sans-serif'
+                        padding: '12px 32px'
                       }}
                     >
                       View Our Portfolio
                     </Button>
                   </Link>
-                </div>
-              </div>
+                </motion.div>
+              </PageTransition>
             </div>
-          </PageTransition>
-        </section>
-      </div>
+          </section>
+        </div>
+      </section>
 
       {/* Services Section */}
       <section
