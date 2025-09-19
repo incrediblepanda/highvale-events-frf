@@ -49,7 +49,8 @@ export default function AsSeenIn() {
           data-name="As Seen In Section > Carousel Box"
         >
           <div
-            className="flex animate-scroll-right-to-left"
+            className="flex animate-scroll-right-to-left gap-4"
+            style={{ width: 'max-content' }}
             data-element="logo-track"
             data-name="As Seen In Section > Carousel Box > Logo Track"
           >
