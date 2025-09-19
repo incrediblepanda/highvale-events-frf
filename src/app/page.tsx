@@ -414,7 +414,7 @@ export default function HomePage() {
             }}
           >
             <div
-              className="max-w-[1180px] mx-auto px-6 pb-10 flex flex-col"
+              className="max-w-[1180px] mx-auto px-5 sm:px-12 pb-10 flex flex-col"
               data-element="process-main-container"
               data-name="Our Process Section > Content Box > Container"
               style={{
@@ -437,7 +437,7 @@ export default function HomePage() {
                 }}
               />
               <h2
-                className="text-center text-3xl sm:text-4xl lg:text-5xl font-cormorant mb-6"
+                className="text-center text-3xl sm:text-4xl lg:text-5xl font-cormorant mb-6 px-2 sm:px-0"
                 data-element="process-title"
                 data-name="Our Process Section > Content Box > Heading"
                 style={{
