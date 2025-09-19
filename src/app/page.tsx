@@ -138,7 +138,7 @@ export default function HomePage() {
               }}
             >
               <PageTransition
-                className="relative z-10 text-center mx-auto"
+                className="relative z-10 text-center mx-auto px-4 sm:px-6 lg:px-8"
                 data-element="hero-content"
                 data-name="Hero Section > Content Box"
               >
@@ -160,11 +160,14 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
                   style={{
                     color: 'rgb(255, 255, 255)',
                     textDecoration: 'rgb(255, 255, 255)',
                     margin: '0 auto 24px',
-                    font: '400 60px/60px "Cormorant Garamond", serif '
+                    fontFamily: '"Cormorant Garamond", serif',
+                    fontWeight: '400',
+                    lineHeight: '1'
                   }}
                   data-element="hero-title"
                   data-name="Hero Section > Content Box > Heading"
@@ -176,6 +179,7 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
+                  className="text-sm sm:text-base md:text-lg"
                   style={{
                     color: 'rgba(255, 255, 255, 0.8)',
                     fontFamily: 'Arial, sans-serif',
