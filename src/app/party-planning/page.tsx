@@ -44,7 +44,7 @@ export default function PartyPlanningPage() {
             <h2 className="text-4xl md:text-5xl font-cormorant text-sage mb-6">
               Celebrate Life's Special Moments
             </h2>
-            <p className="text-lg text-sage/70 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-sage/70 max-w-3xl mx-auto leading-relaxed" style={{ font: '400 18px/29px Arial, sans-serif ' }}>
               From intimate gatherings to grand celebrations, we bring the same attention to detail and
               creative flair to every party we plan. Whether it's a milestone birthday, bachelorette weekend,
               corporate event, or just because you deserve to celebrate, we're here to make it unforgettable.
