@@ -322,6 +322,11 @@
   .hero-desktop-sub {
     display: none !important;
   }
+  /* hero description tweaks on mobile */
+  [data-element="hero-description"] {
+    font-size: 18px !important;
+    padding: 0 5px !important;
+  }
 }
 
 @media (min-width: 640px) {
