@@ -38,7 +38,7 @@ export default function ProcessPage() {
         'Initial vendor recommendations',
         'Style and aesthetic exploration'
       ],
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F800489f1000249769fbb0285c522154a'
     },
     {
       number: 'Phase Two',
@@ -52,7 +52,7 @@ export default function ProcessPage() {
         'Regular check-ins and updates',
         'Logistics coordination'
       ],
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F070cb75f5c4548b3ac4e044635a1b4ad'
     },
     {
       number: 'Phase Three',
@@ -66,7 +66,7 @@ export default function ProcessPage() {
         'Stationery and signage design',
         'Visual direction finalization'
       ],
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F57ab56aab34b44329ef5bad9cf5652e2'
     },
     {
       number: 'Phase Four',
@@ -80,7 +80,7 @@ export default function ProcessPage() {
         'Emergency planning and backup solutions',
         'Complete vendor coordination for event day'
       ],
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F7afb9b4d984d4cdd8ef6358d3cec72be'
     }
   ];
 
