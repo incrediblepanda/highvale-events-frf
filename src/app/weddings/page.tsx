@@ -227,7 +227,7 @@ export default function WeddingsPage() {
             position: 'relative',
             width: '100vw',
             marginLeft: 'calc(50% - 50vw)',
-            backgroundColor: 'rgba(49, 53, 49, 0.61)'
+            backgroundColor: 'rgba(66, 68, 66, 0.61)'
           }}
         >
           <section
