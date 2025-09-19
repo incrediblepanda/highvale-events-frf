@@ -37,7 +37,8 @@ export default function Contact() {
 
   return (
     <div
-      className="min-h-screen bg-cream"
+      className="bg-cream"
+      style={{ minHeight: "calc(var(--vh, 1vh) * 100)" }}
       data-element="contact-page-wrapper"
       data-name="Contact Page"
     >
