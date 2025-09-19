@@ -281,6 +281,13 @@
 
   /* MOBILE / SAFE-AREA / VIEWPORT FIXES */
 
+:root { --scroll-offset: 130px; }
+
+/* Apply a scroll-margin-top so scrolling to anchors leaves space for sticky header */
+[id], [data-scroll-target], [data-element] {
+  scroll-margin-top: calc(var(--scroll-offset) + env(safe-area-inset-top));
+}
+
 /* Hide development-only turbopack bubble / nextjs portal used by devtools so it isn't visible to end users */
 nextjs-portal,
 nextjs-portal * {
