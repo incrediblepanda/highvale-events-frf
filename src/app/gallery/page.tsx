@@ -9,6 +9,7 @@ import ModernGallery from '@/components/ModernGallery';
 import { galleryImages, galleryCategories, getCategoryCounts } from '@/data/galleryData';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import StandardHero from '@/components/StandardHero';
 
 export default function GalleryPage() {
   const scrollToInquiry = () => {
