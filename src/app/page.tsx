@@ -148,9 +148,13 @@ export default function HomePage() {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F79e25098e0fe4082903d579f2e81ecb3"
                   alt="Highvale Events & Design"
-                  className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto max-w-full object-contain mt-[60px] sm:mt-0 mx-auto mb-6"
+                  className="w-auto max-w-full object-contain"
                   style={{
-                    display: "block"
+                    display: "block",
+                    fontWeight: "400",
+                    height: "128px",
+                    objectFit: "contain",
+                    margin: "60px auto 24px",
                   }}
                   data-element="hero-company-logo"
                   data-name="Hero Section > Content Box > Logo"
@@ -162,16 +166,15 @@ export default function HomePage() {
                   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
                   style={{
                     color: 'rgb(255, 255, 255)',
-                    textDecoration: 'rgb(255, 255, 255)',
                     margin: '0 auto 24px',
-                    fontFamily: '"Cormorant Garamond", serif',
-                    fontWeight: '400',
-                    lineHeight: '1'
+                    font: '400 30px/30px "Cormorant Garamond", serif ',
                   }}
                   data-element="hero-title"
                   data-name="Hero Section > Content Box > Heading"
                 >
-                  Luxury Wedding &amp; Event Planning<br />
+                  Luxury Wedding <br />
+                  &amp; Event Planning
+                  <br />
                   in the Heart of Colorado
                 </motion.h1>
                 <motion.p
@@ -181,12 +184,10 @@ export default function HomePage() {
                   className="text-sm sm:text-base md:text-lg"
                   style={{
                     color: 'rgba(255, 255, 255, 0.8)',
-                    fontFamily: 'Arial, sans-serif',
-                    fontWeight: '400',
                     maxWidth: '672px',
-                    textDecoration: 'rgba(255, 255, 255, 0.8)',
-                    textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
-                    margin: '0 auto 40px'
+                    textShadow: 'rgba(0, 0, 0, 0.5) 1px 1px 3px',
+                    margin: '0 auto 40px',
+                    font: '400 14px/20px Arial, sans-serif '
                   }}
                   data-element="hero-description"
                   data-name="Hero Section > Content Box > Text"
