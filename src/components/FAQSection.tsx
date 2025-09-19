@@ -51,6 +51,7 @@ export default function FAQSection() {
             className="text-lg text-sage-darker/70"
             data-element="section-description"
             data-name="FAQ Section > Header Box > Text"
+            style={{ font: '400 18px/28px Arial, sans-serif ' }}
           >
             Common questions about planning your perfect celebration.
           </p>
