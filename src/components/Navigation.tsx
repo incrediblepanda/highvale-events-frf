@@ -138,7 +138,7 @@ export default function Navigation() {
                       className={`block text-white/90 hover:text-champagne transition-colors font-inter font-medium ${
                         pathname === link.href ? 'text-champagne' : ''
                       }`}
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={() => { setIsMenuOpen(false); try { setTimeout(() => window.dispatchEvent(new Event('resize')), 40); } catch(e){} }}
                     >
                       {link.label}
                     </Link>
