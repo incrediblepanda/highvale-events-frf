@@ -281,7 +281,7 @@
 
   /* MOBILE / SAFE-AREA / VIEWPORT FIXES */
 
-:root { --scroll-offset: 130px; }
+:root { --scroll-offset: 105px; }
 
 /* Apply a scroll-margin-top so scrolling to anchors leaves space for sticky header */
 [id], [data-scroll-target], [data-element] {
