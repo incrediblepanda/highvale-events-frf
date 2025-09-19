@@ -75,7 +75,7 @@ export default function FAQPage() {
     <>
 
       {/* Hero Section - Slimmer version */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+      <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "calc(var(--vh, 1vh) * 50)" }}>
         <div className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20" />
 
         {/* Background image placeholder */}
