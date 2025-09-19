@@ -6,6 +6,7 @@ import AsSeenIn from '@/components/AsSeenIn';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ChevronRight, Heart, Calendar, Users } from 'lucide-react';
+import StandardHero from '@/components/StandardHero';
 
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
