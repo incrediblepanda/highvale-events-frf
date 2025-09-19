@@ -164,8 +164,13 @@ export default function HomePage() {
                   Luxuty Wedding & Event Planning<br />
                   in the Heart of Colorado<br />
                 </motion.h1>
-                <div>
-                  <div className="flex gap-5">
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}>
+                  <div className="flex gap-5" style={{
+                    margin: '0 auto'
+                  }}>
                     <div className="flex flex-col w-1/2">
                       <Link
                         href="/weddings"
@@ -195,7 +200,7 @@ export default function HomePage() {
                         data-name="Hero Section > Content Box > Button Link"
                       >
                         <Button
-                          className="inline-flex items-center bg-white text-sage-darkest border-2 border-sage-dark hover:bg-sage-dark/10 rounded-full shadow-lg transform transition-all hover:scale-105"
+                          className="inline-flex items-center bg-white text-sage-darkest hover:bg-sage-dark/10 rounded-full shadow-lg transform transition-all hover:scale-105"
                           data-element="hero-secondary-button"
                           data-name="Hero Section > Content Box > Secondary Button"
                           style={{
@@ -203,7 +208,8 @@ export default function HomePage() {
                             height: '48px',
                             justifyContent: 'center',
                             padding: '24px 32px',
-                            font: '500 18px/28px Inter, sans-serif'
+                            font: '500 18px/28px Inter, sans-serif',
+                            border: '2px solid rgba(59, 79, 54, 0.94)'
                           }}
                         >
                           View Our Portfolio
