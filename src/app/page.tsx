@@ -92,8 +92,6 @@ export default function HomePage() {
     >
       {/* Hero Section */}
       <div
-        maxWidth={1200}
-        lazyLoad={false}
         style={{
           display: 'flex',
           flexDirection: 'column',
