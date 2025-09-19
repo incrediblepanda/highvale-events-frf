@@ -148,10 +148,9 @@ export default function HomePage() {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F79e25098e0fe4082903d579f2e81ecb3"
                   alt="Highvale Events & Design"
-                  className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto max-w-full object-contain"
+                  className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto max-w-full object-contain mt-[60px] sm:mt-0 mx-auto mb-6"
                   style={{
-                    display: "block",
-                    margin: "0 auto 24px"
+                    display: "block"
                   }}
                   data-element="hero-company-logo"
                   data-name="Hero Section > Content Box > Logo"
@@ -414,7 +413,7 @@ export default function HomePage() {
             }}
           >
             <div
-              className="max-w-[1180px] mx-auto px-5 sm:px-12 pb-10 flex flex-col"
+              className="max-w-[1180px] mx-auto px-[15px] sm:px-12 pb-10 flex flex-col"
               data-element="process-main-container"
               data-name="Our Process Section > Content Box > Container"
               style={{
