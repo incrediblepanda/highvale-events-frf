@@ -93,7 +93,7 @@ export default function InquirySection() {
 
   return (
     <section
-      className="py-20"
+      className="py-10"
       style={{
         backgroundColor: 'rgba(1, 1, 1, 1)',
         backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F4b9ba40f793140a2982a78715899cb1f)',

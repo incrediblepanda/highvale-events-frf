@@ -18,7 +18,7 @@ export default function AsSeenIn() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="py-16 bg-white border-t border-sage/10 overflow-hidden"
+      className="py-10 bg-white border-t border-sage/10 overflow-hidden"
       data-element="as-seen-in-section"
       data-name="As Seen In Section"
     >

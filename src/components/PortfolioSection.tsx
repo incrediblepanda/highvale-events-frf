@@ -41,7 +41,7 @@ export default function PortfolioSection() {
 
   return (
     <section
-      className="py-20 bg-cream"
+      className="py-10 bg-cream"
       data-element="portfolio-section"
       data-name="Our Portfolio Section"
     >

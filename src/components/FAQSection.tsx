@@ -26,7 +26,7 @@ export default function FAQSection() {
 
   return (
     <section
-      className="py-20 bg-white"
+      className="py-10 bg-white"
       data-element="faq-section"
       data-name="FAQ Section"
     >
