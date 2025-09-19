@@ -443,7 +443,7 @@ export default function HomePage() {
                   marginBottom: "25px",
                   textAlign: "center",
                   textDecoration: "rgb(0, 0, 0)",
-                  backgroundColor: "rgba(0, 0, 0, 0.5)",
+                  backgroundColor: "rgba(0, 0, 0, 0.31)",
                   borderRadius: "10px",
                   overflow: "hidden",
                   padding: "25px 0",
