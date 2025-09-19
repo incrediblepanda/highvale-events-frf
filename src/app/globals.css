@@ -303,14 +303,15 @@ nextjs-portal * {
   }
 
   main[data-element="main-content"] {
-    /* Prefer dynamic viewport fill for mobile browsers to avoid 100vh issues */
-    /* Uses --vh set via JS (1% of the viewport height) to avoid mobile address bar issues */
-    min-height: calc(var(--vh, 1vh) * 100);
-    min-height: -webkit-fill-available;
-    min-height: 100vh;
+    /* Make main fill the viewport using the dynamic --vh value so it becomes the scroll container */
+    height: calc(var(--vh, 1vh) * 100);
+    max-height: calc(var(--vh, 1vh) * 100);
+    min-height: 100px; /* fallback */
+
     /* Make main the primary scroll container to avoid nested scrollbars */
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+
     /* Reserve space under the fixed nav using --site-nav-height set by the nav component */
     padding-top: calc(env(safe-area-inset-top) + var(--site-nav-height, 0px));
   }
