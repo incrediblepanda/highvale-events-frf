@@ -172,11 +172,11 @@ export default function HomePage() {
                   data-element="hero-title"
                   data-name="Hero Section > Content Box > Heading"
                 >
-                  <span className="hero-mobile-title" style={{ fontWeight: '400', display: 'block' }}>
+                  <span className="hero-mobile-title" style={{ fontWeight: '400' }}>
                     Luxury Wedding
                     <br
                       data-loc="src/app/page.tsx:231:128"
-                      style={{ display: 'inline', fontWeight: '400' }}
+                      style={{ fontWeight: '400' }}
                     />
                     &amp; Event Planning
                     <br />
@@ -184,11 +184,11 @@ export default function HomePage() {
                     <br />
                   </span>
 
-                  <div className="hero-desktop-title" style={{ display: 'none', fontWeight: '400' }}>
+                  <div className="hero-desktop-title" style={{ fontWeight: '400' }}>
                     Luxury Wedding &amp; Event Planning
                   </div>
 
-                  <div className="hero-desktop-sub" style={{ display: 'none', fontWeight: '400' }}>
+                  <div className="hero-desktop-sub" style={{ fontWeight: '400' }}>
                     in the Heart of Colorado
                   </div>
                 </motion.h1>
