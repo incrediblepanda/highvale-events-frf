@@ -524,7 +524,7 @@ export default function HomePage() {
                         color: "rgba(255, 255, 255, 1)",
                         marginBottom: "12px",
                         textDecoration: "rgb(0, 0, 0)",
-                        textShadow: "1px 1px 3px rgba(0, 0, 0, 1)",
+                        textShadow: "1px 1px 3px rgba(0, 0, 0, 0.75)",
                         font: '400 30px/28px "Cormorant Garamond", serif '
                       }}
                     >
@@ -537,7 +537,7 @@ export default function HomePage() {
                       style={{
                         color: "rgba(255, 255, 255, 1)",
                         textDecoration: "rgb(0, 0, 0)",
-                        textShadow: "1px 1px 3px rgba(0, 0, 0, 1)",
+                        textShadow: "1px 1px 3px rgba(0, 0, 0, 0.75)",
                         font: "400 15px/23px Arial, sans-serif "
                       }}
                     >
