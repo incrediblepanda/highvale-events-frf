@@ -278,6 +278,36 @@
   .animation-delay-600 {
     animation-delay: 600ms;
   }
+
+  /* MOBILE / SAFE-AREA / VIEWPORT FIXES */
+  /* Ensure the document and main content fill available space and respect safe-area insets */
+  html, body, main {
+    height: 100%;
+    min-height: 100%;
+  }
+
+  main[data-element="main-content"] {
+    min-height: -webkit-fill-available;
+    min-height: 100vh;
+  }
+
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: auto;
+    overflow-x: hidden;
+  }
+
+  /* Position top navigation below the safe area on devices with notches */
+  [data-element="main-navigation"] {
+    top: env(safe-area-inset-top);
+  }
+
+  /* Prevent scroll traps */
+  section {
+    overflow-anchor: none;
+  }
 }
 
 /* Ivy font utility classes */
