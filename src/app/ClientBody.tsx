@@ -8,26 +8,53 @@ export default function ClientBody({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    // This runs only on the client after hydration
+    // client-only runtime adjustments
     document.body.classList.add("antialiased");
+    document.body.style.overflowX = "hidden";
 
-    // Set CSS var --vh to be 1% of the viewport height to work around mobile UI chrome
+    // Robust --vh calculation using VisualViewport when available
+    let rafId: number | null = null;
+
     const setVh = () => {
-      const vh = window.innerHeight * 0.01;
+      const viewportHeight = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
+      const vh = viewportHeight * 0.01;
       document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+
+    const scheduleSetVh = () => {
+      if (rafId != null) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        setVh();
+        rafId = null;
+      });
     };
 
     setVh();
 
-    window.addEventListener("resize", setVh);
-    window.addEventListener("orientationchange", setVh);
+    // Listen to multiple sources of viewport change
+    window.addEventListener("resize", scheduleSetVh);
+    window.addEventListener("orientationchange", scheduleSetVh);
 
-    // Prevent body from having an explicit height that might create nested scrolling
-    document.body.style.overflowX = "hidden";
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", scheduleSetVh);
+      window.visualViewport.addEventListener("scroll", scheduleSetVh);
+    }
+
+    // Also update when page becomes visible again (e.g., after switching apps)
+    const onVisibilityChange = () => {
+      if (document.visibilityState === "visible") scheduleSetVh();
+    };
+    document.addEventListener("visibilitychange", onVisibilityChange);
 
     return () => {
-      window.removeEventListener("resize", setVh);
-      window.removeEventListener("orientationchange", setVh);
+      window.removeEventListener("resize", scheduleSetVh);
+      window.removeEventListener("orientationchange", scheduleSetVh);
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener("resize", scheduleSetVh);
+        window.visualViewport.removeEventListener("scroll", scheduleSetVh);
+      }
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      if (rafId != null) cancelAnimationFrame(rafId);
     };
   }, []);
 
