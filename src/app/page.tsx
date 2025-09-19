@@ -201,26 +201,30 @@ export default function HomePage() {
                   data-element="hero-buttons"
                   data-name="Hero Section > Content Box > Button Container"
                 >
+                  <Button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const el = document.getElementById('inquiry-section');
+                      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }}
+                    className="w-full sm:w-auto"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      backgroundColor: 'rgb(227, 198, 141)',
+                      borderRadius: '9999px',
+                      color: 'rgb(27, 35, 36)',
+                      fontWeight: '500',
+                      gap: '8px',
+                      height: '48px',
+                      justifyContent: 'center',
+                      padding: '12px 32px'
+                    }}
+                  >
+                    Start Planning Your Event
+                  </Button>
+
                   <Link href="/weddings">
-                    <Button
-                      className="w-full sm:w-auto"
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        backgroundColor: 'rgb(227, 198, 141)',
-                        borderRadius: '9999px',
-                        color: 'rgb(27, 35, 36)',
-                        fontWeight: '500',
-                        gap: '8px',
-                        height: '48px',
-                        justifyContent: 'center',
-                        padding: '12px 32px'
-                      }}
-                    >
-                      Start Planning Your Event
-                    </Button>
-                  </Link>
-                  <Link href="/gallery">
                     <Button
                       className="w-full sm:w-auto"
                       style={{
@@ -238,7 +242,7 @@ export default function HomePage() {
                         padding: '12px 32px'
                       }}
                     >
-                      View Our Portfolio
+                      Wedding Planning Packages
                     </Button>
                   </Link>
                 </motion.div>
