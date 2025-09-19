@@ -303,10 +303,11 @@ nextjs-portal * {
   }
 
   main[data-element="main-content"] {
-    /* Make main fill the viewport using the dynamic --vh value so it becomes the scroll container */
-    height: calc(var(--vh, 1vh) * 100);
-    max-height: calc(var(--vh, 1vh) * 100);
-    min-height: 100px; /* fallback */
+    /* Prefer dynamic viewport fill for mobile browsers to avoid 100vh issues */
+    /* Uses --vh set via JS (1% of the viewport height) to avoid mobile address bar issues */
+    min-height: calc(var(--vh, 1vh) * 100);
+    min-height: -webkit-fill-available;
+    min-height: 100vh;
 
     /* Make main the primary scroll container to avoid nested scrollbars */
     overflow-y: auto;
@@ -317,8 +318,8 @@ nextjs-portal * {
   }
 
   body {
-    /* Prevent body from scrolling when main is the primary scroll container */
-    overflow-y: hidden;
+    /* Allow body scrolling as a fallback; main will handle primary scroll but body must not be locked */
+    overflow-y: visible;
     padding-bottom: env(safe-area-inset-bottom);
     overscroll-behavior-y: auto;
     overflow-x: hidden;
