@@ -293,12 +293,16 @@
     min-height: calc(var(--vh, 1vh) * 100);
     min-height: -webkit-fill-available;
     min-height: 100vh;
-    /* Let the document (body) be the primary scroll container */
-    overflow-y: visible;
+    /* Make main the primary scroll container to avoid nested scrollbars */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Reserve space under the fixed nav using --site-nav-height set by the nav component */
+    padding-top: calc(env(safe-area-inset-top) + var(--site-nav-height, 0px));
   }
 
   body {
-    padding-top: env(safe-area-inset-top);
+    /* Prevent body from scrolling when main is the primary scroll container */
+    overflow-y: hidden;
     padding-bottom: env(safe-area-inset-bottom);
     overscroll-behavior-y: auto;
     overflow-x: hidden;
