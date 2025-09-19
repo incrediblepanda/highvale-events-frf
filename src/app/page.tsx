@@ -410,61 +410,9 @@ export default function HomePage() {
               paddingBottom: "30px",
               width: "100vw",
               marginLeft: "calc(50% - 50vw)",
-              backgroundColor: "rgba(114, 114, 114, 0.56)"
+              backgroundColor: "rgba(48, 48, 48, 0.4)"
             }}
           >
-            <h2
-              className="text-center pt-6 sm:pt-10 text-3xl sm:text-4xl lg:text-5xl font-cormorant mb-3 sm:mb-4 px-4 sm:px-0"
-              data-element="process-title"
-              data-name="Our Process Section > Content Box > Heading"
-              style={{
-                color: "rgb(0, 0, 0)",
-                textAlign: "center",
-                textDecoration: "rgb(0, 0, 0)"
-              }}
-            >
-              <div
-                data-element="process-title-our"
-                data-name="Our Process Section > Content Box > Heading > Our"
-                style={{
-                  display: "inline",
-                  fontWeight: "700",
-                  color: "rgba(255, 255, 255, 1)",
-                  textShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)"
-                }}
-              >
-                Our{" "}
-              </div>
-              <div
-                data-element="process-title-process"
-                data-name="Our Process Section > Content Box > Heading > Process"
-                style={{
-                  display: "inline",
-                  fontStyle: "italic",
-                  fontWeight: "700",
-                  color: "rgba(255, 255, 255, 1)",
-                  textShadow: "1px 1px 1px rgba(0, 0, 0, 0.59)"
-                }}
-              >
-                Process
-              </div>
-            </h2>
-            <div
-              className="text-lg sm:text-xl lg:text-2xl max-w-2xl mx-auto px-4 sm:px-6 lg:px-0 mb-6 sm:mb-8"
-              data-element="process-description"
-              data-name="Our Process Section > Content Box > Text"
-              style={{
-                color: "rgba(255, 255, 255, 1)",
-                maxWidth: "672px",
-                textDecoration: "rgb(0, 0, 0)",
-                textShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)",
-                margin: "0 auto",
-                textAlign: "center",
-                lineHeight: "1.5"
-              }}
-            >
-              A seamless journey from concept to celebration.
-            </div>
             <div
               className="max-w-[1180px] mx-auto px-6 pb-10 flex flex-col"
               data-element="process-main-container"
@@ -488,6 +436,68 @@ export default function HomePage() {
                   textAlign: "center"
                 }}
               />
+              <h2
+                className="text-center text-3xl sm:text-4xl lg:text-5xl font-cormorant mb-6"
+                data-element="process-title"
+                data-name="Our Process Section > Content Box > Heading"
+                style={{
+                  color: "rgb(0, 0, 0)",
+                  marginBottom: "25px",
+                  textAlign: "center",
+                  textDecoration: "rgb(0, 0, 0)",
+                  backgroundColor: "rgba(0, 0, 0, 0.5)",
+                  borderRadius: "10px",
+                  overflow: "hidden",
+                  padding: "25px 0",
+                  font: '400 48px/48px "Cormorant Garamond", serif ',
+                  border: "1px solid rgba(0, 0, 0, 0)"
+                }}
+              >
+                <div
+                  data-element="process-title-our"
+                  data-name="Our Process Section > Content Box > Heading > Our"
+                  style={{
+                    display: "inline",
+                    color: "rgb(255, 255, 255)",
+                    fontWeight: "700",
+                    textDecoration: "rgb(255, 255, 255)",
+                    textShadow: "rgba(0, 0, 0, 0.6) 1px 1px 3px"
+                  }}
+                >
+                  Our
+                </div>
+                <div
+                  data-element="process-title-process"
+                  data-name="Our Process Section > Content Box > Heading > Process"
+                  style={{
+                    display: "inline",
+                    color: "rgb(255, 255, 255)",
+                    fontStyle: "italic",
+                    fontWeight: "700",
+                    textDecoration: "rgb(255, 255, 255)",
+                    textShadow: "rgba(0, 0, 0, 0.59) 1px 1px 1px"
+                  }}
+                >
+                  Process
+                </div>
+                <div
+                  data-element="process-description"
+                  data-name="Our Process Section > Content Box > Text"
+                  style={{
+                    color: "rgb(255, 255, 255)",
+                    fontSize: "24px",
+                    fontWeight: "400",
+                    lineHeight: "36px",
+                    maxWidth: "672px",
+                    textAlign: "center",
+                    textDecoration: "rgb(0, 0, 0)",
+                    textShadow: "rgba(0, 0, 0, 0.6) 1px 1px 3px",
+                    margin: "0 auto"
+                  }}
+                >
+                  A seamless journey from concept to celebration.
+                </div>
+              </h2>
               <div
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
                 data-element="process-steps-grid"
@@ -500,12 +510,21 @@ export default function HomePage() {
                 {processSteps.map((step, index) => (
                   <div
                     key={index}
-                    className="text-center"
+                    className=""
                     data-element={`process-step-${index + 1}`}
                     data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box`}
                     style={{
                       fontWeight: "400",
-                      textAlign: "center"
+                      color: "rgba(250, 250, 250, 0.85)",
+                      fontFamily: "Inter, sans-serif",
+                      textDecoration: "rgba(250, 250, 250, 0.85)",
+                      backgroundColor: "rgba(0, 0, 0, 0.5)",
+                      borderRadius: "10px",
+                      overflow: "hidden",
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "32px",
+                      border: "1px solid rgba(250, 250, 250, 0)"
                     }}
                   >
                     <div
@@ -519,9 +538,9 @@ export default function HomePage() {
                         borderWidth: "2px",
                         boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
                         fontWeight: "400",
-                        height: "45px",
+                        height: "90px",
                         justifyContent: "center",
-                        width: "130px",
+                        width: "90px",
                         margin: "0 auto 16px"
                       }}
                       data-element={`process-step-icon-${index + 1}`}
@@ -546,10 +565,10 @@ export default function HomePage() {
                       data-element={`process-step-title-${index + 1}`}
                       data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Heading`}
                       style={{
-                        color: "rgba(255, 255, 255, 1)",
-                        marginBottom: "12px",
+                        color: "rgb(255, 255, 255)",
                         textDecoration: "rgb(0, 0, 0)",
-                        textShadow: "1px 1px 3px rgba(0, 0, 0, 0.75)",
+                        textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
+                        margin: "0 auto 12px",
                         font: '400 30px/28px "Cormorant Garamond", serif '
                       }}
                     >
