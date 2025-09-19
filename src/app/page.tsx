@@ -473,6 +473,7 @@ export default function HomePage() {
                     display: "inline",
                     color: "rgb(255, 255, 255)",
                     fontStyle: "italic",
+                    fontWeight: "400",
                     textDecoration: "rgb(255, 255, 255)",
                     textShadow: "rgba(0, 0, 0, 0.59) 1px 1px 1px"
                   }}
