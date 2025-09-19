@@ -5,6 +5,7 @@ import AsSeenIn from '@/components/AsSeenIn';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { MapPin, Clock, Mail, Phone, Calendar, Users, Heart } from 'lucide-react';
+import StandardHero from '@/components/StandardHero';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
