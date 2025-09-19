@@ -624,7 +624,7 @@ export default function HomePage() {
         data-name="FAQ Section"
       >
         <div
-          className="max-w-3xl mx-auto pr-6"
+          className="max-w-3xl mx-auto pr-6 px-[10px] sm:px-0"
           data-element="faq-container"
           data-name="FAQ Section > Container"
         >
