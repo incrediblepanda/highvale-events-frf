@@ -281,32 +281,43 @@
 
   /* MOBILE / SAFE-AREA / VIEWPORT FIXES */
   /* Ensure the document and main content fill available space and respect safe-area insets */
-  html, body, main {
-    height: 100%;
+  html, body {
+    /* Avoid forcing height:100% which can create nested scroll containers on some mobile browsers */
+    height: auto;
     min-height: 100%;
   }
 
   main[data-element="main-content"] {
+    /* Prefer dynamic viewport fill for mobile browsers to avoid 100vh issues */
     min-height: -webkit-fill-available;
     min-height: 100vh;
+    /* Ensure main is the primary scroll container */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   body {
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
-    -webkit-overflow-scrolling: touch;
     overscroll-behavior-y: auto;
     overflow-x: hidden;
+    position: relative;
+    background-color: #fff;
   }
 
   /* Position top navigation below the safe area on devices with notches */
   [data-element="main-navigation"] {
-    top: env(safe-area-inset-top);
+    top: calc(env(safe-area-inset-top) + 0px);
   }
 
   /* Prevent scroll traps */
   section {
     overflow-anchor: none;
+  }
+
+  /* Ensure no element inadvertently traps scrolling by having overflow:auto without intent */
+  *:not(body):not(html) {
+    -webkit-overflow-scrolling: touch;
   }
 }
 
