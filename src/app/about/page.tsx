@@ -29,110 +29,19 @@ export default function AboutPage() {
     <>
 
       {/* Hero Section */}
-      <section
-        className="relative flex items-center justify-center overflow-hidden"
-        data-element="hero-section"
-        data-name="Hero Section"
-        style={{ minHeight: "calc(var(--vh, 1vh) * 50)" }}
-      >
-        {/* Background gradient */}
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20"
-          data-element="hero-background-gradient"
-          data-name="Hero Section > Background Gradient"
-        />
-
-        {/* Background image placeholder */}
-        <div
-          className="absolute inset-0 opacity-10"
-          data-element="hero-background-image"
-          data-name="Hero Section > Background Image"
-        >
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F5894a5c00c9f4584b87bc389691cf849"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Dark overlay for better text contrast */}
-        <div
-          className="absolute inset-0 bg-black/40"
-          data-element="hero-dark-overlay"
-          data-name="Hero Section > Dark Overlay"
-        />
-
-        {/* Grey-green overlay */}
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-sage-darkest/20 to-sage-darker/15"
-          data-element="hero-color-overlay"
-          data-name="Hero Section > Color Overlay"
-        />
-
-        {/* Content */}
-        <PageTransition
-          className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24"
-          data-element="hero-content-container"
-          data-name="Hero Section > Content Box"
-        >
-          <img
-            loading="lazy"
-            srcSet="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51"
-            alt="Highvale Events"
-            data-element="hero-logo"
-            data-name="Hero Section > Content Box > Logo"
-            style={{
-              aspectRatio: "3.48",
-              objectFit: "cover",
-              objectPosition: "center",
-              width: "50%",
-              margin: "20px auto",
-              minHeight: "20px",
-              minWidth: "20px",
-              overflow: "hidden",
-            }}
-          />
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-cormorant text-sage-darkest mb-4"
-            data-element="hero-main-heading"
-            data-name="Hero Section > Content Box > Heading"
-          >
+      <StandardHero
+        title={
+          <>
             About Highvale
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-sage-darker/80 max-w-2xl mx-auto mb-8 leading-relaxed"
-            data-element="hero-description"
-            data-name="Hero Section > Content Box > Text"
-          >
+          </>
+        }
+        subtitle={
+          <>
             A passionate team of wedding and event professionals bringing over 40 years of combined experience, creativity, and genuine care to every celebration we touch.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
-          >
-            <Button
-              onClick={scrollToInquiry}
-              className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-3"
-            >
-              Contact Form
-            </Button>
-            <Button
-              onClick={scrollToWhoWeAre}
-              className="bg-white/80 hover:bg-white text-sage-darkest border-2 border-sage-dark/20 font-medium rounded-full px-8 py-3"
-            >
-              Learn More
-            </Button>
-          </motion.div>
-        </PageTransition>
-      </section>
+          </>
+        }
+        learnMoreCallback={scrollToWhoWeAre}
+      />
 
       {/* Who We Are Section */}
       <section id="who-we-are-section" className="py-20 bg-white">
