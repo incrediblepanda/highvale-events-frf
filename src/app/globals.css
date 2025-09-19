@@ -289,11 +289,12 @@
 
   main[data-element="main-content"] {
     /* Prefer dynamic viewport fill for mobile browsers to avoid 100vh issues */
+    /* Uses --vh set via JS (1% of the viewport height) to avoid mobile address bar issues */
+    min-height: calc(var(--vh, 1vh) * 100);
     min-height: -webkit-fill-available;
     min-height: 100vh;
-    /* Ensure main is the primary scroll container */
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    /* Let the document (body) be the primary scroll container */
+    overflow-y: visible;
   }
 
   body {
