@@ -5,6 +5,7 @@ import AsSeenIn from '@/components/AsSeenIn';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Star, Quote } from 'lucide-react';
+import StandardHero from '@/components/StandardHero';
 
 export default function Testimonials() {
   const testimonials = [
