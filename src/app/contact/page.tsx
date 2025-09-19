@@ -44,9 +44,10 @@ export default function Contact() {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-[50vh] flex items-center justify-center overflow-hidden"
+        className="relative flex items-center justify-center overflow-hidden"
         data-element="hero-section"
         data-name="Hero Section"
+        style={{ minHeight: "calc(var(--vh, 1vh) * 50)" }}
       >
         <div
           className="absolute inset-0 bg-gradient-sage"

@@ -31,7 +31,7 @@ export default function GalleryPage() {
     <>
 
       {/* Hero Section - Matching other pages */}
-      <section className="relative overflow-hidden min-h-[60vh] lg:min-h-[590px] justify-center items-center flex pb-5">
+      <section className="relative overflow-hidden lg:min-h-[590px] justify-center items-center flex pb-5" style={{ minHeight: "calc(var(--vh, 1vh) * 60)" }}>
         {/* Background image placeholder */}
         <div className="absolute inset-0 opacity-[0.34]">
           <img

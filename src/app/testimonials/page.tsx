@@ -110,7 +110,7 @@ export default function Testimonials() {
     <div className="min-h-screen bg-cream">
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "calc(var(--vh, 1vh) * 60)" }}>
         <div className="absolute inset-0 bg-gradient-sage"></div>
 
         {/* Dark overlay for better text contrast */}
