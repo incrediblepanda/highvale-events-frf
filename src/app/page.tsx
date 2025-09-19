@@ -91,140 +91,210 @@ export default function HomePage() {
       data-name="Homepage"
     >
       {/* Hero Section */}
-      <section
-        className="relative flex items-center justify-center overflow-hidden"
-        data-element="hero-section"
-        data-name="Hero Section"
+      <div
+        maxWidth={1200}
+        lazyLoad={false}
         style={{
-          backgroundImage: 'url("https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F1d75e495f4d149ec926832ab0eea47a5")',
-          backgroundPosition: '50% 50%',
+          display: 'flex',
+          flexDirection: 'column',
+          position: 'relative',
+          minHeight: '100px',
+          backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d)',
           backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
           backgroundSize: 'cover',
-          minHeight: '345px'
+          padding: '0 20px'
         }}
       >
-        <div
-          className="flex flex-col relative"
+        <section
           style={{
-            backgroundColor: 'rgba(66, 68, 66, 0.61)',
-            marginLeft: 'calc(50% - 576.5px)',
-            width: '1153px'
+            display: 'flex',
+            flexDirection: 'column',
+            position: 'relative',
+            minHeight: '100px',
+            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d)',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            padding: '0 20px',
+            width: '100%',
+            alignSelf: 'stretch',
+            flexGrow: 1,
+            maxWidth: '1200px',
+            marginLeft: 'auto',
+            marginRight: 'auto'
           }}
         >
-          <section
-            className="flex flex-col flex-grow relative"
+          <PageTransition
             style={{
-              alignSelf: 'stretch',
-              backgroundColor: 'rgba(0, 0, 0, 0.13)',
-              width: '1153px',
-              margin: '0 auto 0 calc(50% - 576.5px)'
+              fontWeight: '400',
+              position: 'relative',
+              zIndex: '10',
+              backgroundColor: 'rgba(0, 0, 0, 0.61)',
+              width: '100vw',
+              marginLeft: 'calc(50% - 50vw)',
+              padding: '200px 0 125px'
             }}
           >
-            <div
-              className="flex flex-col self-center relative text-center"
+            <motion.img
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F79e25098e0fe4082903d579f2e81ecb3"
+              alt="Highvale Events & Design"
+              className="mx-auto block"
+              data-element="hero-company-logo"
+              data-name="Hero Section > Content Box > Logo"
               style={{
-                width: '1153px',
-                margin: '150px 0 50px'
+                display: 'block',
+                fontWeight: '400',
+                height: '200px',
+                margin: '0 auto 40px'
+              }}
+            />
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              data-element="hero-main-heading"
+              data-name="Hero Section > Content Box > Heading"
+              style={{
+                color: 'rgb(255, 255, 255)',
+                fontFeatureSettings: 'normal',
+                textDecoration: 'rgb(255, 255, 255)',
+                display: 'flex',
+                flexDirection: 'column',
+                width: '100vw',
+                margin: '0 auto 20px calc(50% - 50vw)',
+                font: '400 60px/30px "Cormorant Garamond", serif'
               }}
             >
-              <PageTransition
-                className="relative z-10"
-                style={{
-                  margin: '0 auto'
-                }}
-              >
-                <motion.img
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, ease: 'easeOut' }}
-                  src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F79e25098e0fe4082903d579f2e81ecb3"
-                  alt="Highvale Events & Design"
-                  className="mx-auto block"
-                  data-element="hero-company-logo"
-                  data-name="Hero Section > Content Box > Logo"
-                  style={{
-                    height: '200px',
-                    margin: '0 auto 20px'
-                  }}
-                />
-                <motion.h1
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  data-element="hero-main-heading"
-                  data-name="Hero Section > Content Box > Heading"
-                  style={{
-                    color: 'rgb(255, 255, 255)',
-                    fontFeatureSettings: 'normal',
-                    textDecoration: 'rgb(255, 255, 255)',
-                    margin: '0 auto 20px',
-                    font: '400 60px/30px "Cormorant Garamond", serif'
-                  }}
-                >
-                  <div style={{ fontSize: '50px' }}>Luxury Wedding &amp; Event Planning</div>
-                  <br />
-                  <div style={{ fontSize: '50px' }}>in the Heart of Colorado</div>
-                  <br />
-                </motion.h1>
+              <div style={{
+                fontFeatureSettings: 'normal',
+                fontSize: '50px',
+                fontWeight: '400',
+                margin: '0 auto'
+              }}>
+                Luxury Wedding & Event Planning
+              </div>
+              <br />
+              <div style={{
+                fontFeatureSettings: 'normal',
+                fontSize: '50px',
+                fontWeight: '400',
+                margin: '0 auto'
+              }}>
+                in the Heart of Colorado
+              </div>
+              <br />
+            </motion.h1>
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              fontWeight: '400'
+            }}>
+              <div style={{
+                display: 'flex',
+                fontWeight: '400',
+                gap: '20px',
+                margin: '0 auto'
+              }}>
                 <div style={{
                   display: 'flex',
-                  flexDirection: 'column'
+                  flexDirection: 'column',
+                  fontWeight: '400',
+                  width: '50%'
                 }}>
-                  <div className="flex gap-5" style={{
-                    margin: '0 auto'
-                  }}>
-                    <div className="flex flex-col w-1/2">
-                      <Link
-                        href="/weddings"
-                        data-element="hero-primary-button-link"
-                        data-name="Hero Section > Content Box > Button Link"
-                      >
-                        <Button
-                          className="inline-flex items-center bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full shadow-lg transform transition-all hover:scale-105"
-                          data-element="hero-primary-button"
-                          data-name="Hero Section > Content Box > Primary Button"
-                          style={{
-                            gap: '8px',
-                            height: '48px',
-                            justifyContent: 'center',
-                            padding: '24px 32px',
-                            font: '500 18px/28px Inter, sans-serif'
-                          }}
-                        >
-                          Start Planning Your Event
-                        </Button>
-                      </Link>
-                    </div>
-                    <div className="flex flex-col w-1/2">
-                      <Link
-                        href="/gallery"
-                        data-element="hero-secondary-button-link"
-                        data-name="Hero Section > Content Box > Button Link"
-                      >
-                        <Button
-                          className="inline-flex items-center bg-white text-sage-darkest hover:bg-sage-dark/10 rounded-full shadow-lg transform transition-all hover:scale-105"
-                          data-element="hero-secondary-button"
-                          data-name="Hero Section > Content Box > Secondary Button"
-                          style={{
-                            gap: '8px',
-                            height: '48px',
-                            justifyContent: 'center',
-                            padding: '24px 32px',
-                            font: '500 18px/28px Inter, sans-serif',
-                            border: '2px solid rgba(59, 79, 54, 0.94)'
-                          }}
-                        >
-                          View Our Portfolio
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
+                  <Link
+                    href="/weddings"
+                    data-element="hero-primary-button-link"
+                    data-name="Hero Section > Content Box > Button Link"
+                    style={{
+                      display: 'block',
+                      fontWeight: '400'
+                    }}
+                  >
+                    <Button
+                      className="inline-flex items-center bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full shadow-lg transform transition-all hover:scale-105"
+                      data-element="hero-primary-button"
+                      data-name="Hero Section > Content Box > Primary Button"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        animationDuration: '0.3s',
+                        backgroundColor: 'rgb(227, 198, 141)',
+                        borderRadius: '9999px',
+                        boxShadow: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px',
+                        color: 'rgb(27, 35, 36)',
+                        fontFeatureSettings: 'normal',
+                        gap: '8px',
+                        height: '48px',
+                        justifyContent: 'center',
+                        textDecoration: 'rgb(27, 35, 36)',
+                        textWrap: 'nowrap',
+                        transitionDuration: '0.3s',
+                        whiteSpace: 'nowrap',
+                        transform: 'matrix(1, 0, 0, 1, 0, 0)',
+                        borderColor: 'rgba(0, 0, 0, 0)',
+                        padding: '24px 32px',
+                        font: '500 18px/28px Inter, sans-serif'
+                      }}
+                    >
+                      Start Planning Your Event
+                    </Button>
+                  </Link>
                 </div>
-              </PageTransition>
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  fontWeight: '400',
+                  width: '50%'
+                }}>
+                  <Link
+                    href="/gallery"
+                    data-element="hero-secondary-button-link"
+                    data-name="Hero Section > Content Box > Button Link"
+                    style={{
+                      display: 'block',
+                      fontWeight: '400'
+                    }}
+                  >
+                    <Button
+                      className="inline-flex items-center bg-white text-sage-darkest hover:bg-sage-dark/10 rounded-full shadow-lg transform transition-all hover:scale-105"
+                      data-element="hero-secondary-button"
+                      data-name="Hero Section > Content Box > Secondary Button"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        animationDuration: '0.3s',
+                        backgroundColor: 'rgb(255, 255, 255)',
+                        borderColor: 'rgba(59, 79, 54, 0.94)',
+                        borderRadius: '9999px',
+                        borderWidth: '2px',
+                        boxShadow: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px',
+                        color: 'rgb(27, 35, 36)',
+                        fontFeatureSettings: 'normal',
+                        gap: '8px',
+                        height: '48px',
+                        justifyContent: 'center',
+                        textDecoration: 'rgb(27, 35, 36)',
+                        textWrap: 'nowrap',
+                        transitionDuration: '0.3s',
+                        whiteSpace: 'nowrap',
+                        transform: 'matrix(1, 0, 0, 1, 0, 0)',
+                        padding: '24px 32px',
+                        font: '500 18px/28px Inter, sans-serif'
+                      }}
+                    >
+                      View Our Portfolio
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
-          </section>
-        </div>
-      </section>
+          </PageTransition>
+        </section>
+      </div>
 
       {/* Services Section */}
       <section
