@@ -301,6 +301,38 @@
   }
 }
 
+/* Explicit hero title visibility and sizing to avoid reliance on Tailwind classes */
+.hero-mobile-title,
+.hero-mobile-sub {
+  display: none;
+}
+.hero-desktop-title,
+.hero-desktop-sub {
+  display: inline;
+}
+
+@media (max-width: 639px) {
+  .hero-mobile-title,
+  .hero-mobile-sub {
+    display: block !important;
+    font-size: 30px !important;
+    line-height: 30px !important;
+  }
+  .hero-desktop-title,
+  .hero-desktop-sub {
+    display: none !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-desktop-title,
+  .hero-desktop-sub {
+    display: inline !important;
+    font-size: 60px !important;
+    line-height: 60px !important;
+  }
+}
+
 /* Hide development-only turbopack bubble / nextjs portal used by devtools so it isn't visible to end users */
 nextjs-portal,
 nextjs-portal * {
