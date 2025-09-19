@@ -159,7 +159,7 @@ export default function PartyPlanningPage() {
             <h2 className="text-4xl md:text-5xl font-cormorant text-sage mb-6">
               Party Planning Packages
             </h2>
-            <p className="text-lg text-sage/70 max-w-3xl mx-auto">
+            <p className="text-lg text-sage/70 max-w-3xl mx-auto" style={{ font: '400 18px/28px Arial, sans-serif ' }}>
               Flexible packages designed to fit your celebration style and budget
             </p>
           </ScrollAnimation>
