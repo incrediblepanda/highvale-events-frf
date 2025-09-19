@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import ViewportDebugger from "@/components/ViewportDebugger";
 
 export default function ClientBody({
   children,
@@ -66,6 +67,7 @@ export default function ClientBody({
       data-name="Document Body"
     >
       {children}
+      <ViewportDebugger />
     </body>
   );
 }
