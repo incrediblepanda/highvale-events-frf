@@ -35,7 +35,7 @@ export default function Navigation() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
       style={{
-        top: 'calc(env(safe-area-inset-top) + 0px)',
+        top: 'calc(env(safe-area-inset-top) + 8px)',
         // expose nav height so main can offset content correctly. update if nav size changes.
         ['--site-nav-height' as any]: '72px'
       }}
