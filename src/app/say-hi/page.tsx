@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, MessageCircle, Sparkles, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
+import StandardHero from '@/components/StandardHero';
 
 export default function SayHiPage() {
   const scrollToInquiry = () => {
