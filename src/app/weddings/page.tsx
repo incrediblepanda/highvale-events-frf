@@ -236,7 +236,7 @@ export default function WeddingsPage() {
               flexDirection: 'column',
               position: 'relative',
               width: '100vw',
-              backgroundColor: 'rgba(55, 58, 52, 0)',
+              backgroundColor: 'rgba(0, 0, 0, 0.13)',
               alignSelf: 'stretch',
               flexGrow: 1,
               margin: '0 auto 0 calc(50% - 50vw)'
