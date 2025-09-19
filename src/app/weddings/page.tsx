@@ -206,119 +206,160 @@ export default function WeddingsPage() {
   return (
     <>
 
-      {/* Hero Section - Slimmer version */}
+      {/* Hero Section */}
       <section
-        className="relative min-h-[60vh] lg:min-h-[50vh] flex items-center justify-center overflow-hidden"
+        className="relative flex items-center justify-center overflow-hidden"
+        style={{
+          minHeight: '345px',
+          backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F1d75e495f4d149ec926832ab0eea47a5)',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          flexGrow: 0
+        }}
         data-element="hero-section"
         data-name="Hero Section"
       >
         <div
-          className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20"
-          data-element="hero-background-gradient"
-          data-name="Hero Section > Background Gradient"
-        />
-
-        {/* Background image placeholder */}
-        <div
-          className="absolute inset-0 opacity-10"
-          data-element="hero-background-placeholder"
-          data-name="Hero Section > Background Placeholder"
-        />
-
-        {/* Dark overlay for better text contrast */}
-        <div
-          className="absolute inset-0 bg-black/40"
-          data-element="hero-dark-overlay"
-          data-name="Hero Section > Dark Overlay"
-        />
-
-        {/* Background image overlay */}
-        <div
-          className="absolute inset-0"
-          data-element="hero-background-image"
-          data-name="Hero Section > Background Image"
           style={{
-            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F1d75e495f4d149ec926832ab0eea47a5)',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            opacity: '0.38'
-          }}
-        />
-
-        <PageTransition
-          className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 lg:pt-24 lg:pb-5 mt-[100px] sm:mt-0"
-          data-element="hero-content"
-          data-name="Hero Section > Content Box"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            minHeight: "100%",
-            justifyContent: "center"
+            display: 'flex',
+            flexDirection: 'column',
+            position: 'relative',
+            width: '100vw',
+            marginLeft: 'calc(50% - 50vw)',
+            backgroundColor: 'rgba(49, 60, 44, 0.61)'
           }}
         >
-          <img
-            loading="lazy"
-            srcSet="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51"
+          <section
             style={{
-              aspectRatio: "3.48",
-              objectFit: "contain",
-              objectPosition: "center",
-              width: "80%",
-              maxWidth: "300px",
-              margin: "0 auto 24px",
-              minHeight: "60px",
-              height: "auto",
+              display: 'flex',
+              flexDirection: 'column',
+              position: 'relative',
+              width: '100%',
+              marginLeft: 'auto',
+              backgroundColor: 'rgba(49, 60, 44, 0.61)',
+              alignSelf: 'stretch',
+              flexGrow: 1,
+              maxWidth: '1200px',
+              marginRight: 'auto'
             }}
-            className="sm:w-1/2 sm:max-w-none"
-          />
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-3xl sm:text-4xl lg:text-6xl font-cormorant mb-4 sm:mb-6 leading-tight"
-            style={{ color: 'rgba(255, 255, 255, 1)' }}
-            data-element="hero-title"
-            data-name="Hero Section > Content Box > Heading"
           >
-            Signature Wedding Planning
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="max-w-2xl mx-auto mb-8 sm:mb-10 px-2 sm:px-0"
-            style={{
-              color: 'rgba(255, 255, 255, 0.8)',
-              font: '400 16px/24px Arial, sans-serif'
-            }}
-            data-element="hero-description"
-            data-name="Hero Section > Content Box > Text"
-          >
-            From full-service planning to day-of coordination, we bring your dream wedding to life with elegance, precision, and Colorado's natural beauty as your backdrop.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-10 px-4 sm:px-0"
-            data-element="hero-buttons"
-            data-name="Hero Section > Content Box > Button Container"
-          >
-            <Button
-              onClick={scrollToInquiry}
-              className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-6 sm:px-8 py-3 text-sm sm:text-base w-full sm:w-auto"
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                position: 'relative',
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                width: '100vw',
+                alignSelf: 'center',
+                margin: '100px 0 82px calc(50% - 50vw)'
+              }}
             >
-              Contact Form
-            </Button>
-            <Button
-              onClick={scrollToWelcome}
-              className="bg-white/80 hover:bg-white text-sage-darkest border-2 border-sage-dark/20 font-medium rounded-full px-6 sm:px-8 py-3 text-sm sm:text-base w-full sm:w-auto"
-            >
-              Learn More
-            </Button>
-          </motion.div>
-        </PageTransition>
+
+              <PageTransition
+                className="relative z-10 text-center mx-auto"
+                data-element="hero-content"
+                data-name="Hero Section > Content Box"
+              >
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51"
+                  style={{
+                    display: "block",
+                    aspectRatio: "3.48",
+                    objectFit: "contain",
+                    width: "80%",
+                    maxWidth: "300px",
+                    minHeight: "60px",
+                    margin: "0 auto 24px"
+                  }}
+                />
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  style={{
+                    color: 'rgb(255, 255, 255)',
+                    textDecoration: 'rgb(255, 255, 255)',
+                    margin: '0 auto 24px',
+                    font: '400 60px/60px "Cormorant Garamond", serif '
+                  }}
+                  data-element="hero-title"
+                  data-name="Hero Section > Content Box > Heading"
+                >
+                  Signature Wedding Planning
+                </motion.h1>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  style={{
+                    color: 'rgba(255, 255, 255, 0.8)',
+                    fontFamily: 'Arial, sans-serif',
+                    fontWeight: '400',
+                    maxWidth: '672px',
+                    textDecoration: 'rgba(255, 255, 255, 0.8)',
+                    margin: '0 auto 40px'
+                  }}
+                  data-element="hero-description"
+                  data-name="Hero Section > Content Box > Text"
+                >
+                  From full-service planning to day-of coordination, we bring your dream wedding to life with elegance, precision, and Colorado's natural beauty as your backdrop.
+                </motion.p>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  style={{
+                    display: 'flex',
+                    gap: '16px',
+                    justifyContent: 'center',
+                    marginBottom: '40px'
+                  }}
+                  data-element="hero-buttons"
+                  data-name="Hero Section > Content Box > Button Container"
+                >
+                  <Button
+                    onClick={scrollToInquiry}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      backgroundColor: 'rgb(227, 198, 141)',
+                      borderRadius: '9999px',
+                      color: 'rgb(27, 35, 36)',
+                      fontWeight: '500',
+                      gap: '8px',
+                      height: '48px',
+                      justifyContent: 'center',
+                      padding: '12px 32px'
+                    }}
+                  >
+                    Contact Form
+                  </Button>
+                  <Button
+                    onClick={scrollToWelcome}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                      borderColor: 'rgba(35, 43, 42, 0.2)',
+                      borderRadius: '9999px',
+                      borderWidth: '2px',
+                      color: 'rgb(27, 35, 36)',
+                      fontWeight: '500',
+                      gap: '8px',
+                      height: '48px',
+                      justifyContent: 'center',
+                      padding: '12px 32px'
+                    }}
+                  >
+                    Learn More
+                  </Button>
+                </motion.div>
+              </PageTransition>
+            </div>
+          </section>
+        </div>
       </section>
 
       {/* Welcome Section */}
