@@ -235,13 +235,11 @@ export default function WeddingsPage() {
               display: 'flex',
               flexDirection: 'column',
               position: 'relative',
-              width: '100%',
-              marginLeft: 'auto',
-              backgroundColor: 'rgba(49, 60, 44, 0.61)',
+              width: '100vw',
+              backgroundColor: 'rgba(55, 58, 52, 0)',
               alignSelf: 'stretch',
               flexGrow: 1,
-              maxWidth: '1200px',
-              marginRight: 'auto'
+              margin: '0 auto 0 calc(50% - 50vw)'
             }}
           >
             <div
@@ -252,7 +250,7 @@ export default function WeddingsPage() {
                 backgroundColor: 'rgba(0, 0, 0, 0)',
                 width: '100vw',
                 alignSelf: 'center',
-                margin: '100px 0 82px calc(50% - 50vw)'
+                margin: '100px 0 82px'
               }}
             >
 
