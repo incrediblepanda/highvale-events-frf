@@ -127,14 +127,14 @@ export default function HomePage() {
             }}
           >
             <div
+              className="py-20 sm:py-24 md:py-32"
               style={{
                 display: 'flex',
                 flexDirection: 'column',
                 position: 'relative',
                 backgroundColor: 'rgba(0, 0, 0, 0)',
                 width: '100vw',
-                alignSelf: 'center',
-                margin: '150px 0 50px'
+                alignSelf: 'center'
               }}
             >
               <PageTransition
