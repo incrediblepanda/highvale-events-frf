@@ -143,7 +143,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-cormorant text-sage-darkest mb-3">
                   Seamless Execution
                 </h3>
-                <p className="text-sage/70">
+                <p className="text-sage/70" style={{ fontFamily: 'Arial, sans-serif' }}>
                   Behind every beautiful moment is flawless planning and invisible coordination.
                 </p>
               </div>
