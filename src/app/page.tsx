@@ -226,7 +226,8 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section
-        className="py-20 bg-white"
+        className="bg-white"
+        style={{ padding: '60px 0 80px' }}
         data-element="services-section"
         data-name="Our Services Section"
       >
