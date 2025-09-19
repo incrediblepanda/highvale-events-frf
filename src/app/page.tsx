@@ -4,7 +4,7 @@ import InquirySection from '@/components/InquirySection';
 import PortfolioSection from '@/components/PortfolioSection';
 import AsSeenIn from '@/components/AsSeenIn';
 import { ScrollAnimation } from '@/components/ScrollAnimation';
-import PageTransition from '@/components/PageTransition';
+import { PageTransition } from '@/components/PageTransition';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
