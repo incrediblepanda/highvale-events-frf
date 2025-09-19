@@ -138,7 +138,7 @@ export default function HomePage() {
               }}
             >
               <PageTransition
-                className="relative z-10 text-center mx-auto px-4 sm:px-6 lg:px-8 pt-15 sm:pt-0"
+                className="relative z-10 text-center mx-auto px-1 sm:px-4 lg:px-8 pt-15 sm:pt-0"
                 data-element="hero-content"
                 data-name="Hero Section > Content Box"
               >
@@ -172,7 +172,7 @@ export default function HomePage() {
                   data-element="hero-title"
                   data-name="Hero Section > Content Box > Heading"
                 >
-                  Luxury Wedding & Event Planning<br />
+                  Luxury Wedding &amp; Event Planning<br />
                   in the Heart of Colorado
                 </motion.h1>
                 <motion.p
@@ -456,6 +456,7 @@ export default function HomePage() {
                 <div
                   data-element="process-title-our"
                   data-name="Our Process Section > Content Box > Heading > Our"
+                  className="font-normal sm:font-bold text-5xl sm:text-inherit"
                   style={{
                     display: "inline",
                     color: "rgb(255, 255, 255)",
@@ -469,6 +470,7 @@ export default function HomePage() {
                 <div
                   data-element="process-title-process"
                   data-name="Our Process Section > Content Box > Heading > Process"
+                  className="font-normal sm:font-bold text-5xl sm:text-inherit"
                   style={{
                     display: "inline",
                     color: "rgb(255, 255, 255)",
@@ -483,16 +485,16 @@ export default function HomePage() {
                 <div
                   data-element="process-description"
                   data-name="Our Process Section > Content Box > Text"
+                  className="text-lg sm:text-2xl leading-6 sm:leading-9 pt-4 sm:pt-0"
                   style={{
                     color: "rgb(255, 255, 255)",
-                    fontSize: "24px",
                     fontWeight: "400",
-                    lineHeight: "36px",
                     maxWidth: "672px",
                     textAlign: "center",
                     textDecoration: "rgb(0, 0, 0)",
-                    textShadow: "rgba(0, 0, 0, 0.6) 1px 1px 3px",
-                    margin: "0 auto"
+                    textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
+                    margin: "0 auto",
+                    fontFamily: "Arial, sans-serif"
                   }}
                 >
                   A seamless journey from concept to celebration.
@@ -575,7 +577,7 @@ export default function HomePage() {
                       {step.title}
                     </h3>
                     <p
-                      className="leading-relaxed"
+                      className="leading-relaxed text-lg sm:text-base"
                       data-element={`process-step-description-${index + 1}`}
                       data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
                       style={{
