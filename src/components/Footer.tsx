@@ -42,7 +42,7 @@ export default function Footer() {
             data-name="Site Footer > Brand Column"
           >
             <img
-              src="/light-sand-mountain.png"
+              src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F8667e6cb8ccc497aa1048754a51494a3"
               alt="Highvale Events"
               className="h-12 w-auto mb-4 brightness-0 invert"
               data-element="footer-logo"
