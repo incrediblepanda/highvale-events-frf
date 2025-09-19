@@ -364,7 +364,7 @@ export default function WeddingsPage() {
       {/* Welcome Section */}
       <section
         id="welcome-section"
-        className="py-20 bg-white"
+        className="py-12 bg-white"
         data-element="welcome-section"
         data-name="Welcome Section"
       >
@@ -391,7 +391,7 @@ export default function WeddingsPage() {
 
       {/* Packages Section */}
       <section
-        className="py-20 bg-warm-white"
+        className="py-10 bg-warm-white"
         data-element="packages-section"
         data-name="Our Wedding Packages Section"
       >
@@ -523,7 +523,7 @@ export default function WeddingsPage() {
       </section>
 
       {/* Add-Ons Section */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-[1180px] mx-auto px-6">
           <ScrollAnimation className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4">
