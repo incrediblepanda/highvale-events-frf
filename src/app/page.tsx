@@ -458,7 +458,6 @@ export default function HomePage() {
                   style={{
                     display: "inline",
                     color: "rgb(255, 255, 255)",
-                    fontWeight: "700",
                     textDecoration: "rgb(255, 255, 255)",
                     textShadow: "rgba(0, 0, 0, 0.6) 1px 1px 3px"
                   }}
@@ -473,7 +472,6 @@ export default function HomePage() {
                     display: "inline",
                     color: "rgb(255, 255, 255)",
                     fontStyle: "italic",
-                    fontWeight: "700",
                     textDecoration: "rgb(255, 255, 255)",
                     textShadow: "rgba(0, 0, 0, 0.59) 1px 1px 1px"
                   }}
@@ -486,7 +484,6 @@ export default function HomePage() {
                   className="text-lg sm:text-2xl leading-6 sm:leading-9 pt-4 sm:pt-0"
                   style={{
                     color: "rgb(255, 255, 255)",
-                    fontWeight: "400",
                     maxWidth: "672px",
                     textAlign: "center",
                     textDecoration: "rgb(0, 0, 0)",
@@ -582,7 +579,7 @@ export default function HomePage() {
                         color: "rgba(255, 255, 255, 1)",
                         textDecoration: "rgb(0, 0, 0)",
                         textShadow: "1px 1px 3px rgba(0, 0, 0, 0.75)",
-                        font: "400 15px/23px Arial, sans-serif "
+                        fontFamily: "Arial, sans-serif"
                       }}
                     >
                       {step.description}
