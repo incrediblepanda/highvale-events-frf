@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Heart, Sparkles, Leaf } from 'lucide-react';
 import { motion } from 'framer-motion';
+import StandardHero from '@/components/StandardHero';
 
 export default function AboutPage() {
   const scrollToInquiry = () => {
