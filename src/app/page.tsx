@@ -161,8 +161,10 @@ export default function HomePage() {
                     font: '400 60px/60px "Cormorant Garamond", serif'
                   }}
                 >
-                  Luxuty Wedding & Event Planning<br />
-                  in the Heart of Colorado<br />
+                  <div style={{ fontSize: '50px' }}>Luxury Wedding &amp; Event Planning</div>
+                  <br />
+                  <div style={{ fontSize: '50px' }}>in the Heart of Colorado</div>
+                  <br />
                 </motion.h1>
                 <div style={{
                   display: 'flex',
