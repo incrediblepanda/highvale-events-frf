@@ -148,9 +148,9 @@ export default function HomePage() {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F79e25098e0fe4082903d579f2e81ecb3"
                   alt="Highvale Events & Design"
+                  className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto max-w-full object-contain"
                   style={{
                     display: "block",
-                    height: "200px",
                     margin: "0 auto 24px"
                   }}
                   data-element="hero-company-logo"
