@@ -296,10 +296,12 @@ nextjs-portal * {
 }
 
   /* Ensure the document and main content fill available space and respect safe-area insets */
-  html, body {
+  html, body, #__next {
     /* Avoid forcing height:100% which can create nested scroll containers on some mobile browsers */
     height: auto;
     min-height: 100%;
+    touch-action: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   main[data-element="main-content"] {
