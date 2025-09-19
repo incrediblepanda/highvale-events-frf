@@ -4,6 +4,7 @@ import InquirySection from '@/components/InquirySection';
 import AsSeenIn from '@/components/AsSeenIn';
 import { PageTransition } from '@/components/PageTransition';
 import { Button } from '@/components/ui/button';
+import StandardHero from '@/components/StandardHero';
 import {
   Accordion,
   AccordionContent,
