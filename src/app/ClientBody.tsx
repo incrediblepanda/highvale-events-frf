@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import ViewportDebugger from "@/components/ViewportDebugger";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function ClientBody({
   children,
