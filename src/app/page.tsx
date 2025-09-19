@@ -508,7 +508,9 @@ export default function HomePage() {
                 data-name="Our Process Section > Content Box > Steps Grid"
                 style={{
                   display: "grid",
-                  fontWeight: "400"
+                  fontWeight: "400",
+                  gap: "24px",
+                  gridTemplate: "none / repeat(1, minmax(0px, 1fr)) / none",
                 }}
               >
                 {processSteps.map((step, index) => (
