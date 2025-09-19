@@ -172,20 +172,20 @@ export default function HomePage() {
                   data-element="hero-title"
                   data-name="Hero Section > Content Box > Heading"
                 >
-                  <span className="sm:hidden" style={{ fontSize: '30px', lineHeight: '30px', fontWeight: '400' }}>
+                  <span className="hero-mobile-title" style={{ fontWeight: '400' }}>
                     Luxury Wedding<br />&amp; Event Planning
                   </span>
 
-                  <span className="hidden sm:inline" style={{ display: 'inline', fontWeight: '400', fontSize: '60px', lineHeight: '60px' }}>
+                  <span className="hero-desktop-title" style={{ display: 'inline', fontWeight: '400' }}>
                     Luxury Wedding &amp; Event Planning
                   </span>
 
                   <br />
 
-                  <span className="sm:hidden" style={{ fontSize: '30px', lineHeight: '30px' }}>
+                  <span className="hero-mobile-sub" style={{}}>
                     in the Heart of Colorado
                   </span>
-                  <span className="hidden sm:inline" style={{ fontSize: '60px', lineHeight: '60px' }}>
+                  <span className="hero-desktop-sub" style={{}}>
                     in the Heart of Colorado
                   </span>
                 </motion.h1>
