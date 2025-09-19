@@ -280,6 +280,21 @@
   }
 
   /* MOBILE / SAFE-AREA / VIEWPORT FIXES */
+
+/* Hide development-only turbopack bubble / nextjs portal used by devtools so it isn't visible to end users */
+nextjs-portal,
+nextjs-portal * {
+  display: none !important;
+}
+
+/* Fallback for other dev overlays */
+.__next_dev__,
+#__next_dev__,
+.turbopack-frontend,
+.turbopack-overlay {
+  display: none !important;
+}
+
   /* Ensure the document and main content fill available space and respect safe-area insets */
   html, body {
     /* Avoid forcing height:100% which can create nested scroll containers on some mobile browsers */
