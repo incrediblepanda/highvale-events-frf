@@ -149,7 +149,7 @@ export default function Navigation() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navLinks.length * 0.05 }}
                 >
-                  <Link href="/say-hi" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/say-hi" onClick={() => { setIsMenuOpen(false); try { setTimeout(() => window.dispatchEvent(new Event('resize')), 40); } catch(e){} }}>
                     <Button className="w-full bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full transform transition-all hover:scale-105">
                       Say Hi!
                     </Button>
