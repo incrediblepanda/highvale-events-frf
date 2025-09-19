@@ -48,69 +48,39 @@ export default function AboutPage() {
       <section id="who-we-are-section" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <ScrollAnimation className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-cormorant text-sage mb-8">
+            <div style={{ color: 'rgb(42, 53, 50)', marginBottom: '32px', font: '400 48px/48px "Cormorant Garamond", serif ' }}>
               Who We Are
-            </h2>
+            </div>
           </ScrollAnimation>
 
           <ScrollAnimation delay={0.2} className="prose prose-lg max-w-none text-sage">
-            <p className="text-xl mb-8 leading-relaxed text-center">
-              We're a highly caffeinated, wedding-obsessed, client-focused team that brings
-              boundless energy and genuine passion to every event we touch.
-            </p>
-
-            {/* First Image Placeholder */}
-            <div className="mb-12 rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F800489f1000249769fbb0285c522154a"
-                alt="Highvale Events Team"
-                className="className=w-full h-full object-cover"
-              />
+            <div style={{ font: '400 20px/32.5px Arial, sans-serif ', marginBottom: '32px', textAlign: 'center' }}>
+              We're a highly caffeinated, wedding-obsessed, client-focused team that brings boundless energy and genuine passion to every event we touch.
             </div>
 
-            <p className="mb-6">
-              Our approach is simple: we believe your celebration should be as unique as your love story.
-              We're not here to impose a cookie-cutter template or push trendy ideas that don't reflect
-              who you are. Instead, we listen, we learn, and we bring your authentic vision to life with
-              meticulous attention to detail and creative flair.
+            {/* First Image Placeholder (background image) */}
+            <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', marginTop: '20px', height: '500px', backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F800489f1000249769fbb0285c522154a)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', borderRadius: '10px', overflow: 'hidden', border: '1px solid rgba(42, 53, 50, 0)' }} />
+
+            <p className="mb-6" style={{ fontFamily: 'Arial, sans-serif' }}>
+              Our approach is simple: we believe your celebration should be as unique as your love story. We're not here to impose a cookie-cutter template or push trendy ideas that don't reflect who you are. Instead, we listen, we learn, and we bring your authentic vision to life with meticulous attention to detail and creative flair.
             </p>
 
-            <p className="mb-6">
-              What sets us apart? It's our personality. We're the planners who will laugh with you,
-              cry happy tears at your ceremony, and dance at your reception (if you want us to!).
-              Many of our clients tell us that by the end of the planning process, we feel like family –
-              and honestly, that's exactly how we like it.
+            <p className="mb-6" style={{ fontFamily: 'Arial, sans-serif' }}>
+              What sets us apart? It's our personality. We're the planners who will laugh with you, cry happy tears at your ceremony, and dance at your reception (if you want us to!). Many of our clients tell us that by the end of the planning process, we feel like family – and honestly, that's exactly how we like it.
             </p>
 
-            {/* Second Image Placeholder */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src="https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg"
-                  alt="Event Planning Process"
-                  className="w-full h-[300px] object-cover"
-                />
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src="https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg"
-                  alt="Event Details"
-                  className="w-full h-[300px] object-cover"
-                />
-              </div>
-            </div>
+            {/* Replace two-image grid with a single background block */}
+            <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', marginTop: '20px', height: '400px', backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc4b5777164f04449bbab5d908f19d153)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', borderRadius: '10px', overflow: 'hidden' }} />
+
+            {/* Additional visual block */}
+            <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', height: '400px', backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F082b40be8f3e44bc80b2566b73f89fa2)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', borderRadius: '10px', overflow: 'hidden', margin: '20px 0 50px' }} />
 
             <p className="mb-6">
-              We understand that planning a wedding or event can feel overwhelming. That's why we offer
-              flexible support options tailored to your specific journey. Whether you need comprehensive
-              planning from day one or just someone to tie everything together in the final weeks, we're
-              here to make the process seamless and enjoyable.
+              We understand that planning a wedding or event can feel overwhelming. That's why we offer flexible support options tailored to your specific journey. Whether you need comprehensive planning from day one or just someone to tie everything together in the final weeks, we're here to make the process seamless and enjoyable.
             </p>
 
             <p className="mb-8">
-              Our team brings over 40 years of combined industry experience, but more importantly,
-              we bring heart. We're problem-solvers and dream-makers, logistics experts and creative
-              visionaries. We're the calm in the storm and the spark that brings magic to your celebration.
+              Our team brings over 40 years of combined industry experience, but more importantly, we bring heart. We're problem-solvers and dream-makers, logistics experts and creative visionaries. We're the calm in the storm and the spark that brings magic to your celebration.
             </p>
 
             <div className="bg-cream rounded-2xl p-8 mt-12">
