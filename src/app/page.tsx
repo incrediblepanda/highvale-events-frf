@@ -138,7 +138,7 @@ export default function HomePage() {
               }}
             >
               <PageTransition
-                className="relative z-10 text-center mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-0"
+                className="relative z-10 text-center mx-auto px-4 sm:px-6 lg:px-8 pt-15 sm:pt-0"
                 data-element="hero-content"
                 data-name="Hero Section > Content Box"
               >
