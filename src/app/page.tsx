@@ -172,13 +172,30 @@ export default function HomePage() {
                   data-element="hero-title"
                   data-name="Hero Section > Content Box > Heading"
                 >
-                  <span className="sm:hidden">
-                    Luxury Wedding<br />
-                    &amp; Event Planning
+                  <span
+                    data-loc="src/app/page.tsx:224:120"
+                    style={{ display: 'none', fontWeight: '400' }}
+                  >
+                    Luxury Wedding
+                    <br
+                      data-loc="src/app/page.tsx:228:128"
+                      style={{ display: 'inline', fontWeight: '400' }}
+                    />
+                    & Event Planning
                   </span>
-                  <span className="hidden sm:inline">Luxury Wedding &amp; Event Planning</span>
+
+                  <div
+                    data-loc="src/app/page.tsx:240:120"
+                    style={{ display: 'inline', fontWeight: '400', fontSize: '60px' }}
+                  >
+                    Luxury Wedding &amp; Event Planning
+                  </div>
+
                   <br />
-                  in the Heart of Colorado
+
+                  <div style={{ fontSize: '60px', lineHeight: '60px' }}>
+                    in the Heart of Colorado
+                  </div>
                 </motion.h1>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -187,10 +204,11 @@ export default function HomePage() {
                   className="text-sm sm:text-base md:text-lg"
                   style={{
                     color: 'rgba(255, 255, 255, 0.8)',
+                    fontFeatureSettings: 'normal',
                     maxWidth: '672px',
                     textShadow: 'rgba(0, 0, 0, 0.5) 1px 1px 3px',
                     margin: '0 auto 40px',
-                    font: '400 14px/20px Arial, sans-serif '
+                    font: '400 20px/20px Arial, sans-serif '
                   }}
                   data-element="hero-description"
                   data-name="Hero Section > Content Box > Text"
