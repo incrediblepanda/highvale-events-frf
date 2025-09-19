@@ -288,6 +288,19 @@
   scroll-margin-top: calc(var(--scroll-offset) + env(safe-area-inset-top));
 }
 
+/* Responsive tweaks for Process section headings */
+@media (max-width: 640px) {
+  [data-element="process-title-our"],
+  [data-element="process-title-process"] {
+    font-size: 38px !important;
+    line-height: 1 !important;
+  }
+  [data-element="process-description"] {
+    font-size: 16px !important;
+    line-height: 28px !important;
+  }
+}
+
 /* Hide development-only turbopack bubble / nextjs portal used by devtools so it isn't visible to end users */
 nextjs-portal,
 nextjs-portal * {
