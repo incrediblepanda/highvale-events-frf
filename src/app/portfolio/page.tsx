@@ -151,15 +151,10 @@ export default function Portfolio() {
           }}
         ></div>
 
-        <div className="relative z-10 max-w-[1180px] mx-auto px-6 text-center pt-20">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-cormorant font-bold text-white mb-6 leading-tight animate-fade-in">
-            A Collection of<br />
-            <span className="text-gold italic">Unforgettable Moments</span>
-          </h1>
-          <p className="text-lg md:text-xl text-text-light mb-10 max-w-3xl mx-auto font-inter leading-relaxed animate-fade-in animation-delay-200">
-            Explore our curated portfolio of weddings and celebrations, each a reflection of our clients' distinct visions.
-          </p>
-        </div>
+        <StandardHero
+          title={<>A Collection of<br/><span className="text-gold italic">Unforgettable Moments</span></>}
+          subtitle={<>Explore our curated portfolio of weddings and celebrations, each a reflection of our clients' distinct visions.</>}
+        />
       </section>
 
       {/* Filter Section */}
