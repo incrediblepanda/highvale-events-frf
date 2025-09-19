@@ -104,8 +104,7 @@ export default function StandardHero({
                 transition={{ duration: 0.6, delay: 0.3 }}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
-                  fontFamily: 'Arial, sans-serif',
-                  fontWeight: '400',
+                  font: '400 20px Arial, sans-serif ',
                   maxWidth: '672px',
                   textDecoration: 'rgba(255, 255, 255, 0.8)',
                   textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
