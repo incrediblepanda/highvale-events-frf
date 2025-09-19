@@ -129,7 +129,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-cormorant text-sage-darkest mb-3">
                   Authentic Creativity
                 </h3>
-                <p className="text-sage/70">
+                <p className="text-sage/70" style={{ fontFamily: 'Arial, sans-serif' }}>
                   We bring fresh ideas and creative solutions while staying true to your unique style.
                 </p>
               </div>
