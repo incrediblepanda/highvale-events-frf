@@ -93,7 +93,16 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => {
+              const next = !isMenuOpen;
+              setIsMenuOpen(next);
+              try {
+                // small delay to allow DOM changes then trigger viewport recalc used by ClientBody
+                setTimeout(() => window.dispatchEvent(new Event('resize')), 60);
+              } catch (e) {
+                // noop
+              }
+            }}
             className="lg:hidden text-white"
             data-element="mobile-menu-button"
             data-name="Main Navigation > Content Box > Menu Button"
