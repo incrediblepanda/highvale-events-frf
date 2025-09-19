@@ -194,17 +194,13 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
-                  style={{
-                    display: 'flex',
-                    gap: '16px',
-                    justifyContent: 'center',
-                    marginBottom: '40px'
-                  }}
+                  className="flex flex-col sm:flex-row gap-4 justify-center mb-10 px-4"
                   data-element="hero-buttons"
                   data-name="Hero Section > Content Box > Button Container"
                 >
                   <Link href="/weddings">
                     <Button
+                      className="w-full sm:w-auto"
                       style={{
                         display: 'flex',
                         alignItems: 'center',
@@ -223,6 +219,7 @@ export default function HomePage() {
                   </Link>
                   <Link href="/gallery">
                     <Button
+                      className="w-full sm:w-auto"
                       style={{
                         display: 'flex',
                         alignItems: 'center',
