@@ -71,7 +71,7 @@ export default function StandardHero({
                 src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff3eaa0d01287491bb3add65b28898d51"
                 style={{
                   display: 'block',
-                  aspectRatio: '3.48',
+                  aspectRatio: '3.48 / 1',
                   objectFit: 'contain',
                   width: '80%',
                   maxWidth: '300px',
