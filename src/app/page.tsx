@@ -157,8 +157,8 @@ export default function HomePage() {
                     color: 'rgb(255, 255, 255)',
                     fontFeatureSettings: 'normal',
                     textDecoration: 'rgb(255, 255, 255)',
-                    margin: '0 auto 50px',
-                    font: '400 60px/60px "Cormorant Garamond", serif'
+                    margin: '0 auto 20px',
+                    font: '400 60px/30px "Cormorant Garamond", serif'
                   }}
                 >
                   <div style={{ fontSize: '50px' }}>Luxury Wedding &amp; Event Planning</div>
