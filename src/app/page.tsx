@@ -189,6 +189,8 @@ export default function HomePage() {
                   </div>
 
                   <div className="hero-desktop-sub" style={{ fontWeight: '400' }}>
+                    &nbsp;
+                    <br />
                     in the Heart of Colorado
                   </div>
                 </motion.h1>
