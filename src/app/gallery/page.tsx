@@ -36,6 +36,7 @@ export default function GalleryPage() {
         title={<>Our Gallery</>}
         subtitle={<>A curated collection of our favorite moments from weddings, parties, and celebrations across Colorado's most beautiful venues.</>}
         learnMoreCallback={scrollToGallery}
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fd5e7f9a1b3c5d7e9f1a3b5c7d9e1f3a5)"
       />
 
       {/* Modern Gallery Section */}
