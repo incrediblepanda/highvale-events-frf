@@ -35,7 +35,7 @@ export default function PartyPlanningPage() {
         title={<>Party Planning</>}
         subtitle={<>Bachelorette parties, milestone celebrations, and corporate events designed with creativity, style, and attention to every memorable detail.</>}
         learnMoreCallback={scrollToIntro}
-        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fe6f8a0b2c4d6e8f0a2b4c6d8e0f2a4b6)"
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F39ff8520416a4d7eabd3d346d3edd505)"
       />
 
       {/* Introduction */}
