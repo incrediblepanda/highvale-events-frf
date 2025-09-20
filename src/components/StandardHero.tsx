@@ -23,7 +23,7 @@ export default function StandardHero({
       style={{
         minHeight: '345px',
         backgroundImage:
-          "url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F39ff8520416a4d7eabd3d346d3edd505)",
+          "url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F28c9d97713d44c8baea1a1aaa5b1bcb7)",
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
