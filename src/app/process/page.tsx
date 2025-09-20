@@ -92,7 +92,7 @@ export default function ProcessPage() {
         title={<>Our Process</>}
         subtitle={<>A proven four-phase approach that takes your celebration from initial vision to flawless execution, with you at the center of every decision.</>}
         learnMoreCallback={scrollToPhases}
-        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fa8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8)"
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Faa88c307fd1340f39c05a5c95aa7bdc5)"
       />
 
       {/* Process Phases */}
