@@ -139,6 +139,7 @@ export default function Portfolio() {
       <StandardHero
         title={<>A Collection of<br/><span className="text-gold italic">Unforgettable Moments</span></>}
         subtitle={<>Explore our curated portfolio of weddings and celebrations, each a reflection of our clients' distinct visions.</>}
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff7a9b1c3d5e7f9a1b3c5d7e9f1a3b5c7)"
       />
 
       {/* Filter Section */}
