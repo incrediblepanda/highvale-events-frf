@@ -113,6 +113,7 @@ export default function Testimonials() {
       <StandardHero
         title={<>What Our<br/><span className="text-gold italic">Clients Say</span></>}
         subtitle={<>Celebrations brought to life with artistry and precision.</>}
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0)"
       />
 
       {/* Stats Section */}
