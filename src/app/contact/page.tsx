@@ -57,6 +57,7 @@ export default function Contact() {
             Start your journey with a personalized consultation.
           </>
         }
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fb3c5d7e9f1a2c4d6e8f0a2b4c6d8e0f2)"
       />
 
       {/* Contact Section */}
