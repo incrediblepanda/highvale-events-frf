@@ -24,8 +24,7 @@ export default function StandardHero({
       className="relative flex items-center justify-center overflow-hidden"
       style={{
         minHeight: '345px',
-        backgroundImage:
-          "url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F28c9d97713d44c8baea1a1aaa5b1bcb7)",
+        backgroundImage,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
