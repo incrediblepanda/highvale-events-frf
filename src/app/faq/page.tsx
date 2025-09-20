@@ -80,7 +80,7 @@ export default function FAQPage() {
         title={<>Frequently Asked Questions</>}
         subtitle={<>Everything you need to know about working with Highvale Events, from planning packages to our process and philosophy.</>}
         learnMoreCallback={scrollToQuestions}
-        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc4d6e8f0a2b4c6d8e0f2a4b6c8d0e2f4)"
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fb60f674fe85c445bb0654dbd9a2591c4)"
       />
 
       {/* FAQ Section */}
