@@ -42,6 +42,7 @@ export default function AboutPage() {
           </>
         }
         learnMoreCallback={scrollToWhoWeAre}
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fae2b4e5c7a1d4c9e8f2d5b3a6e8c4d1f)"
       />
 
       {/* Who We Are Section */}
