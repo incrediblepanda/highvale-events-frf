@@ -6,11 +6,13 @@ export default function StandardHero({
   subtitle,
   scrollToInquiryId = 'inquiry-section',
   learnMoreCallback,
+  backgroundImage = "url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F28c9d97713d44c8baea1a1aaa5b1bcb7)",
 }: {
   title: React.ReactNode;
   subtitle: React.ReactNode;
   scrollToInquiryId?: string;
   learnMoreCallback?: () => void;
+  backgroundImage?: string;
 }) {
   const scrollToInquiry = () => {
     const el = document.getElementById(scrollToInquiryId);
