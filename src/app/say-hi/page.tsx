@@ -34,7 +34,7 @@ export default function SayHiPage() {
         title={<>Say Hi!</>}
         subtitle={<>Ready to start your journey? Let's have a conversation about your vision, timeline, and how we can make your celebration extraordinary.</>}
         learnMoreCallback={scrollToIntro}
-        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fb9c1d3e5f7a9b1c3d5e7f9a1b3c5d7e9)"
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F83bc7803e09d4a28bf82c368522bf9ff)"
       />
 
       {/* Introduction Section */}
