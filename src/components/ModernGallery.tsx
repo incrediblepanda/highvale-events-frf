@@ -71,25 +71,26 @@ const ModernGallery = ({ images, categories, className = '' }: ModernGalleryProp
   };
 
   const itemVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       scale: 0.8,
       y: 20
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       scale: 1,
       y: 0,
       transition: {
         duration: 0.4,
-        ease: 'easeOut'
+        ease: [0.4, 0, 0.2, 1]
       }
     },
     exit: {
       opacity: 0,
       scale: 0.8,
       transition: {
-        duration: 0.2
+        duration: 0.2,
+        ease: [0.4, 0, 0.2, 1]
       }
     }
   };
