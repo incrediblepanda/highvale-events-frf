@@ -68,7 +68,7 @@ const ModernGallery = ({ images, categories, className = '' }: ModernGalleryProp
         staggerChildren: 0.02
       }
     }
-  };
+  } as const;
 
   const itemVariants = {
     hidden: {
@@ -82,7 +82,7 @@ const ModernGallery = ({ images, categories, className = '' }: ModernGalleryProp
       y: 0,
       transition: {
         duration: 0.4,
-        ease: [0.4, 0, 0.2, 1]
+        ease: [0.4, 0, 0.2, 1] as const
       }
     },
     exit: {
@@ -90,10 +90,10 @@ const ModernGallery = ({ images, categories, className = '' }: ModernGalleryProp
       scale: 0.8,
       transition: {
         duration: 0.2,
-        ease: [0.4, 0, 0.2, 1]
+        ease: [0.4, 0, 0.2, 1] as const
       }
     }
-  };
+  } as const;
 
   return (
     <div className={`w-full ${className}`}>
