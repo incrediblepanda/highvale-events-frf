@@ -75,7 +75,7 @@ export const galleryImages: GalleryImage[] = [
   // Party Images
   {
     id: 7,
-    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fdbc9d1a9c0cc4678a778bfe785ad61de',
+    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fce46c1d73c4a4641a7fe6b6a6d63670d',
     alt: 'Bachelorette party celebration with elegant decor',
     category: 'parties',
     featured: true
@@ -104,7 +104,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 11,
-    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F7afb3ce1c7e5412da2a5d8a23b226118',
+    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F53d48eef1ac94145ada5d3a60c8a3dd0',
     alt: 'Product launch event with branded elements',
     category: 'corporate'
   },
@@ -112,7 +112,7 @@ export const galleryImages: GalleryImage[] = [
   // Design Details
   {
     id: 12,
-    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fe15769e1f80b49f2b9ebdbd2ce9bd162',
+    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F6950a24124e6431b9f79bb7c8ef9950d',
     alt: 'Exquisite floral centerpiece with candles',
     category: 'details',
     aspectRatio: 'portrait'
@@ -125,10 +125,57 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 14,
-    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F28c9d97713d44c8baea1a1aaa5b1bcb7',
+    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F97cd57db5b10407a914c07b7f4feb877',
     alt: 'Custom wedding signage and stationery',
     category: 'details',
     aspectRatio: 'landscape'
+  },
+
+  // Additional gallery images
+  {
+    id: 15,
+    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F569b29cf2b9e4c6a93dc7ff32c33fdde',
+    alt: 'Custom wedding signage and stationery',
+    category: 'details'
+  },
+  {
+    id: 16,
+    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F21c81db5f20f417b8c8f9aaecea161a5',
+    alt: 'Custom wedding signage and stationery',
+    category: 'details'
+  },
+  {
+    id: 17,
+    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F0556bbbfacb94d81a89db6e4d0ae7dc8',
+    alt: 'Exquisite floral centerpiece with candles',
+    category: 'details',
+    aspectRatio: 'portrait'
+  },
+  {
+    id: 18,
+    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F5146ee267a6d4f2cbee3fe2cfc5ad7eb',
+    alt: 'Corporate gala dinner with sophisticated ambiance',
+    category: 'corporate',
+    aspectRatio: 'wide'
+  },
+  {
+    id: 19,
+    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fe246870217c644a5931b5467bf1b3842',
+    alt: 'Custom wedding signage and stationery',
+    category: 'details'
+  },
+  {
+    id: 20,
+    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F79fc0883271f460e8a646399a2d6bb05',
+    alt: 'Exquisite floral centerpiece with candles',
+    category: 'details',
+    aspectRatio: 'portrait'
+  },
+  {
+    id: 21,
+    src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F73589cc22f2d4158a6122629fba4d610',
+    alt: 'Custom wedding signage and stationery',
+    category: 'details'
   }
 ];
 
