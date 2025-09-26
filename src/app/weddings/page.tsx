@@ -422,7 +422,7 @@ export default function WeddingsPage() {
                               {pkg.price}
                             </CardDescription>
                             {pkg.timeline && (
-                              <p className="text-sage-darker/60 text-sm mt-1">
+                              <p className="text-sage-darker/60 mt-1" style={{ font: "400 14px/20px Arial, sans-serif" }}>
                                 {pkg.timeline}
                               </p>
                             )}
