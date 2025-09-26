@@ -1,5 +1,6 @@
 'use client';
 
+import { Metadata } from 'next';
 import InquirySection from '@/components/InquirySection';
 import PortfolioSection from '@/components/PortfolioSection';
 import AsSeenIn from '@/components/AsSeenIn';
