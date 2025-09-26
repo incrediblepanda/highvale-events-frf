@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { ScrollAnimation } from '@/components/ScrollAnimation';
 import { Button } from '@/components/ui/button';
 
