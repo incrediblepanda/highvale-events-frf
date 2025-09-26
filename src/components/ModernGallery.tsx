@@ -194,7 +194,7 @@ const ModernGallery = ({ images, categories, className = '' }: ModernGalleryProp
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
       >
-        <p className="text-sage-darker/60 font-ivy-body">
+        <p className="text-sage-darker/60 font-ivy-body" style={{ fontFamily: "Arial, sans-serif" }}>
           Showing {filteredImages.length} of {images.length} images
           {activeFilter !== 'all' && (
             <span className="ml-2">
