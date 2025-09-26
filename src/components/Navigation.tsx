@@ -37,8 +37,8 @@ export default function Navigation() {
       style={{
         top: 'calc(env(safe-area-inset-top) + 8px)',
         // expose nav height so main can offset content correctly. update if nav size changes.
-        ['--site-nav-height' as any]: '72px'
-      }}
+        '--site-nav-height': '72px'
+      } as React.CSSProperties}
       className={`fixed left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}
       data-element="main-navigation"
       data-name="Main Navigation"
