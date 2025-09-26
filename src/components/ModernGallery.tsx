@@ -61,16 +61,16 @@ const ModernGallery = ({ images, categories, className = '' }: ModernGalleryProp
   };
 
   // Animation variants
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: {},
     visible: {
       transition: {
         staggerChildren: 0.02
       }
     }
-  } as const;
+  };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: {
       opacity: 0,
       scale: 0.8,
@@ -82,7 +82,7 @@ const ModernGallery = ({ images, categories, className = '' }: ModernGalleryProp
       y: 0,
       transition: {
         duration: 0.4,
-        ease: [0.4, 0, 0.2, 1] as const
+        ease: [0.4, 0, 0.2, 1]
       }
     },
     exit: {
@@ -90,10 +90,10 @@ const ModernGallery = ({ images, categories, className = '' }: ModernGalleryProp
       scale: 0.8,
       transition: {
         duration: 0.2,
-        ease: [0.4, 0, 0.2, 1] as const
+        ease: [0.4, 0, 0.2, 1]
       }
     }
-  } as const;
+  };
 
   return (
     <div className={`w-full ${className}`}>
