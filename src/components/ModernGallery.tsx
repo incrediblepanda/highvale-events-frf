@@ -98,7 +98,7 @@ const ModernGallery = ({ images, categories, className = '' }: ModernGalleryProp
     <div className={`w-full ${className}`}>
       {/* Filter Buttons */}
       <ScrollAnimation className="mb-12">
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-3" style={{ display: 'none' }}>
           <Button
             onClick={() => setActiveFilter('all')}
             className={`${
