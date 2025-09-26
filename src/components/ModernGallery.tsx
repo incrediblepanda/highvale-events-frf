@@ -182,8 +182,6 @@ const ModernGallery = ({ images, categories, className = '' }: ModernGalleryProp
                 )}
               </div>
 
-              {/* Subtle border on hover */}
-              <div className="absolute inset-0 border-2 border-champagne/0 group-hover:border-champagne/30 transition-all duration-500 rounded-xl pointer-events-none" />
             </motion.div>
           ))}
         </AnimatePresence>
