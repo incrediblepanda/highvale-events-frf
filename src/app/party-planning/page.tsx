@@ -1,6 +1,5 @@
 'use client';
 
-import Navigation from '@/components/Navigation';
 import InquirySection from '@/components/InquirySection';
 import PortfolioSection from '@/components/PortfolioSection';
 import AsSeenIn from '@/components/AsSeenIn';
@@ -11,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Sparkles, Calendar, Users, Heart, Gift, Music } from 'lucide-react';
 import { motion } from 'framer-motion';
+import StandardHero from '@/components/StandardHero';
 
 export default function PartyPlanningPage() {
   const scrollToInquiry = () => {
@@ -29,70 +29,14 @@ export default function PartyPlanningPage() {
 
   return (
     <>
-      <Navigation />
 
       {/* Hero Section - Slimmer version */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20" />
-
-        {/* Background image placeholder */}
-        <div className="absolute inset-0 opacity-10">
-          <img
-            src="https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Grey-green overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-sage-darkest/20 to-sage-darker/15" />
-
-        <PageTransition className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24">
-          <motion.img
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            src="/golden-wheat-highvale.png"
-            alt="Highvale Events"
-            className="h-20 md:h-24 mx-auto mb-6"
-          />
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-cormorant text-sage-darkest mb-4"
-          >
-            Party Planning
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-sage-darker/80 max-w-2xl mx-auto mb-8 leading-relaxed"
-          >
-            Bachelorette parties, milestone celebrations, and corporate events designed with creativity, style, and attention to every memorable detail.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Button
-              onClick={scrollToInquiry}
-              className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-3"
-            >
-              Contact Form
-            </Button>
-            <Button
-              onClick={scrollToIntro}
-              className="bg-white/80 hover:bg-white text-sage-darkest border-2 border-sage-dark/20 font-medium rounded-full px-8 py-3"
-            >
-              Learn More
-            </Button>
-          </motion.div>
-        </PageTransition>
-      </section>
+      <StandardHero
+        title={<>Party Planning</>}
+        subtitle={<>Bachelorette parties, milestone celebrations, and corporate events designed with creativity, style, and attention to every memorable detail.</>}
+        learnMoreCallback={scrollToIntro}
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F39ff8520416a4d7eabd3d346d3edd505)"
+      />
 
       {/* Introduction */}
       <section id="intro-section" className="py-20 bg-white">
@@ -101,7 +45,7 @@ export default function PartyPlanningPage() {
             <h2 className="text-4xl md:text-5xl font-cormorant text-sage mb-6">
               Celebrate Life's Special Moments
             </h2>
-            <p className="text-lg text-sage/70 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-sage/70 max-w-3xl mx-auto leading-relaxed" style={{ font: '400 18px/29px Arial, sans-serif ' }}>
               From intimate gatherings to grand celebrations, we bring the same attention to detail and
               creative flair to every party we plan. Whether it's a milestone birthday, bachelorette weekend,
               corporate event, or just because you deserve to celebrate, we're here to make it unforgettable.
@@ -216,7 +160,7 @@ export default function PartyPlanningPage() {
             <h2 className="text-4xl md:text-5xl font-cormorant text-sage mb-6">
               Party Planning Packages
             </h2>
-            <p className="text-lg text-sage/70 max-w-3xl mx-auto">
+            <p className="text-lg text-sage/70 max-w-3xl mx-auto" style={{ font: '400 18px/28px Arial, sans-serif ' }}>
               Flexible packages designed to fit your celebration style and budget
             </p>
           </ScrollAnimation>
@@ -224,134 +168,135 @@ export default function PartyPlanningPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <ScrollAnimation animation="fadeInUp" delay={0}>
               <Card className="border-sage/20 h-full">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-cormorant text-sage-darkest mb-4">
-                    Essential Party Package
+                <CardContent className="p-8 flex flex-col h-full">
+                  <h3 className="text-2xl font-cormorant text-sage-darkest mb-2">
+                    Bachelorette Parties
                   </h3>
+                  <div className="text-sm text-sage/70 mb-4">3 available packages</div>
                   <p className="text-3xl font-cormorant text-champagne mb-6">
-                    Starting at $800
+                    Starting at $300
                   </p>
                   <ul className="space-y-3 text-sage-darker mb-6">
                     <li className="flex items-start">
                       <span className="text-champagne mr-2">•</span>
-                      <span>Initial consultation & vision planning</span>
+                      <span>Custom weekend itineraries and curated venue selections.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-gold mr-2">•</span>
-                      <span>Venue selection assistance</span>
+                      <span>Vendor bookings for dining, nightlife, and activities.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-gold mr-2">•</span>
-                      <span>Vendor recommendations</span>
+                      <span>Themed décor, styling, and personalized party favors.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-gold mr-2">•</span>
-                      <span>Basic timeline creation</span>
+                      <span>Group logistics, transportation, and timeline planning.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-gold mr-2">•</span>
-                      <span>Day-of coordination (4 hours)</span>
+                      <span>On-site coordination and day-of support to keep things seamless.</span>
                     </li>
                   </ul>
-                  <Button
-                    onClick={scrollToInquiry}
-                    className="w-full bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full"
-                  >
-                    Learn More
-                  </Button>
+
+                  <div className="mt-auto">
+                    <Button
+                      onClick={scrollToInquiry}
+                      className="w-full bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full"
+                    >
+                      Learn More
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             </ScrollAnimation>
 
             <ScrollAnimation animation="fadeInUp" delay={0.1}>
-              <Card className="border-champagne h-full">
-                <CardContent className="p-8">
-                  <div className="bg-champagne text-sage-darkest text-center py-1 px-3 rounded-full text-sm mb-4 inline-block">
-                    Most Popular
-                  </div>
-                  <h3 className="text-2xl font-cormorant text-sage-darkest mb-4">
-                    Premium Party Package
+              <Card className="border-sage/20 h-full">
+                <CardContent className="p-8 flex flex-col h-full">
+                  <h3 className="text-2xl font-cormorant text-sage-darkest mb-2">
+                    Holiday Parties
                   </h3>
+                  <div className="text-sm text-sage/70 mb-4">Corporate & private holiday events</div>
                   <p className="text-3xl font-cormorant text-champagne mb-6">
-                    Starting at $1,500
+                    Starting at $500 + cost of decor
                   </p>
                   <ul className="space-y-3 text-sage-darker mb-6">
                     <li className="flex items-start">
                       <span className="text-champagne mr-2">•</span>
-                      <span>Everything in Essential, plus:</span>
+                      <span>Theme and décor concepting tailored to your brand or celebration.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-gold mr-2">•</span>
-                      <span>Full vendor management</span>
+                      <span>Catering and bar coordination with curated menus.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-gold mr-2">•</span>
-                      <span>Design & theme development</span>
+                      <span>Entertainment booking including DJs and live music.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-gold mr-2">•</span>
-                      <span>Guest list management</span>
+                      <span>Corporate gifting, branding, and event signage integration.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-gold mr-2">•</span>
-                      <span>Custom party favors coordination</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-gold mr-2">•</span>
-                      <span>Day-of coordination (8 hours)</span>
+                      <span>Comprehensive timeline and vendor management.</span>
                     </li>
                   </ul>
-                  <Button
-                    onClick={scrollToInquiry}
-                    className="w-full bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full"
-                  >
-                    Learn More
-                  </Button>
+
+                  <div className="mt-auto">
+                    <Button
+                      onClick={scrollToInquiry}
+                      className="w-full bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full"
+                    >
+                      Learn More
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             </ScrollAnimation>
 
             <ScrollAnimation animation="fadeInUp" delay={0.2}>
               <Card className="border-sage/20 h-full">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-cormorant text-sage-darkest mb-4">
-                    Luxury Party Experience
+                <CardContent className="p-8 flex flex-col h-full">
+                  <h3 className="text-2xl font-cormorant text-sage-darkest mb-2">
+                    Premium Party Planning
                   </h3>
+                  <div className="text-sm text-sage/70 mb-4">Retirements, Baby Shower, Bridal Shower, Birthday Parties</div>
                   <p className="text-3xl font-cormorant text-champagne mb-6">
-                    Starting at $2,500
+                    Starting at $300 + price of decor
                   </p>
                   <ul className="space-y-3 text-sage-darker mb-6">
                     <li className="flex items-start">
                       <span className="text-champagne mr-2">•</span>
-                      <span>Everything in Premium, plus:</span>
+                      <span>Full design and concept development to bring your vision to life.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-gold mr-2">•</span>
-                      <span>Complete party design & styling</span>
+                      <span>Vendor negotiation, booking, and management.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-gold mr-2">•</span>
-                      <span>Entertainment booking & coordination</span>
+                      <span>Custom rentals, décor sourcing, and installation coordination.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-gold mr-2">•</span>
-                      <span>Custom décor & rental management</span>
+                      <span>Personalized favors, stationery, and on-theme details.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-gold mr-2">•</span>
-                      <span>Photography/videography coordination</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-gold mr-2">•</span>
-                      <span>Full event production (unlimited hours)</span>
+                      <span>Day-of coordination and vendor oversight to ensure flawless execution.</span>
                     </li>
                   </ul>
-                  <Button
-                    onClick={scrollToInquiry}
-                    className="w-full bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full"
-                  >
-                    Learn More
-                  </Button>
+
+                  <div className="mt-auto">
+                    <Button
+                      onClick={scrollToInquiry}
+                      className="w-full bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full"
+                    >
+                      Learn More
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             </ScrollAnimation>

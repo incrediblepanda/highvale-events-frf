@@ -1,11 +1,11 @@
 'use client';
 
-import Navigation from '@/components/Navigation';
 import InquirySection from '@/components/InquirySection';
 import AsSeenIn from '@/components/AsSeenIn';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Star, Quote } from 'lucide-react';
+import StandardHero from '@/components/StandardHero';
 
 export default function Testimonials() {
   const testimonials = [
@@ -108,30 +108,13 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="min-h-screen bg-cream">
-      <Navigation />
+    <div className="bg-cream" style={{ minHeight: "calc(var(--vh, 1vh) * 100)" }}>
 
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-sage"></div>
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '60px 60px'
-          }}
-        ></div>
-
-        <div className="relative z-10 max-w-[1180px] mx-auto px-6 text-center pt-20">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-cormorant font-bold text-white mb-6 leading-tight animate-fade-in">
-            What Our<br />
-            <span className="text-gold italic">Clients Say</span>
-          </h1>
-          <p className="text-lg md:text-xl text-text-light mb-10 max-w-3xl mx-auto font-inter leading-relaxed animate-fade-in animation-delay-200">
-            Celebrations brought to life with artistry and precision.
-          </p>
-        </div>
-      </section>
+      <StandardHero
+        title={<>What Our<br/><span className="text-gold italic">Clients Say</span></>}
+        subtitle={<>Celebrations brought to life with artistry and precision.</>}
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0)"
+      />
 
       {/* Stats Section */}
       <section className="py-12 bg-white">

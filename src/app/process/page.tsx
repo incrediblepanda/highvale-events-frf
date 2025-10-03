@@ -1,6 +1,5 @@
 'use client';
 
-import Navigation from '@/components/Navigation';
 import InquirySection from '@/components/InquirySection';
 import AsSeenIn from '@/components/AsSeenIn';
 import FAQSection from '@/components/FAQSection';
@@ -9,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import StandardHero from '@/components/StandardHero';
 
 export default function ProcessPage() {
   const scrollToInquiry = () => {
@@ -38,7 +38,7 @@ export default function ProcessPage() {
         'Initial vendor recommendations',
         'Style and aesthetic exploration'
       ],
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F800489f1000249769fbb0285c522154a'
     },
     {
       number: 'Phase Two',
@@ -52,7 +52,7 @@ export default function ProcessPage() {
         'Regular check-ins and updates',
         'Logistics coordination'
       ],
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F070cb75f5c4548b3ac4e044635a1b4ad'
     },
     {
       number: 'Phase Three',
@@ -66,7 +66,7 @@ export default function ProcessPage() {
         'Stationery and signage design',
         'Visual direction finalization'
       ],
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F57ab56aab34b44329ef5bad9cf5652e2'
     },
     {
       number: 'Phase Four',
@@ -80,76 +80,20 @@ export default function ProcessPage() {
         'Emergency planning and backup solutions',
         'Complete vendor coordination for event day'
       ],
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F7afb9b4d984d4cdd8ef6358d3cec72be'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-cream">
-      <Navigation />
+    <div className="bg-cream" style={{ minHeight: "calc(var(--vh, 1vh) * 100)" }}>
 
-      {/* Hero Section - Slimmer version */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20" />
-
-        {/* Background image placeholder */}
-        <div className="absolute inset-0 opacity-10">
-          <img
-            src="https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Grey-green overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-sage-darkest/20 to-sage-darker/15" />
-
-        <PageTransition className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24">
-          <motion.img
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            src="/golden-wheat-highvale.png"
-            alt="Highvale Events"
-            className="h-20 md:h-24 mx-auto mb-6"
-          />
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-cormorant text-sage-darkest mb-4"
-          >
-            Our Process
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-sage-darker/80 max-w-2xl mx-auto mb-8 leading-relaxed"
-          >
-            A proven four-phase approach that takes your celebration from initial vision to flawless execution, with you at the center of every decision.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Button
-              onClick={scrollToInquiry}
-              className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-3"
-            >
-              Contact Form
-            </Button>
-            <Button
-              onClick={scrollToPhases}
-              className="bg-white/80 hover:bg-white text-sage-darkest border-2 border-sage-dark/20 font-medium rounded-full px-8 py-3"
-            >
-              Learn More
-            </Button>
-          </motion.div>
-        </PageTransition>
-      </section>
+          {/* Hero Section - Slimmer version */}
+      <StandardHero
+        title={<>Our Process</>}
+        subtitle={<>A proven four-phase approach that takes your celebration from initial vision to flawless execution, with you at the center of every decision.</>}
+        learnMoreCallback={scrollToPhases}
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Faa88c307fd1340f39c05a5c95aa7bdc5)"
+      />
 
       {/* Process Phases */}
       <section id="phases-section" className="py-20 bg-white">

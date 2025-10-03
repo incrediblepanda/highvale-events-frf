@@ -10,75 +10,119 @@ export default function PortfolioSection() {
     {
       title: 'Mountain Vista Wedding',
       category: 'Wedding',
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F8a1facff10d24beb91243561cda0d7b1'
     },
     {
       title: 'Garden Party Celebration',
       category: 'Party',
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F21c81db5f20f417b8c8f9aaecea161a5'
     },
     {
       title: 'Elegant Barn Reception',
       category: 'Wedding',
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F73589cc22f2d4158a6122629fba4d610'
     },
     {
       title: 'Milestone Birthday Soirée',
       category: 'Party',
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F319feb18e2e8433aaaddbbd783c5e70e'
     },
     {
       title: 'Lakeside Ceremony',
       category: 'Wedding',
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F79fc0883271f460e8a646399a2d6bb05'
     },
     {
       title: 'Corporate Gala',
       category: 'Event',
-      image: 'https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F97cd57db5b10407a914c07b7f4feb877'
     }
   ];
 
   return (
-    <section className="py-20 bg-cream">
-      <div className="max-w-[1180px] mx-auto px-6">
-        <ScrollAnimation className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4">
+    <section
+      className="py-10 bg-cream"
+      data-element="portfolio-section"
+      data-name="Our Portfolio Section"
+    >
+      <div
+        className="max-w-[1180px] mx-auto px-6"
+        data-element="portfolio-container"
+        data-name="Our Portfolio Section > Container"
+      >
+        <ScrollAnimation
+          className="text-center mb-16"
+          data-element="portfolio-header"
+          data-name="Our Portfolio Section > Header Box"
+        >
+          <h2
+            className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4"
+            data-element="portfolio-title"
+            data-name="Our Portfolio Section > Header Box > Heading"
+          >
             Our <span className="text-sage-dark italic">Portfolio</span>
           </h2>
-          <p className="text-lg text-sage-darker/70 max-w-2xl mx-auto">
+          <p
+            className="max-w-2xl mx-auto"
+            style={{ font: '400 18px/28px Arial, sans-serif', color: 'rgba(33, 43, 42, 0.7)' }}
+            data-element="portfolio-description"
+            data-name="Our Portfolio Section > Header Box > Text"
+          >
             A glimpse into the celebrations we've had the honor of creating.
           </p>
         </ScrollAnimation>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mb-12"
+          data-element="portfolio-grid"
+          data-name="Our Portfolio Section > Images Grid"
+        >
           {portfolioItems.map((item, index) => (
             <ScrollAnimation
               key={index}
               animation="fadeInUp"
               delay={index * 0.1}
+              data-element={`portfolio-item-wrapper-${index + 1}`}
+              data-name={`Our Portfolio Section > Portfolio Item ${index + 1} > Wrapper`}
             >
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift group cursor-pointer">
-                <div className="relative h-64 overflow-hidden">
+              <div
+                className="block h-full w-full object-cover transition-transform duration-500"
+                data-element={`portfolio-item-${index + 1}`}
+                data-name={`Portfolio Item ${index + 1} - ${item.title}`}
+              >
+                <div
+                  className="relative h-64 overflow-hidden"
+                  data-element={`portfolio-image-container-${index + 1}`}
+                  data-name={`Our Portfolio Section > Portfolio Item ${index + 1} > Image Container`}
+                >
                   <img
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    data-element={`portfolio-image-${index + 1}`}
+                    data-name={`Our Portfolio Section > Portfolio Item ${index + 1} > Image`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-sage-darkest/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-champagne text-sm mb-1">{item.category}</p>
-                    <h3 className="text-xl font-cormorant">{item.title}</h3>
-                  </div>
                 </div>
-              </Card>
+              </div>
             </ScrollAnimation>
           ))}
         </div>
 
-        <ScrollAnimation className="text-center">
-          <Link href="/gallery">
-            <Button className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-3">
+        <ScrollAnimation
+          className="text-center"
+          data-element="portfolio-button-wrapper"
+          data-name="Our Portfolio Section > Button Box"
+        >
+          <Link
+            href="/gallery"
+            data-element="portfolio-gallery-link"
+            data-name="Our Portfolio Section > Button Box > Button Link"
+          >
+            <Button
+              className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-3"
+              data-element="portfolio-gallery-button"
+              data-name="Our Portfolio Section > Button Box > Button"
+            >
               View Full Gallery
             </Button>
           </Link>

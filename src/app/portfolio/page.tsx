@@ -1,12 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import Navigation from '@/components/Navigation';
 import InquirySection from '@/components/InquirySection';
 import AsSeenIn from '@/components/AsSeenIn';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ChevronRight, Heart, Calendar, Users } from 'lucide-react';
+import StandardHero from '@/components/StandardHero';
 
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -134,30 +134,13 @@ export default function Portfolio() {
     : portfolioItems.filter(item => item.category === activeFilter);
 
   return (
-    <div className="min-h-screen bg-cream">
-      <Navigation />
+    <div className="bg-cream" style={{ minHeight: "calc(var(--vh, 1vh) * 100)" }}>
 
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-sage"></div>
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '60px 60px'
-          }}
-        ></div>
-
-        <div className="relative z-10 max-w-[1180px] mx-auto px-6 text-center pt-20">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-cormorant font-bold text-white mb-6 leading-tight animate-fade-in">
-            A Collection of<br />
-            <span className="text-gold italic">Unforgettable Moments</span>
-          </h1>
-          <p className="text-lg md:text-xl text-text-light mb-10 max-w-3xl mx-auto font-inter leading-relaxed animate-fade-in animation-delay-200">
-            Explore our curated portfolio of weddings and celebrations, each a reflection of our clients' distinct visions.
-          </p>
-        </div>
-      </section>
+      <StandardHero
+        title={<>A Collection of<br/><span className="text-gold italic">Unforgettable Moments</span></>}
+        subtitle={<>Explore our curated portfolio of weddings and celebrations, each a reflection of our clients' distinct visions.</>}
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Ff7a9b1c3d5e7f9a1b3c5d7e9f1a3b5c7)"
+      />
 
       {/* Filter Section */}
       <section className="py-12 bg-white sticky top-[100px] z-40 shadow-sm">

@@ -256,6 +256,16 @@
     background: linear-gradient(90deg, #2A3532 0%, #2A3532 50%, #1A2223 50%, #1A2223 100%);
   }
 
+  /* Wedding hero mobile background */
+  @media (max-width: 640px) {
+    .wedding-hero-mobile {
+      background-image: url('https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F79fc0883271f460e8a646399a2d6bb05');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
   /* Animation delays */
   .animation-delay-200 {
     animation-delay: 200ms;
@@ -267,6 +277,130 @@
 
   .animation-delay-600 {
     animation-delay: 600ms;
+  }
+
+  /* MOBILE / SAFE-AREA / VIEWPORT FIXES */
+
+:root { --scroll-offset: 105px; }
+
+/* Apply a scroll-margin-top so scrolling to anchors leaves space for sticky header */
+[id], [data-scroll-target], [data-element] {
+  scroll-margin-top: calc(var(--scroll-offset) + env(safe-area-inset-top));
+}
+
+/* Responsive tweaks for Process section headings */
+@media (max-width: 640px) {
+  [data-element="process-title-our"],
+  [data-element="process-title-process"] {
+    font-size: 38px !important;
+    line-height: 1 !important;
+  }
+  [data-element="process-description"] {
+    font-size: 16px !important;
+    line-height: 28px !important;
+  }
+}
+
+/* Explicit hero title visibility and sizing to avoid reliance on Tailwind classes */
+.hero-mobile-title,
+.hero-mobile-sub {
+  display: none;
+}
+.hero-desktop-title,
+.hero-desktop-sub {
+  display: inline;
+}
+
+@media (max-width: 639px) {
+  .hero-mobile-title,
+  .hero-mobile-sub {
+    display: block !important;
+    font-size: 30px !important;
+    line-height: 30px !important;
+  }
+  .hero-desktop-title,
+  .hero-desktop-sub {
+    display: none !important;
+  }
+  /* hero description tweaks on mobile */
+  [data-element="hero-description"] {
+    font-size: 18px !important;
+    padding: 0 5px !important;
+  }
+  /* FAQ container tweak for mobile */
+  [data-element="faq-container"] {
+    padding-right: 10px !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-desktop-title {
+    display: inline !important;
+    font-size: 60px !important;
+    line-height: 60px !important;
+  }
+  .hero-desktop-sub {
+    display: inline !important;
+    font-size: 60px !important;
+    line-height: 55px !important;
+  }
+}
+
+/* Hide development-only turbopack bubble / nextjs portal used by devtools so it isn't visible to end users */
+nextjs-portal,
+nextjs-portal * {
+  display: none !important;
+}
+
+/* Fallback for other dev overlays */
+.__next_dev__,
+#__next_dev__,
+.turbopack-frontend,
+.turbopack-overlay {
+  display: none !important;
+}
+
+  /* Ensure the document and main content fill available space and respect safe-area insets */
+  html, body, #__next {
+    /* Avoid forcing height:100% which can create nested scroll containers on some mobile browsers */
+    height: auto;
+    min-height: 100%;
+    touch-action: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  main[data-element="main-content"] {
+    /* Restore natural document scrolling: don't force main to be the viewport-sized scroll container */
+    min-height: 100%;
+    min-height: -webkit-fill-available;
+    /* Avoid forcing overflow on main to prevent trapping scroll */
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    padding-top: calc(env(safe-area-inset-top) + var(--site-nav-height, 0px));
+  }
+
+  body {
+    /* Restore body scrolling */
+    overflow-y: auto;
+    padding-bottom: env(safe-area-inset-bottom);
+    overscroll-behavior-y: auto;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Position top navigation below the safe area on devices with notches */
+  [data-element="main-navigation"] {
+    top: calc(env(safe-area-inset-top) + 0px);
+  }
+
+  /* Prevent scroll traps */
+  section {
+    overflow-anchor: none;
+  }
+
+  /* Ensure no element inadvertently traps scrolling by having overflow:auto without intent */
+  *:not(body):not(html) {
+    -webkit-overflow-scrolling: touch;
   }
 }
 

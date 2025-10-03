@@ -92,21 +92,71 @@ export default function InquirySection() {
   }, [pathname]); // Re-run effect when pathname changes
 
   return (
-    <section className="py-20 bg-warm-white">
-      <div className="max-w-4xl mx-auto px-6">
-        <ScrollAnimation className="text-center">
-          <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4">
+    <section
+      className="py-10"
+      style={{
+        backgroundColor: 'rgba(1, 1, 1, 1)',
+        backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F4b9ba40f793140a2982a78715899cb1f)',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        opacity: '0.8'
+      }}
+      data-element="inquiry-section"
+      data-name="Contact Us Section"
+    >
+      <div
+        className="max-w-4xl mx-auto px-6"
+        data-element="inquiry-container"
+        data-name="Contact Us Section > Container"
+      >
+        <ScrollAnimation
+          className="text-center"
+          data-element="inquiry-header"
+          data-name="Contact Us Section > Header Box"
+        >
+          <h2
+            className="text-4xl md:text-5xl font-cormorant mb-4"
+            style={{
+              color: 'rgba(255, 255, 255, 1)',
+              textShadow: '1px 1px 3px rgba(0, 0, 0, 1)'
+            }}
+            data-element="section-heading"
+            data-name="Contact Us Section > Header Box > Heading"
+          >
             Start Your Journey With Us
           </h2>
-          <p className="text-lg text-sage-darker/70 mb-12">
+          <p
+            className="mb-12"
+            style={{
+              color: 'rgba(255, 255, 255, 1)',
+              textShadow: '1px 1px 3px rgba(0, 0, 0, 1)',
+              font: '400 18px/28px Arial, sans-serif'
+            }}
+            data-element="section-description"
+            data-name="Contact Us Section > Header Box > Text"
+          >
             Tell us about your vision and we'll bring it to life with elegance and precision.
           </p>
         </ScrollAnimation>
 
-        <ScrollAnimation delay={0.2}>
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 min-h-[400px]">
+        <ScrollAnimation
+          delay={0.2}
+          data-element="inquiry-form-wrapper"
+          data-name="Contact Us Section > Form Box"
+        >
+          <div
+            className="bg-white rounded-2xl shadow-lg p-8 md:p-12 min-h-[400px]"
+            data-element="inquiry-form-container"
+            data-name="Contact Us Section > Form Box > Form Container"
+          >
             {/* HoneyBook Form Container */}
-            <div ref={formContainerRef} id="honeybook-form-container">
+            <div
+              ref={formContainerRef}
+              id="honeybook-form-container"
+              data-element="contact-form"
+              data-name="Contact Us Section > Form Box > Form"
+            >
               {/* Form will be injected here by the script */}
               <div className="text-center text-sage-darker/50">
                 <p className="text-lg">Loading contact form...</p>

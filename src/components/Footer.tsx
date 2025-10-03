@@ -19,43 +19,77 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-sage-darkest text-white py-16">
-      <div className="max-w-[1180px] mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+    <footer
+      className="text-white py-16"
+      style={{ backgroundColor: '#262b24' }}
+      data-element="site-footer"
+      data-name="Site Footer"
+    >
+      <div
+        className="max-w-[1180px] mx-auto px-6"
+        data-element="footer-container"
+        data-name="Site Footer > Container"
+      >
+        <div
+          className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12"
+          data-element="footer-content-grid"
+          data-name="Site Footer > Content Grid"
+        >
           {/* Brand Column */}
-          <div className="md:col-span-1">
+          <div
+            className="md:col-span-1"
+            data-element="footer-brand-column"
+            data-name="Site Footer > Brand Column"
+          >
             <img
-              src="/light-sand-mountain.png"
+              src="https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fbd3a1bfc1b374db1bac86c432a175cc6"
               alt="Highvale Events"
               className="h-12 w-auto mb-4 brightness-0 invert"
+              data-element="footer-logo"
+              data-name="Site Footer > Brand Column > Logo"
             />
-            <p className="text-white/70 text-sm leading-relaxed">
+            <p
+              className="text-white/70 text-sm leading-relaxed font-inter"
+              data-element="footer-brand-description"
+              data-name="Site Footer > Brand Column > Text"
+            >
               Creating unforgettable moments for Colorado's most cherished celebrations.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="font-cormorant text-xl font-semibold mb-4 text-champagne">
+          <div
+            data-element="footer-quick-links-column"
+            data-name="Site Footer > Links Column"
+          >
+            <h4
+              className="font-cormorant text-xl font-semibold mb-4 text-champagne"
+              data-element="footer-section-heading"
+              data-name="Site Footer > Links Column > Heading"
+            >
               Quick Links
             </h4>
-            <ul className="space-y-2">
-              <li>
+            <ul
+              className="space-y-2"
+              data-element="footer-navigation-list"
+              data-name="Site Footer > Links Column > List"
+            >
+              <li className="font-inter">
                 <Link href="/weddings" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   Weddings
                 </Link>
               </li>
-              <li>
+              <li className="font-inter">
                 <Link href="/party-planning" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   Party Planning
                 </Link>
               </li>
-              <li>
+              <li className="font-inter">
                 <Link href="/about" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   About Us
                 </Link>
               </li>
-              <li>
+              <li className="font-inter">
                 <Link href="/process" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   Our Process
                 </Link>
@@ -64,22 +98,33 @@ export default function Footer() {
           </div>
 
           {/* Resources */}
-          <div>
-            <h4 className="font-cormorant text-xl font-semibold mb-4 text-champagne">
+          <div
+            data-element="footer-resources-column"
+            data-name="Site Footer > Resources Column"
+          >
+            <h4
+              className="font-cormorant text-xl font-semibold mb-4 text-champagne"
+              data-element="footer-section-heading"
+              data-name="Site Footer > Resources Column > Heading"
+            >
               Resources
             </h4>
-            <ul className="space-y-2">
-              <li>
+            <ul
+              className="space-y-2"
+              data-element="footer-navigation-list"
+              data-name="Site Footer > Resources Column > List"
+            >
+              <li className="font-inter">
                 <Link href="/gallery" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   Gallery
                 </Link>
               </li>
-              <li>
+              <li className="font-inter">
                 <Link href="/faq" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   FAQ
                 </Link>
               </li>
-              <li>
+              <li className="font-inter">
                 <Link href="/say-hi" className="text-white/70 hover:text-champagne transition-colors text-sm">
                   Contact
                 </Link>
@@ -88,33 +133,48 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="font-cormorant text-xl font-semibold mb-4 text-champagne">
+          <div
+            data-element="footer-contact-column"
+            data-name="Site Footer > Contact Column"
+          >
+            <h4
+              className="font-cormorant text-xl font-semibold mb-4 text-champagne"
+              data-element="footer-section-heading"
+              data-name="Site Footer > Contact Column > Heading"
+            >
               Get in Touch
             </h4>
-            <div className="space-y-3">
+            <div
+              className="space-y-3"
+              data-element="footer-contact-list"
+              data-name="Site Footer > Contact Column > Info List"
+            >
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-champagne mt-0.5 flex-shrink-0" />
-                <p className="text-white/70 text-sm">
+                <p className="text-white/70 text-sm font-inter">
                   Colorado Springs, CO
                 </p>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-champagne flex-shrink-0" />
-                <a href="tel:+19703712799" className="text-white/70 hover:text-champagne transition-colors text-sm">
+                <a href="tel:+19703712799" className="text-white/70 hover:text-champagne transition-colors text-sm font-inter">
                   (970) 371-2799
                 </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-champagne flex-shrink-0" />
-                <a href="mailto:hello@highvaleevents.com" className="text-white/70 hover:text-champagne transition-colors text-sm">
+                <a href="mailto:hello@highvaleevents.com" className="text-white/70 hover:text-champagne transition-colors text-sm font-inter">
                   hello@highvaleevents.com
                 </a>
               </div>
             </div>
 
             {/* Social Icons */}
-            <div className="flex space-x-4 mt-6">
+            <div
+              className="flex space-x-4 mt-6"
+              data-element="footer-social-links"
+              data-name="Site Footer > Contact Column > Social Links"
+            >
               <a href="#" className="text-white/70 hover:text-champagne transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
@@ -126,13 +186,21 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-white/50 text-sm">
+        <div
+          className="border-t border-white/10 pt-8"
+          data-element="footer-bottom-bar"
+          data-name="Site Footer > Bottom Bar"
+        >
+          <div
+            className="flex flex-col md:flex-row justify-between items-center"
+            data-element="footer-bottom-content"
+            data-name="Site Footer > Bottom Bar > Content"
+          >
+            <p className="text-white/50 text-sm font-inter">
               © {currentYear} Highvale Events & Design. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-white/50 hover:text-champagne text-sm transition-colors">
+              <Link href="#" className="text-white/50 hover:text-champagne text-sm transition-colors font-inter">
                 Privacy Policy
               </Link>
             </div>

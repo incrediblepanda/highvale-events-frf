@@ -1,10 +1,10 @@
 'use client';
 
-import Navigation from '@/components/Navigation';
 import InquirySection from '@/components/InquirySection';
 import AsSeenIn from '@/components/AsSeenIn';
 import { PageTransition } from '@/components/PageTransition';
 import { Button } from '@/components/ui/button';
+import StandardHero from '@/components/StandardHero';
 import {
   Accordion,
   AccordionContent,
@@ -74,70 +74,14 @@ export default function FAQPage() {
 
   return (
     <>
-      <Navigation />
 
       {/* Hero Section - Slimmer version */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-champagne/20" />
-
-        {/* Background image placeholder */}
-        <div className="absolute inset-0 opacity-10">
-          <img
-            src="https://marketplace.canva.com/EAGFdr5xrIY/1/0/1600w/canva-beige-and-brown-elegant-coming-soon-instagram-post-rCVKQbzDkrc.jpg"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Grey-green overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-sage-darkest/20 to-sage-darker/15" />
-
-        <PageTransition className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24">
-          <motion.img
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            src="/golden-wheat-highvale.png"
-            alt="Highvale Events"
-            className="h-20 md:h-24 mx-auto mb-6"
-          />
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-cormorant text-sage-darkest mb-4"
-          >
-            Frequently Asked Questions
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-sage-darker/80 max-w-2xl mx-auto mb-8 leading-relaxed"
-          >
-            Everything you need to know about working with Highvale Events, from planning packages to our process and philosophy.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Button
-              onClick={scrollToInquiry}
-              className="bg-champagne hover:bg-champagne/90 text-sage-darkest font-medium rounded-full px-8 py-3"
-            >
-              Contact Form
-            </Button>
-            <Button
-              onClick={scrollToQuestions}
-              className="bg-white/80 hover:bg-white text-sage-darkest border-2 border-sage-dark/20 font-medium rounded-full px-8 py-3"
-            >
-              Learn More
-            </Button>
-          </motion.div>
-        </PageTransition>
-      </section>
+      <StandardHero
+        title={<>Frequently Asked Questions</>}
+        subtitle={<>Everything you need to know about working with Highvale Events, from planning packages to our process and philosophy.</>}
+        learnMoreCallback={scrollToQuestions}
+        backgroundImage="url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fb60f674fe85c445bb0654dbd9a2591c4)"
+      />
 
       {/* FAQ Section */}
       <section id="questions-section" className="py-20 bg-white">

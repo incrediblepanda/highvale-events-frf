@@ -11,7 +11,7 @@ import {
 export default function FAQSection() {
   const faqs = [
     {
-      question: 'Why should I choose Highvale Events & Design over another planner?',
+      question: 'Why should I choose Highvale Events over another planner?',
       answer: "At Highvale Events & Design, we specialize in more than just timelines and logistics—we bring custom creation and curated design elements to every event. Many of our clients come to us with Pinterest boards they've been building for years, filled with inspiration and dreams. Our passion is transforming those boards into reality, making sure every detail—big or small—feels intentional and beautifully executed. From designing your wedding signage and styling a custom monogram, to curating the perfect tablescape, we ensure every element reflects your unique vision."
     },
     {
@@ -25,19 +25,50 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-3xl mx-auto px-6">
-        <ScrollAnimation className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4">
+    <section
+      className="py-10 bg-white"
+      data-element="faq-section"
+      data-name="FAQ Section"
+    >
+      <div
+        className="max-w-3xl mx-auto px-6"
+        data-element="faq-container"
+        data-name="FAQ Section > Container"
+      >
+        <ScrollAnimation
+          className="text-center mb-12"
+          data-element="faq-header"
+          data-name="FAQ Section > Header Box"
+        >
+          <h2
+            className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4"
+            data-element="section-heading"
+            data-name="FAQ Section > Header Box > Heading"
+          >
             Frequently Asked <span className="text-sage-dark italic">Questions</span>
           </h2>
-          <p className="text-lg text-sage-darker/70">
+          <p
+            className="text-lg text-sage-darker/70"
+            data-element="section-description"
+            data-name="FAQ Section > Header Box > Text"
+            style={{ font: '400 18px/28px Arial, sans-serif ' }}
+          >
             Common questions about planning your perfect celebration.
           </p>
         </ScrollAnimation>
 
-        <ScrollAnimation delay={0.2}>
-          <Accordion type="single" collapsible className="space-y-4">
+        <ScrollAnimation
+          delay={0.2}
+          data-element="faq-content"
+          data-name="FAQ Section > Content Box"
+        >
+          <Accordion
+            type="single"
+            collapsible
+            className="space-y-4"
+            data-element="faq-accordion"
+            data-name="FAQ Section > Content Box > Accordion"
+          >
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
@@ -45,7 +76,15 @@ export default function FAQSection() {
                 className="border border-sage-dark/20 rounded-lg px-6"
               >
                 <AccordionTrigger className="text-left font-cormorant text-xl text-sage-darkest hover:text-sage-dark py-6">
-                  {faq.question}
+                  {index === 0 || index === 2 ? (
+                    <div style={{ fontFamily: 'Arial, sans-serif', fontWeight: '500' }}>
+                      {faq.question}
+                    </div>
+                  ) : (
+                    <div style={{ fontFamily: 'Arial, sans-serif', fontWeight: '500' }}>
+                      {faq.question}
+                    </div>
+                  )}
                 </AccordionTrigger>
                 <AccordionContent className="text-sage-darker/70 leading-relaxed pb-6">
                   {faq.answer}
