@@ -506,7 +506,7 @@ export default function HomePage() {
                 <div
                   data-element="process-description"
                   data-name="Our Process Section > Content Box > Text"
-                  className="text-lg sm:text-2xl leading-6 sm:leading-9 pt-4 sm:pt-0"
+                  className="text-lg sm:text-2xl leading-6 sm:leading-9 pt-4 sm:pt-0 px-2.5 sm:px-0"
                   style={{
                     color: "rgb(255, 255, 255)",
                     maxWidth: "672px",
