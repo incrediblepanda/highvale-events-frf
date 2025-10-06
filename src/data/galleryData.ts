@@ -76,7 +76,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 7,
     src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fce46c1d73c4a4641a7fe6b6a6d63670d',
-    alt: 'Bachelorette party celebration with elegant decor',
+    alt: 'Pup as the Ring Bearer',
     category: 'parties',
     featured: true
   },
