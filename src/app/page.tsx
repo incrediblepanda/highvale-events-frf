@@ -152,7 +152,7 @@ export default function HomePage() {
                   style={{
                     display: "block",
                     fontWeight: "400",
-                    height: "200px",
+                    height: "250px",
                     objectFit: "contain",
                     margin: "60px auto 24px",
                   }}
