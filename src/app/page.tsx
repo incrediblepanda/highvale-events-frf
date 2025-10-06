@@ -152,7 +152,7 @@ export default function HomePage() {
                   style={{
                     display: "block",
                     fontWeight: "400",
-                    height: "128px",
+                    height: "200px",
                     objectFit: "contain",
                     margin: "60px auto 24px",
                   }}
@@ -165,7 +165,7 @@ export default function HomePage() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
                   style={{
-                    color: 'rgb(255, 255, 255)',
+                    color: '#FCF5EA',
                     margin: '0 auto 24px',
                     font: '400 30px/30px "Cormorant Garamond", serif ',
                   }}
