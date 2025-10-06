@@ -67,7 +67,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 6,
     src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fb7bbaf124c2b49d8aa2bbe3596e5ba15',
-    alt: 'Luxury wedding ceremony with floral arch',
+    alt: 'Head Table Decor',
     category: 'weddings',
     aspectRatio: 'portrait'
   },
