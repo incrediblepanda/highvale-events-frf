@@ -172,17 +172,27 @@ export default function HomePage() {
                   data-element="hero-title"
                   data-name="Hero Section > Content Box > Heading"
                 >
-                  <span className="hero-mobile-title" style={{ fontWeight: '400', fontFamily: 'var(--font-ivy-body)' }}>
-                    Luxury Wedding
-                    <br
-                      data-loc="src/app/page.tsx:231:128"
-                      style={{ fontWeight: '400' }}
-                    />
-                    &amp; Event Planning
-                    <br />
-                    in the Heart of Colorado
-                    <br />
-                  </span>
+                  <span
+                      data-loc="src/app/page.tsx:224:120"
+                      $name="page"
+                      className="hero-mobile-title"
+                      style={{
+                        display: 'none',
+                        fontFamily: 'ivyModeBody, "ivyModeBody Fallback"',
+                        fontFeatureSettings: 'normal',
+                        fontWeight: '400',
+                      }}
+                    >
+                      Luxury Wedding
+                      <br
+                        data-loc="src/app/page.tsx:231:128"
+                        style={{ fontWeight: '400' }}
+                      />
+                      &amp; Event Planning
+                      <br />
+                      in the Heart of Colorado
+                      <br />
+                    </span>
 
                   <div className="hero-desktop-title" style={{ display: 'inline', fontFeatureSettings: 'normal', font: '400 48px/60px ivyModeBody, "ivyModeBody Fallback" ' }}>
                     Luxury Wedding &amp; Event Planning
