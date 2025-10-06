@@ -184,11 +184,11 @@ export default function HomePage() {
                     <br />
                   </span>
 
-                  <div className="hero-desktop-title" style={{ fontWeight: '400', fontFamily: 'var(--font-ivy-body)' }}>
+                  <div className="hero-desktop-title" style={{ display: 'inline', fontFeatureSettings: 'normal', font: '400 50px/60px ivyModeBody, "ivyModeBody Fallback" ' }}>
                     Luxury Wedding &amp; Event Planning
                   </div>
 
-                  <div className="hero-desktop-sub" style={{ fontWeight: '400', fontFamily: 'var(--font-ivy-body)' }}>
+                  <div className="hero-desktop-sub" style={{ display: 'inline', fontFeatureSettings: 'normal', font: '400 60px/55px ivyModeBody, "ivyModeBody Fallback" ' }}>
                     &nbsp;
                     <br />
                     in the Heart of Colorado
