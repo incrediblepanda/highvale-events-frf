@@ -448,15 +448,16 @@ export default function HomePage() {
               }}
             >
               <div
-                className="text-center mb-16"
-                data-element="process-spacer"
-                data-name="Our Process Section > Content Box > Header Spacer"
-                style={{
-                  fontWeight: "400",
-                  marginBottom: "64px",
-                  textAlign: "center"
-                }}
-              />
+              className="text-center mb-16"
+              data-element="process-spacer"
+              data-name="Our Process Section > Content Box > Header Spacer"
+              style={{
+                fontWeight: "400",
+                marginBottom: "64px",
+                textAlign: "center",
+                fontFamily: 'var(--font-ivy-body)'
+              }}
+            />
               <h2
                 className="text-center text-3xl sm:text-4xl lg:text-5xl font-cormorant mb-6 px-2 sm:px-0"
                 data-element="process-title"
