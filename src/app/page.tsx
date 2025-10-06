@@ -174,7 +174,6 @@ export default function HomePage() {
                 >
                   <span
                       data-loc="src/app/page.tsx:224:120"
-                      $name="page"
                       className="hero-mobile-title"
                       style={{
                         display: 'none',
