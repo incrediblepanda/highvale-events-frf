@@ -87,11 +87,14 @@ export default function StandardHero({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 style={{
-                  color: 'rgb(255, 255, 255)',
-                  textDecoration: 'rgb(255, 255, 255)',
+                  color: '#FCF5EA',
+                  textDecoration: '#FCF5EA',
                   margin: '0 auto 24px',
                   fontFeatureSettings: 'normal',
-                  font: '400 60px/60px "Cormorant Garamond", serif ',
+                  fontFamily: 'var(--font-ivy-body)',
+                  fontWeight: '400',
+                  fontSize: '48px',
+                  lineHeight: '48px',
                 }}
                 data-element="hero-title"
                 data-name="Hero Section > Content Box > Heading"
