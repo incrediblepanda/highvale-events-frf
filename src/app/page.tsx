@@ -205,7 +205,7 @@ export default function HomePage() {
                     maxWidth: '672px',
                     textShadow: 'rgba(0, 0, 0, 0.5) 1px 1px 3px',
                     margin: '0 auto 40px',
-                    font: '400 20px/20px Arial, sans-serif '
+                    font: '400 30px/30px Arial, sans-serif '
                   }}
                   data-element="hero-description"
                   data-name="Hero Section > Content Box > Text"
