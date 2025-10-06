@@ -203,9 +203,9 @@ export default function HomePage() {
                     color: 'rgba(255, 255, 255, 0.8)',
                     fontFeatureSettings: 'normal',
                     maxWidth: '672px',
-                    textShadow: 'rgba(0, 0, 0, 0.5) 1px 1px 3px',
+                    textDecoration: 'rgba(255, 255, 255, 0.8)',
                     margin: '0 auto 40px',
-                    font: '400 30px/30px Arial, sans-serif '
+                    font: '20px/24px Roboto, sans-serif '
                   }}
                   data-element="hero-description"
                   data-name="Hero Section > Content Box > Text"
