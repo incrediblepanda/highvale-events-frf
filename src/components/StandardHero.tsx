@@ -87,11 +87,15 @@ export default function StandardHero({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 style={{
-                  color: 'rgb(255, 255, 255)',
-                  textDecoration: 'rgb(255, 255, 255)',
+                  color: '#FCF5EA',
+                  textDecoration: '#FCF5EA',
+                  opacity: '0.9',
                   margin: '0 auto 24px',
                   fontFeatureSettings: 'normal',
-                  font: '400 60px/60px "Cormorant Garamond", serif ',
+                  fontFamily: 'var(--font-ivy-body)',
+                  fontWeight: '400',
+                  fontSize: '48px',
+                  lineHeight: '48px',
                 }}
                 data-element="hero-title"
                 data-name="Hero Section > Content Box > Heading"
@@ -105,10 +109,9 @@ export default function StandardHero({
                 transition={{ duration: 0.6, delay: 0.3 }}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
-                  font: '400 20px Arial, sans-serif ',
+                  font: '400 20px Roboto, sans-serif ',
                   maxWidth: '672px',
                   textDecoration: 'rgba(255, 255, 255, 0.8)',
-                  textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
                   margin: '0 auto 40px',
                 }}
                 data-element="hero-description"

@@ -166,16 +166,9 @@ const ModernGallery = ({ images, categories, className = '' }: ModernGalleryProp
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-sage-darkest/80 via-sage-darkest/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
 
-              {/* Content overlay */}
+              {/* Content overlay - text removed to disable hover popup */}
               <div className="absolute inset-0 flex flex-col justify-end p-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                <h3 className="text-white font-ivy-headline text-lg mb-1 line-clamp-2">
-                  {image.alt}
-                </h3>
-                <p className="text-champagne text-sm font-ivy-body capitalize tracking-wide">
-                  {categories.find(cat => cat.id === image.category)?.label || image.category}
-                </p>
-                
-                {/* Featured badge */}
+                {/* Featured badge remains if applicable */}
                 {image.featured && (
                   <div className="absolute top-4 right-4 bg-champagne text-sage-darkest px-2 py-1 rounded-full text-xs font-medium">
                     Featured

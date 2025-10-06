@@ -152,7 +152,7 @@ export default function HomePage() {
                   style={{
                     display: "block",
                     fontWeight: "400",
-                    height: "128px",
+                    height: "250px",
                     objectFit: "contain",
                     margin: "60px auto 24px",
                   }}
@@ -165,30 +165,40 @@ export default function HomePage() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
                   style={{
-                    color: 'rgb(255, 255, 255)',
+                    color: '#FCF5EA',
                     margin: '0 auto 24px',
                     font: '400 30px/30px "Cormorant Garamond", serif ',
                   }}
                   data-element="hero-title"
                   data-name="Hero Section > Content Box > Heading"
                 >
-                  <span className="hero-mobile-title" style={{ fontWeight: '400' }}>
-                    Luxury Wedding
-                    <br
-                      data-loc="src/app/page.tsx:231:128"
-                      style={{ fontWeight: '400' }}
-                    />
-                    &amp; Event Planning
-                    <br />
-                    in the Heart of Colorado
-                    <br />
-                  </span>
+                  <span
+                      data-loc="src/app/page.tsx:224:120"
+                      $name="page"
+                      className="hero-mobile-title"
+                      style={{
+                        display: 'none',
+                        fontFamily: 'ivyModeBody, "ivyModeBody Fallback"',
+                        fontFeatureSettings: 'normal',
+                        fontWeight: '400',
+                      }}
+                    >
+                      Luxury Wedding
+                      <br
+                        data-loc="src/app/page.tsx:231:128"
+                        style={{ fontWeight: '400' }}
+                      />
+                      &amp; Event Planning
+                      <br />
+                      in the Heart of Colorado
+                      <br />
+                    </span>
 
-                  <div className="hero-desktop-title" style={{ fontWeight: '400' }}>
+                  <div className="hero-desktop-title" style={{ display: 'inline', fontFeatureSettings: 'normal', font: '400 48px/60px ivyModeBody, "ivyModeBody Fallback" ' }}>
                     Luxury Wedding &amp; Event Planning
                   </div>
 
-                  <div className="hero-desktop-sub" style={{ fontWeight: '400' }}>
+                  <div className="hero-desktop-sub" style={{ display: 'inline', fontFeatureSettings: 'normal', font: '400 60px/55px ivyModeBody, "ivyModeBody Fallback" ' }}>
                     &nbsp;
                     <br />
                     in the Heart of Colorado
@@ -203,9 +213,9 @@ export default function HomePage() {
                     color: 'rgba(255, 255, 255, 0.8)',
                     fontFeatureSettings: 'normal',
                     maxWidth: '672px',
-                    textShadow: 'rgba(0, 0, 0, 0.5) 1px 1px 3px',
+                    textDecoration: 'rgba(255, 255, 255, 0.8)',
                     margin: '0 auto 40px',
-                    font: '400 20px/20px Arial, sans-serif '
+                    font: '20px/24px Roboto, sans-serif '
                   }}
                   data-element="hero-description"
                   data-name="Hero Section > Content Box > Text"
@@ -448,15 +458,16 @@ export default function HomePage() {
               }}
             >
               <div
-                className="text-center mb-16"
-                data-element="process-spacer"
-                data-name="Our Process Section > Content Box > Header Spacer"
-                style={{
-                  fontWeight: "400",
-                  marginBottom: "64px",
-                  textAlign: "center"
-                }}
-              />
+              className="text-center mb-16"
+              data-element="process-spacer"
+              data-name="Our Process Section > Content Box > Header Spacer"
+              style={{
+                fontWeight: "400",
+                marginBottom: "64px",
+                textAlign: "center",
+                fontFamily: 'var(--font-ivy-body)'
+              }}
+            />
               <h2
                 className="text-center text-3xl sm:text-4xl lg:text-5xl font-cormorant mb-6 px-2 sm:px-0"
                 data-element="process-title"
