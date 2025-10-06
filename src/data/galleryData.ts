@@ -141,7 +141,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 16,
     src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F21c81db5f20f417b8c8f9aaecea161a5',
-    alt: 'Custom wedding signage and stationery',
+    alt: 'Grand Exit Moment',
     category: 'details'
   },
   {
