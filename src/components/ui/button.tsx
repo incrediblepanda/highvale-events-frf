@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-sage text-text-light shadow-lg hover:bg-sage-dark hover:shadow-xl hover:transform hover:-translate-y-[2px]",
+          "bg-[#FCF5EA] text-charcoal shadow-lg hover:bg-sage-dark hover:shadow-xl hover:transform hover:-translate-y-[2px]",
         gold:
           "bg-gold text-charcoal shadow-md hover:bg-gold-dark hover:shadow-lg hover:transform hover:-translate-y-[1px]",
         outline:
