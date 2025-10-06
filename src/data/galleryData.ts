@@ -46,7 +46,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 3,
     src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F83bc7803e09d4a28bf82c368522bf9ff',
-    alt: 'Garden wedding reception with elegant table settings',
+    alt: 'Custom Sunglasses Bar',
     category: 'weddings',
     aspectRatio: 'landscape'
   },
