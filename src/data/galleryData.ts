@@ -98,7 +98,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 10,
     src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d',
-    alt: 'Corporate gala dinner with sophisticated ambiance',
+    alt: 'Outdoor Table Decor',
     category: 'corporate',
     aspectRatio: 'wide'
   },
