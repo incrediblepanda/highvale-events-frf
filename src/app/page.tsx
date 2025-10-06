@@ -184,7 +184,7 @@ export default function HomePage() {
                     <br />
                   </span>
 
-                  <div className="hero-desktop-title" style={{ display: 'inline', fontFeatureSettings: 'normal', font: '400 45px/60px ivyModeBody, "ivyModeBody Fallback" ' }}>
+                  <div className="hero-desktop-title" style={{ display: 'inline', fontFeatureSettings: 'normal', font: '400 48px/60px ivyModeBody, "ivyModeBody Fallback" ' }}>
                     Luxury Wedding &amp; Event Planning
                   </div>
 
