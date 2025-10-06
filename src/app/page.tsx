@@ -173,8 +173,6 @@ export default function HomePage() {
                   data-name="Hero Section > Content Box > Heading"
                 >
                   <span
-                      data-loc="src/app/page.tsx:224:120"
-                      $name="page"
                       className="hero-mobile-title"
                       style={{
                         display: 'none',
