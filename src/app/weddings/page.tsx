@@ -300,7 +300,6 @@ export default function WeddingsPage() {
                     fontWeight: '400',
                     maxWidth: '672px',
                     textDecoration: 'rgba(255, 255, 255, 0.8)',
-                    textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
                     margin: '0 auto 40px'
                   }}
                   data-element="hero-description"
