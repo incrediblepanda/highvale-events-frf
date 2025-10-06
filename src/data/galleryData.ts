@@ -90,7 +90,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 9,
     src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fe137fdb8669345f6a848efc534ada837',
-    alt: 'Elegant anniversary celebration',
+    alt: 'Welcome Table Signage',
     category: 'parties'
   },
 
