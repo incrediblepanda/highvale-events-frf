@@ -53,7 +53,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 4,
     src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fb60f674fe85c445bb0654dbd9a2591c4',
-    alt: 'Intimate ceremony under the stars',
+    alt: 'Guests looking at Welcome Table Details',
     category: 'weddings'
   },
   {
