@@ -147,7 +147,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 17,
     src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F0556bbbfacb94d81a89db6e4d0ae7dc8',
-    alt: 'Exquisite floral centerpiece with candles',
+    alt: 'Tablescape Design',
     category: 'details',
     aspectRatio: 'portrait'
   },
