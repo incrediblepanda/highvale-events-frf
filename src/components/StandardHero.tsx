@@ -89,6 +89,7 @@ export default function StandardHero({
                 style={{
                   color: '#FCF5EA',
                   textDecoration: '#FCF5EA',
+                  opacity: '0.9',
                   margin: '0 auto 24px',
                   fontFeatureSettings: 'normal',
                   fontFamily: 'var(--font-ivy-body)',
