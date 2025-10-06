@@ -172,7 +172,7 @@ export default function HomePage() {
                   data-element="hero-title"
                   data-name="Hero Section > Content Box > Heading"
                 >
-                  <span className="hero-mobile-title" style={{ fontWeight: '400' }}>
+                  <span className="hero-mobile-title" style={{ fontWeight: '400', fontFamily: 'var(--font-ivy-body)' }}>
                     Luxury Wedding
                     <br
                       data-loc="src/app/page.tsx:231:128"
@@ -184,11 +184,11 @@ export default function HomePage() {
                     <br />
                   </span>
 
-                  <div className="hero-desktop-title" style={{ fontWeight: '400' }}>
+                  <div className="hero-desktop-title" style={{ fontWeight: '400', fontFamily: 'var(--font-ivy-body)' }}>
                     Luxury Wedding &amp; Event Planning
                   </div>
 
-                  <div className="hero-desktop-sub" style={{ fontWeight: '400' }}>
+                  <div className="hero-desktop-sub" style={{ fontWeight: '400', fontFamily: 'var(--font-ivy-body)' }}>
                     &nbsp;
                     <br />
                     in the Heart of Colorado
