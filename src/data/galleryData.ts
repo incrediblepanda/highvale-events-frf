@@ -180,7 +180,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 22,
     src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fac0086452ac84cd0850dbeb491177976',
-    alt: 'Custom wedding signage and stationery',
+    alt: 'Baby Shower Custom Design',
     category: 'details'
   }
 ];
