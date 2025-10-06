@@ -126,7 +126,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 14,
     src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F97cd57db5b10407a914c07b7f4feb877',
-    alt: 'Custom wedding signage and stationery',
+    alt: 'Photo Booth Set-up',
     category: 'details',
     aspectRatio: 'landscape'
   },
