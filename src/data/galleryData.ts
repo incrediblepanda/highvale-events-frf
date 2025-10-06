@@ -120,7 +120,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 13,
     src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F5bb27648143e488ab6f639b3640931c2',
-    alt: 'Elegant table setting with gold accents',
+    alt: 'Ceremony Decor at Spruce Mountain Ranch',
     category: 'details'
   },
   {
