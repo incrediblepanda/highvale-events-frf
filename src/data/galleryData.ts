@@ -113,7 +113,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 12,
     src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F6950a24124e6431b9f79bb7c8ef9950d',
-    alt: 'Exquisite floral centerpiece with candles',
+    alt: 'Custom Welcome Sign',
     category: 'details',
     aspectRatio: 'portrait'
   },
