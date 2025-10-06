@@ -154,7 +154,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 18,
     src: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F5146ee267a6d4f2cbee3fe2cfc5ad7eb',
-    alt: 'Corporate gala dinner with sophisticated ambiance',
+    alt: 'Ceremony at Spruce Mountain Ranch',
     category: 'corporate',
     aspectRatio: 'wide'
   },
