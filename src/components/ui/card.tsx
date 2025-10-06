@@ -18,7 +18,7 @@ const Card = React.forwardRef<
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'flex-start',
-        height: '294px',
+        height: '300px',
       }
     }}
     {...props}
