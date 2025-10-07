@@ -187,8 +187,7 @@ export default function HomePage() {
             flexDirection: 'column',
             position: 'relative',
             width: '100vw',
-            marginLeft: 'calc(50% - 50vw)',
-            backgroundColor: 'rgba(66, 68, 66, 0.61)'
+            marginLeft: 'calc(50% - 50vw)'
           }}
         >
           <section
@@ -197,7 +196,6 @@ export default function HomePage() {
               flexDirection: 'column',
               position: 'relative',
               width: '100vw',
-              backgroundColor: 'rgba(0, 0, 0, 0.13)',
               alignSelf: 'stretch',
               flexGrow: 1,
               margin: '0 auto 0 calc(50% - 50vw)'
