@@ -93,26 +93,26 @@ export default function HomePage() {
       title: 'Luxury Weddings',
       description: 'Create the wedding of your dreams with our meticulous attention to detail and creative vision.',
       href: '/weddings',
-      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fb7bbaf124c2b49d8aa2bbe3596e5ba15'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F37df92d536484ac38103d3d19caacf25'
     },
     {
       title: 'Bachelorette Parties',
       description: 'Celebrate the bride-to-be with an unforgettable experience tailored to her unique style and personality.',
       href: '/party-planning',
-      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fdbc9d1a9c0cc4678a778bfe785ad61de'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F07309c944dd84e3a9362b760d95a65a9'
     },
     {
       title: 'Party Planning',
       description: 'From intimate gatherings to grand celebrations, we bring your special occasions to life with elegance.',
       href: '/party-planning',
-      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F39ff8520416a4d7eabd3d346d3edd505'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F2b90228216d54c63bb41b8abc2e20a42'
     }
   ];
 
   const processSteps = [
     { phase: 'Phase 1', title: 'Discovery', description: 'We begin with understanding your vision, style, and unique requirements for your celebration.' },
     { phase: 'Phase 2', title: 'Planning', description: 'Detailed planning of logistics, timelines, and vendor selection tailored to your needs.' },
-    { phase: 'Phase 3', title: 'Design', description: 'Our creative team brings your vision to life with bespoke design concepts and styling.' },
+    { phase: 'Phase 3', title: 'Design', description: 'Our creative team brings your vision to life with unique design concepts and styling.' },
     { phase: 'Phase 4', title: 'Execution', description: 'Flawless delivery of your event with our dedicated team managing every detail.' }
   ];
 
@@ -384,13 +384,6 @@ export default function HomePage() {
             >
               Our <span className="text-sage-dark italic">Services</span>
             </h2>
-            <p
-              className="text-lg text-sage-darker/70 max-w-2xl mx-auto font-sans sm:font-inherit"
-              data-element="services-description"
-              data-name="Our Services Section > Header Box > Text"
-            >
-              We specialize in creating memorable celebrations tailored to your unique vision.
-            </p>
           </ScrollAnimation>
 
           <div
