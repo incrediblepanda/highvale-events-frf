@@ -32,7 +32,7 @@ export default function AsSeenIn() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center text-2xl font-cormorant font-semibold text-sage mb-10"
+          className="text-center text-2xl font-ivy-body font-semibold text-sage mb-10" style={{ font: '400 24px/28px ivyModeBody, "ivyModeBody Fallback"' }}
           data-element="section-heading"
           data-name="As Seen In Section > Heading"
         >
