@@ -15,10 +15,16 @@ import {
 } from '@/components/ui/accordion';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+
 
 export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [prevImageIndex, setPrevImageIndex] = useState<number | null>(null);
+  const [prevVisible, setPrevVisible] = useState(false);
+  const fadeDuration = 800; // ms
+  const fadeTimeoutRef = useRef<number | null>(null);
+  const removePrevTimeoutRef = useRef<number | null>(null);
 
   const heroImages = [
     'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d',
@@ -28,11 +34,37 @@ export default function HomePage() {
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    const interval = window.setInterval(() => {
+      setCurrentImageIndex((prev) => {
+        const next = (prev + 1) % heroImages.length;
+
+        // set the previous image index so we can crossfade it out
+        setPrevImageIndex(prev);
+        setPrevVisible(true);
+
+        // clear any existing timers
+        if (fadeTimeoutRef.current) window.clearTimeout(fadeTimeoutRef.current);
+        if (removePrevTimeoutRef.current) window.clearTimeout(removePrevTimeoutRef.current);
+
+        // allow one tick then start fading out the previous image
+        fadeTimeoutRef.current = window.setTimeout(() => {
+          setPrevVisible(false);
+        }, 50) as unknown as number;
+
+        // remove the previous image from DOM after fade completes
+        removePrevTimeoutRef.current = window.setTimeout(() => {
+          setPrevImageIndex(null);
+        }, fadeDuration + 60) as unknown as number;
+
+        return next;
+      });
     }, 5000); // Change image every 5 seconds
 
-    return () => clearInterval(interval);
+    return () => {
+      window.clearInterval(interval);
+      if (fadeTimeoutRef.current) window.clearTimeout(fadeTimeoutRef.current);
+      if (removePrevTimeoutRef.current) window.clearTimeout(removePrevTimeoutRef.current);
+    };
   }, [heroImages.length]);
 
   const scrollToInquiry = () => {
@@ -95,15 +127,44 @@ export default function HomePage() {
         className="relative flex items-center justify-center overflow-hidden"
         style={{
           minHeight: '345px',
-          backgroundImage: `url(${heroImages[currentImageIndex]})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
           flexGrow: 0
         }}
         data-element="hero-section"
         data-name="Hero Section"
       >
+        {/* Background layers for crossfade */}
+        <div aria-hidden style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+          {prevImageIndex !== null && (
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                backgroundImage: `url(${heroImages[prevImageIndex]})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                transition: `opacity ${fadeDuration}ms ease`,
+                opacity: prevVisible ? 1 : 0
+              }}
+            />
+          )}
+
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              backgroundImage: `url(${heroImages[currentImageIndex]})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+              transition: `opacity ${fadeDuration}ms ease`,
+              opacity: 1
+            }}
+          />
+
+          {/* overlay color */}
+          <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(66, 68, 66, 0.61)' }} />
+        </div>
         <div
           style={{
             display: 'flex',
