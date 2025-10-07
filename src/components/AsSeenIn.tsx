@@ -72,9 +72,12 @@ export default function AsSeenIn() {
                 key={`first-${index}`}
                 className="flex items-center justify-center px-4 sm:px-8 min-w-[120px] sm:min-w-[240px]"
               >
-                <div className="text-sage/60 font-ivy-body font-medium text-lg tracking-wider whitespace-nowrap" style={{ font: '400 16px/20px ivyModeBody, "ivyModeBody Fallback"' }}>
-                  {logo.text}
-                </div>
+                <img
+                  src={getLogoSrc(logo)}
+                  alt={logo.name}
+                  className="h-8 sm:h-12 object-contain"
+                  style={{ maxWidth: '220px' }}
+                />
               </div>
             ))}
             {/* Duplicate set for seamless loop */}
@@ -83,9 +86,12 @@ export default function AsSeenIn() {
                 key={`second-${index}`}
                 className="flex items-center justify-center px-4 sm:px-8 min-w-[120px] sm:min-w-[240px]"
               >
-                <div className="text-sage/60 font-ivy-body font-medium text-lg tracking-wider whitespace-nowrap" style={{ font: '400 16px/20px ivyModeBody, "ivyModeBody Fallback"' }}>
-                  {logo.text}
-                </div>
+                <img
+                  src={getLogoSrc(logo)}
+                  alt={logo.name}
+                  className="h-8 sm:h-12 object-contain"
+                  style={{ maxWidth: '220px' }}
+                />
               </div>
             ))}
           </div>
