@@ -127,14 +127,15 @@ export default function HomePage() {
             }}
           >
             <div
-              className="pt-20 sm:pt-24 md:pt-32 pb-6"
+              className="pt-20 sm:pt-24 md:pt-32"
               style={{
                 display: 'flex',
                 flexDirection: 'column',
                 position: 'relative',
                 backgroundColor: 'rgba(0, 0, 0, 0)',
                 width: '100vw',
-                alignSelf: 'center'
+                alignSelf: 'center',
+                paddingBottom: '22px'
               }}
             >
               <PageTransition
