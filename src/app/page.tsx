@@ -150,6 +150,22 @@ export default function HomePage() {
       >
         {/* Background layers for crossfade */}
         <div aria-hidden style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+          {/* Current image below */}
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              backgroundImage: `url(${heroImages[currentImageIndex]})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+              transition: `opacity ${fadeDuration}ms ease`,
+              opacity: 1,
+              zIndex: 0,
+            }}
+          />
+
+          {/* Previous image on top, fades out to reveal current */}
           {prevImageIndex !== null && (
             <div
               style={{
@@ -160,26 +176,15 @@ export default function HomePage() {
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 transition: `opacity ${fadeDuration}ms ease`,
-                opacity: prevVisible ? 1 : 0
+                opacity: prevVisible ? 1 : 0,
+                zIndex: 1,
+                willChange: 'opacity',
               }}
             />
           )}
 
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              backgroundImage: `url(${heroImages[currentImageIndex]})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
-              transition: `opacity ${fadeDuration}ms ease`,
-              opacity: 1
-            }}
-          />
-
           {/* overlay color */}
-          <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(66, 68, 66, 0.61)' }} />
+          <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(66, 68, 66, 0.61)', zIndex: 2 }} />
         </div>
         <div
           style={{
