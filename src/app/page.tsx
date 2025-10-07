@@ -15,71 +15,8 @@ import {
 } from '@/components/ui/accordion';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect, useRef } from 'react';
-
 
 export default function HomePage() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [prevImageIndex, setPrevImageIndex] = useState<number | null>(null);
-  const [prevVisible, setPrevVisible] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
-  const fadeDuration = 800; // ms
-  const fadeTimeoutRef = useRef<number | null>(null);
-  const removePrevTimeoutRef = useRef<number | null>(null);
-  const intervalRef = useRef<number | null>(null);
-
-  const heroImages = [
-    'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d',
-    'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fb7bbaf124c2b49d8aa2bbe3596e5ba15',
-    'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fdbc9d1a9c0cc4678a778bfe785ad61de',
-    'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F39ff8520416a4d7eabd3d346d3edd505'
-  ];
-
-  useEffect(() => {
-    const startInterval = () => {
-      if (intervalRef.current) return;
-      intervalRef.current = window.setInterval(() => {
-        setCurrentImageIndex((prev) => {
-          const next = (prev + 1) % heroImages.length;
-
-          // set the previous image index so we can crossfade it out
-          setPrevImageIndex(prev);
-          setPrevVisible(true);
-
-          // clear any existing timers
-          if (fadeTimeoutRef.current) window.clearTimeout(fadeTimeoutRef.current);
-          if (removePrevTimeoutRef.current) window.clearTimeout(removePrevTimeoutRef.current);
-
-          // allow one tick then start fading out the previous image
-          fadeTimeoutRef.current = window.setTimeout(() => {
-            setPrevVisible(false);
-          }, 50) as unknown as number;
-
-          // remove the previous image from DOM after fade completes
-          removePrevTimeoutRef.current = window.setTimeout(() => {
-            setPrevImageIndex(null);
-          }, fadeDuration + 60) as unknown as number;
-
-          return next;
-        });
-      }, 5000);
-    };
-
-    if (!isPaused) startInterval();
-    else if (intervalRef.current) {
-      window.clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-
-    return () => {
-      if (intervalRef.current) {
-        window.clearInterval(intervalRef.current);
-        intervalRef.current = null;
-      }
-      if (fadeTimeoutRef.current) window.clearTimeout(fadeTimeoutRef.current);
-      if (removePrevTimeoutRef.current) window.clearTimeout(removePrevTimeoutRef.current);
-    };
-  }, [heroImages.length, isPaused]);
 
   const scrollToInquiry = () => {
     const inquirySection = document.getElementById('inquiry-section');
@@ -139,53 +76,14 @@ export default function HomePage() {
       {/* Hero Section */}
       <section
         className="relative flex items-center justify-center overflow-hidden"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
         style={{
           minHeight: '345px',
-          flexGrow: 0
+          flexGrow: 0,
+          backgroundColor: '#2A3532'
         }}
         data-element="hero-section"
         data-name="Hero Section"
       >
-        {/* Background layers for crossfade */}
-        <div aria-hidden style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          {/* Current image below */}
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              backgroundImage: `url(${heroImages[currentImageIndex]})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
-              transition: `opacity ${fadeDuration}ms ease`,
-              opacity: 1,
-              zIndex: 0,
-            }}
-          />
-
-          {/* Previous image on top, fades out to reveal current */}
-          {prevImageIndex !== null && (
-            <div
-              style={{
-                position: 'absolute',
-                inset: 0,
-                backgroundImage: `url(${heroImages[prevImageIndex]})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                transition: `opacity ${fadeDuration}ms ease`,
-                opacity: prevVisible ? 1 : 0,
-                zIndex: 1,
-                willChange: 'opacity',
-              }}
-            />
-          )}
-
-          {/* overlay color */}
-          <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(66, 68, 66, 0.61)', zIndex: 2 }} />
-        </div>
         <div
           style={{
             display: 'flex',
