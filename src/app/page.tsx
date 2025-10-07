@@ -22,9 +22,11 @@ export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [prevImageIndex, setPrevImageIndex] = useState<number | null>(null);
   const [prevVisible, setPrevVisible] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const fadeDuration = 800; // ms
   const fadeTimeoutRef = useRef<number | null>(null);
   const removePrevTimeoutRef = useRef<number | null>(null);
+  const intervalRef = useRef<number | null>(null);
 
   const heroImages = [
     'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d',
@@ -34,38 +36,50 @@ export default function HomePage() {
   ];
 
   useEffect(() => {
-    const interval = window.setInterval(() => {
-      setCurrentImageIndex((prev) => {
-        const next = (prev + 1) % heroImages.length;
+    const startInterval = () => {
+      if (intervalRef.current) return;
+      intervalRef.current = window.setInterval(() => {
+        setCurrentImageIndex((prev) => {
+          const next = (prev + 1) % heroImages.length;
 
-        // set the previous image index so we can crossfade it out
-        setPrevImageIndex(prev);
-        setPrevVisible(true);
+          // set the previous image index so we can crossfade it out
+          setPrevImageIndex(prev);
+          setPrevVisible(true);
 
-        // clear any existing timers
-        if (fadeTimeoutRef.current) window.clearTimeout(fadeTimeoutRef.current);
-        if (removePrevTimeoutRef.current) window.clearTimeout(removePrevTimeoutRef.current);
+          // clear any existing timers
+          if (fadeTimeoutRef.current) window.clearTimeout(fadeTimeoutRef.current);
+          if (removePrevTimeoutRef.current) window.clearTimeout(removePrevTimeoutRef.current);
 
-        // allow one tick then start fading out the previous image
-        fadeTimeoutRef.current = window.setTimeout(() => {
-          setPrevVisible(false);
-        }, 50) as unknown as number;
+          // allow one tick then start fading out the previous image
+          fadeTimeoutRef.current = window.setTimeout(() => {
+            setPrevVisible(false);
+          }, 50) as unknown as number;
 
-        // remove the previous image from DOM after fade completes
-        removePrevTimeoutRef.current = window.setTimeout(() => {
-          setPrevImageIndex(null);
-        }, fadeDuration + 60) as unknown as number;
+          // remove the previous image from DOM after fade completes
+          removePrevTimeoutRef.current = window.setTimeout(() => {
+            setPrevImageIndex(null);
+          }, fadeDuration + 60) as unknown as number;
 
-        return next;
-      });
-    }, 5000); // Change image every 5 seconds
+          return next;
+        });
+      }, 5000);
+    };
+
+    if (!isPaused) startInterval();
+    else if (intervalRef.current) {
+      window.clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
 
     return () => {
-      window.clearInterval(interval);
+      if (intervalRef.current) {
+        window.clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
       if (fadeTimeoutRef.current) window.clearTimeout(fadeTimeoutRef.current);
       if (removePrevTimeoutRef.current) window.clearTimeout(removePrevTimeoutRef.current);
     };
-  }, [heroImages.length]);
+  }, [heroImages.length, isPaused]);
 
   const scrollToInquiry = () => {
     const inquirySection = document.getElementById('inquiry-section');
@@ -125,6 +139,8 @@ export default function HomePage() {
       {/* Hero Section */}
       <section
         className="relative flex items-center justify-center overflow-hidden"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
         style={{
           minHeight: '345px',
           flexGrow: 0
