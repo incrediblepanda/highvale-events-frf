@@ -12,6 +12,18 @@ export default function AsSeenIn() {
     { name: 'Best of Colorado Springs', text: 'BEST OF COLORADO SPRINGS' },
   ];
 
+  const getLogoSrc = (logo: { name: string; text: string; image?: string }) => {
+    if (logo.image) return logo.image;
+    const text = logo.text.replace(/&/g, '&amp;');
+    const svg = `
+      <svg xmlns='http://www.w3.org/2000/svg' width='360' height='60'>
+        <rect width='100%' height='100%' fill='transparent' />
+        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family="ivyModeBody, 'Inter', sans-serif" font-size='16' fill='#2A3532'>${text}</text>
+      </svg>
+    `;
+    return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
