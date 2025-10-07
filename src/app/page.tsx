@@ -244,7 +244,7 @@ export default function HomePage() {
                   style={{
                     color: '#FCF5EA',
                     margin: '0 auto 24px',
-                    font: '400 30px/30px "Cormorant Garamond", serif ',
+                    font: '400 30px/30px ivyModeBody, "ivyModeBody Fallback" ',
                   }}
                   data-element="hero-title"
                   data-name="Hero Section > Content Box > Heading"
@@ -428,7 +428,7 @@ export default function HomePage() {
                     data-name={`Our Services Section > Service Card ${index + 1} > Content Box`}
                   >
                     <h3
-                      className="text-2xl font-cormorant text-sage-darkest mb-4"
+                      className="text-2xl font-ivy-body text-sage-darkest mb-4"
                       data-element={`service-title-${index + 1}`}
                       data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Title Heading`}
                     >
@@ -545,7 +545,7 @@ export default function HomePage() {
               }}
             />
               <h2
-                className="text-center text-3xl sm:text-4xl lg:text-5xl font-cormorant mb-6 px-2 sm:px-0"
+                className="text-center text-3xl sm:text-4xl lg:text-5xl font-ivy-body mb-6 px-2 sm:px-0"
                 data-element="process-title"
                 data-name="Our Process Section > Content Box > Heading"
                 style={{
@@ -557,7 +557,7 @@ export default function HomePage() {
                   borderRadius: "10px",
                   overflow: "hidden",
                   padding: "25px 0",
-                  font: '400 48px/48px "Cormorant Garamond", serif ',
+                  font: '400 48px/48px ivyModeBody, "ivyModeBody Fallback" ',
                   border: "1px solid rgba(0, 0, 0, 0)"
                 }}
               >
@@ -663,7 +663,7 @@ export default function HomePage() {
                           display: "block",
                           color: "rgb(255, 255, 255)",
                           textDecoration: "rgb(255, 255, 255)",
-                          font: '700 20px/28px "Cormorant Garamond", serif '
+                          font: '700 20px/28px ivyModeBody, "ivyModeBody Fallback" '
                         }}
                         data-element={`process-step-number-${index + 1}`}
                         data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
@@ -680,7 +680,7 @@ export default function HomePage() {
                         textDecoration: "rgb(0, 0, 0)",
                         textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
                         margin: "0 auto 12px",
-                        font: '400 30px/28px "Cormorant Garamond", serif '
+                        font: '400 30px/28px ivyModeBody, "ivyModeBody Fallback" '
                       }}
                     >
                       {step.title}
