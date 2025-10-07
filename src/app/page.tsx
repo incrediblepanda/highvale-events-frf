@@ -98,8 +98,16 @@ export default function HomePage() {
           muted
           loop
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
           style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%) scale(1.5)',
+            minWidth: '100%',
+            minHeight: '100%',
+            width: '100vw',
+            height: '100vh',
+            objectFit: 'cover',
             zIndex: 0
           }}
         >
