@@ -116,10 +116,11 @@ export default function InquirySection() {
           data-name="Contact Us Section > Header Box"
         >
           <h2
-            className="text-4xl md:text-5xl font-cormorant mb-4"
+            className="text-4xl md:text-5xl font-ivy-body mb-4"
             style={{
               color: 'rgba(255, 255, 255, 1)',
-              textShadow: '1px 1px 3px rgba(0, 0, 0, 1)'
+              textShadow: '1px 1px 3px rgba(0, 0, 0, 1)',
+              font: '400 48px/48px ivyModeBody, "ivyModeBody Fallback" '
             }}
             data-element="section-heading"
             data-name="Contact Us Section > Header Box > Heading"
