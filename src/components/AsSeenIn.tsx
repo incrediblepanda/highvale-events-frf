@@ -60,7 +60,7 @@ export default function AsSeenIn() {
                 key={`first-${index}`}
                 className="flex items-center justify-center px-4 sm:px-8 min-w-[120px] sm:min-w-[240px]"
               >
-                <div className="text-sage/60 font-inter font-medium text-lg tracking-wider whitespace-nowrap">
+                <div className="text-sage/60 font-ivy-body font-medium text-lg tracking-wider whitespace-nowrap" style={{ font: '400 16px/20px ivyModeBody, "ivyModeBody Fallback"' }}>
                   {logo.text}
                 </div>
               </div>
@@ -71,7 +71,7 @@ export default function AsSeenIn() {
                 key={`second-${index}`}
                 className="flex items-center justify-center px-4 sm:px-8 min-w-[120px] sm:min-w-[240px]"
               >
-                <div className="text-sage/60 font-inter font-medium text-lg tracking-wider whitespace-nowrap">
+                <div className="text-sage/60 font-ivy-body font-medium text-lg tracking-wider whitespace-nowrap" style={{ font: '400 16px/20px ivyModeBody, "ivyModeBody Fallback"' }}>
                   {logo.text}
                 </div>
               </div>
