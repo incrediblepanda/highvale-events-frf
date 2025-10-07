@@ -72,19 +72,22 @@ export default function HomePage() {
     <div
       data-element="homepage-wrapper"
       data-name="Homepage"
+      style={{ margin: 0, padding: 0 }}
     >
       {/* Hero Section */}
       <section
-        className="relative overflow-hidden"
+        className="relative"
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           height: '100vh',
-          width: '100%',
+          width: '100vw',
           backgroundColor: '#2A3532',
           margin: 0,
-          padding: 0
+          padding: 0,
+          overflow: 'hidden',
+          position: 'relative'
         }}
         data-element="hero-section"
         data-name="Hero Section"
@@ -97,12 +100,16 @@ export default function HomePage() {
           playsInline
           style={{
             position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            minWidth: '100%',
+            minHeight: '100%',
+            width: 'auto',
+            height: 'auto',
             objectFit: 'cover',
-            zIndex: 0
+            zIndex: 0,
+            display: 'block'
           }}
         >
           <source src="https://cdn.builder.io/o/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F2a4a6484c1074911857f4fd16ecbf7e0%2Fcompressed?apiKey=52185cbc63e544f6abfcb901069ce1f1&token=2a4a6484c1074911857f4fd16ecbf7e0&alt=media&optimized=true" type="video/mp4" />
