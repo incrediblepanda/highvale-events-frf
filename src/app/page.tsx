@@ -105,7 +105,7 @@ export default function HomePage() {
       title: 'Party Planning',
       description: 'From intimate gatherings to grand celebrations, we bring your special occasions to life with elegance.',
       href: '/party-planning',
-      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F2b90228216d54c63bb41b8abc2e20a42'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F4717adbf50024f3aa1deda1c5bf7b113'
     }
   ];
 
