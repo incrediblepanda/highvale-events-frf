@@ -127,7 +127,7 @@ export default function HomePage() {
             }}
           >
             <div
-              className="py-20 sm:py-24 md:py-32"
+              className="pt-20 sm:pt-24 md:pt-32 pb-6"
               style={{
                 display: 'flex',
                 flexDirection: 'column',
