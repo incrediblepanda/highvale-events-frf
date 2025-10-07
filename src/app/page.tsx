@@ -378,7 +378,7 @@ export default function HomePage() {
             data-name="Our Services Section > Header Box"
           >
             <h2
-              className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4"
+              className="text-4xl md:text-5xl font-ivy-body text-sage-darkest mb-4"
               data-element="services-title"
               data-name="Our Services Section > Header Box > Heading"
             >
@@ -654,7 +654,7 @@ export default function HomePage() {
                       data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Icon`}
                     >
                       <div
-                        className="text-xl font-cormorant font-bold"
+                        className="text-xl font-ivy-body font-bold"
                         style={{
                           display: "block",
                           color: "rgb(255, 255, 255)",
@@ -668,7 +668,7 @@ export default function HomePage() {
                       </div>
                     </div>
                     <h3
-                      className="font-cormorant mb-3"
+                      className="font-ivy-body mb-3"
                       data-element={`process-step-title-${index + 1}`}
                       data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Heading`}
                       style={{
@@ -744,7 +744,7 @@ export default function HomePage() {
             data-name="FAQ Section > Header Box"
           >
             <h2
-              className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4"
+              className="text-4xl md:text-5xl font-ivy-body text-sage-darkest mb-4"
               data-element="faq-title"
               data-name="FAQ Section > Header Box > Heading"
             >
@@ -777,7 +777,7 @@ export default function HomePage() {
                   value={`item-${index}`}
                   className="border border-sage-dark/20 rounded-lg px-6"
                 >
-                  <AccordionTrigger className="text-left font-cormorant text-xl text-sage-darkest hover:text-sage-dark py-6">
+                  <AccordionTrigger className="text-left font-ivy-body text-xl text-sage-darkest hover:text-sage-dark py-6">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-sage-darker/70 leading-relaxed pb-6">
