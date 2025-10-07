@@ -15,25 +15,8 @@ import {
 } from '@/components/ui/accordion';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
 
 export default function HomePage() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const heroImages = [
-    'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d',
-    'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fb7bbaf124c2b49d8aa2bbe3596e5ba15',
-    'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fdbc9d1a9c0cc4678a778bfe785ad61de',
-    'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F39ff8520416a4d7eabd3d346d3edd505'
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 5000); // Change image every 5 seconds
-
-    return () => clearInterval(interval);
-  }, [heroImages.length]);
 
   const scrollToInquiry = () => {
     const inquirySection = document.getElementById('inquiry-section');
@@ -47,26 +30,26 @@ export default function HomePage() {
       title: 'Luxury Weddings',
       description: 'Create the wedding of your dreams with our meticulous attention to detail and creative vision.',
       href: '/weddings',
-      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fb7bbaf124c2b49d8aa2bbe3596e5ba15'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F37df92d536484ac38103d3d19caacf25'
     },
     {
       title: 'Bachelorette Parties',
       description: 'Celebrate the bride-to-be with an unforgettable experience tailored to her unique style and personality.',
       href: '/party-planning',
-      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fdbc9d1a9c0cc4678a778bfe785ad61de'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F07309c944dd84e3a9362b760d95a65a9'
     },
     {
       title: 'Party Planning',
       description: 'From intimate gatherings to grand celebrations, we bring your special occasions to life with elegance.',
       href: '/party-planning',
-      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F39ff8520416a4d7eabd3d346d3edd505'
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F4717adbf50024f3aa1deda1c5bf7b113'
     }
   ];
 
   const processSteps = [
     { phase: 'Phase 1', title: 'Discovery', description: 'We begin with understanding your vision, style, and unique requirements for your celebration.' },
     { phase: 'Phase 2', title: 'Planning', description: 'Detailed planning of logistics, timelines, and vendor selection tailored to your needs.' },
-    { phase: 'Phase 3', title: 'Design', description: 'Our creative team brings your vision to life with bespoke design concepts and styling.' },
+    { phase: 'Phase 3', title: 'Design', description: 'Our creative team brings your vision to life with unique design concepts and styling.' },
     { phase: 'Phase 4', title: 'Execution', description: 'Flawless delivery of your event with our dedicated team managing every detail.' }
   ];
 
@@ -89,21 +72,50 @@ export default function HomePage() {
     <div
       data-element="homepage-wrapper"
       data-name="Homepage"
+      style={{ margin: 0, padding: 0 }}
     >
       {/* Hero Section */}
       <section
-        className="relative flex items-center justify-center overflow-hidden"
+        className="relative"
         style={{
-          minHeight: '345px',
-          backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fc382e1a13da64c9ea4d004cbcd28e09d)",
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          flexGrow: 0
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100vh',
+          width: '100vw',
+          backgroundColor: '#2A3532',
+          margin: 0,
+          padding: 0,
+          overflow: 'hidden',
+          position: 'relative'
         }}
         data-element="hero-section"
         data-name="Hero Section"
       >
+        {/* Video Background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%) scale(1.5)',
+            minWidth: '100%',
+            minHeight: '100%',
+            width: '100vw',
+            height: '100vh',
+            objectFit: 'cover',
+            zIndex: 0
+          }}
+        >
+          <source src="https://cdn.builder.io/o/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F2a4a6484c1074911857f4fd16ecbf7e0%2Fcompressed?apiKey=52185cbc63e544f6abfcb901069ce1f1&token=2a4a6484c1074911857f4fd16ecbf7e0&alt=media&optimized=true" type="video/mp4" />
+        </video>
+        {/* Overlay */}
+        <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(66, 68, 66, 0.4)', zIndex: 1 }} />
+
         <div
           style={{
             display: 'flex',
@@ -111,7 +123,7 @@ export default function HomePage() {
             position: 'relative',
             width: '100vw',
             marginLeft: 'calc(50% - 50vw)',
-            backgroundColor: 'rgba(66, 68, 66, 0.61)'
+            zIndex: 2
           }}
         >
           <section
@@ -120,21 +132,22 @@ export default function HomePage() {
               flexDirection: 'column',
               position: 'relative',
               width: '100vw',
-              backgroundColor: 'rgba(0, 0, 0, 0.13)',
               alignSelf: 'stretch',
               flexGrow: 1,
               margin: '0 auto 0 calc(50% - 50vw)'
             }}
           >
             <div
-              className="py-20 sm:py-24 md:py-32"
+              className="pt-20 sm:pt-24 md:pt-32"
               style={{
                 display: 'flex',
                 flexDirection: 'column',
                 position: 'relative',
                 backgroundColor: 'rgba(0, 0, 0, 0)',
                 width: '100vw',
-                alignSelf: 'center'
+                alignSelf: 'center',
+                justifyContent: 'flex-start',
+                paddingBottom: '22px'
               }}
             >
               <PageTransition
@@ -167,7 +180,7 @@ export default function HomePage() {
                   style={{
                     color: '#FCF5EA',
                     margin: '0 auto 24px',
-                    font: '400 30px/30px "Cormorant Garamond", serif ',
+                    font: '400 30px/30px ivyModeBody, "ivyModeBody Fallback" ',
                   }}
                   data-element="hero-title"
                   data-name="Hero Section > Content Box > Heading"
@@ -193,7 +206,7 @@ export default function HomePage() {
                       <br />
                     </span>
 
-                  <div className="hero-desktop-title" style={{ display: 'inline', fontFeatureSettings: 'normal', font: '400 48px/60px ivyModeBody, "ivyModeBody Fallback" ' }}>
+                  <div className="hero-desktop-title" style={{ display: 'inline', fontFeatureSettings: 'normal', font: '400 60px/80px ivyModeBody, "ivyModeBody Fallback" ' }}>
                     Luxury Wedding &amp; Event Planning
                   </div>
 
@@ -298,19 +311,12 @@ export default function HomePage() {
             data-name="Our Services Section > Header Box"
           >
             <h2
-              className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4"
+              className="text-4xl md:text-5xl font-ivy-body text-sage-darkest mb-4"
               data-element="services-title"
               data-name="Our Services Section > Header Box > Heading"
             >
               Our <span className="text-sage-dark italic">Services</span>
             </h2>
-            <p
-              className="text-lg text-sage-darker/70 max-w-2xl mx-auto font-sans sm:font-inherit"
-              data-element="services-description"
-              data-name="Our Services Section > Header Box > Text"
-            >
-              We specialize in creating memorable celebrations tailored to your unique vision.
-            </p>
           </ScrollAnimation>
 
           <div
@@ -351,7 +357,7 @@ export default function HomePage() {
                     data-name={`Our Services Section > Service Card ${index + 1} > Content Box`}
                   >
                     <h3
-                      className="text-2xl font-cormorant text-sage-darkest mb-4"
+                      className="text-2xl font-ivy-body text-sage-darkest mb-4"
                       data-element={`service-title-${index + 1}`}
                       data-name={`Our Services Section > Service Card ${index + 1} > Content Box > Title Heading`}
                     >
@@ -468,7 +474,7 @@ export default function HomePage() {
               }}
             />
               <h2
-                className="text-center text-3xl sm:text-4xl lg:text-5xl font-cormorant mb-6 px-2 sm:px-0"
+                className="text-center text-3xl sm:text-4xl lg:text-5xl font-ivy-body mb-6 px-2 sm:px-0"
                 data-element="process-title"
                 data-name="Our Process Section > Content Box > Heading"
                 style={{
@@ -480,7 +486,7 @@ export default function HomePage() {
                   borderRadius: "10px",
                   overflow: "hidden",
                   padding: "25px 0",
-                  font: '400 48px/48px "Cormorant Garamond", serif ',
+                  font: '400 48px/48px ivyModeBody, "ivyModeBody Fallback" ',
                   border: "1px solid rgba(0, 0, 0, 0)"
                 }}
               >
@@ -581,12 +587,12 @@ export default function HomePage() {
                       data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Icon`}
                     >
                       <div
-                        className="text-xl font-cormorant font-bold"
+                        className="text-xl font-ivy-body font-bold"
                         style={{
                           display: "block",
                           color: "rgb(255, 255, 255)",
                           textDecoration: "rgb(255, 255, 255)",
-                          font: '700 20px/28px "Cormorant Garamond", serif '
+                          font: '700 20px/28px ivyModeBody, "ivyModeBody Fallback" '
                         }}
                         data-element={`process-step-number-${index + 1}`}
                         data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
@@ -595,7 +601,7 @@ export default function HomePage() {
                       </div>
                     </div>
                     <h3
-                      className="font-cormorant mb-3"
+                      className="font-ivy-body mb-3"
                       data-element={`process-step-title-${index + 1}`}
                       data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Heading`}
                       style={{
@@ -603,7 +609,7 @@ export default function HomePage() {
                         textDecoration: "rgb(0, 0, 0)",
                         textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
                         margin: "0 auto 12px",
-                        font: '400 30px/28px "Cormorant Garamond", serif '
+                        font: '400 30px/28px ivyModeBody, "ivyModeBody Fallback" '
                       }}
                     >
                       {step.title}
@@ -671,7 +677,7 @@ export default function HomePage() {
             data-name="FAQ Section > Header Box"
           >
             <h2
-              className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4"
+              className="text-4xl md:text-5xl font-ivy-body text-sage-darkest mb-4"
               data-element="faq-title"
               data-name="FAQ Section > Header Box > Heading"
             >
@@ -704,7 +710,7 @@ export default function HomePage() {
                   value={`item-${index}`}
                   className="border border-sage-dark/20 rounded-lg px-6"
                 >
-                  <AccordionTrigger className="text-left font-cormorant text-xl text-sage-darkest hover:text-sage-dark py-6">
+                  <AccordionTrigger className="text-left font-ivy-body text-xl text-sage-darkest hover:text-sage-dark py-6">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-sage-darker/70 leading-relaxed pb-6">

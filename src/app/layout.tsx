@@ -102,6 +102,7 @@ export default function RootLayout({
         <main
           data-element="main-content"
           data-name="Main Content Area"
+          style={{ margin: 0, padding: 0 }}
         >
           {children}
         </main>

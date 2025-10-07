@@ -56,9 +56,10 @@ export default function PortfolioSection() {
           data-name="Our Portfolio Section > Header Box"
         >
           <h2
-            className="text-4xl md:text-5xl font-cormorant text-sage-darkest mb-4"
+            className="text-4xl md:text-5xl font-ivy-body text-sage-darkest mb-4"
             data-element="portfolio-title"
             data-name="Our Portfolio Section > Header Box > Heading"
+            style={{ font: '400 48px/48px ivyModeBody, "ivyModeBody Fallback"' }}
           >
             Our <span className="text-sage-dark italic">Portfolio</span>
           </h2>
