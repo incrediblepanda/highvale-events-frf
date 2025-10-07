@@ -75,11 +75,16 @@ export default function HomePage() {
     >
       {/* Hero Section */}
       <section
-        className="relative flex items-center justify-center overflow-hidden"
+        className="relative overflow-hidden"
         style={{
-          minHeight: '345px',
-          flexGrow: 0,
-          backgroundColor: '#2A3532'
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '100vh',
+          height: 'auto',
+          backgroundColor: '#2A3532',
+          margin: 0,
+          padding: 0
         }}
         data-element="hero-section"
         data-name="Hero Section"
@@ -92,10 +97,13 @@ export default function HomePage() {
           playsInline
           style={{
             position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            minWidth: '100%',
+            minHeight: '100%',
+            width: 'auto',
+            height: 'auto',
             objectFit: 'cover',
             zIndex: 0
           }}
@@ -135,6 +143,7 @@ export default function HomePage() {
                 backgroundColor: 'rgba(0, 0, 0, 0)',
                 width: '100vw',
                 alignSelf: 'center',
+                justifyContent: 'flex-start',
                 paddingBottom: '22px'
               }}
             >
