@@ -80,8 +80,8 @@ export default function HomePage() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          minHeight: '100vh',
-          height: 'auto',
+          height: '100vh',
+          width: '100%',
           backgroundColor: '#2A3532',
           margin: 0,
           padding: 0
@@ -97,13 +97,10 @@ export default function HomePage() {
           playsInline
           style={{
             position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            minWidth: '100%',
-            minHeight: '100%',
-            width: 'auto',
-            height: 'auto',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
             objectFit: 'cover',
             zIndex: 0
           }}
