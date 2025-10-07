@@ -95,6 +95,7 @@ export default function InquirySection() {
     <section
       className="py-10"
       style={{
+        position: 'relative',
         backgroundColor: 'rgba(1, 1, 1, 1)',
         backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F4b9ba40f793140a2982a78715899cb1f)',
         backgroundRepeat: 'no-repeat',
@@ -105,11 +106,14 @@ export default function InquirySection() {
       data-element="inquiry-section"
       data-name="Contact Us Section"
     >
+      {/* Overlay over background image */}
+      <div aria-hidden style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0, 0, 0, 0.45)', zIndex: 2 }} />
       <div
-        className="max-w-4xl mx-auto px-6"
-        data-element="inquiry-container"
-        data-name="Contact Us Section > Container"
-      >
+      className="max-w-4xl mx-auto px-6"
+      data-element="inquiry-container"
+      data-name="Contact Us Section > Container"
+      style={{ position: 'relative', zIndex: 3 }}
+    >
         <ScrollAnimation
           className="text-center"
           data-element="inquiry-header"
