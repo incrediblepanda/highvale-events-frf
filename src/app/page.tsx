@@ -340,20 +340,12 @@ export default function HomePage() {
                 data-name={`Our Services Section > Service Card ${index + 1} > Wrapper`}
               >
                 <Card
-                  className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift p-0"
-                  style={{
-                    height: index === 2 ? '454px' : '472px',
-                  }}
+                  className={`overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift p-0 ${
+                    index === 2 ? 'h-[454px] sm:h-auto' : 'h-[472px] sm:h-auto'
+                  }`}
                   data-element={`service-card-${index + 1}`}
                   data-name={`Our Services Section > Service Card ${index + 1} > Card`}
                 >
-                  <style jsx>{`
-                    @media (min-width: 641px) {
-                      .overflow-hidden {
-                        height: auto !important;
-                      }
-                    }
-                  `}</style>
                   {/* Service image */}
                   <div
                     className="h-48 overflow-hidden"
