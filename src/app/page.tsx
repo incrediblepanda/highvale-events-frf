@@ -233,24 +233,6 @@ export default function HomePage() {
                     in the Heart of Colorado
                   </div>
                 </motion.h1>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-sm sm:text-base md:text-lg"
-                  style={{
-                    color: 'rgba(255, 255, 255, 0.8)',
-                    fontFeatureSettings: 'normal',
-                    maxWidth: '672px',
-                    textDecoration: 'rgba(255, 255, 255, 0.8)',
-                    margin: '0 auto 40px',
-                    font: '20px/24px Roboto, sans-serif '
-                  }}
-                  data-element="hero-description"
-                  data-name="Hero Section > Content Box > Text"
-                >
-                  From intimate celebrations to grand galas, we bring your vision to life with elegance, precision, and Colorado's natural beauty as your backdrop.
-                </motion.p>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -312,8 +294,8 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section
-        className="bg-white"
-        style={{ padding: '60px 0 80px' }}
+        className="bg-white pt-[70px] sm:pt-[60px]"
+        style={{ paddingBottom: '80px' }}
         data-element="services-section"
         data-name="Our Services Section"
       >
@@ -336,6 +318,14 @@ export default function HomePage() {
             </h2>
           </ScrollAnimation>
 
+          <div className="mt-5 mb-5 sm:pb-[47px] sm:mt-[62px] sm:mb-5 text-center">
+            <p>
+              <span style={{ fontSize: '18px' }}>
+                From intimate celebrations to grand galas, we bring your vision to life with elegance, precision, and Colorado's natural beauty as your backdrop.
+              </span>
+            </p>
+          </div>
+
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             data-element="services-grid"
@@ -350,10 +340,20 @@ export default function HomePage() {
                 data-name={`Our Services Section > Service Card ${index + 1} > Wrapper`}
               >
                 <Card
-                  className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift h-full p-0"
+                  className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift p-0"
+                  style={{
+                    height: index === 2 ? '454px' : '472px',
+                  }}
                   data-element={`service-card-${index + 1}`}
                   data-name={`Our Services Section > Service Card ${index + 1} > Card`}
                 >
+                  <style jsx>{`
+                    @media (min-width: 641px) {
+                      .overflow-hidden {
+                        height: auto !important;
+                      }
+                    }
+                  `}</style>
                   {/* Service image */}
                   <div
                     className="h-48 overflow-hidden"
