@@ -71,7 +71,7 @@ export default function PortfolioSection() {
           }}
         >
           <div>
-            <p>
+            <p className="px-2.5 sm:px-0">
               A glimpse into the celebrations we've had the honor of creating.
             </p>
           </div>

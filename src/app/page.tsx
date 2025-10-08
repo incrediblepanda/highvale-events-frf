@@ -324,7 +324,7 @@ export default function HomePage() {
               font: "400 18px/28px Arial, sans-serif "
             }}
           >
-            <p>
+            <p className="px-2.5 sm:px-0">
               From intimate celebrations to grand galas, we bring your vision to life with elegance, precision, and Colorado's natural beauty as your backdrop.
             </p>
           </div>
@@ -355,7 +355,7 @@ export default function HomePage() {
               >
                 <Card
                   className={`overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift p-0 ${
-                    index === 2 ? 'h-[454px] sm:h-auto' : 'h-[472px] sm:h-auto'
+                    index === 0 ? 'h-[480px] sm:h-auto' : index === 1 ? 'h-[475px] sm:h-auto' : 'h-[454px] sm:h-auto'
                   }`}
                   data-element={`service-card-${index + 1}`}
                   data-name={`Our Services Section > Service Card ${index + 1} > Card`}
