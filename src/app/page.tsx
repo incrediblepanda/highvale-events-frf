@@ -581,12 +581,21 @@ export default function HomePage() {
                   }}
                 >
                   <div
-                    className="flex flex-col lg:flex-row gap-5 lg:gap-0"
+                    className="flex flex-col lg:flex-row gap-5 lg:gap-5"
                     style={{
-                      gap: "20px",
                       display: "flex"
                     }}
                   >
+                    <style dangerouslySetInnerHTML={{__html: `
+                      @media (min-width: 1024px) {
+                        .flex.lg\\:flex-row > div {
+                          margin-left: 20px;
+                        }
+                        .flex.lg\\:flex-row > div:first-child {
+                          margin-left: 0;
+                        }
+                      }
+                    `}} />
                     {processSteps.map((step, index) => (
                       <div
                         key={index}
