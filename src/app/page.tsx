@@ -92,12 +92,29 @@ export default function HomePage() {
         data-element="hero-section"
         data-name="Hero Section"
       >
-        {/* Video Background */}
+        {/* Mobile Background Image */}
+        <div
+          className="block md:hidden"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundImage: 'url(https://cdn.builder.io/o/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F03813cb852214c41aaf1c5c0db6153e7?alt=media&token=f74c858b-2677-40c9-9ffa-01436cb5575e&apiKey=52185cbc63e544f6abfcb901069ce1f1)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            zIndex: 0
+          }}
+        />
+        {/* Desktop Video Background */}
         <video
           autoPlay
           muted
           loop
           playsInline
+          className="hidden md:block"
           style={{
             position: 'absolute',
             top: '50%',
