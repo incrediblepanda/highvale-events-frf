@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 
 export default function AsSeenIn() {
   const logos = [
-    { name: 'Zola', text: 'ZOLA' },
-    { name: 'The Knot', text: 'THE KNOT' },
-    { name: 'Best of Colorado Springs', text: 'BEST OF COLORADO SPRINGS' },
-    { name: 'Zola', text: 'ZOLA' }, // Duplicate for seamless loop
-    { name: 'The Knot', text: 'THE KNOT' },
-    { name: 'Best of Colorado Springs', text: 'BEST OF COLORADO SPRINGS' },
+    { name: 'Zola', text: 'ZOLA', image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F2ddf5ee6819e4d738b30a39002cafe80' },
+    { name: 'The Knot', text: 'THE KNOT', image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fda200a9799b84a228578edeb6b8f14d3' },
+    { name: 'Best of Colorado Springs', text: 'BEST OF COLORADO SPRINGS', image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fbe97f3a8cc9a469db19f73491d96cb21' },
+    { name: 'Zola', text: 'ZOLA', image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F2ddf5ee6819e4d738b30a39002cafe80' }, // Duplicate for seamless loop
+    { name: 'The Knot', text: 'THE KNOT', image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fda200a9799b84a228578edeb6b8f14d3' },
+    { name: 'Best of Colorado Springs', text: 'BEST OF COLORADO SPRINGS', image: 'https://cdn.builder.io/api/v1/image/assets%2F52185cbc63e544f6abfcb901069ce1f1%2Fbe97f3a8cc9a469db19f73491d96cb21' },
   ];
 
   const getLogoSrc = (logo: { name: string; text: string; image?: string }) => {
