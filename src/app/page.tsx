@@ -549,6 +549,115 @@ export default function HomePage() {
                     A seamless journey from concept to celebration.
                   </div>
                 </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    position: "relative",
+                    marginTop: "20px"
+                  }}
+                >
+                  <div
+                    className="flex flex-col lg:flex-row gap-5 lg:gap-0"
+                    style={{
+                      gap: "20px",
+                      display: "flex"
+                    }}
+                  >
+                    {processSteps.map((step, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col w-full lg:w-1/4"
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          lineHeight: "normal",
+                          width: index === 0 ? "25%" : "25%",
+                          marginLeft: index === 0 ? "0px" : "20px"
+                        }}
+                      >
+                        <div
+                          data-element={`process-step-${index + 1}`}
+                          data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box`}
+                          style={{
+                            fontWeight: "400",
+                            color: "rgba(250, 250, 250, 0.85)",
+                            fontFamily: "Inter, sans-serif",
+                            textDecoration: "rgba(250, 250, 250, 0.85)",
+                            backgroundColor: "rgba(38, 43, 36, 0.84)",
+                            borderRadius: "10px",
+                            overflow: "hidden",
+                            display: "flex",
+                            flexDirection: "column",
+                            padding: index >= 2 ? "32px 32px 53px" : "32px",
+                            border: "1px solid rgba(250, 250, 250, 0)"
+                          }}
+                        >
+                          <div
+                            className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center shadow-md"
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              backgroundColor: "rgb(27, 36, 36)",
+                              borderColor: "rgb(227, 198, 141)",
+                              borderRadius: "9999px",
+                              borderWidth: "2px",
+                              boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
+                              fontWeight: "400",
+                              height: "90px",
+                              justifyContent: "center",
+                              width: "90px",
+                              margin: "0 auto 16px"
+                            }}
+                            data-element={`process-step-icon-${index + 1}`}
+                            data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Icon`}
+                          >
+                            <div
+                              className="text-xl font-ivy-body font-bold"
+                              style={{
+                                display: "block",
+                                color: "rgb(255, 255, 255)",
+                                textDecoration: "rgb(255, 255, 255)",
+                                font: '700 20px/28px ivyModeBody, "ivyModeBody Fallback" '
+                              }}
+                              data-element={`process-step-number-${index + 1}`}
+                              data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
+                            >
+                              {step.phase}
+                            </div>
+                          </div>
+                          <h3
+                            className="font-ivy-body mb-3"
+                            data-element={`process-step-title-${index + 1}`}
+                            data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Heading`}
+                            style={{
+                              color: "rgb(255, 255, 255)",
+                              textDecoration: "rgb(0, 0, 0)",
+                              textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
+                              margin: "0 auto 12px",
+                              font: '400 30px/28px ivyModeBody, "ivyModeBody Fallback" '
+                            }}
+                          >
+                            {step.title}
+                          </h3>
+                          <p
+                            className="leading-relaxed text-lg sm:text-base"
+                            data-element={`process-step-description-${index + 1}`}
+                            data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
+                            style={{
+                              color: "rgb(255, 255, 255)",
+                              textDecoration: "rgb(0, 0, 0)",
+                              textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
+                              font: "400 18px Arial, sans-serif"
+                            }}
+                          >
+                            {step.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
                 <a
                   href="/process"
                   className="inline-flex items-center justify-center bg-champagne text-sage-darkest rounded-full shadow-lg transition-all duration-300 hover:scale-105 font-medium"
@@ -587,90 +696,7 @@ export default function HomePage() {
                   gap: "24px",
                   gridTemplate: "none / repeat(4, minmax(0px, 1fr))",
                 }}
-              >
-                {processSteps.map((step, index) => (
-                  <div
-                    key={index}
-                    className=""
-                    data-element={`process-step-${index + 1}`}
-                    data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box`}
-                    style={{
-                      fontWeight: "400",
-                      color: "rgba(250, 250, 250, 0.85)",
-                      fontFamily: "Inter, sans-serif",
-                      textDecoration: "rgba(250, 250, 250, 0.85)",
-                      backgroundColor: "rgba(38, 43, 36, 0.84)",
-                      borderRadius: "10px",
-                      overflow: "hidden",
-                      display: "flex",
-                      flexDirection: "column",
-                      padding: "32px",
-                      border: "1px solid rgba(250, 250, 250, 0)"
-                    }}
-                  >
-                    <div
-                      className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center shadow-md"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        backgroundColor: "rgb(27, 36, 36)",
-                        borderColor: "rgb(227, 198, 141)",
-                        borderRadius: "9999px",
-                        borderWidth: "2px",
-                        boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
-                        fontWeight: "400",
-                        height: "90px",
-                        justifyContent: "center",
-                        width: "90px",
-                        margin: "0 auto 16px"
-                      }}
-                      data-element={`process-step-icon-${index + 1}`}
-                      data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Icon`}
-                    >
-                      <div
-                        className="text-xl font-ivy-body font-bold"
-                        style={{
-                          display: "block",
-                          color: "rgb(255, 255, 255)",
-                          textDecoration: "rgb(255, 255, 255)",
-                          font: '700 20px/28px ivyModeBody, "ivyModeBody Fallback" '
-                        }}
-                        data-element={`process-step-number-${index + 1}`}
-                        data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
-                      >
-                        {step.phase}
-                      </div>
-                    </div>
-                    <h3
-                      className="font-ivy-body mb-3"
-                      data-element={`process-step-title-${index + 1}`}
-                      data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Heading`}
-                      style={{
-                        color: "rgb(255, 255, 255)",
-                        textDecoration: "rgb(0, 0, 0)",
-                        textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
-                        margin: "0 auto 12px",
-                        font: '400 30px/28px ivyModeBody, "ivyModeBody Fallback" '
-                      }}
-                    >
-                      {step.title}
-                    </h3>
-                    <p
-                      className="leading-relaxed text-lg sm:text-base"
-                      data-element={`process-step-description-${index + 1}`}
-                      data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
-                      style={{
-                        color: "rgb(255, 255, 255)",
-                        textDecoration: "rgb(0, 0, 0)",
-                        textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
-                        font: "400 18px Arial, sans-serif"
-                      }}
-                    >
-                      {step.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              />
             </div>
           </div>
         </section>
