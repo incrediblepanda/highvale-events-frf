@@ -46,32 +46,47 @@ export default function PortfolioSection() {
       data-name="Our Portfolio Section"
     >
       <div
-        className="max-w-[1180px] mx-auto px-6"
+        className="text-center mb-16"
         data-element="portfolio-container"
         data-name="Our Portfolio Section > Container"
+      >
+        <h2
+          className="text-4xl md:text-5xl font-ivy-body text-sage-darkest mb-4"
+          data-element="portfolio-title"
+          data-name="Our Portfolio Section > Header Box > Heading"
+          style={{
+            color: "rgb(27, 35, 36)",
+            marginBottom: "16px",
+            font: '400 48px/48px ivyModeBody, "ivyModeBody Fallback" '
+          }}
+        >
+          Our <span className="text-sage-dark italic" style={{ display: "inline", color: "rgb(35, 43, 42)", fontStyle: "italic" }}>Portfolio</span>
+        </h2>
+        <div
+          style={{
+            color: "rgba(33, 43, 42, 0.7)",
+            maxWidth: "672px",
+            margin: "0 auto",
+            font: "400 18px/28px Arial, sans-serif "
+          }}
+        >
+          <div>
+            <p className="px-2.5 sm:px-0">
+              A glimpse into the celebrations we've had the honor of creating.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="max-w-[1180px] mx-auto px-6"
+        data-element="portfolio-grid-container"
+        data-name="Our Portfolio Section > Grid Container"
       >
         <ScrollAnimation
           className="text-center mb-16"
           data-element="portfolio-header"
           data-name="Our Portfolio Section > Header Box"
-        >
-          <h2
-            className="text-4xl md:text-5xl font-ivy-body text-sage-darkest mb-4"
-            data-element="portfolio-title"
-            data-name="Our Portfolio Section > Header Box > Heading"
-            style={{ font: '400 48px/48px ivyModeBody, "ivyModeBody Fallback"' }}
-          >
-            Our <span className="text-sage-dark italic">Portfolio</span>
-          </h2>
-          <p
-            className="max-w-2xl mx-auto"
-            style={{ font: '400 18px/28px Arial, sans-serif', color: 'rgba(33, 43, 42, 0.7)' }}
-            data-element="portfolio-description"
-            data-name="Our Portfolio Section > Header Box > Text"
-          >
-            A glimpse into the celebrations we've had the honor of creating.
-          </p>
-        </ScrollAnimation>
+        />
 
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mb-12"

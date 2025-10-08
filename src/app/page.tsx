@@ -92,12 +92,29 @@ export default function HomePage() {
         data-element="hero-section"
         data-name="Hero Section"
       >
-        {/* Video Background */}
+        {/* Mobile Background Image */}
+        <div
+          className="block md:hidden"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundImage: 'url(https://cdn.builder.io/o/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F03813cb852214c41aaf1c5c0db6153e7?alt=media&token=f74c858b-2677-40c9-9ffa-01436cb5575e&apiKey=52185cbc63e544f6abfcb901069ce1f1)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            zIndex: 0
+          }}
+        />
+        {/* Desktop Video Background */}
         <video
           autoPlay
           muted
           loop
           playsInline
+          className="hidden md:block"
           style={{
             position: 'absolute',
             top: '50%',
@@ -111,7 +128,7 @@ export default function HomePage() {
             zIndex: 0
           }}
         >
-          <source src="https://cdn.builder.io/o/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F2a4a6484c1074911857f4fd16ecbf7e0%2Fcompressed?apiKey=52185cbc63e544f6abfcb901069ce1f1&token=2a4a6484c1074911857f4fd16ecbf7e0&alt=media&optimized=true" type="video/mp4" />
+          <source src="https://cdn.builder.io/o/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F0861570d1d114dfbb1ca4f985344cc37?alt=media&token=cd9f7576-fd31-431c-8218-7306024489a6&apiKey=52185cbc63e544f6abfcb901069ce1f1" type="video/mp4" />
         </video>
         {/* Overlay */}
         <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(66, 68, 66, 0.4)', zIndex: 1 }} />
@@ -216,29 +233,11 @@ export default function HomePage() {
                     in the Heart of Colorado
                   </div>
                 </motion.h1>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-sm sm:text-base md:text-lg"
-                  style={{
-                    color: 'rgba(255, 255, 255, 0.8)',
-                    fontFeatureSettings: 'normal',
-                    maxWidth: '672px',
-                    textDecoration: 'rgba(255, 255, 255, 0.8)',
-                    margin: '0 auto 40px',
-                    font: '20px/24px Roboto, sans-serif '
-                  }}
-                  data-element="hero-description"
-                  data-name="Hero Section > Content Box > Text"
-                >
-                  From intimate celebrations to grand galas, we bring your vision to life with elegance, precision, and Colorado's natural beauty as your backdrop.
-                </motion.p>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
-                  className="flex flex-col sm:flex-row gap-4 justify-center mb-10 px-4"
+                  className="flex flex-col sm:flex-row gap-4 justify-center mt-20 mb-10 px-4"
                   data-element="hero-buttons"
                   data-name="Hero Section > Content Box > Button Container"
                 >
@@ -295,11 +294,41 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section
-        className="bg-white"
-        style={{ padding: '60px 0 80px' }}
+        className="bg-white pt-[70px] sm:pt-[60px]"
+        style={{ paddingBottom: '80px' }}
         data-element="services-section"
         data-name="Our Services Section"
       >
+        <ScrollAnimation
+          className="text-center mb-16"
+          data-element="services-header"
+          data-name="Our Services Section > Header Box"
+        >
+          <h2
+            className="text-4xl md:text-5xl font-ivy-body text-sage-darkest mb-4"
+            style={{
+              color: "rgb(27, 35, 36)",
+              marginBottom: "16px",
+              font: '400 48px/48px ivyModeBody, "ivyModeBody Fallback" '
+            }}
+            data-element="services-title"
+            data-name="Our Services Section > Header Box > Heading"
+          >
+            Our <span className="text-sage-dark italic" style={{ display: "inline", color: "rgb(35, 43, 42)", fontStyle: "italic" }}>Services</span>
+          </h2>
+          <div
+            style={{
+              color: "rgba(33, 43, 42, 0.7)",
+              maxWidth: "672px",
+              margin: "0 auto",
+              font: "400 18px/28px Arial, sans-serif "
+            }}
+          >
+            <p className="px-2.5 sm:px-0">
+              From intimate celebrations to grand galas, we bring your vision to life with elegance, precision, and Colorado's natural beauty as your backdrop.
+            </p>
+          </div>
+        </ScrollAnimation>
         <div
           className="max-w-[1180px] mx-auto px-6"
           data-element="services-container"
@@ -309,15 +338,7 @@ export default function HomePage() {
             className="text-center mb-16"
             data-element="services-header"
             data-name="Our Services Section > Header Box"
-          >
-            <h2
-              className="text-4xl md:text-5xl font-ivy-body text-sage-darkest mb-4"
-              data-element="services-title"
-              data-name="Our Services Section > Header Box > Heading"
-            >
-              Our <span className="text-sage-dark italic">Services</span>
-            </h2>
-          </ScrollAnimation>
+          />
 
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -333,7 +354,9 @@ export default function HomePage() {
                 data-name={`Our Services Section > Service Card ${index + 1} > Wrapper`}
               >
                 <Card
-                  className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift h-full p-0"
+                  className={`overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift p-0 ${
+                    index === 0 ? 'h-[480px] sm:h-auto' : index === 1 ? 'h-[475px] sm:h-auto' : 'h-[454px] sm:h-auto'
+                  }`}
                   data-element={`service-card-${index + 1}`}
                   data-name={`Our Services Section > Service Card ${index + 1} > Card`}
                 >
@@ -451,7 +474,7 @@ export default function HomePage() {
             }}
           >
             <div
-              className="max-w-[1180px] mx-auto px-[25px] sm:px-12 pb-10 flex flex-col"
+              className="max-w-[1180px] mx-auto px-4 sm:px-12 pb-10 flex flex-col"
               data-element="process-main-container"
               data-name="Our Process Section > Content Box > Container"
               style={{
@@ -479,27 +502,34 @@ export default function HomePage() {
                 data-name="Our Process Section > Content Box > Heading"
                 style={{
                   color: "rgb(0, 0, 0)",
-                  marginBottom: "25px",
                   textAlign: "center",
                   textDecoration: "rgb(0, 0, 0)",
-                  backgroundColor: "rgba(0, 0, 0, 0.31)",
+                  backgroundColor: "rgba(250, 247, 242, 0.77)",
                   borderRadius: "10px",
                   overflow: "hidden",
-                  padding: "25px 0",
                   font: '400 48px/48px ivyModeBody, "ivyModeBody Fallback" ',
                   border: "1px solid rgba(0, 0, 0, 0)"
                 }}
               >
+                <style dangerouslySetInnerHTML={{__html: `
+                  h2[data-element="process-title"] {
+                    padding: 25px 15px 43px 15px;
+                  }
+                  @media (min-width: 640px) {
+                    h2[data-element="process-title"] {
+                      padding: 25px 87px 43px 59px;
+                    }
+                  }
+                `}} />
                 <div
                   data-element="process-title-our"
                   data-name="Our Process Section > Content Box > Heading > Our"
                   className="font-normal sm:font-bold text-5xl sm:text-inherit"
                   style={{
                     display: "inline",
-                    color: "rgb(255, 255, 255)",
+                    color: "rgba(0, 0, 0, 1)",
                     textDecoration: "rgb(255, 255, 255)",
-                    fontWeight: "400",
-                    textShadow: "rgba(0, 0, 0, 0.6) 1px 1px 3px"
+                    fontWeight: "400"
                   }}
                 >
                   Our
@@ -510,31 +540,183 @@ export default function HomePage() {
                   className="font-normal sm:font-bold text-5xl sm:text-inherit"
                   style={{
                     display: "inline",
-                    color: "rgb(255, 255, 255)",
+                    color: "rgba(0, 0, 0, 1)",
                     fontStyle: "italic",
                     fontWeight: "400",
-                    textDecoration: "rgb(255, 255, 255)",
-                    textShadow: "rgba(0, 0, 0, 0.59) 1px 1px 1px"
+                    textDecoration: "rgb(255, 255, 255)"
                   }}
                 >
                   Process
                 </div>
                 <div
-                  data-element="process-description"
-                  data-name="Our Process Section > Content Box > Text"
-                  className="text-lg sm:text-2xl leading-6 sm:leading-9 pt-4 sm:pt-0 px-2.5 sm:px-0"
                   style={{
-                    color: "rgb(255, 255, 255)",
-                    maxWidth: "672px",
-                    textAlign: "center",
-                    textDecoration: "rgb(0, 0, 0)",
-                    textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
-                    margin: "0 auto",
-                    font: "400 18px/36px Arial, sans-serif"
+                    display: "flex",
+                    flexDirection: "column",
+                    position: "relative",
+                    marginTop: "20px",
+                    height: "auto",
+                    paddingBottom: "30px"
                   }}
                 >
-                  A seamless journey from concept to celebration.
+                  <div
+                    data-element="process-description"
+                    data-name="Our Process Section > Content Box > Text"
+                    className="text-lg sm:text-2xl leading-6 sm:leading-9 pt-4 sm:pt-0 px-2.5 sm:px-0"
+                    style={{
+                      color: "rgba(33, 43, 42, 0.7)",
+                      maxWidth: "672px",
+                      margin: "0 auto",
+                      font: "400 18px/28px Arial, sans-serif "
+                    }}
+                  >
+                    <p>A seamless journey from concept to celebration.</p>
+                  </div>
                 </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    position: "relative",
+                    marginTop: "20px"
+                  }}
+                >
+                  <div
+                    className="flex flex-col lg:flex-row gap-5 lg:gap-5"
+                    style={{
+                      display: "flex"
+                    }}
+                  >
+                    <style dangerouslySetInnerHTML={{__html: `
+                      @media (min-width: 1024px) {
+                        .flex.lg\\:flex-row > div {
+                          margin-left: 20px;
+                        }
+                        .flex.lg\\:flex-row > div:first-child {
+                          margin-left: 0;
+                        }
+                      }
+                    `}} />
+                    {processSteps.map((step, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col w-full lg:w-1/4 mb-5 lg:mb-0"
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          lineHeight: "normal"
+                        }}
+                      >
+                        <div
+                          data-element={`process-step-${index + 1}`}
+                          data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box`}
+                          style={{
+                            fontWeight: "400",
+                            color: "rgba(250, 250, 250, 0.85)",
+                            fontFamily: "Inter, sans-serif",
+                            textDecoration: "rgba(250, 250, 250, 0.85)",
+                            backgroundColor: "rgba(38, 43, 36, 0.84)",
+                            borderRadius: "10px",
+                            overflow: "hidden",
+                            display: "flex",
+                            flexDirection: "column",
+                            padding: index >= 2 ? "32px 32px 53px" : "32px",
+                            border: "1px solid rgba(250, 250, 250, 0)"
+                          }}
+                        >
+                          <div
+                            className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center shadow-md"
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              backgroundColor: "rgb(27, 36, 36)",
+                              borderColor: "rgb(227, 198, 141)",
+                              borderRadius: "9999px",
+                              borderWidth: "2px",
+                              boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
+                              fontWeight: "400",
+                              height: "90px",
+                              justifyContent: "center",
+                              width: "90px",
+                              margin: "0 auto 16px"
+                            }}
+                            data-element={`process-step-icon-${index + 1}`}
+                            data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Icon`}
+                          >
+                            <div
+                              className="text-xl font-ivy-body font-bold"
+                              style={{
+                                display: "block",
+                                color: "rgb(255, 255, 255)",
+                                textDecoration: "rgb(255, 255, 255)",
+                                font: '700 20px/28px ivyModeBody, "ivyModeBody Fallback" '
+                              }}
+                              data-element={`process-step-number-${index + 1}`}
+                              data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
+                            >
+                              {step.phase}
+                            </div>
+                          </div>
+                          <h3
+                            className="font-ivy-body mb-3"
+                            data-element={`process-step-title-${index + 1}`}
+                            data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Heading`}
+                            style={{
+                              color: "rgb(255, 255, 255)",
+                              textDecoration: "rgb(0, 0, 0)",
+                              textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
+                              margin: "0 auto 12px",
+                              font: '400 30px/28px ivyModeBody, "ivyModeBody Fallback" '
+                            }}
+                          >
+                            {step.title}
+                          </h3>
+                          <p
+                            className="leading-relaxed text-lg sm:text-base"
+                            data-element={`process-step-description-${index + 1}`}
+                            data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
+                            style={{
+                              color: "rgb(255, 255, 255)",
+                              textDecoration: "rgb(0, 0, 0)",
+                              textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
+                              font: "400 18px Arial, sans-serif",
+                              ...(index === 0 && { marginRight: "-1px" })
+                            }}
+                          >
+                            {step.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <a
+                  href="/process"
+                  className="inline-flex items-center justify-center bg-champagne text-sage-darkest rounded-full shadow-lg transition-all duration-300 hover:scale-105 font-medium mx-4 sm:mx-12 md:mx-[200px]"
+                  data-element="process-learn-more-button"
+                  data-name="Our Process Section > Content Box > Button"
+                  style={{
+                    display: "flex",
+                    height: "48px",
+                    alignItems: "center",
+                    animationDuration: "0.3s",
+                    backgroundColor: "rgb(227, 198, 141)",
+                    borderRadius: "9999px",
+                    boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+                    color: "rgb(27, 35, 36)",
+                    gap: "8px",
+                    justifyContent: "center",
+                    textDecoration: "rgb(27, 35, 36)",
+                    transitionDuration: "0.3s",
+                    width: "auto",
+                    alignSelf: "center",
+                    marginTop: "40px",
+                    marginBottom: "0",
+                    padding: "24px 32px",
+                    font: "500 18px/28px Arial, sans-serif "
+                  }}
+                >
+                  More About Our Process
+                </a>
               </h2>
               <div
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
@@ -544,117 +726,9 @@ export default function HomePage() {
                   display: "grid",
                   fontWeight: "400",
                   gap: "24px",
-                  gridTemplate: "none / repeat(1, minmax(0px, 1fr)) / none",
+                  gridTemplate: "none / repeat(4, minmax(0px, 1fr))",
                 }}
-              >
-                {processSteps.map((step, index) => (
-                  <div
-                    key={index}
-                    className=""
-                    data-element={`process-step-${index + 1}`}
-                    data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box`}
-                    style={{
-                      fontWeight: "400",
-                      color: "rgba(250, 250, 250, 0.85)",
-                      fontFamily: "Inter, sans-serif",
-                      textDecoration: "rgba(250, 250, 250, 0.85)",
-                      backgroundColor: "rgba(0, 0, 0, 0.5)",
-                      borderRadius: "10px",
-                      overflow: "hidden",
-                      display: "flex",
-                      flexDirection: "column",
-                      padding: "32px",
-                      border: "1px solid rgba(250, 250, 250, 0)"
-                    }}
-                  >
-                    <div
-                      className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center shadow-md"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        backgroundColor: "rgb(27, 36, 36)",
-                        borderColor: "rgb(227, 198, 141)",
-                        borderRadius: "9999px",
-                        borderWidth: "2px",
-                        boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
-                        fontWeight: "400",
-                        height: "90px",
-                        justifyContent: "center",
-                        width: "90px",
-                        margin: "0 auto 16px"
-                      }}
-                      data-element={`process-step-icon-${index + 1}`}
-                      data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Icon`}
-                    >
-                      <div
-                        className="text-xl font-ivy-body font-bold"
-                        style={{
-                          display: "block",
-                          color: "rgb(255, 255, 255)",
-                          textDecoration: "rgb(255, 255, 255)",
-                          font: '700 20px/28px ivyModeBody, "ivyModeBody Fallback" '
-                        }}
-                        data-element={`process-step-number-${index + 1}`}
-                        data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
-                      >
-                        {step.phase}
-                      </div>
-                    </div>
-                    <h3
-                      className="font-ivy-body mb-3"
-                      data-element={`process-step-title-${index + 1}`}
-                      data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Heading`}
-                      style={{
-                        color: "rgb(255, 255, 255)",
-                        textDecoration: "rgb(0, 0, 0)",
-                        textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
-                        margin: "0 auto 12px",
-                        font: '400 30px/28px ivyModeBody, "ivyModeBody Fallback" '
-                      }}
-                    >
-                      {step.title}
-                    </h3>
-                    <p
-                      className="leading-relaxed text-lg sm:text-base"
-                      data-element={`process-step-description-${index + 1}`}
-                      data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
-                      style={{
-                        color: "rgba(255, 255, 255, 1)",
-                        textDecoration: "rgb(0, 0, 0)",
-                        textShadow: "1px 1px 3px rgba(0, 0, 0, 0.75)",
-                        fontFamily: "Arial, sans-serif"
-                      }}
-                    >
-                      {step.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <a
-                href="/process"
-                className="inline-flex items-center justify-center bg-champagne text-sage-darkest rounded-full shadow-lg transition-all duration-300 hover:scale-105 font-medium mx-auto mt-6"
-                data-element="process-learn-more-button"
-                data-name="Our Process Section > Content Box > Button"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  animationDuration: "0.3s",
-                  backgroundColor: "rgb(227, 198, 141)",
-                  borderRadius: "9999px",
-                  boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
-                  color: "rgb(27, 35, 36)",
-                  gap: "8px",
-                  height: "48px",
-                  justifyContent: "center",
-                  textDecoration: "rgb(27, 35, 36)",
-                  transitionDuration: "0.3s",
-                  margin: "55px auto 0",
-                  padding: "24px 32px",
-                  font: "500 18px/28px Arial, sans-serif "
-                }}
-              >
-                More About Our Process
-              </a>
+              />
             </div>
           </div>
         </section>
