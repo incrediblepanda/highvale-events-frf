@@ -299,6 +299,36 @@ export default function HomePage() {
         data-element="services-section"
         data-name="Our Services Section"
       >
+        <ScrollAnimation
+          className="text-center mb-16"
+          data-element="services-header"
+          data-name="Our Services Section > Header Box"
+        >
+          <h2
+            className="text-4xl md:text-5xl font-ivy-body text-sage-darkest mb-4"
+            style={{
+              color: "rgb(27, 35, 36)",
+              marginBottom: "16px",
+              font: '400 48px/48px ivyModeBody, "ivyModeBody Fallback" '
+            }}
+            data-element="services-title"
+            data-name="Our Services Section > Header Box > Heading"
+          >
+            Our <span className="text-sage-dark italic" style={{ display: "inline", color: "rgb(35, 43, 42)", fontStyle: "italic" }}>Services</span>
+          </h2>
+          <div
+            style={{
+              color: "rgba(33, 43, 42, 0.7)",
+              maxWidth: "672px",
+              margin: "0 auto",
+              font: "400 18px/28px Arial, sans-serif "
+            }}
+          >
+            <p>
+              From intimate celebrations to grand galas, we bring your vision to life with elegance, precision, and Colorado's natural beauty as your backdrop.
+            </p>
+          </div>
+        </ScrollAnimation>
         <div
           className="max-w-[1180px] mx-auto px-6"
           data-element="services-container"
@@ -308,23 +338,7 @@ export default function HomePage() {
             className="text-center mb-16"
             data-element="services-header"
             data-name="Our Services Section > Header Box"
-          >
-            <h2
-              className="text-4xl md:text-5xl font-ivy-body text-sage-darkest mb-4"
-              data-element="services-title"
-              data-name="Our Services Section > Header Box > Heading"
-            >
-              Our <span className="text-sage-dark italic">Services</span>
-            </h2>
-          </ScrollAnimation>
-
-          <div className="mt-5 mb-5 sm:pb-[47px] sm:mt-[62px] sm:mb-5 text-center">
-            <p style={{ margin: '0 50px' }}>
-              <span style={{ fontSize: '24px', fontFamily: 'Arial, sans-serif' }}>
-                From intimate celebrations to grand galas, we bring your vision to life with elegance, precision, and Colorado's natural beauty as your backdrop.
-              </span>
-            </p>
-          </div>
+          />
 
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -540,13 +554,13 @@ export default function HomePage() {
                     data-name="Our Process Section > Content Box > Text"
                     className="text-lg sm:text-2xl leading-6 sm:leading-9 pt-4 sm:pt-0 px-2.5 sm:px-0"
                     style={{
-                      color: "rgba(0, 0, 0, 1)",
+                      color: "rgba(33, 43, 42, 0.7)",
                       maxWidth: "672px",
                       margin: "0 auto",
-                      font: "400 24px/36px Arial, sans-serif"
+                      font: "400 18px/28px Arial, sans-serif "
                     }}
                   >
-                    A seamless journey from concept to celebration.
+                    <p>A seamless journey from concept to celebration.</p>
                   </div>
                 </div>
                 <div
@@ -648,7 +662,8 @@ export default function HomePage() {
                               color: "rgb(255, 255, 255)",
                               textDecoration: "rgb(0, 0, 0)",
                               textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
-                              font: "400 18px Arial, sans-serif"
+                              font: "400 18px Arial, sans-serif",
+                              ...(index === 0 && { marginRight: "-1px" })
                             }}
                           >
                             {step.description}
