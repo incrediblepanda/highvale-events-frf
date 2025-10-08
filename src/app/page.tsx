@@ -507,11 +507,18 @@ export default function HomePage() {
                   backgroundColor: "rgba(250, 247, 242, 0.77)",
                   borderRadius: "10px",
                   overflow: "hidden",
-                  padding: "25px 87px 43px 59px",
+                  padding: "25px 20px 43px 20px",
                   font: '400 48px/48px ivyModeBody, "ivyModeBody Fallback" ',
                   border: "1px solid rgba(0, 0, 0, 0)"
                 }}
               >
+                <style jsx>{`
+                  @media (min-width: 640px) {
+                    h2 {
+                      padding: 25px 87px 43px 59px !important;
+                    }
+                  }
+                `}</style>
                 <div
                   data-element="process-title-our"
                   data-name="Our Process Section > Content Box > Heading > Our"
@@ -585,11 +592,17 @@ export default function HomePage() {
                         style={{
                           display: "flex",
                           flexDirection: "column",
-                          lineHeight: "normal",
-                          width: "25%",
-                          marginLeft: "20px"
+                          lineHeight: "normal"
                         }}
                       >
+                        <style jsx>{`
+                          @media (min-width: 1024px) {
+                            div {
+                              width: 25%;
+                              margin-left: 20px;
+                            }
+                          }
+                        `}</style>
                         <div
                           data-element={`process-step-${index + 1}`}
                           data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box`}
@@ -675,7 +688,7 @@ export default function HomePage() {
                 </div>
                 <a
                   href="/process"
-                  className="inline-flex items-center justify-center bg-champagne text-sage-darkest rounded-full shadow-lg transition-all duration-300 hover:scale-105 font-medium"
+                  className="inline-flex items-center justify-center bg-champagne text-sage-darkest rounded-full shadow-lg transition-all duration-300 hover:scale-105 font-medium mx-4 sm:mx-12 md:mx-[200px]"
                   data-element="process-learn-more-button"
                   data-name="Our Process Section > Content Box > Button"
                   style={{
@@ -693,7 +706,8 @@ export default function HomePage() {
                     transitionDuration: "0.3s",
                     width: "auto",
                     alignSelf: "center",
-                    margin: "40px 200px 0",
+                    marginTop: "40px",
+                    marginBottom: "0",
                     padding: "24px 32px",
                     font: "500 18px/28px Arial, sans-serif "
                   }}
