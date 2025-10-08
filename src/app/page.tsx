@@ -507,18 +507,11 @@ export default function HomePage() {
                   backgroundColor: "rgba(250, 247, 242, 0.77)",
                   borderRadius: "10px",
                   overflow: "hidden",
-                  padding: "25px 20px 43px 20px",
+                  padding: "25px 15px 43px 15px",
                   font: '400 48px/48px ivyModeBody, "ivyModeBody Fallback" ',
                   border: "1px solid rgba(0, 0, 0, 0)"
                 }}
               >
-                <style jsx>{`
-                  @media (min-width: 640px) {
-                    h2 {
-                      padding: 25px 87px 43px 59px !important;
-                    }
-                  }
-                `}</style>
                 <div
                   data-element="process-title-our"
                   data-name="Our Process Section > Content Box > Heading > Our"
@@ -588,21 +581,13 @@ export default function HomePage() {
                     {processSteps.map((step, index) => (
                       <div
                         key={index}
-                        className="flex flex-col w-full lg:w-1/4"
+                        className="flex flex-col w-full lg:w-1/4 mb-5 lg:mb-0"
                         style={{
                           display: "flex",
                           flexDirection: "column",
                           lineHeight: "normal"
                         }}
                       >
-                        <style jsx>{`
-                          @media (min-width: 1024px) {
-                            div {
-                              width: 25%;
-                              margin-left: 20px;
-                            }
-                          }
-                        `}</style>
                         <div
                           data-element={`process-step-${index + 1}`}
                           data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box`}
