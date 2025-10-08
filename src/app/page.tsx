@@ -319,8 +319,8 @@ export default function HomePage() {
           </ScrollAnimation>
 
           <div className="mt-5 mb-5 sm:pb-[47px] sm:mt-[62px] sm:mb-5 text-center">
-            <p>
-              <span style={{ fontSize: '18px' }}>
+            <p style={{ margin: '0 50px' }}>
+              <span style={{ fontSize: '24px', fontFamily: 'Arial, sans-serif' }}>
                 From intimate celebrations to grand galas, we bring your vision to life with elegance, precision, and Colorado's natural beauty as your backdrop.
               </span>
             </p>
@@ -488,13 +488,12 @@ export default function HomePage() {
                 data-name="Our Process Section > Content Box > Heading"
                 style={{
                   color: "rgb(0, 0, 0)",
-                  marginBottom: "25px",
                   textAlign: "center",
                   textDecoration: "rgb(0, 0, 0)",
-                  backgroundColor: "rgba(0, 0, 0, 0.31)",
+                  backgroundColor: "rgba(250, 247, 242, 0.77)",
                   borderRadius: "10px",
                   overflow: "hidden",
-                  padding: "25px 0",
+                  padding: "25px 87px 43px 59px",
                   font: '400 48px/48px ivyModeBody, "ivyModeBody Fallback" ',
                   border: "1px solid rgba(0, 0, 0, 0)"
                 }}
@@ -505,10 +504,9 @@ export default function HomePage() {
                   className="font-normal sm:font-bold text-5xl sm:text-inherit"
                   style={{
                     display: "inline",
-                    color: "rgb(255, 255, 255)",
+                    color: "rgba(0, 0, 0, 1)",
                     textDecoration: "rgb(255, 255, 255)",
-                    fontWeight: "400",
-                    textShadow: "rgba(0, 0, 0, 0.6) 1px 1px 3px"
+                    fontWeight: "400"
                   }}
                 >
                   Our
@@ -519,31 +517,65 @@ export default function HomePage() {
                   className="font-normal sm:font-bold text-5xl sm:text-inherit"
                   style={{
                     display: "inline",
-                    color: "rgb(255, 255, 255)",
+                    color: "rgba(0, 0, 0, 1)",
                     fontStyle: "italic",
                     fontWeight: "400",
-                    textDecoration: "rgb(255, 255, 255)",
-                    textShadow: "rgba(0, 0, 0, 0.59) 1px 1px 1px"
+                    textDecoration: "rgb(255, 255, 255)"
                   }}
                 >
                   Process
                 </div>
                 <div
-                  data-element="process-description"
-                  data-name="Our Process Section > Content Box > Text"
-                  className="text-lg sm:text-2xl leading-6 sm:leading-9 pt-4 sm:pt-0 px-2.5 sm:px-0"
                   style={{
-                    color: "rgb(255, 255, 255)",
-                    maxWidth: "672px",
-                    textAlign: "center",
-                    textDecoration: "rgb(0, 0, 0)",
-                    textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
-                    margin: "0 auto",
-                    font: "400 18px/36px Arial, sans-serif"
+                    display: "flex",
+                    flexDirection: "column",
+                    position: "relative",
+                    marginTop: "20px",
+                    height: "auto",
+                    paddingBottom: "30px"
                   }}
                 >
-                  A seamless journey from concept to celebration.
+                  <div
+                    data-element="process-description"
+                    data-name="Our Process Section > Content Box > Text"
+                    className="text-lg sm:text-2xl leading-6 sm:leading-9 pt-4 sm:pt-0 px-2.5 sm:px-0"
+                    style={{
+                      color: "rgba(0, 0, 0, 1)",
+                      maxWidth: "672px",
+                      margin: "0 auto",
+                      font: "400 24px/36px Arial, sans-serif"
+                    }}
+                  >
+                    A seamless journey from concept to celebration.
+                  </div>
                 </div>
+                <a
+                  href="/process"
+                  className="inline-flex items-center justify-center bg-champagne text-sage-darkest rounded-full shadow-lg transition-all duration-300 hover:scale-105 font-medium"
+                  data-element="process-learn-more-button"
+                  data-name="Our Process Section > Content Box > Button"
+                  style={{
+                    display: "flex",
+                    height: "48px",
+                    alignItems: "center",
+                    animationDuration: "0.3s",
+                    backgroundColor: "rgb(227, 198, 141)",
+                    borderRadius: "9999px",
+                    boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+                    color: "rgb(27, 35, 36)",
+                    gap: "8px",
+                    justifyContent: "center",
+                    textDecoration: "rgb(27, 35, 36)",
+                    transitionDuration: "0.3s",
+                    width: "auto",
+                    alignSelf: "center",
+                    margin: "40px 200px 0",
+                    padding: "24px 32px",
+                    font: "500 18px/28px Arial, sans-serif "
+                  }}
+                >
+                  More About Our Process
+                </a>
               </h2>
               <div
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
@@ -553,7 +585,7 @@ export default function HomePage() {
                   display: "grid",
                   fontWeight: "400",
                   gap: "24px",
-                  gridTemplate: "none / repeat(1, minmax(0px, 1fr)) / none",
+                  gridTemplate: "none / repeat(4, minmax(0px, 1fr))",
                 }}
               >
                 {processSteps.map((step, index) => (
@@ -567,7 +599,7 @@ export default function HomePage() {
                       color: "rgba(250, 250, 250, 0.85)",
                       fontFamily: "Inter, sans-serif",
                       textDecoration: "rgba(250, 250, 250, 0.85)",
-                      backgroundColor: "rgba(0, 0, 0, 0.5)",
+                      backgroundColor: "rgba(38, 43, 36, 0.84)",
                       borderRadius: "10px",
                       overflow: "hidden",
                       display: "flex",
@@ -628,10 +660,10 @@ export default function HomePage() {
                       data-element={`process-step-description-${index + 1}`}
                       data-name={`Our Process Section > Content Box > Step ${index + 1} > Step Box > Text`}
                       style={{
-                        color: "rgba(255, 255, 255, 1)",
+                        color: "rgb(255, 255, 255)",
                         textDecoration: "rgb(0, 0, 0)",
-                        textShadow: "1px 1px 3px rgba(0, 0, 0, 0.75)",
-                        fontFamily: "Arial, sans-serif"
+                        textShadow: "rgba(0, 0, 0, 0.75) 1px 1px 3px",
+                        font: "400 18px Arial, sans-serif"
                       }}
                     >
                       {step.description}
@@ -639,31 +671,6 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-              <a
-                href="/process"
-                className="inline-flex items-center justify-center bg-champagne text-sage-darkest rounded-full shadow-lg transition-all duration-300 hover:scale-105 font-medium mx-auto mt-6"
-                data-element="process-learn-more-button"
-                data-name="Our Process Section > Content Box > Button"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  animationDuration: "0.3s",
-                  backgroundColor: "rgb(227, 198, 141)",
-                  borderRadius: "9999px",
-                  boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
-                  color: "rgb(27, 35, 36)",
-                  gap: "8px",
-                  height: "48px",
-                  justifyContent: "center",
-                  textDecoration: "rgb(27, 35, 36)",
-                  transitionDuration: "0.3s",
-                  margin: "55px auto 0",
-                  padding: "24px 32px",
-                  font: "500 18px/28px Arial, sans-serif "
-                }}
-              >
-                More About Our Process
-              </a>
             </div>
           </div>
         </section>
