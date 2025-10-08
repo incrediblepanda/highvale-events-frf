@@ -111,7 +111,7 @@ export default function HomePage() {
             zIndex: 0
           }}
         >
-          <source src="https://cdn.builder.io/o/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F2a4a6484c1074911857f4fd16ecbf7e0%2Fcompressed?apiKey=52185cbc63e544f6abfcb901069ce1f1&token=2a4a6484c1074911857f4fd16ecbf7e0&alt=media&optimized=true" type="video/mp4" />
+          <source src="https://cdn.builder.io/o/assets%2F52185cbc63e544f6abfcb901069ce1f1%2F0861570d1d114dfbb1ca4f985344cc37?alt=media&token=cd9f7576-fd31-431c-8218-7306024489a6&apiKey=52185cbc63e544f6abfcb901069ce1f1" type="video/mp4" />
         </video>
         {/* Overlay */}
         <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(66, 68, 66, 0.4)', zIndex: 1 }} />
