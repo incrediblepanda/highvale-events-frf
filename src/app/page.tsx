@@ -474,7 +474,7 @@ export default function HomePage() {
             }}
           >
             <div
-              className="max-w-[1180px] mx-auto px-[25px] sm:px-12 pb-10 flex flex-col"
+              className="max-w-[1180px] mx-auto px-4 sm:px-12 pb-10 flex flex-col"
               data-element="process-main-container"
               data-name="Our Process Section > Content Box > Container"
               style={{
