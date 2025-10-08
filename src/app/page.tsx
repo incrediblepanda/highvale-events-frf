@@ -586,8 +586,8 @@ export default function HomePage() {
                           display: "flex",
                           flexDirection: "column",
                           lineHeight: "normal",
-                          width: index === 0 ? "25%" : "25%",
-                          marginLeft: index === 0 ? "0px" : "20px"
+                          width: "25%",
+                          marginLeft: "20px"
                         }}
                       >
                         <div
