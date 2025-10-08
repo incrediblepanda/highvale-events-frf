@@ -507,11 +507,20 @@ export default function HomePage() {
                   backgroundColor: "rgba(250, 247, 242, 0.77)",
                   borderRadius: "10px",
                   overflow: "hidden",
-                  padding: "25px 15px 43px 15px",
                   font: '400 48px/48px ivyModeBody, "ivyModeBody Fallback" ',
                   border: "1px solid rgba(0, 0, 0, 0)"
                 }}
               >
+                <style dangerouslySetInnerHTML={{__html: `
+                  h2[data-element="process-title"] {
+                    padding: 25px 15px 43px 15px;
+                  }
+                  @media (min-width: 640px) {
+                    h2[data-element="process-title"] {
+                      padding: 25px 87px 43px 59px;
+                    }
+                  }
+                `}} />
                 <div
                   data-element="process-title-our"
                   data-name="Our Process Section > Content Box > Heading > Our"
