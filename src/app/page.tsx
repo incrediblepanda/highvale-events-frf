@@ -334,12 +334,6 @@ export default function HomePage() {
           data-element="services-container"
           data-name="Our Services Section > Container"
         >
-          <ScrollAnimation
-            className="text-center mb-16"
-            data-element="services-header"
-            data-name="Our Services Section > Header Box"
-          />
-
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             data-element="services-grid"
