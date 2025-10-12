@@ -82,12 +82,6 @@ export default function PortfolioSection() {
         data-element="portfolio-grid-container"
         data-name="Our Portfolio Section > Grid Container"
       >
-        <ScrollAnimation
-          className="text-center mb-16"
-          data-element="portfolio-header"
-          data-name="Our Portfolio Section > Header Box"
-        />
-
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mb-12"
           data-element="portfolio-grid"
