@@ -121,8 +121,8 @@ export default function WeddingsPage() {
       ]
     },
     {
-      title: 'Day-of Coordination / Wedding Management',
-      price: 'Starting at $800',
+      title: 'Day-of Coordination',
+      price: 'Starting at $1,000',
       timeline: 'Planning begins 3 Months out',
       description: 'Month-Of Coordination is the perfect service for couples who desire to handle the entire planning process themselves but want to hand over the reins prior to the big day. Our job is to step in and coordinate any of the final details and manage all of the logistics for your event, leaving you to enjoy the last moments before you walk down the aisle.',
       includedServices: [
@@ -412,10 +412,10 @@ export default function WeddingsPage() {
               const isExpanded = expandedCards.includes(index);
               return (
                 <ScrollAnimation key={index} animation="fadeInUp" delay={index * 0.1}>
-                  <Card className={`bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 ${!isExpanded ? 'h-64' : ''}`}>
-                    <CardHeader className={`${isExpanded ? 'border-b border-sage-dark/10' : ''} ${!isExpanded ? 'h-full flex flex-col justify-between' : ''}`}>
+                  <Card className={`bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 ${!isExpanded ? 'h-64' : 'h-auto'}`}>
+                    <CardHeader className={`${isExpanded ? 'border-b border-sage-dark/10' : ''} ${!isExpanded ? 'h-full flex flex-col' : ''}`}>
                       <div className="flex items-start justify-between h-full">
-                        <div className="flex-1 flex flex-col justify-between h-full">
+                        <div className="flex-1 flex flex-col justify-between min-h-0">
                           <div>
                             <CardTitle className="text-2xl md:text-3xl font-cormorant text-sage-darkest leading-tight">
                               {pkg.title}
