@@ -40,7 +40,7 @@ export default function WeddingsPage() {
 
   const packages = [
     {
-      title: 'Full-service planning',
+      title: 'Full Service Planning',
       price: 'Starting at $4,500',
       timeline: 'Planning begins 12 Months out',
       description: 'This service includes assistance with everything in the planning process from start to finish. From vendor and budget advice to designing a beautiful tablescape, full planning ensures that you have a coordinator by your side through all of it. Your coordinator will provide answers to your questions and solutions to any issues that may arise throughout your time together so that things progress smoothly throughout the entire process.',
@@ -67,7 +67,7 @@ export default function WeddingsPage() {
       ]
     },
     {
-      title: 'Partial planning',
+      title: 'Partial Planning',
       price: 'Starting at $2,500',
       timeline: 'Planning begins 6 Months out',
       description: 'This service is for the client who has the main pieces of their planning process in place but is overwhelmed with managing everything in the months leading up to their wedding day. Partial planning services do not provide the same level of support as full planning services, as they typically do not start more than 6 months before the wedding date, unlike full planning which begins at least 12 months prior.',
@@ -94,7 +94,7 @@ export default function WeddingsPage() {
       ]
     },
     {
-      title: 'Elopement / microwedding',
+      title: 'Elopement / Microwedding',
       price: 'Starting at $700',
       timeline: 'Planning begins 9 Months out',
       description: 'A wedding under 50 guests is considered a "micro wedding." This service is for you if you\'re planning a smaller celebration with close friends and family to celebrate your union. A micro wedding is perfect if you want a wedding and all of its traditions on a smaller scale so you don\'t feel overwhelmed by the process and its complexities.',
@@ -121,8 +121,8 @@ export default function WeddingsPage() {
       ]
     },
     {
-      title: 'Day-of coordination / wedding management',
-      price: 'Starting at $800',
+      title: 'Day-of Coordination / Wedding Management',
+      price: 'Starting at $1,000',
       timeline: 'Planning begins 3 Months out',
       description: 'Month-Of Coordination is the perfect service for couples who desire to handle the entire planning process themselves but want to hand over the reins prior to the big day. Our job is to step in and coordinate any of the final details and manage all of the logistics for your event, leaving you to enjoy the last moments before you walk down the aisle.',
       includedServices: [
@@ -148,7 +148,7 @@ export default function WeddingsPage() {
       ]
     },
     {
-      title: 'Event design',
+      title: 'Event Design',
       price: 'Starting at $500',
       timeline: 'Planning timelines vary',
       description: '',
@@ -175,7 +175,7 @@ export default function WeddingsPage() {
       ]
     },
     {
-      title: 'A la carte',
+      title: 'A La Carte',
       price: 'Starting at $100',
       timeline: 'Planning begins 9 Months out',
       description: 'We offer à la carte services that meet your needs! Our parties are customized to each and every client. From intimate weddings, milestone birthdays, bridal showers, baby showers. Our goal is to design and style an event that your guests will be talking about for years. We\'d love to hear from you so please get in touch and we\'ll work with you to provide a quote.',
@@ -193,14 +193,14 @@ export default function WeddingsPage() {
   ];
 
   const addOns = [
-    'Monogram design',
-    'Signage creation',
-    'Invitation and RSVP management',
-    'Post-wedding brunch planning',
-    'Additional assistants',
-    'Decor rentals',
-    'Rehearsal dinner planning',
-    'Hotel block management'
+    'Monogram Design',
+    'Signage Creation',
+    'Invitation and RSVP Management',
+    'Post-Wedding Brunch Planning',
+    'Additional Assistants',
+    'Decor Rentals',
+    'Rehearsal Dinner Planning',
+    'Hotel Block Management'
   ];
 
   return (
