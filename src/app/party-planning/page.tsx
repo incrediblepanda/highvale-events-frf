@@ -219,7 +219,7 @@ export default function PartyPlanningPage() {
                   </h3>
                   <div className="text-sm text-sage/70 mb-4">Corporate & private holiday events</div>
                   <p className="text-3xl font-cormorant text-champagne mb-6">
-                    Starting at $500 + cost of decor
+                    Starting at $500 + Cost of Decor
                   </p>
                   <ul className="space-y-3 text-sage-darker mb-6">
                     <li className="flex items-start">
@@ -264,7 +264,7 @@ export default function PartyPlanningPage() {
                   </h3>
                   <div className="text-sm text-sage/70 mb-4">Retirements, Baby Shower, Bridal Shower, Birthday Parties</div>
                   <p className="text-3xl font-cormorant text-champagne mb-6">
-                    Starting at $300 + price of decor
+                    Starting at $300 + Cost of Decor
                   </p>
                   <ul className="space-y-3 text-sage-darker mb-6">
                     <li className="flex items-start">
