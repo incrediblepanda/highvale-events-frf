@@ -413,9 +413,9 @@ export default function WeddingsPage() {
               return (
                 <ScrollAnimation key={index} animation="fadeInUp" delay={index * 0.1}>
                   <Card className={`bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 ${!isExpanded ? 'h-64' : 'h-auto'}`}>
-                    <CardHeader className={`${isExpanded ? 'border-b border-sage-dark/10' : ''} ${!isExpanded ? 'h-full flex flex-col justify-between' : ''}`}>
+                    <CardHeader className={`${isExpanded ? 'border-b border-sage-dark/10' : ''} ${!isExpanded ? 'h-full flex flex-col' : ''}`}>
                       <div className="flex items-start justify-between h-full">
-                        <div className="flex-1 flex flex-col justify-between h-full">
+                        <div className="flex-1 flex flex-col justify-between min-h-0">
                           <div>
                             <CardTitle className="text-2xl md:text-3xl font-cormorant text-sage-darkest leading-tight">
                               {pkg.title}
