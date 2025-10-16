@@ -122,7 +122,7 @@ export default function WeddingsPage() {
     },
     {
       title: 'Day-of Coordination / Wedding Management',
-      price: 'Starting at $800',
+      price: 'Starting at $1,000',
       timeline: 'Planning begins 3 Months out',
       description: 'Month-Of Coordination is the perfect service for couples who desire to handle the entire planning process themselves but want to hand over the reins prior to the big day. Our job is to step in and coordinate any of the final details and manage all of the logistics for your event, leaving you to enjoy the last moments before you walk down the aisle.',
       includedServices: [
